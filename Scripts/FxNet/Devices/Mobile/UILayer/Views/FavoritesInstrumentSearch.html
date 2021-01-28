@@ -1,0 +1,30 @@
+﻿<div class="autocompleteWrapper">
+	<div class="search-wrapper">
+		<div class="clear-input">
+			<input class="search"
+				id="quotes-autocomplete"
+				type="text"
+				data-bind="autocomplete: {
+						elementType: 'input.mobile',
+						source: Data.list,
+						selected: Data.selected,
+						appendTo: '.results-wrapper',
+						autocompleteWrapperClass: 'autocompleteWrapper',
+						showIcons: true,
+						hasCategories: true,
+						renderInstruments: true,
+						noResultText: Dictionary.GetItem('no_results'),
+						isEditFavoritesView: true,
+						keepTextAfterSelect: true,
+						searchResultPostBoxTopic: 'edit-favorite-instruments-search-result',
+						minLength: Data.searchMinLength()
+					},
+					attr: {
+						placeholder: Dictionary.GetItem('lblSearchAndAdd', 'EditFavoriteInstruments')
+					}">
+			<a href="#" class="clear-button closeButton" data-bind="cssIfValue: { valueElementId: 'quotes-autocomplete', className: 'clear-button' }"></a>
+		</div>
+	</div>
+
+	<div class="results-wrapper"></div>
+</div>

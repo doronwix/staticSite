@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/api/accountingactions/GetData?symbolId=47&actionCategory=0&from=20%2F1%2F2021&to=27%2F1%2F2021&page=1&position=&pageSize=250&exportdata=false&showCosts=false&closedDate=",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{ \"status\": \"Success\", \"totalItems\": 0, \"actions\": [], \"costs\": {\"SpreadCostInAccountBase\":null,\"SpreadDiscount\":null,\"CommissionInAccountBase\":null,\"RolloverSpreadCostInAccountBase\":null,\"ConversionCostInAccountBase\":null}, \"showZeroCosts\": false }",
+  "isBase64": false
+}

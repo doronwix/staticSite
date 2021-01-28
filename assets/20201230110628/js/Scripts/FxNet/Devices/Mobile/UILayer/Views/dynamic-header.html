@@ -1,0 +1,40 @@
+﻿<template id="deal-details-navigator">
+    <div class="navigation-buttons">
+        <span class="up-button" data-bind="css: { disabled: Data.isFirst() }, click: function() { Data.isFirst() || Navigate.GetNewSelectedItem(eNavigateDirection.Prev, UpdateObject); }">
+        </span>
+        <span class="down-button" data-bind="css: { disabled: Data.isLast() }, click: function() { Data.isLast() || Navigate.GetNewSelectedItem(eNavigateDirection.Next, UpdateObject); }">
+        </span> 
+    </div>
+</template>
+
+<div id="header" data-bind="resetScroll: $viewModelsManager.VManager.Activeform().isReset()" data-ios="adjustTop">
+    <!-- ko ifnot: Data.hideMobileMenu -->
+        <div class="menu-icon" id="toggleMobileMenu" data-bind="css: $customer.prop.isDemo ? '' : Data.generalStatusColor, toggleMobileMenu"></div>
+    <!-- /ko -->
+
+    <!-- ko if: Data.showBackButton -->
+        <div id="back-button" class="back-button" data-bind="click: function() { ko.postbox.publish('back-button-click', $viewModelsManager.VManager.Activeform()); $viewModelsManager.VManager.History.GoBack(); }">
+        </div>
+    <!-- /ko -->
+    
+    <div data-bind="css: { envelope: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vMenu).visible }">
+        <a href="javascript:void(0)"></a>
+    </div>
+    <!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vMenu).visible -->
+        <!-- ko component: { name: 'fx-component-help-center-action' } --><!-- /ko -->
+    <!-- /ko -->
+    <div class="logo-wrapper" data-bind="css: { 'demo': $statesManager.States.IsDemo() }">
+        <div class="icon-mid"></div>
+        <span data-bind="'data-automation':'demologo'"></span>
+    </div>
+
+    <!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vClosedDealDetails).visible -->
+        <div data-bind="template: { name: eTemplateNames.editLimitNavigator, data: $viewModelsManager.VmClosedDealDetails }"></div>
+    <!-- /ko -->
+
+    <!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vCashBack).visible -->
+        <div id="closeButton" runat="server" class="header-text-button" data-bind="click: function() { $viewModelsManager.VManager.SwitchViewVisible(eForms.Wallet, {}); }">
+            <span id="close_trigger"></span>
+        </div>
+    <!-- /ko -->
+</div>

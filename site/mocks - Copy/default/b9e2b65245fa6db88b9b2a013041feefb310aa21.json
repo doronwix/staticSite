@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/instrument-notavailable.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<div class=\"instrument-unavailable\"\r\n     data-bind=\"showIntrumentNotAvailable: { instrData: Data.instrumentData(), dealContainerClass: 'deal-content-transaction-data', keepContainerHeight: true }\">\r\n    <div class=\"deal-content instrument-unavailable-wrapper\">\r\n        <span class=\"warn-icon\"></span>\r\n        <span class=\"instrument-notavailable-text\">\r\n            <span class=\"bold\" data-bind=\"dictionaryBinding: 'InstrumentInactive'\"></span>\r\n            <span data-bind=\"dictionaryBinding: 'InstrumentInactivePart2'\"></span>\r\n        </span>\r\n    </div>\r\n</div>",
+  "isBase64": false
+}

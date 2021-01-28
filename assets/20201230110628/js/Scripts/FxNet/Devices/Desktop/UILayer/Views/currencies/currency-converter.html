@@ -1,0 +1,53 @@
+﻿<div class="fourth left currency-converter">
+    <h3 class="title" data-bind="text: Dictionary.GetItem('lblCurrencyConverter', 'CurrencyConverterBackOffice')"></h3>
+
+    <div class="holder">
+        <table class="data-holder general-table loading" data-bind="css: { loading: Data.isSaveSpinnerOn }">
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem('lblBase', 'CurrencyConverterBackOffice')"></span>
+                </td>
+                <td>
+                    <select id="baseCurrencySelector" data-bind="valueAllowUnset: true, options: $data.Data.availableCurrencies(), value: $data.Data.from, optionsText: 'symbolName', optionsCaption: Dictionary.GetItem('lblChooseCurrency', 'CurrencyConverterBackOffice')"></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem('lblOther', 'CurrencyConverterBackOffice')"></span>
+                </td>
+                <td>
+                    <select id="otherCurrencySelector" data-bind="options: $data.Data.availableCurrencies(), value: $data.Data.to, optionsText: 'symbolName', optionsCaption: Dictionary.GetItem('lblChooseCurrency', 'CurrencyConverterBackOffice')"></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem('lblAmount', 'CurrencyConverterBackOffice')"></span>
+                </td>
+                <td>
+                    <input id="amountInput" type="text" class="number" data-bind="value: $data.Data.amount, numericField: {negative: false}" />
+                </td>
+            </tr>
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem('lblResult', 'CurrencyConverterBackOffice')"></span>
+                </td>
+                <td>
+                    <input id="resultInput" type="text" class="number" readonly disabled data-bind="value: $data.Data.result()" />
+                </td>
+            </tr>
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem('lblRate', 'CurrencyConverterBackOffice')"></span>
+                </td>
+                <td>
+                    <input id="rateInput" type="text" class="number" readonly disabled data-bind="value: $data.Data.rate()" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button id="calculateButton" data-bind="click: $data.DoConversion, text: Dictionary.GetItem('lblCalculate', 'CurrencyConverterBackOffice')"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

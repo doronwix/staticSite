@@ -1,0 +1,43 @@
+﻿<div class="chart-autocomplete">
+	<div class="select-wrapper">
+		<div id="dlgCmbCCYTrigger" class="select-like" data-bind="attr: {id: 'dlgTileCmbCCYTrigger' + Data.suffixId  }">
+			<div class="trigger"></div>
+			<span class="selected-instrument" data-bind="instrumentName: Data.selectedInstrumentId"></span>
+		</div>
+
+		<div data-bind="attr: { class: 'autocompleteWrapper autocomplete-wrapper-' + Data.suffixId }">
+			<input class="search"
+					data-bind="attr: { 
+							id: 'quotes-autocomplete' + Data.suffixId,
+							placeholder: Dictionary.GetItem('lblSearch','deals_CloseDeal')
+						},
+						autocomplete: {
+							elementType: 'select',
+							autocompleteWrapperClass: 'autocomplete-wrapper-' + Data.suffixId,
+							source: Data.list,
+							selected: Data.selected,
+							minLength: Data.searchMinLength(),
+							appendTo: '.autocomplete-wrapper-' + Data.suffixId + ' .tile-search-select',
+							contentMaxHeight: 180,
+							triggerFrom: '#dlgTileCmbCCYTrigger' + Data.suffixId,
+							predefinedOptionsListClass: 'customized',
+							noResultText: Dictionary.GetItem('no_results'),
+							searchPostBoxTopic: 'tile-search-complete',
+							hasCategories: true,
+							renderInstruments: true,
+						}" />
+
+			<div class="styled-select tile-search-select" data-bind="jScrollPane: { postBoxTopic: 'tile-search-complete', reinitialiseDelay: 0 }">
+				<ul class="customized">
+					<li class="header autocomplete-group" data-bind="dictionaryBinding: Data.favouritePreset() ? 'Customized' : 'MostPopular', resourceName:'deals_CloseDeal'">%Customized</li>
+
+					<!-- ko foreach: { data: Data.instrumentsList() } -->
+					<li data-bind="template: {name: 'fx-template-search-instrument-description', data: $data},
+						css: { selected: $parent.Data.selectedInstrumentId() === id },
+						click: function() { $parent.Data.selected({ id: id }); }"></li>
+					<!-- /ko -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

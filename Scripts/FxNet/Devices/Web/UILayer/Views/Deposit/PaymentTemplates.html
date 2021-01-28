@@ -1,0 +1,38 @@
+﻿
+<div>
+    <div class="thirdPartyPagePayment header">
+        <h3 data-bind="html: Dictionary.GetItem('lblPaymentIntro', 'payments_general')"></h3>
+        <fx-concrete-payment-subtitle></fx-concrete-payment-subtitle>
+    </div>
+
+    <div id="DepositContainer">
+        <div class="input-half">
+            <table class="singleLined">
+                <!-- ko with: $parentContext.$parent.Form.paymentsConfigSettings.find(function(c) { return c.Id === $parent.Id; }) -->
+                    <!-- ko foreach: $data.Templates -->
+                        <!-- ko template: { name: $data} -->
+                        <!-- /ko -->
+                    <!-- /ko -->
+                <!-- /ko -->
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="inputHolder align-right">
+                        <div class="input-col">
+                            <div class="input-holder">
+                                <a id="btnDeposit" class="btn big"
+                                   data-bind="text: Dictionary.GetItem('btnDeposit', 'payments_ewallet'),
+                                        click: function() { Deposit(); ko.postbox.publish('trading-event', 'deposit-submit'); },
+                                        css:{disabled: $statesManager.States.IsDemo()}"></a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="clear"></div>
+        </div>
+
+        <!-- ko if: Form.showQuestionnaireAlert -->
+        <fx-component-questionnaire-alert params="showQuestionnaireAlert: Form.showQuestionnaireAlert"></fx-component-questionnaire-alert>
+        <!-- /ko -->
+    </div>
+</div>

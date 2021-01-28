@@ -1,0 +1,10 @@
+<div class="pg-wrap-var4" id="pgWrap" data-bind="css: {'show': Data.bubbleVisible() }">
+    <div class="pg-content">
+        <p class="pg-line" data-bind="html: Data.showBubble().message"></p>
+        <p class="pg-line" data-bind="html: Data.showBubble().text"></p>
+        <div class="buttons-wrap">
+            <div class="ctaButton" data-bind="click: hideBubble, clickBubble: false, animatePgbubbleHide, html: Data.showBubble().ctaAbort">Show later</div>
+            <div class="ctaButton ctaChatbot" data-bind="click: showHelpCenter, html: Data.showBubble().ctaChatbot">Start now</div>
+        </div>
+    </div>
+</div>

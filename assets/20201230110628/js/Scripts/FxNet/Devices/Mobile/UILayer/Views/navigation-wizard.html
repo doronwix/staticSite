@@ -1,0 +1,8 @@
+﻿<!-- ko if: Data.renderedComponent -->
+<!-- ko component: { name: Data.renderedComponent(), params: { setStepActions: UpdateStepActions } } --><!-- /ko -->
+<div class="step-action" data-bind="visible: nextStep.visible()">
+	<button id="wizard-next" class="action-button" data-bind="click: next,
+			visible: nextStep.visible, enable: nextStep.valid,
+			dictionaryBinding: nextStep.label, resourceName: 'navigationWizard'"></button>
+</div>
+<!-- /ko -->

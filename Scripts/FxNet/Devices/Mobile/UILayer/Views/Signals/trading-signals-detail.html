@@ -1,0 +1,61 @@
+﻿<!-- ko if: Data.currentSignal() -->
+<div class="signals-details-page" data-bind="with: Data.currentSignal()">
+    <div class="top-section">
+        <div class="signal-instrument">
+            <div class="signal-icon">
+                <!-- ko template: { name: 'fx-template-instrument-icon', data: {
+                    instrumentId: instrument.id, baseSymbolId: instrument.baseSymbol, otherSymbolId: instrument.otherSymbol }} -->
+                <!-- /ko -->
+            </div>
+            <div class="instrument-info">
+                <h1 class="instrument-name" data-bind="text: symbol"></h1>
+                <h3 class="instrument-change">
+                    <span data-bind="dictionaryBinding: 'lblChange', resourceName: 'customerTools_TradingSignalDetails'"></span>
+                    <span class="change-value" data-bind="text: $parent.Data.currentChange(), css: { down: $parent.Data.currentChange().indexOf('-') >= 0, up: $parent.Data.currentChange().indexOf('+') >= 0 }"></span>
+                </h3>
+            </div>
+        </div>
+        <h2 class="trend-title" data-bind="dictionaryBinding: 'lblTradingCentralsTrendEstimation', resourceName: 'customerTools_TradingSignalDetails'"></h2>
+        <p class="signal-date" data-bind="dateFormatShortDayMonthYear: signalDate"></p>
+    </div>
+    <div class="signal-trend-section">
+        <div class="signal-detail">
+            <h4 class="signal-label" data-bind="dictionaryBinding: 'lblShortTerm', resourceName: 'customerTools_TradingSignalDetails'"></h4>
+            <h3 class="trend-detail">
+                <span class="icn-label" data-bind="styleFromSignalSign: shortTermLevel, dictionaryBinding: shortTermText, resourceName: 'customerTools_TradingSignalDetails';"></span>
+                <i class="icn" data-bind="imageFromSignalSign: shortTermLevel, visible: shortTermLevel != '0'"></i>
+            </h3>
+        </div>
+        <div class="signal-detail">
+            <h4 class="signal-label" data-bind="dictionaryBinding: 'lblMediumTerm', resourceName: 'customerTools_TradingSignalDetails'"></h4>
+            <h3 class="trend-detail">
+                <span class="icn-label" data-bind="styleFromSignalSign: mediumTermLevel, dictionaryBinding: mediumTermText, resourceName: 'customerTools_TradingSignalDetails';"></span>
+                <i class="icn" data-bind="imageFromSignalSign: mediumTermLevel"></i>
+            </h3>
+        </div>
+        <div class="signal-detail">
+            <h4 class="signal-label" data-bind="dictionaryBinding: 'lblLongTerm', resourceName: 'customerTools_TradingSignalDetails'"></h4>
+            <h3 class="trend-detail">
+                <span class="icn-label" data-bind="styleFromSignalSign: longTermLevel, dictionaryBinding: longTermText, resourceName: 'customerTools_TradingSignalDetails';"></span>
+                <i class="icn" data-bind="imageFromSignalSign: longTermLevel"></i>
+            </h3>
+        </div>
+    </div>
+    <div class="signal-info-section">
+        <div class="signal-info-text">
+            <p class="highlighted" data-bind="text: signalTitle"></p>
+            <p data-bind="text: summary"></p>
+        </div>
+        <div class="signal-info-image">
+            <img data-bind="attr: { src: imagePath }" />
+        </div>
+        <p class="disclaimer-cta-wrap">
+            <span class="disclaimer-cta" data-bind="dictionaryBinding: 'hlSignalsToolDisclaimer', resourceName: 'customerTools_TradingSignalDetails', click: function () { $viewModelsManager.VManager.SwitchViewVisible(eForms.SignalsDisclaimer, {}) }"></span>
+        </p>
+    </div>
+    <div class="cta-action">
+        <button class="wide-action-button sticky-bottom" data-bind="dictionaryBinding: 'btnOpenADeal', resourceName: 'customerTools_TradingSignalDetails', click: function() { $parent.OpenNewDeal($data); ko.postbox.publish('signals-detail-new-deal', { signalData: $data }); }">
+        </button>
+    </div>
+</div>
+<!-- /ko -->

@@ -1,0 +1,323 @@
+﻿        <panels-container>
+
+            <div class="properties-tabs">
+           
+            </div>
+            <div id="defauls-css" style ="display: none" ></div>
+
+            <div class ="main-properties" style ="display:block ">
+                <table class="property-page property-page-panels" cellpadding="0" cellspacing="2">
+                    <tbody id="tbody-indicatorpanels">
+                         %panels%      
+                    </tbody>
+                </table>
+                <table class="property-page property-page-panels" cellpadding="0" cellspacing="2">
+                    <tbody id="tbody-indicatorpanels-bk">
+                
+                    </tbody>
+                </table>
+            </div>
+        </panels-container>
+        
+        <panels-tr-container>
+            <tr class="%css%">
+                <td class="panels-td-1">
+                    <span data-localize="dialogs.indicator.%panel-type% " class="title-panel-%panel-type%" >%panel-type-title%</span> 
+                    <div class="panels-legends">%legends%</div>
+                </td>
+                <td class="panels-td-2"><a href ="javascript:void(0);" tpanelid="%tpanelid%" tid="%tid%" tguiid="%tguiid%"  style="%panel-action-style%"  class="action-%button%-indicator  %position%" data-localize="dialogs.indicator.%button%">%button-title%</a></td> 
+            </tr>
+            <tr>
+                <td colspan="2" class="delim-td"><div></div></td>
+            </tr>
+        </panels-tr-container>
+        
+       
+
+        
+        
+        <indicator-container>
+            <div class="adv-dialog-content" id="dlg-indicator">
+            <div class="properties-tabs">
+                <a id="tab-param"  class ="properties-tabs-label " href="javascript:void(0);" data-localize="dialogs.indicator.tab-parameters">Parameters</a>
+                <a id="tab-style"  class ="properties-tabs-label" href="javascript:void(0);" data-localize="dialogs.indicator.tab-style">Style</a>
+                <a id="tab-level" class ="properties-tabs-label" href="javascript:void(0);" data-localize="dialogs.indicator.tab-levels">Levels</a>
+                <a id="tab-panels" class ="properties-tabs-label" href="javascript:void(0);" data-localize="dialogs.indicator.tab-panels" style="%style-link-panels%">Panels</a> 
+            </div>
+            <div id="defauls-css" style ="display: none" ></div>
+
+            <div class="main-properties" style ="display:none ">
+                <table class="property-page" cellpadding="0" cellspacing="2">
+                    <tbody id="tbody-parameters">
+              
+                    </tbody>
+                </table>
+                <table class="property-page" cellpadding="0" cellspacing="2">
+                    <tbody id="tbody-sources"></tbody>
+                </table>
+            </div>
+            <div class="main-properties" style ="display:none ">
+                <table class="property-page" cellpadding="0" cellspacing="2">
+                    <tbody id="tbody-styles">
+                    </tbody>
+                </table>
+            </div>
+            <div class ="main-properties" style ="display:none ">
+                <table class="property-page" cellpadding="0" cellspacing="2">
+                    <tbody id="tbody-indicatorlevels">
+
+                    </tbody>
+                </table>
+                <table class="property-page" cellpadding="0" cellspacing="2">
+                    <tbody id="tbody-indicatorlevels-bk">
+                       
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class ="main-properties" style ="display:none ">
+                <table class="property-page property-page-panels" cellpadding="0" cellspacing="2">
+                    <tbody id="tbody-indicatorpanels">
+                        %panels%
+                    </tbody>
+                     
+                </table>
+                <table class="property-page property-page-panels" cellpadding="0" cellspacing="2">
+                    <tbody id="tbody-indicatorpanels-bk">
+                
+                    </tbody>
+                </table>
+            </div>
+         </div>
+        </indicator-container>
+        
+        
+        <indicator-style>
+            <tr id="%renderitem%"> 
+                <td><input  class="visibility-onoff line-visible" type="checkbox" checked="checked"/></td>
+                <td>%caption%</td>
+                %indicator_style_adv%
+                <td>
+                    <select class ="linedesign-type dialog-select lineselect">
+                    </select>
+                </td>
+            </tr>
+
+        </indicator-style>
+        
+        
+        <indicator-style-default>
+                <td><input type="color" class ="line-color class-color-widget spectrum-color "  ritem ="%renderitem%"/></td>
+                <td >
+                    <div class="color-alt" style="dispaly:none"> <input type="color" class ="line-color-alt class-color-widget spectrum-color  "  ritem ="%renderitem%"/></div>
+                </td>
+                <td>
+                    <div  class="line-width class-slider-5 slider-border slider-horizontal" ritem ="%renderitem%">
+                        <div class="gradient" ></div></div>
+                    <div class="line-opacity slider-coloropaciry " style="display:none; " ritem ="%renderitem%">
+                        <div class="gradient" ></div>
+                    </div>
+                </td>
+        </indicator-style-default>
+           
+        
+        
+        <indicator-style-columns>
+             <td colspan="3">
+                 <div id="charttype-block-columns"  class="charttype-block"  >
+                    <table class="property-page" cellpadding="0" cellspacing="2">
+                        <tbody>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th data-localize="dialogs.props.up">up</th>
+                                <th  data-localize="dialogs.props.down">down</th>
+                                <th  data-localize="dialogs.props.flat">flat</th>
+                            </tr>
+                            <tr>
+                                <td></td>  
+                                <td data-localize="dialogs.props.columns">Column</td>  
+                                <td><input id="color-columns-up-column" type="color" class ="class-color-widget spectrum-color class-columns-study-color" tid="%tid%" ritem ="%renderitem%"/></td>   
+                                <td><input id="color-columns-down-column" type="color" class ="class-color-widget spectrum-color  class-columns-study-color "tid="%tid%"  ritem ="%renderitem%"/></td>   
+                                <td><input id="color-columns-flat-column" type="color" class ="class-color-widget spectrum-color  class-columns-study-color" tid="%tid%"  ritem ="%renderitem%"/></td>   
+                            </tr> 
+                            <tr>
+                                <td><input id="control-columns-border" class="visibility-switch" type="checkbox" checked="checked" tid="%tid%"  ritem ="%renderitem%"/></td>  
+                                <td data-localize="dialogs.props.border">Border</td>  
+                                <td><input id="color-columns-up-border" type="color" class ="class-color-widget spectrum-color  class-columns-study-color" tid="%tid%"  ritem ="%renderitem%"/></td>   
+                                <td><input id="color-columns-down-border" type="color" class ="class-color-widget spectrum-color class-columns-study-color" tid="%tid%"  ritem ="%renderitem%"/></td>   
+                                <td><input id="color-columns-flat-border" type="color" class ="class-color-widget spectrum-color  class-columns-study-color" tid="%tid%"  ritem ="%renderitem%"/></td>   
+                            </tr> 
+                            <tr>
+                            <td></td>
+                            <td data-localize="dialogs.props.opacity">Opacity</td>  
+                            <td colspan="3" ><div id="color-opacity-columns" class="slider-coloropaciry " tid="%tid%"  ritem ="%renderitem%">
+                                    <div class="gradient" ></div>
+                                </div></td>  
+                            
+                          </tr>  
+                        </tbody> 
+                     </table>
+                </div>
+            </td>
+
+        </indicator-style-columns>
+        
+
+         
+        <indicator-level>
+            <tr id="%levelitem%">
+                            <td><input  class="visibility-onoff line-visible" type="checkbox" checked="checked"/></td>
+                            <td data-localize="dialogs.indicator.levels.%capid%" >%caption%</td>
+                            <td><input type="text"   class="param-input levelinput onlynumeric " autocomplete="off" autofocus=""  value ="%levelvalue%"   prevvalue="%levelvalue%"  /></td>
+                            <td><input type="color" class ="line-color class-color-widget spectrum-color"  /></td>
+                            <td><div  class="line-width class-slider-5 slider-border slider-horizontal">
+                            <div class="gradient" ></div></div>
+                            <div class="line-opacity slider-coloropaciry " style="display:none; ">
+                             <div class="gradient" ></div>
+                             </div>
+                            </td>
+                            <td><select class ="linedesign-type dialog-select lineselect">
+                             </select>
+                            </td>
+                        </tr>
+
+        </indicator-level>
+        
+        <indicator-source>
+            <tr>
+                <td data-localize="dialogs.indicator.source.title">Source:</td>
+                    <td>
+                <select id="select-source" class ="dialog-select sourceselect">
+                    <option value="close" data-localize="dialogs.indicator.source.close">Close</option>
+                    <option value="open" data-localize="dialogs.indicator.source.open">Open</option>
+                    <option value="low" data-localize="dialogs.indicator.source.low">Low</option>
+                    <option value="high" data-localize="dialogs.indicator.source.high">High</option>
+                    <option value="tipical" data-localize="dialogs.indicator.source.tipical">Tipical</option>
+                    <option value="median" data-localize="dialogs.indicator.source.median">Median</option>
+                    <option value="weighted" data-localize="dialogs.indicator.source.weighted">Weighted</option>
+                    </select>
+                    </td>
+            </tr>
+        </indicator-source>
+        
+        
+<indicators-form-pattern>
+    <div class="adv-dialog-content" id="dlg-indicators" >
+        <div class ="dialog-indicators-browser">
+            <ul id="main-indicator-browser">
+                <li id="li-browser-favorites" data-localize="dialogs.indicators.list-favorites"   class="%favorites-selected%">Favorites</li>
+                <li id="li-browser-indicators" data-localize="dialogs.indicators.list-indicators" class="%indicators-selected%">Indicators</li>
+            </ul>
+        </div>
+        <div class ="dialog-indicators">
+            <div id="dialog-main-page" >
+                <div class = "main-page" style ="display:%indicatorsfavorite-visible%" id ="favorite-indicators-page">
+                    <div class ="dialog-main-page-title" >
+                        <ul>
+                            <li  class="title_level active"><a href="javascript:void(0);" data-localize="dialogs.indicators.list-favorites">Favorites</a></li>
+                            <li  class="title_level" style="display:none"><span>\</span><a href="javascript:void(0);"></a></li>
+                            <li  class="title_level" style="display:none"><span>\</span><a href="javascript:void(0);"></a></li>
+                        </ul>
+                        <div class ="clear"></div> 
+                    </div>
+                    <div class ="dialog_level" style="display:block; ">
+                        <div class ="main-properties">
+                            <ul class="favorite-indicators-list"></ul>
+                        </div>
+                    </div>
+                </div> 
+                <div class = "main-page" style ="display:%indicatorslist-visible%" id ="indicators-page">
+                    <div class ="dialog-main-page-title" >
+                        <ul>
+                            <li  class="title_level active"><a href="javascript:void(0);" data-localize="dialogs.indicators.path">Indicators</a></li>
+                            <li  class="title_level" style="display:none"><span>\</span><a href="javascript:void(0);"></a></li>
+                            <li  class="title_level" style="display:none"><span>\</span><a href="javascript:void(0);"></a></li>
+                        </ul>
+                        <div class ="clear"></div> 
+                    </div>
+                    <div  class="dialog_level"  style="display:block ">
+                        <div class="properties-tabs">
+                            <a class ="properties-tabs-label active" href="javascript:void(0);" data-localize="dialogs.indicators.tab-trend">Trend</a>
+                            <a class ="properties-tabs-label" href="javascript:void(0);" data-localize="dialogs.indicators.tab-oscillators">Oscillators</a>
+                            <a class ="properties-tabs-label" href="javascript:void(0);" data-localize="dialogs.indicators.tab-customize">Customize</a>
+                            <a class ="properties-tabs-label" href="javascript:void(0);" data-localize="dialogs.indicators.tab-billwilliams">Bill Williams</a>
+                            <a class ="properties-tabs-label volume-category-tab" href="javascript:void(0);" data-localize="dialogs.indicators.tab-volumes">Volumes</a>
+                        </div>
+                        <div class="main-properties" style ="display:block ">
+                            <div id ="indicatorsgroup-trend">
+                                <ul class="indicators-list"></ul>
+                            </div>
+        
+                        </div>
+                        <div class="main-properties" style ="display:none ">
+                            <div id ="indicatorsgroup-oscillator">
+                                <ul class="indicators-list"></ul>
+                            </div>
+                        </div>
+                        <div class ="main-properties" style ="display:none ">
+                            <div id ="indicatorsgroup-customize">
+                                <ul class="indicators-list"></ul>
+                            </div>
+                        </div>
+                        <div class ="main-properties" style ="display:none ">
+                            <div id ="indicatorsgroup-billwilliams">
+                                <ul class="indicators-list"></ul>
+                            </div>
+                        </div>
+                        <div class ="main-properties" style ="display:none ">
+                            <div id ="indicatorsgroup-volume">
+                                <ul class="indicators-list"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dialog-indicator-page" style="display:none " class="dialog_level" >
+                        <div id ="indicator-inner"></div>
+                        <div id ="indicator-buttons">
+                            <button id="button-reset-settings-indicator" data-localize="dialogs.common.button-reset-settings" >Reset</button>
+                            <button id="button-save-settings-indicator" data-localize="dialogs.common.button-save-settings" >Save as Default</button>
+                            <button id="button-add-indicator" data-localize="dialogs.common.button-add" >Add</button>
+                            <button id="button-add-indicator-to" data-localize="dialogs.common.button-add-to" >Add to ..</button>
+                        </div>
+                    </div>
+                    <div id="dialog-panels-page" style="display:none " class="dialog_level" >
+                        <div id ="panels-inner"></div>
+                    </div>
+                </div>
+                <div class = "main-page" style ="display:none">Main page1</div> 
+                <div class = "main-page" style ="display:none">Main page3</div> 
+            </div>
+        </div>
+        <div class ="clear"></div>
+    </div>
+</indicators-form-pattern>
+<indicarors-form-row-pattern>
+    <li id="indicator-%id%"  class="li-indicator">
+        <button class="favorite star-button %icon-prefix%stardisabled-icon fl-l %icon-source%" type="button"  ></button>
+        <a href="javascript:void(0)" class="openindicator" idx="indicator-%id%" title="%caption%" >
+                 <span>%caption%</span>
+             </a>
+        <button class="favorite %icon-prefix%property-favorite a-property-favorite fl-r %icon-source%" type="button"></button>
+        <button class="favorite %icon-prefix%add-favorite fl-r a-add-favorite %icon-source%" type="button"></button>
+    </li>
+</indicarors-form-row-pattern>
+
+
+<indicators-button-settings-pattern>
+    <button id="button-reset-settings-indicator" data-localize="dialogs.common.button-reset-settings" >Reset</button>
+    <button id="button-save-settings-indicator" data-localize="dialogs.common.button-save-settings" >Save as Default</button>
+</indicators-button-settings-pattern>
+
+
+<indicators-form-favorites-row-pattern>
+    <li idx="indicator-%id%" class="li-indicator"> 
+        <button class="favorite star-button %icon-prefix%startenabled-icon fl-l %icon-source%" type="button"  ></button> 
+        <a href="javascript:void(0)" class="openindicator" idx="indicator-%id%" title="%title%" > 
+            <span>%caption%</span> 
+        </a> 
+        <button class="favorite %icon-source% %icon-prefix%property-favorite a-property-favorite  fl-r" type="button"></button> 
+        <button class="favorite %icon-source% %icon-prefix%add-favorite  fl-r" type="button"></button> 
+    </li> 
+</indicators-form-favorites-row-pattern>
+
+ 

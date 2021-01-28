@@ -1,0 +1,258 @@
+﻿<html>
+    <head>
+        <title>props</title>
+    </head>
+<body>
+
+<div class="adv-dialog-content" id="dlg-price">
+    
+ 
+        <table class="property-page" cellpadding="0" cellspacing="2">
+            <tbody id="tbody-charttype-select">
+                <tr>
+                    <td data-localize="dialogs.props.charttype">Chart type</td>
+                    <td>
+                        <select class="linedesign-type dialog-select"></select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!----- candlesticks ----->
+        <div id="charttype-block-candlesticks"  class="charttype-block"  >
+            <table class="property-page" cellpadding="0" cellspacing="2">
+                <tbody>
+                   <tr>
+                    <td></td>  
+                    <td data-localize="dialogs.props.candles">Candles</td>  
+                    <td><input id="color-candlesticks-up-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-candlesticks-down-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                   <tr>
+                    <td><input id="control-candlesticks-border" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                    <td data-localize="dialogs.props.border">Border</td>  
+                    <td><input id="color-candlesticks-up-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-candlesticks-down-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                   <tr>
+                    <td><input id="control-candlesticks-flat" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                    <td data-localize="dialogs.props.flat">Flat</td>  
+                    <td><input id="color-candlesticks-up-flat" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-candlesticks-down-flat" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                </tbody> 
+             </table>
+        </div>
+    
+    
+    
+        <!----- HollowCandless ----->
+        <div id="charttype-block-hollowcandlesticks"  class="charttype-block" style="display:none  ">
+            <table class="property-page" cellpadding="0" cellspacing="2">
+                <tbody>
+                   <tr>
+                    <td></td>  
+                    <td data-localize="dialogs.props.candles">Candles</td>  
+                    <td><input id="color-hollowcandlesticks-up-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-hollowcandlesticks-down-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                   <tr>
+                    <td><input id="control-hollowcandlesticks-border" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                    <td data-localize="dialogs.props.border">Border</td>  
+                    <td><input id="color-hollowcandlesticks-up-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-hollowcandlesticks-down-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                   <tr>
+                    <td><input id="control-hollowcandlesticks-flat" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                    <td data-localize="dialogs.props.flat">Flat</td>  
+                    <td><input id="color-hollowcandlesticks-up-flat" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-hollowcandlesticks-down-flat" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                </tbody> 
+             </table>
+        </div>    
+
+        
+         <!-----ohlc ----->
+        <div id="charttype-block-ohlc"  class="charttype-block" style="display:none  ">
+            <table class="property-page" cellpadding="0" cellspacing="2">
+                <tbody>
+                   <tr>
+                    <td></td>  
+                    <td data-localize="dialogs.props.candles">Candles</td>  
+                    <td><input id="color-ohlc-up-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-ohlc-down-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                   <tr>
+                    <td><input id="control-ohlc-border" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                    <td data-localize="dialogs.props.border">Border</td>  
+                    <td><input id="color-ohlc-up-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-ohlc-down-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                   <tr>
+                    <td><input id="control-ohlc-flat" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                    <td data-localize="dialogs.props.flat">Flat</td>  
+                    <td><input id="color-ohlc-up-flat" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-ohlc-down-flat" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                </tbody> 
+             </table>
+        </div> 
+
+
+        <!-----hlc ----->
+        <div id="charttype-block-hlc"  class="charttype-block" style="display:none  ">
+            <table class="property-page" cellpadding="0" cellspacing="2">
+                <tbody>
+                   <tr>
+                    <td></td>  
+                    <td data-localize="dialogs.props.candles">Candles</td>  
+                    <td><input id="color-hlc-up-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-hlc-down-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                   <tr>
+                    <td><input id="control-hlc-border" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                    <td data-localize="dialogs.props.border">Border</td>  
+                    <td><input id="color-hlc-up-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-hlc-down-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                   <tr>
+                    <td><input id="control-hlc-flat" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                    <td data-localize="dialogs.props.flat">Flat</td>  
+                    <td><input id="color-hlc-up-flat" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-hlc-down-flat" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                </tbody> 
+             </table>
+        </div> 
+        
+        
+        <!-----histogram ----->
+        <div id="charttype-block-histogram" class="charttype-block"  style="display:none  ">
+            <table class="property-page" cellpadding="0" cellspacing="2">
+                <tbody>
+                   <tr>
+           
+                    <td data-localize="dialogs.props.candles">Candles</td>  
+                    <td><input id="color-histogram-up-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-histogram-down-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td>
+                        <div id="borderwidth-histogram-line"  class="class-slider-5 slider-border slider-horizontal"> 
+                            <div class="gradient" ></div>
+                        </div>
+
+                    </td>
+                   </tr> 
+<!--                   <tr>
+                    <td><input id="control-histogram-border" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                    <td data-localize="dialogs.props.border">Border</td>  
+                    <td><input id="color-histogram-up-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-histogram-down-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                   <tr>
+                    <td><input id="control-histogram-flat" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                    <td data-localize="dialogs.props.flat">Flat</td>  
+                    <td><input id="color-histogram-up-flat" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-histogram-down-flat" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr>--> 
+                </tbody> 
+             </table>
+        </div> 
+        
+        <!-----dots ----->
+        <div id="charttype-block-dots" class="charttype-block"  style="display:none  ">
+            <table class="property-page" cellpadding="0" cellspacing="2">
+                <tbody>
+                    <tr>
+                        <td></td> 
+                        <td data-localize="dialogs.props.candles">Dot</td>  
+                        <td><input id="color-dots-up-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                        <td><input id="color-dots-down-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    </tr> 
+                    <tr>
+                        <td><input id="control-dots-border" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                        <td data-localize="dialogs.props.border">Border</td>  
+                        <td><input id="color-dots-up-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                        <td><input id="color-dots-down-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                </tbody> 
+             </table>
+        </div>
+
+        <!----- Heiken ----->
+        <div id="charttype-block-heiken"  class="charttype-block" style="display:none  ">
+            <table class="property-page" cellpadding="0" cellspacing="2">
+                <tbody>
+                   <tr>
+                    <td></td>  
+                    <td data-localize="dialogs.props.candles">Candles</td>  
+                    <td><input id="color-heiken-up-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-heiken-down-candles" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                   <tr>
+                    <td><input id="control-heiken-border" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                    <td data-localize="dialogs.props.border">Border</td>  
+                    <td><input id="color-heiken-up-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-heiken-down-border" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                   <tr>
+                    <td><input id="control-heiken-flat" class="visibility-switch" type="checkbox" checked="checked"/></td>  
+                    <td data-localize="dialogs.props.flat">Flat</td>  
+                    <td><input id="color-heiken-up-flat" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-heiken-down-flat" type="color" class ="class-color-widget spectrum-color"/></td>   
+                   </tr> 
+                </tbody> 
+             </table>
+        </div> 
+        
+        
+        
+         <!----- Line ----->
+        <div id="charttype-block-line" class="charttype-block" style="display:none  ">
+            <table class="property-page" cellpadding="0" cellspacing="2">
+                <tbody>
+                   <tr>
+                    <td data-localize="dialogs.props.line">Line</td>  
+                    <td><input id="color-line-line" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><div id="borderwidth-line-line"  class="class-slider-5 slider-border slider-horizontal"> 
+                               <div class="gradient" ></div>
+                           </div>
+                    </td>
+                   </tr> 
+               </tbody> 
+             </table>
+        </div> 
+        
+        
+         <!----- Area ----->
+        <div id="charttype-block-area"  class="charttype-block"  style="display:none  ">
+            <table class="property-page" cellpadding="0" cellspacing="2">
+                <tbody>
+                   <tr>
+                    <td data-localize="dialogs.props.line">Line</td>  
+                    <td><input id="color-area-line" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td></td> 
+                    <td><div id="borderwidth-area-line"  class="class-slider-5 slider-border slider-horizontal"> 
+                            <div class="gradient" ></div>
+                        </div>
+                    </td>     
+                   </tr> 
+                   <tr>
+                    <td data-localize="dialogs.props.fill">Fill</td>  
+                    <td><input id="color-area-up" type="color" class ="class-color-widget spectrum-color"/></td>   
+                    <td><input id="color-area-down" type="color" class ="class-color-widget spectrum-color"/></td> 
+                    <td><div id="color-opacity-area" class="slider-coloropaciry ">
+                            <div class="gradient" ></div>
+                        </div></td>      
+                   </tr> 
+                </tbody> 
+             </table>
+        </div>
+ 
+ 
+
+  </div>
+    
+ 
+ </body>
+</html>

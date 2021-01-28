@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/devices/web/uilayer/uilayerhelpers/adjustUiPerDevice.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿(function (root, factory) {\r\n    'use strict';\r\n    if (typeof define === \"function\" && define.amd) {\r\n        define(\"devicehelpers/adjustUiPerDevice\", [], factory);\r\n    } else {\r\n        root.adjustUiPerDevice = factory();\r\n    }\r\n}(typeof self !== 'undefined' ? self : this, function () {\r\n\r\n    function adjustUiPerDevice(element) {\r\n    }\r\n\r\n    return adjustUiPerDevice;\r\n}));",
+  "isBase64": false
+}

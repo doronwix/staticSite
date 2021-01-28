@@ -1,0 +1,51 @@
+﻿<!-- ko ifnot: Data.isFormVisible() -->
+<div class="half left">
+    <h3 class="title" data-bind="text: Dictionary.GetItem('lblDone', 'DepositBackOffice')"></h3>
+    <div class="doneText" data-bind="html: Data.doneText"></div>
+</div>
+<!-- /ko -->
+<!-- ko if: Data.isFormVisible() -->
+<div class="half left">
+    <h3 class="title" data-bind="text: Dictionary.GetItem('hdDepositFunds', 'DepositBackOffice')"></h3>
+    <div class="holder forced-deposit">
+        <table class="data-holder loading" data-bind="css: { loading: Data.isDepositInProgress }">
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblChooseProvider', 'DepositBackOffice')"></td>
+                <td>
+                    <select data-bind="options: Data.forcedClearers,
+							optionsText: 'Name',
+							optionsValue: 'ClearerID',
+							value: Data.selectedForcedClearer"></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblAmount', 'DepositBackOffice')"></td>
+                <td>
+                    <input type="text" data-bind="value: Data.amount" />
+
+                    <select class="fd-currency" data-bind="options: Data.forcedClearerCurrencies,
+							optionsText: 'Name',
+							value: Data.selectedForcedClearerCurrency,
+							valueAllowUnset: true"></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblCardholderName', 'DepositBackOffice')"></td>
+                <td><input type="text" data-bind="value: Data.cardHolder" /></td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblLastDigits', 'DepositBackOffice')"></td>
+                <td><input type="text" data-bind="value: Data.lastDigits" /></td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblConfirmationCode', 'DepositBackOffice')"></td>
+                <td>
+                    <input type="text" data-bind="value: Data.confirmationCode" />
+
+                    <button data-bind="text: Dictionary.GetItem('btnDeposit', 'DepositBackOffice'), click: Handlers.depositClick" class="short right"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- /ko -->

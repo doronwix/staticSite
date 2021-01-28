@@ -1,0 +1,205 @@
+﻿<!--ko if: _valid-->
+<div id="openDealPage" class="transaction inner-top-shadow" data-bind="visible: _valid" style="display: none">
+    <table class="transaction-details two-columns-grid">
+        <tbody>
+            <tr class="borderless">
+                <td colspan="2" class="instrument">
+                    <!-- ko template: { name: 'fx-template-instrument-icon',
+                        data: { instrumentId: Data.selectedInstrument(),
+                            baseSymbolId: Data.SelectedPosition().Instrument.baseSymbolId,
+                            otherSymbolId: Data.SelectedPosition().Instrument.otherSymbolId }
+                    } --><!-- /ko -->
+                    <strong class="instr-name" data-bind="instrumentShortName: Data.selectedInstrument(), ajustMobileFontSize"></strong>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" valign="top">
+                    <ul class="rates-display">
+                        <li>
+                            <p>
+                                <span data-bind="text: Dictionary.GetItem('txtClosingRate', 'deals_CloseDeal')"></span>
+                                <span data-bind="text: Dictionary.GetItem(
+                                          'txtClosingRateDirection' + Data.SelectedPosition().orderDir,
+                                          'deals_CloseDeal'
+                                    )"></span>
+                            </p>
+                            <p class="data-value">
+                                <span class="rates">
+                                    <span data-bind="text: Data.SelectedPosition().closingRateLabel().First">0.00</span><!--
+                                    --><span data-bind="text: Data.SelectedPosition().closingRateLabel().Middle">00</span><!--
+                                    --><span class="smaller-font-size" data-bind="text: Data.SelectedPosition().closingRateLabel().Last">0</span>
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span data-bind="text: Dictionary.GetItem(Data.SelectedPosition().isProfit() ?
+                                      'txtCurrentProfit' : 'txtCurrentLoss', 'deals_CloseDeal')"></span>
+                            </p>
+                            <p class="data-value">
+                                <span class="currency-value no-wrap" data-bind="html: Format.addCurrencyToNumber(Data.SelectedPosition().pl(),
+                                    $customer.prop.selectedCcyId()), css: { green: parseFloat(Data.SelectedPosition().pl()) > 0,
+                                    red: parseFloat(Data.SelectedPosition().pl()) < 0  }"></span>
+                            </p>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <!-- ko if: DealPermissions.CustomerDealPermit() == eDealPermit.ZeroSpread-->
+            <tr>
+                <td>
+                    <span id="GrossPL" data-bind="text: Dictionary.GetItem('txtGrossPL', 'deals_CloseDeal')"></span>
+                </td>
+                <td class="right-text" data-bind="html: Format.addCurrencyToNumber(
+                    Format.toNumberWithThousandsSeparator(Data.SelectedPosition().grosspl(), 2), $customer.prop.baseCcyId())"></td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="Commission" data-bind="text: Dictionary.GetItem('txtCommission', 'deals_CloseDeal')"></span>
+                </td>
+                <td class="right-text" data-bind="html: Format.addCurrencyToNumber(
+                        Data.SelectedPosition().commission(), $customer.prop.baseCcyId())"></td>
+            </tr>
+            <!-- /ko -->
+            <!-- ko if: DealPermissions.HasSpreadDiscount() -->
+            <tr>
+                <td>
+                    <span id="SDGrossPL" data-bind="text: Dictionary.GetItem('txtGrossPL', 'deals_CloseDeal')"></span>
+                </td>
+                <td class="right-text" data-bind="html: Format.addCurrencyToNumber(
+                    Format.toNumberWithThousandsSeparator(Data.SelectedPosition().grosspl(), 2),
+                    $customer.prop.baseCcyId())"></td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="Commission" data-bind="text: Dictionary.GetItem('txtSpreadDiscount', 'deals_CloseDeal')"></span>
+                </td>
+                <td class="right-text" data-bind="html: Format.addCurrencyToNumber(
+                    Data.SelectedPosition().spreadDiscount(), $customer.prop.baseCcyId())"></td>
+            </tr>
+            <!-- /ko -->
+            <tr>
+                <td colspan="2" class="tabs-controller" data-bind="click: ToggleAdditionalInfoExpanded">
+                    <span class="tabs-controller-container" data-bind="css: { 'ico-sh-info-opened': Data.isAdditionalInfoExpanded(), 'icon-info-closed': !Data.isAdditionalInfoExpanded()}">
+                        <span class="tab-label" data-bind="text: Dictionary.GetItem('txtAddInfo', 'deals_CloseDeal')"></span>
+                    </span>
+                </td>
+            </tr>
+            <!-- ko if: Data.isAdditionalInfoExpanded -->
+            <tr>
+                <td class="close-deal-amount">
+                    <span class="order-direction" data-bind="text: Dictionary.GetItem(Data.SelectedPosition().orderDir == eOrderDir.Sell ?
+                          'txtSell' : 'txtBuy', 'deals_CloseDeal')"></span>
+                    <span data-bind="text: Format.formatDealAmount(Data.SelectedPosition().dealAmount)"></span><!--
+                    --><span data-bind="text: Dictionary.GetItem('txtAtRate', 'deals_CloseDeal')"></span>
+                    <span class="gray-details small-font-size converted-amount" data-bind="component: { name: 'fx-component-converted-amount-text', params: Data }"></span>
+                </td>
+                <td class="right-text close-deal-amount">
+                    <span data-bind="text: Data.SelectedPosition().dealRateLabel.First">0.00</span><!--
+                    --><span data-bind="text: Data.SelectedPosition().dealRateLabel.Middle">00</span><!--
+                    --><span class="smaller-font-size" data-bind="text: Data.SelectedPosition().dealRateLabel.Last">0</span>
+                </td>
+            </tr>
+            <!--ko if: Data.SelectedPosition().slRate != 0 -->
+            <tr>
+                <td><span data-bind="text: Dictionary.GetItem('txtStopLoss', 'deals_CloseDeal')"></span></td>
+                <td class="right-text">
+                    <span data-bind="text: Data.SelectedPosition().slRateLabel.First">0.00</span><!--
+                    --><span data-bind="text: Data.SelectedPosition().slRateLabel.Middle">00</span><!--
+                    --><span class="smaller-font-size" data-bind="text: Data.SelectedPosition().slRateLabel.Last">0</span>
+                </td>
+            </tr>
+            <!-- /ko -->
+            <!--ko if: Data.SelectedPosition().tpRate != 0 -->
+            <tr>
+                <td><span data-bind="text: Dictionary.GetItem('txtTakeProfit', 'deals_CloseDeal')"></span></td>
+                <td class="right-text">
+                    <span data-bind="text: Data.SelectedPosition().tpRateLabel.First">1.5702</span><span data-bind="text: Data.SelectedPosition().tpRateLabel.Middle">1.5702</span><span data-bind="text: Data.SelectedPosition().tpRateLabel.Last" class="smaller-font-size">3</span>
+                </td>
+            </tr>
+            <!-- /ko -->
+            <tr>
+                <td><span data-bind="text: Dictionary.GetItem('txtOpenedDate', 'deals_CloseDeal')"></span></td>
+                <td class="right-text">
+                    <span data-bind="valueDateText: { valueDate:{ date: Data.SelectedPosition().exeTime(), isValueDateEmpty:false }, showHour: true }"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><span data-bind="text: Dictionary.GetItem('txtDealNo', 'deals_CloseDeal')"></span></td>
+                <td class="right-text" data-bind="text:Data.SelectedPosition().positionNumber"></td>
+            </tr>
+            <!-- ko if: Data.SelectedPosition().valueDate().date -->
+            <tr>
+                <td><span data-bind="text: Dictionary.GetItem('txtValueDate', 'deals_CloseDeal')"></span></td>
+                <td class="right-text"><span data-bind="valueDateText: { valueDate: {date:Data.SelectedPosition().valueDate().date, isValueDateEmpty: false }, showHour: true }" class="accrd-linebreak"></span></td>
+            </tr>
+            <!-- /ko -->
+            <!-- ko if: Data.SelectedPosition().hasAdditionalPL -->
+            <tr>
+                <td><span data-bind="text: Dictionary.GetItem('txtRolloverHistory', 'deals_CloseDeal')"></span></td>
+                <td class="right-text">
+                    <a class="right plus-button" href="javascript:void(0)" data-bind="click: function () { $viewModelsManager.VManager.SwitchViewVisible(eForms.ContractRollover, { posNum: Data.SelectedPosition().positionNumber, instrumentID: Data.SelectedPosition().instrumentID, dealAmount: Data.SelectedPosition().dealAmount, orderDir: Data.SelectedPosition().orderDir }); return false; }">
+                        <span class="icon-circle-with-plus"></span>
+                    </a>
+                </td>
+            </tr>
+            <!-- /ko -->
+            <!-- ko if: Data.SelectedPosition().adj && !Data.SelectedPosition().Instrument.isStock -->
+            <tr>
+                <td><span data-bind="text: Dictionary.GetItem('txtOvernightFinancing', 'deals_CloseDeal')"></span></td>
+                <td class="right-text">
+                    <a class="right plus-button" href="javascript:void(0)" data-bind="click: function () { $viewModelsManager.VManager.SwitchViewVisible(eForms.AccountCardRecords, { posNum: Data.SelectedPosition().positionNumber, instrumentID: Data.SelectedPosition().instrumentID, fromDate: Data.SelectedPosition().exeTime() }); return false; }">
+                        <span class="icon-circle-with-plus"></span>
+                    </a>
+                </td>
+            </tr>
+            <!-- /ko -->
+            <!-- /ko -->
+        </tbody>
+    </table>
+</div>
+
+<div data-bind="component: { name: 'fx-component-deal-tools', params: Data }"></div>
+
+<div class="fixed-button-wrapper">
+    <a class="fixed-blue-button" href="javascript:void(0)"
+        data-bind="click: function () { if (!Data.quoteIsActive()) {return;}; CloseDeal(); ko.postbox.publish('close-deal', { chart: 'collapsed'}); },
+                    css: { disabled: !Data.quoteIsActive() || !Data.CloseDealReady(),
+                        isProcessing: Data.isProcessing() }">
+        <div class="inline-loader overlay"></div>
+        <span data-bind="visible: !Data.isProcessing(), text: Dictionary.GetItem('btnCloseDeal', 'deals_CloseDeal')"></span> <i></i>
+    </a>
+</div>
+<div class="deal-panel close-deal" data-bind="visible: Data.chartTransactionEnabled() && Data.isChartFullScrn()">
+    <div class="dealdets">
+        <div class="dldetail">
+            <div class="dllbl" data-bind="text: Dictionary.GetItem('txtClosingRate', 'deals_CloseDeal')"></div>
+            <div class="digitsvals">
+                <span class="digit large" data-bind="text: Data.SelectedPosition().closingRateLabel().First"></span>
+                <span class="digit large" data-bind="text: Data.SelectedPosition().closingRateLabel().Middle"></span>
+                <span class="digit" data-bind="text: Data.SelectedPosition().closingRateLabel().Last"></span>
+            </div>
+        </div>
+        <div class="dldetail">
+            <div class="dllbl" data-bind="text: Dictionary.GetItem(Data.SelectedPosition().isProfit() ?
+                'txtCurrentProfit' : 'txtCurrentLoss', 'deals_CloseDeal')"></div>
+            <div class="digitsvals">
+                <span class="digit large" data-bind="html: Format.addCurrencyToNumber(Data.SelectedPosition().pl(),
+                    $customer.prop.selectedCcyId()), css: { green: parseFloat(Data.SelectedPosition().pl()) > 0,
+                    red: parseFloat(Data.SelectedPosition().pl()) < 0  }"></span>
+            </div>
+        </div>
+    </div>
+    <div class="dlaction-wrap">
+        <button type="button" class="dlaction" data-bind="css: { isProcessing: Data.isProcessing() },
+            disable: !Data.quoteIsActive() || !Data.CloseDealReady(), 
+            click: function () { if (!Data.quoteIsActive()) { return; }; CloseDeal(); ko.postbox.publish('close-deal', { chart: 'expanded'}); }">
+            <div class="inline-loader overlay" data-bind="visible: Data.isProcessing()"></div>
+            <span data-bind="visible: !Data.isProcessing(), text: Dictionary.GetItem('btnCloseDeal', 'deals_CloseDeal')"></span> 
+        </button>
+    </div>
+</div>
+<div class="deal-panel instrinfo-msg">
+    <!-- ko component: { name: 'fx-instrument-notavailable' } --><!-- /ko -->
+</div>
+<!-- /ko -->

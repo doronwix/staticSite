@@ -1,0 +1,166 @@
+﻿<div class="Control PageTitle no-bg" data-bind="css: 'pt' + LanguageHelper.GetLanguage()">
+    <div class="title">
+        <span data-bind="dictionaryBinding: 'lblTransactionsReportTitle', resourceName: 'TransactionsReport'">%Transaction Report</span>
+    </div>
+    <div class="deals-tabs-title-wrapper" data-bind="hidden: !($viewModelsManager.VManager.GetFormProperties().exportSupport ? $viewModelsManager.VManager.GetFormProperties().exportSupport.isExport : false)">
+        <ul>
+            <li class="report-actions-wrap">
+                <button class="report-list-action" type="button" data-bind="click: $viewModelsManager.VManager.Refresh">
+                    <i class="ico-sh-refresh"></i>
+                </button>
+                <!-- ko component: { name: 'fx-component-export-buttons' } --><!-- /ko -->
+            </li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="deals-grid-filter dark-header">
+    <div class="FilterControlWrapper">
+        <fieldset class="FilterBy">
+            <div class="div left" id="Div1">
+                <ul>
+                    <li class="filter-title">
+                        <span data-bind="dictionaryBinding: 'lblFilterByTransactionsReport', resourceName: 'TransactionsReport'">%Filter by:</span>
+                    </li>
+                    <li>
+                        <span data-bind="dictionaryBinding: 'lblFilterFromTransactionsReport', resourceName: 'TransactionsReport'">%From</span>
+
+                        <span class="calendar" data-bind="datepickerbutton: Filter.From,
+                                                field: 'txtFromDateTransactionsReport',
+                                                datepickeroptions: { maxDate: 'now' },
+                                                customClass: 'tooltip-datepicker',
+                                                customLabel: Dictionary.GetItem('lblFromDate','deals_CloseDeal')">
+                            <input type="text" id="txtFromDateTransactionsReport" class="date" maxlength="10" data-bind="value: Filter.From" />
+
+                            <i class="ico-font calendar"></i>
+                        </span>
+                    </li>
+                    <li>
+                        <span data-bind="dictionaryBinding: 'lblFilterToTransactionsReport', resourceName: 'TransactionsReport'">%To</span>
+
+                        <span class="calendar" data-bind="datepickerbutton: Filter.To,
+                                                field: 'txtToDateTransactionsReport',
+                                                minDate: Filter.From,
+                                                datepickeroptions: { maxDate: 'now' },
+                                                customClass: 'tooltip-datepicker',
+                                                customLabel: Dictionary.GetItem('lblToDate','deals_CloseDeal')">
+                            <input type="text" id="txtToDateTransactionsReport" class="date" maxlength="10" data-bind="value: Filter.To" />
+
+                            <i class="ico-font calendar"></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ButtonContainer right">
+                <a id="spnUpdateTransactionsReport" class="btn dark-btn" data-bind="click: Filter.Apply, css: { disabled: !EnableApplyButton() }">
+                    <span data-bind="isProcessing: { switchText: true }, dictionaryBinding: 'btnUpdateTransactionsReport', resourceName: 'TransactionsReport'">%Apply</span>
+
+                    <!-- ko if: DataSet.IsLoadingData()-->
+                    <span class="js_processing"></span>
+                    <!-- /ko -->
+                </a>
+            </div>
+
+            <div class="clear"></div>
+        </fieldset>
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div id="TransactionsReportInnerDiv">
+    <table id="tblTransactionsReport" class="Grid deals-grid">
+        <thead id="tblTransactionsRport-header-area">
+            <tr>
+                <th>
+                    <span data-bind="dictionaryBinding: 'lblPositionNumberHeader', resourceName: 'TransactionsReport'">%Position Number</span>
+                </th>
+                <th>
+                    <span data-bind="dictionaryBinding: 'lblExDateHeader', resourceName: 'TransactionsReport'">%Execution Date</span>
+                </th>
+                <th>
+                    <span data-bind="dictionaryBinding: 'lblByCellHeader', resourceName: 'TransactionsReport'">%Buy/Sell</span>
+                </th>
+                <th>
+                    <span data-bind="dictionaryBinding: 'lblItemHeader', resourceName: 'TransactionsReport'">%Item</span>
+                </th>
+                <th>
+                    <span data-bind="dictionaryBinding: 'lblUnitPriceHeader', resourceName: 'TransactionsReport'">%Unit Price</span>
+                </th>
+                <th>
+                    <span data-bind="dictionaryBinding: 'lblQTradedHeader', resourceName: 'TransactionsReport'">%Quantity Traded</span>
+                </th>
+                <th>
+                    <span data-bind="dictionaryBinding: 'lblTotalAmountHeader', resourceName: 'TransactionsReport'">%Total Amount</span>
+                </th>
+                <th>
+                    <span data-bind="dictionaryBinding: 'lblTypeOfOrderHeader', resourceName: 'TransactionsReport'">%Type Of Order</span>
+                </th>
+                <th>
+                    <span data-bind="dictionaryBinding: 'lblOpenRollCloseHeader', resourceName: 'TransactionsReport'">%Open/Close</span>
+                </th>
+                <th>
+                    <span data-bind="dictionaryBinding: 'lblCommission', resourceName: 'TransactionsReport'">%Commission</span>
+                </th>
+            </tr>
+        </thead>
+
+        <!-- ko if: DataSet.IsLoadingData() || (DataSet.Paging.TotalRecords() <= 0) -->
+        <tbody>
+            <tr>
+                <td class="no-data" colspan="12">
+                    <div>
+                        <!-- ko if: DataSet.IsLoadingData() -->
+                        <span data-bind="dictionaryBinding: 'pleaseWaitMsg', resourceName: 'TransactionsReport'" class="no-data-msg">%pleaseWaitMsg</span>
+                        <!-- /ko -->
+                        <!-- ko if: ((DataSet.Paging.TotalRecords() <= 0) && !DataSet.IsLoadingData()) -->
+                        <span data-bind="dictionaryBinding: 'noDataMsg', resourceName: 'TransactionsReport'" class="no-data-msg">%noDataMsg</span>
+                        <!-- /ko -->
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        <!-- /ko -->
+
+        <tbody id="tblTransactionsReport-data-area" data-bind="foreach: Transactions, alternateRows: Transactions, oddClass: 'odd', evenClass: '', everyRows: 1">
+            <tr>
+                <td>
+                    <span data-bind="text: PositionNumber"></span>
+                </td>
+                <td>
+                    <span data-bind="text: ExecutionDate"></span>
+                </td>
+                <td>
+                    <span data-bind="dictionaryBinding: BuySell, resourceName: 'TransactionsReport'"></span>
+                </td>
+                <td>
+                    <span data-bind="instrumentName: InstrumentId"></span>
+                </td>
+                <td>
+                    <span data-bind="text: UnitPrice"></span>
+                </td>
+                <td>
+                    <span data-bind="text: QuantityTradedAndOtherCcy"></span>
+                </td>
+                <td>
+                    <span data-bind="text: TotalAmountCurrency + ' ' + OtherCur"></span>
+                </td>
+                <td>
+                    <span data-bind="dictionaryBinding: TypeOfOrder, resourceName: 'TransactionsReport'"></span>
+                </td>
+                <td>
+                    <span data-bind="dictionaryBinding: OpenRolloverClose, resourceName: 'TransactionsReport'"></span>
+                </td>
+                <td>
+                    <span data-bind="html: Format.addCurrencyToNumber(Commission, $customer.prop.baseCcyId())"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="gray-area info">
+        <span data-bind="dictionaryBinding: 'lblTransactionsReportFooter', resourceName: 'TransactionsReport'">%Additional Information & Legend</span>
+    </div>
+</div>

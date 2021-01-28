@@ -1,0 +1,322 @@
+﻿<template id="newDealSlipValidationTooltip">
+    <div class="ui-tooltip tooltip tooltipBottom tooltipError left-shifted" data-bind="visible: field.tooltipVisible">
+        <i class="ico-sh-error"></i>
+        <p data-bind="text: field.tooltipMessage"></p>
+        <div class="arrow"></div>
+    </div>
+</template>
+
+<div id="EditClosingLimitHeader" class="slip-custom-header">
+    <!-- ko component: { name: 'fx-component-dynamic-title-slip' } --><!-- /ko -->
+    <!-- ko component: { name: 'fx-component-slip-toggle', params: { recenterWithDelay: true } } --><!-- /ko -->
+</div>
+<!-- ko component: {  name: 'fx-component-deal-tools', params: Data } --><!-- /ko -->
+
+<div class="dscol tradeticket" data-bind="visible: Data.showTransaction()">
+    <div class="ticket-content full-height">
+        <div class="trade-area">
+            <div class="trade-content styled-scroll">
+                <div class="trade-row">
+                    <label id="lblInstrumentLabel" class="trade-label graytint" data-bind="dictionaryBinding: 'lblInstrumentLabel', resourceName: 'deals_EditClosingLimit'"></label>
+                    <div class="info-rect">
+                        <span data-bind="html: Data.ccyPairLong()"></span>
+                    </div>
+                </div>
+
+                <div class="trade-row">
+                    <!-- ko component: { name: 'fx-component-market-info-summary' } --><!-- /ko -->
+                </div>
+
+                <div class="trade-row">
+                    <label id="lblDealAmount" class="trade-label graytint" data-bind="text: Data.dealAmountLabel()"></label>
+                    <div class="info-rect">
+                        <span data-bind="text: Format.formatDealAmount(Data.selectedDealAmount())"></span>
+                    </div>
+                    <div class="conversion-info">
+                        <span class="converted-amount lighttint" data-bind="component: { name: 'fx-component-converted-amount-text', params: Data }"></span>
+                    </div>
+                </div>
+
+                <div class="trade-row">
+                    <div class="tworates">
+                        <div class="ratedisplay">
+                            <div class="ratelabel">
+                                <span data-bind="dictionaryBinding: 'txtDealRate', resourceName: 'deals_EditClosingLimit'"></span>
+                            </div>
+                            <div class="ratevalue">
+                                <span id="lblRateFirst" data-bind="text: Data.dealRateLabel.First">0.00</span>
+                                <span id="lblRateMiddle" data-bind="text: Data.dealRateLabel.Middle">00</span>
+                                <span id="lblRateLast" class="last" data-bind="text: Data.dealRateLabel.Last">0</span>
+                            </div>
+                        </div>
+                        <div class="ratedisplay">
+                            <div class="ratelabel">
+                                <!--ko if: Data.orderDir() != eOrderDir.Sell-->
+                                <span id="txtCurrentBid" data-bind="dictionaryBinding: 'txtCurrentBid', resourceName: 'deals_EditClosingLimit'"></span>
+                                <!-- /ko -->
+                                <!--ko if: Data.orderDir() == eOrderDir.Sell -->
+                                <span id="txtCurrentAsk" data-bind="dictionaryBinding: 'txtCurrentAsk', resourceName: 'deals_EditClosingLimit'"></span>
+                                <!-- /ko -->
+                                <span id="txtClosingRateDirection" data-bind="text:Dictionary.GetItem('txtClosingRateDirection' + Data.orderDir(), 'deals_CloseDeal')"></span>
+                            </div>
+                            <div class="ratevalue" data-bind="css: { redText: Data.ask() < Data.prevAsk(), greenText: Data.ask() > Data.prevAsk()  }">
+                                <span id="lblSpotRateFirst" data-bind="text: Data.spotRateLabel.First">0.00</span>
+                                <span id="lblSpotRateMiddle" data-bind="text: Data.spotRateLabel.Middle">00</span>
+                                <span id="lblSpotRateLast" class="last" data-bind="text: Data.spotRateLabel.Last">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trade-row amspinner nosides">
+                    <form action="javascript:void(0)" class="addsltp-section" data-bind="with: SetLimitsInfo">
+                        <!--ko if: $parent.Data.limitType() == eLimitType.StopLoss -->
+                        <div class="addsltp-section noborder nockbox">
+                            <div class="sltprow slrow active">
+                                <div class="sltprow-header">
+                                    <div class="custom-input-wrapper">
+                                        <label class="sltp-label" for="addStopLoss">
+                                            <span id="lblAddLimitSLTitle" class="label-text" data-bind="dictionaryBinding: 'lblAddSLTitle', resourceName: 'deals_NewLimit'"></span>
+                                            <i id="txtLimitStopLossTooltip" class="ico-sh-tooltip" data-bind="attr: { 'title': Dictionary.GetItem('txtStopLossTooltip', 'deals_NewLimit')},
+                                    balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } }"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="sltprow-container nopadtop">
+                                    <table id="tblSlRateActiveTab" class="stop-loss-data" data-bind="css: { focus: $parent.Data.limitType() == eLimitType.StopLoss }">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label id="lblSellRate1Title" for="jsAddLoss" data-bind="
+                                                        attr: { id: $parent.Data.orderDir() == eOrderDir.Sell ? 'lblBuyRate1Title' : 'lblSellRate1Title' },
+                                                        dictionaryBinding: $parent.Data.orderDir() == eOrderDir.Sell? 'lblBuyRateTitle' : 'lblSellRateTitle',
+                                                        resourceName: 'deals_EditClosingLimit'"></label>
+                                                </td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="spinner-field spinsltp noswitch">
+                                                        <div class="input-special" data-bind="css: { focus: $parent.Data.limitType() == eLimitType.StopLoss }, closingLimitSpinner: stopLossRate, spinnerOptions: { input: '#jsAddLoss', min: $parent.SLField.min, max: $parent.SLField.max, step: $parent.SLField.step, page: $parent.SLField.step, numberFormat: $parent.SLField.format, startSpinFrom: $parent.SLField.startSpinFrom, culture: 'noThousandsSeparator' }">
+                                                            <div class="validation-holder" data-bind="validationOptions: { insertMessages: true, errorElementClass: 'error', decorateInputElement: true, messageTemplate: 'newDealSlipValidationTooltip' }">
+                                                                <input type="number"
+                                                                    value=""
+                                                                    id="jsAddLoss"
+                                                                    name="stopLoss"
+                                                                    step="any"
+                                                                    autocomplete="off"
+                                                                    maxlength="10"
+                                                                    data-bind="textInput: stopLossRate, hasFocus: $parent.Data.limitType() == eLimitType.StopLoss" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <ul class="spinner-summary noswitch">
+                                                        <li>
+                                                            <span data-bind="dictionaryBinding: 'lblPercentageTitle', resourceName: 'deals_EditClosingLimit'"></span>
+                                                            <div class="stop-loss-value">
+                                                                <span data-bind="text: Format.toPercent(stopLossPercent(), true)"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span data-bind="dictionaryBinding: 'lblAmount', resourceName: 'deals_EditClosingLimit'"></span>
+                                                            <div class="stop-loss-value amount">
+                                                                <span data-bind="html: Format.toSign($parent.Data.customerSymbolId()).sign, visible: $parent.Data.displaySlAmountCcySymbol()"></span><!--
+                                                                --><span data-bind="toHumanReadableNumericFormat: $parent.Data.stopLossInCustomerCcy()"></span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="info-value">
+                                                    <span>
+                                                        <!--ko if: $parent.Data.orderDir() != eOrderDir.Sell -->
+                                                        <span id="lblAboveSlRate" data-bind="dictionaryBinding: 'lblBelowTitle', resourceName: 'deals_EditClosingLimit'"></span>
+                                                        <!--/ko-->
+                                                        <!--ko if: $parent.Data.orderDir() == eOrderDir.Sell -->
+                                                        <span id="lblBelowSlRate" data-bind="dictionaryBinding: 'lblAboveTitle', resourceName: 'deals_EditClosingLimit'"></span>
+                                                        <!--/ko-->
+                                                        <span id="lblSlLimitFirst" data-bind="text: SLLimitLabel.First">0.0000</span><span id="lblSlLimitLast" data-bind="text: SLLimitLabel.Last" class="smaller">0</span>
+                                                    </span>
+                                                </td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- ko template: { name: 'limit-actions' }--><!--/ko-->
+                            </div>
+                        </div>
+                        <!--/ko-->
+                        <!--ko if: $parent.Data.limitType() == eLimitType.TakeProfit -->
+                        <div class="addsltp-section noborder nockbox">
+                            <div class="sltprow tprow">
+                                <div class="sltprow-header">
+                                    <div class="custom-input-wrapper">
+                                        <label class="sltp-label" for="addTakeProfit">
+                                            <span id="lblAddTPTitle" data-bind="dictionaryBinding: 'lblAddTPTitle', resourceName: 'deals_NewLimit'"></span>
+                                            <i id="txtTakeProfitTooltip" class="ico-sh-tooltip" data-bind="attr: { title: Dictionary.GetItem('txtTakeProfitTooltip', 'deals_NewLimit')},
+                                        balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } }"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="sltprow-container nopadtop">
+                                    <table id="tblTpRateActiveTab" class="stop-loss-data" data-bind="css: { focus: $parent.Data.limitType() == eLimitType.TakeProfit }">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <!--ko if: $parent.Data.orderDir() != eOrderDir.Sell -->
+                                                    <label id="lblSellRate2Title" for="jsTakePofit" data-bind="dictionaryBinding: 'lblSellRateTitle', resourceName: 'deals_EditClosingLimit'"></label>
+                                                    <!-- /ko -->
+                                                    <!--ko if: $parent.Data.orderDir() == eOrderDir.Sell -->
+                                                    <label id="lblBuyRate2Title" for="jsTakePofit" data-bind="dictionaryBinding: 'lblBuyRateTitle', resourceName: 'deals_EditClosingLimit'"></label>
+                                                    <!-- /ko -->
+                                                </td>
+                                                <td rowspan="3">
+                                                    <ul class="spinner-summary noswitch">
+                                                        <li>
+                                                            <span data-bind="dictionaryBinding: 'lblPercentageTitle', resourceName: 'deals_EditClosingLimit'"></span>
+                                                            <div class="stop-loss-value">
+                                                                <span data-bind="text: Format.toPercent(takeProfitPercent(), true)"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span data-bind="dictionaryBinding: 'lblAmount', resourceName: 'deals_EditClosingLimit'"></span>
+                                                            <div class="stop-loss-value amount">
+                                                                <span data-bind="html: Format.toSign($parent.Data.customerSymbolId()).sign, visible: $parent.Data.displayTpAmountCcySymbol()"></span><!--
+                                                                --><span data-bind="toHumanReadableNumericFormat: $parent.Data.takeProfitInCustomerCcy()"></span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="spinner-field spinsltp noswitch">
+                                                        <div class="input-special" data-bind="css: { focus: $parent.Data.limitType() == eLimitType.TakeProfit }, closingLimitSpinner: takeProfitRate, spinnerOptions: { input: '#jsTakePofit', min: $parent.TPField.min, max: $parent.TPField.max, step: $parent.TPField.step, page: 1, numberFormat: $parent.TPField.format, startSpinFrom: $parent.TPField.startSpinFrom, culture: 'noThousandsSeparator'}">
+                                                            <div class="validation-holder" data-bind="validationOptions: { insertMessages: true, errorElementClass: 'error', decorateInputElement: true, messageTemplate: 'newDealSlipValidationTooltip' }">
+                                                                <input type="number"
+                                                                    value=""
+                                                                    id="jsTakePofit"
+                                                                    name="takeProfit"
+                                                                    step="any"
+                                                                    autocomplete="off"
+                                                                    maxlength="10"
+                                                                    data-bind="textInput: takeProfitRate, hasFocus: $parent.Data.limitType() == eLimitType.TakeProfit" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="info-value">
+                                                    <span>
+                                                        <!-- ko if: $parent.Data.orderDir() != eOrderDir.Sell -->
+                                                        <span id="lblAboveTpRate" data-bind="dictionaryBinding: 'lblAboveTitle', resourceName: 'deals_EditClosingLimit'"></span>
+                                                        <!-- /ko -->
+                                                        <!-- ko if: $parent.Data.orderDir() == eOrderDir.Sell -->
+                                                        <span id="lblBelowTpRate" data-bind="dictionaryBinding: 'lblBelowTitle', resourceName: 'deals_EditClosingLimit'"></span>
+                                                        <!-- /ko -->
+                                                        <span id="lblTpLimitFirst" data-bind="text: TPLimitLabel.First">0.0000</span><span id="lblTpLimitLast" data-bind="text: TPLimitLabel.Last" class="smaller">0</span>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <!-- ko template: { name: 'limit-actions' }--><!--/ko-->
+                            </div>
+                        </div>
+                        <!--/ko-->
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="trade-summary shadowtop">
+                <div class="summary-label" data-bind="dictionaryBinding: Data.isProfit() ?
+                    'txtCurrentProfit' : 'txtCurrentLoss', resourceName: 'deals_EditClosingLimit'">
+                </div>
+                <div class="summary-value" data-bind="css: { redText: !Data.isProfit(), greenText: Data.isProfit() }">
+                    <span data-bind="html: Format.addCurrencyToNumber(Data.profitLoss(), $customer.prop.selectedCcyId())"></span>
+                </div>
+            </div>
+
+            <div class="trade-action">
+                <ul class="buttons-holder">
+                    <!-- ko if: Data.hasRateAdded() -->
+                    <li class="remove-limit">
+                        <!-- ko if: Data.limitType() == eLimitType.StopLoss -->
+                        <a href="javascript:void(0)" data-bind="click: function() { DeleteLimit(); }, dictionaryBinding: 'btnRemoveSL', resourceName: 'deals_EditClosingLimit'"></a>
+                        <!-- /ko -->
+                        <!-- ko if: Data.limitType() != eLimitType.StopLoss -->
+                        <a href="javascript:void(0)" data-bind="click: function() { DeleteLimit(); }, dictionaryBinding: 'btnRemoveTP', resourceName: 'deals_EditClosingLimit'"></a>
+                        <!-- /ko -->
+                    </li>
+                    <!-- /ko -->
+                    <li>
+                        <a id="btnUpdate" class="btn big deal right" href="javascript:void(0)" data-bind="css: { disabled: !Data.UpdateButtonEnabled(), isprocessing: Data.isProcessing() }, click: function () { EditLimit(); }">
+                            <span id="btnContent" data-bind="isProcessing: { switchText: true }, dictionaryBinding: 'btnUpdate', resourceName: 'deals_EditClosingLimit'">
+                            </span>
+                            <!-- ko if: Data.isProcessing()-->
+                            <span class="js_processing"></span>
+                            <!-- /ko -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="dlgEditLimitExpirationDate" data-bind="template: { 'if':  $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vEditLimitExpirationDate).visible, name: 'expirationDateTemplate', data: ExpirationDate }"></div>
+
+<template id="expirationDateTemplate">
+    <div class="column">
+        <div class="prehead">
+            <span class="clockImage"><label id="lblTime" class="boldText" data-bind="dictionaryBinding: 'lblTime', resourceName: 'deals_EditClosingLimit'"></label></span>
+            <select id="dlgNewLimitCmbExpHour" data-bind="options: Data.hoursList, optionsText: 'text', optionsValue: 'value', value: Data.selectedHoursValue, customSelect: true, customSelectOptions: { wrapNative: false, wrapNativeOnMobile: false, fakeDropInBody: false }"></select>
+        </div>
+        <div class="clear"></div>
+        <span class="calendar" data-bind="datepicker: Data.expirationDate, datepickeroptions: { minDate: Data.minExpirationDate(), maxDate: Data.maxExpirationDate() }"></span>
+    </div>
+    <div class="clear"></div>
+    <a class="btn action small right" data-bind="click: OnExpirationDateTimeSet" href="javascript:void(0)">
+        <span id="btnAdd"><span ID="litOK" data-bind="dictionaryBinding: 'btnApply', resourceName: 'deals_EditClosingLimit'"></span></span>
+    </a>
+    <div class="clear"></div>
+</template>
+
+<template id="limit-actions">
+    <div class="closing-limit-actions">
+        <table class="stop-loss-data singleLined">
+            <tr>
+                <td>
+                    <div class="custom-input-wrapper">
+                        <input data-bind="checked: $parent.ExpirationDate.Data.expirationDateSelector.Data.isGoodTillCancel, value: true" type="radio" name="limitExpirationTillCancel" id="tillCancel" />
+                        <span></span>
+                        <label for="tillCancel" data-bind="dictionaryBinding: 'lblGoodTillCancel', resourceName: 'deals_EditClosingLimit'"></label>
+                    </div>
+                </td>
+                <td>
+                    <div class="custom-input-wrapper">
+                        <input data-bind="checked: $parent.ExpirationDate.Data.expirationDateSelector.Data.isGoodTillCancel, value: false" type="radio" name="limitExpiration" id="setDateTime" />
+                        <span></span>
+                        <!-- ko if: General.isEmpty($parent.ExpirationDate.Data.expirationDateSelector.Data.expirationDateValue())-->
+                        <label for="setDateTime" data-bind="dictionaryBinding: 'lblSetDate', resourceName: 'deals_EditClosingLimit'">
+                        </label>
+                        <!-- /ko -->
+                        <!--ko ifnot: General.isEmpty($parent.ExpirationDate.Data.expirationDateSelector.Data.expirationDateValue())-->
+                        <label for="setDateTime">
+                            <a class="dateTime" data-bind="click: function () { $parent.ExpirationDate.Data.expirationDateSelector.Data.isGoodTillCancel(false); $parent.ExpirationDate.Data.expirationDateSelector.OnOptionChanged(); }, text: $parent.ExpirationDate.Data.expirationDateSelector.Data.expirationDateValue" href="javascript:void(0);"></a>
+                        </label>
+                        <!-- /ko -->
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</template>

@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/AmountSpinnerField.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<div class=\"spinner-field\">\r\n    <div class=\"input-special focus\" data-bind=\"amountSpinner: value, spinnerOptions: { input: '.spinnerAmountInput', min: min, max: max, step: step, page: step, numberFormat: 'n' + format(), startSpinFrom: ko.observable(eStartSpinFrom.Above) }\">\r\n        <div class=\"validation-holder\"\r\n             data-bind=\"validationOptions: { insertMessages: true, errorElementClass: 'error', decorateInputElement: true, messageTemplate: 'fx-template-deal-validation-tooltip' }\">\r\n            <input type=\"tel\"\r\n                   autocomplete=\"off\"\r\n                   maxlength=\"16\"\r\n                   class=\"spinnerAmountInput\"\r\n                   data-bind=\"textInput: value, attr: { id: id, name: name }\" />\r\n        </div>\r\n    </div>\r\n</div>",
+  "isBase64": false
+}

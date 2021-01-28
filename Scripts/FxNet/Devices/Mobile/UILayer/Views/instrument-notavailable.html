@@ -1,0 +1,10 @@
+﻿<div id="instrumentUnavailableBanner" class="instrument-unavailable" 
+     data-bind="showIntrumentNotAvailable: { instrData: Data.instrumentData(), dealContainerClass: 'transaction-details', keepContainerHeight: false }">
+    <div class="instrument-unavailable-wrapper">
+        <span class="warn-icon"></span>
+        <span class="alert-text-wrapper">
+            <span data-bind="dictionaryBinding: 'InstrumentInactive'"></span>
+            <span class="alert-text-part2" data-bind="dictionaryBinding: 'InstrumentInactivePart2'"></span>
+        </span>
+    </div>
+</div>

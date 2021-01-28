@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/sort-up-down-button.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<a data-bind=\"click: changeSort, css: sortDir()\" href=\"#\" class=\"direction\">\r\n\t<span class=\"up\"></span>\r\n\t<span class=\"down\"></span>\r\n</a>",
+  "isBase64": false
+}

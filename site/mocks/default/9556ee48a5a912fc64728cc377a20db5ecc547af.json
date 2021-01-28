@@ -1,0 +1,14 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/Scripts/AdvinionChart/ChartCore/js/6.7.0/version/prochart.version.json.js?time456",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "guiversionbuild": "6.7.5.6",
+    "domains": "iforex.com|fxmarker.com|primetrade.com|iboptions.com|iforex.local|fxmarker.local|primetrade.local|iboptions.local|iforex.co.il|iforex.co.uk|iforex.com.uk|fihtrader.com|vestle.com|vestle.co.uk|toredofx.com",
+    "customerversion": "20210112154308",
+    "files": 10,
+    "expiration": "09.01.2021"
+  },
+  "isBase64": false
+}

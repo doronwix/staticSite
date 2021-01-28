@@ -1,0 +1,154 @@
+﻿<html>
+    <head> dialog  </head>
+<body>
+    <div class="adv-dialog-content tradingcentralbo-dialog" id="gui-dialog"  >
+ <div class="properties-tabs">
+        <a id="tab-legend"  class ="properties-tabs-label active " href="javascript:void(0);" data-localize="tradingcentral_bo.tab-levels">Levels</a>
+         <a id="tab-story" class ="properties-tabs-label" href="javascript:void(0);" data-localize="tradingcentral_bo.tab-story">Story&Legend</a>
+         <a id="tab-preference"  class ="properties-tabs-label" href="javascript:void(0);" data-localize="tradingcentral_bo.tab-preference">Preference</a>
+
+    </div>
+    <div id="defauls-css" style ="display: none" ></div>
+
+     <div class="main-properties" style ="display:block ">
+        <table class="property-page" cellpadding="0" cellspacing="2">
+            <tbody id="tbody-levels">
+                 <tr>
+                    <th></th>
+                    <th data-localize="tradingcentral_bo.fill">fill</th>
+                    <th  data-localize="tradingcentral_bo.font">font</th>
+                    <th></th>
+                    <th></th>
+                    </tr>
+                <tr>
+                    <td data-localize="tradingcentral_bo.resistance">Resistance</td>
+                    <td><input id="resistance-color" type="color" class ="class-color-widget spectrum-color  class-level-color"  /></td>
+                    <td><input id="resistance-color-text" type="color" class ="class-color-widget spectrum-color  class-level-color"  /></td>
+                    <td data-localize="tradingcentral_bo.resistance_arrow">Arrow</td>
+                    <td><input id="resistance-arrow-color" type="color" class ="class-color-widget spectrum-color class-level-color"  /></td>
+                </tr>
+                <tr>
+                    <td data-localize="tradingcentral_bo.support">Support</td>
+                    <td><input id="support-color" type="color" class ="class-color-widget spectrum-color class-level-color"  /></td>
+                    <td><input id="support-color-text" type="color" class ="class-color-widget spectrum-color class-level-color"  /></td>
+                    <td data-localize="tradingcentral_bo.support_arrow">Arrow</td>
+                    <td><input id="support-arrow-color" type="color" class ="class-color-widget spectrum-color class-level-color"  /></td>
+                </tr>
+                <tr>
+                    <td data-localize="tradingcentral_bo.pivot">Pivot</td>
+                    <td><input id="pivot-color" type="color" class ="class-color-widget spectrum-color class-level-color"  /></td>
+                    <td><input id="pivot-color-text" type="color" class ="class-color-widget spectrum-color class-level-color"  /></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td data-localize="tradingcentral_bo.neutral">Neutral</td>
+                    <td><input id="neutral-color" type="color" class ="class-color-widget spectrum-color class-level-color"  /></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+            </tbody>
+        </table>
+          <table class="property-page" cellpadding="0" cellspacing="2">
+              <tbody id="tbody-levels-other">
+                  <tr>
+                      <td data-localize="tradingcentral_bo.arrowsize" style="white-space: nowrap">Arrow size</td>
+                      <td>
+                          <div id="arrow-head-size"  class="class-slider-5 slider-border slider-horizontal"> 
+                              <div class="gradient" ></div>
+                          </div>
+
+                      </td>
+                      <td><span id="arrow-head-size-value"></span></td>
+                  </tr>
+                  <tr>
+                      <td data-localize="tradingcentral_bo.levellinewidth">Line</td> 
+                      <td>
+                          <div id="levels-line-width"  class="class-slider-5 slider-border slider-horizontal"> 
+                              <div class="gradient" ></div>
+                          </div>
+                      </td> 
+                       <td><span id="levels-line-width-value"></span></td>
+                  </tr>
+              </tbody>
+          </table>
+    </div>
+    <div class="main-properties" style ="display:none ">
+         <table class="property-page" cellpadding="0" cellspacing="2">
+             <tbody id="tbody-legend-story">
+                 <tr>
+                    <th></th>
+                    <th data-localize="tradingcentral_bo.fill">fill</th>
+                    <th  data-localize="tradingcentral_bo.font">font</th>
+                    <th  data-localize="tradingcentral_bo.fontsize">font size</th>
+                    <th></th>
+                 </tr>
+                  <tr>
+                     <td data-localize="tradingcentral_bo.legend">Legend</td>
+                     <td><input id="legend-color-bk" type="color" class ="class-color-widget spectrum-color  class-story-color"  /></td>
+                     <td></td>
+                     <td>
+                         <div id="legend-size-font"  class="class-slider-5 slider-border slider-horizontal"> 
+                             <div class="gradient" ></div>
+                         </div>
+                     </td> 
+                     <td><span id="legend-size-font-value"></span></td>
+                  </tr>
+                 <tr>
+                     <td data-localize="tradingcentral_bo.story">Story</td>
+                     <td><input id="story-color-bk" type="color" class ="class-color-widget spectrum-color  class-story-color"  /></td>
+                     <td><input id="story-color-text" type="color" class ="class-color-widget spectrum-color  class-story-color"  /></td>
+                     <td>
+                         <div id="story-size-font"  class="class-slider-5 slider-border slider-horizontal"> 
+                             <div class="gradient" ></div>
+                         </div>
+                     </td>   
+                     <td><span id="story-size-font-value"></span></td>    
+                 </tr>
+
+             </tbody>
+          </table>
+    </div>
+    <div class ="main-properties" style ="display:none ">
+         <table class="property-page" cellpadding="0" cellspacing="2">
+             <tbody id="tbody-preference">
+                  <tr>
+                      <td data-localize="tradingcentral_bo.preference.paddingtop">Padding top</td>
+                      <td>
+                         <div id="preference-padding-top"  class="class-slider-5 slider-border slider-horizontal"> 
+                             <div class="gradient" ></div>
+                         </div>
+                     </td>   
+                     <td><span id="preference-padding-top-value"></span></td>    
+                 </tr>
+                 <tr>
+                     <td data-localize="tradingcentral_bo.preference.paddingright">Padding right</td>
+                     <td>
+                         <div id="preference-padding-right"  class="class-slider-5 slider-border slider-horizontal"> 
+                             <div class="gradient" ></div>
+                         </div>
+                     </td>   
+                     <td><span id="preference-padding-right-value"></span></td>    
+                 </tr>
+                 <tr>
+                      <td data-localize="tradingcentral_bo.preference.fontsize">Font size</td>
+                      <td>
+                         <div id="preference-size-font"  class="class-slider-5 slider-border slider-horizontal"> 
+                             <div class="gradient" ></div>
+                         </div>
+                     </td>   
+                     <td><span id="preference-size-font-value"></span></td>    
+                 </tr>
+
+             </tbody>
+     </table>
+ 
+    </div>
+    </div>
+</body>
+</html>
+ 
+
+ 

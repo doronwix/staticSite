@@ -1,0 +1,38 @@
+﻿<div id="contactUs" class="internal">
+    <h3 class="title" data-bind="dictionaryBinding:'contactdetails', resourceName: 'account_InternalContactUs'"></h3>
+    <span class="contactUsAvailability" data-bind="dictionaryBinding:'lblAvailability', resourceName: 'support'"></span>
+    <div class="contactUSWrapper">
+        <!-- ko if: !Dictionary.ValueIsEmpty("lnkClickChat", "support") -->
+        <a id="lnkClickSnapChat" data-bind="click: function(){ googleTagManager.StartChat(); ko.postbox.publish('support-interaction', 'livechat'); }">
+            <div class="contactUs-item">
+                <i class="ico-sh-live-chat"></i>
+            </div>
+            <span class="contact-label" data-bind="dictionaryBinding:'lnkClickChat', resourceName: 'support'"></span>
+        </a>
+        <!-- /ko -->
+        <a id="EmailusLink" data-bind="click: function() { if ($data.Data.isNativeIos) { window.open($data.Data.lnkEmailResponse, '_system', 'location=no'); }
+                ko.postbox.publish('support-interaction', 'email'); return true; }, attr: { 'href': $data.Data.lnkEmailResponse }">
+            <div class="contactUs-item">
+                <i class="ico-sh-email"></i>
+            </div>
+            <span class="contact-label" data-bind="visible: $data.Data.isNativeIos, dictionaryBinding:'lblEmailResponse', resourceName: 'support'"></span>
+            <span class="contact-label" data-bind="visible: !$data.Data.isNativeIos, dictionaryBinding: 'Emailus', resourceName: 'account_InternalContactUs'"></span>
+        </a>
+        <a id="PhoneusLink" data-bind="click: function() { if ($data.Data.isNativeIos) { window.open('tel:' + $data.Data.lblCompliancePhone, '_system', 'location=no'); }
+                ko.postbox.publish('support-interaction','callus'); return true; },  attr: { 'href': 'tel:' + $data.Data.lblCompliancePhone }">
+            <div class="contactUs-item">
+                <i class="ico-sh-outgoing-call"></i>
+            </div>
+            <span class="contact-label" data-bind="dictionaryBinding:'lblCallUs', resourceName: 'support'"></span>
+        </a>
+        <!-- ko if: !Dictionary.ValueIsEmpty("lblCallMeBack", "support") -->
+        <a id="lnkCallBack" data-bind="click: function() { $data.Data.onCallBackClick(); ko.postbox.publish('start-callback-request-chat');}">
+            <div class="contactUs-item">
+                <i class="ico-sh-incomming-call"></i>
+            </div>
+            <span class="contact-label" data-bind="dictionaryBinding:'lblCallMeBack', resourceName: 'support'"></span>
+        </a>
+        <!-- /ko -->
+    </div>
+</div>
+

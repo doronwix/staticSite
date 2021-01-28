@@ -1,0 +1,90 @@
+﻿<!-- ko ifnot: Data.isLoaded -->
+<div id="pendingWithdrawals" class="withdrawal pendingWithdrawals">
+    <div id="pendingWithdrawalsContent">
+        <table id="pendingWithdrawalsTable" class="Grid">
+            <thead>
+                <tr>
+                    <th class="position">
+                        <label data-bind="dictionaryBinding: 'lblWithdrawlActionNumber', resourceName: 'withdrawal_pendingwithdrawals'"></label>
+                    </th>
+                    <th class="datetimesec">
+                        <label data-bind="dictionaryBinding: 'lblWithdrawlDateAndTime', resourceName: 'withdrawal_pendingwithdrawals'"></label>
+                    </th>
+                    <th class="currency">
+                        <label data-bind="dictionaryBinding: 'lblWithdrawlCurrency', resourceName: 'withdrawal_pendingwithdrawals'"></label>
+                    </th>
+                    <th>
+                        <label data-bind="dictionaryBinding: 'lblWithdrawlAmount', resourceName: 'withdrawal_pendingwithdrawals'"></label>
+                    </th>
+                    <th>
+                        <label data-bind="dictionaryBinding: 'lblWithdrawlStatus', resourceName: 'withdrawal_pendingwithdrawals'"></label>
+                    </th>
+                    <th>
+                        <label data-bind="dictionaryBinding: 'lblWithdrawlCancelWithdrawal', resourceName: 'withdrawal_pendingwithdrawals'"></label>
+                    </th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: PendingWithdrawals, alternateRows: PendingWithdrawals, oddClass: 'bgGray', evenClass: 'bgWhite'">
+                <tr>
+                    <td class="position">
+                        <span data-bind="text: withdrawalID"></span>
+                    </td>
+                    <td class="datetimesec">
+                        <span data-bind="text: datetime"></span>
+                    </td>
+                    <td class="currency">
+                        <span data-bind="text: ccy"></span>
+                    </td>
+                    <td>
+                        <span data-bind="text: amount"></span>
+                    </td>
+                    <td>
+                        <span data-bind="text: status"></span>
+                    </td>
+
+                    <td>
+                        <button class="btn action small colored" data-bind="disable: $parent.Data.isCancelingWithdrawal(), click: function () { onCancelPendingWithdrawal(); ko.postbox.publish('trading-event', 'withdrawal-cancel'); }">
+                            <span id="btnCancel" data-bind="dictionaryBinding: 'btnCancel', resourceName: 'withdrawal_pendingwithdrawals'"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody data-bind="foreach: ProcessWithdrawals, alternateRows: ProcessWithdrawals,
+                                oddClass: PendingWithdrawals().length % 2 == 0 ? 'bgGray' : 'bgWhite',
+                                evenClass: PendingWithdrawals().length % 2 == 0 ? 'bgWhite' : 'bgGray'">
+                <tr>
+                    <td class="position">
+                        <span data-bind="text: withdrawalID"></span>
+                    </td>
+                    <td class="datetime">
+                        <span data-bind="text: datetime"></span>
+                    </td>
+                    <td class="currency">
+                        <span data-bind="text: ccy"></span>
+                    </td>
+                    <td>
+                        <span data-bind="text: amount"></span>
+                    </td>
+                    <td>
+                        <span data-bind="text: status"></span>
+                    </td>
+                    <td>
+                        <button class="btn action small colored" data-bind="disable: $parent.Data.isCancelingWithdrawal(), click: onCancelProcessingWithdrawal">
+                            <span id="btnProcessCancel" data-bind="dictionaryBinding: 'btnProcessCancel', resourceName: 'withdrawal_pendingwithdrawals'"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- ko if: !PendingWithdrawals().length && !ProcessWithdrawals().length -->
+        <div class="no-records">
+            <span data-bind="dictionaryBinding: 'lblNoPendingWithdrawals', resourceName: 'withdrawal_pendingwithdrawals'"></span>
+        </div>
+        <!-- /ko -->
+    </div>
+</div>
+<!-- /ko -->
+
+<!-- ko if: Data.isLoaded -->
+<div class="withdrawal-loader"></div>
+<!-- /ko -->

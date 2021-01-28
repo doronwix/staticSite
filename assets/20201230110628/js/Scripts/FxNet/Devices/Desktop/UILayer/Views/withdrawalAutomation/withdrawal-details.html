@@ -1,0 +1,76 @@
+﻿<!-- ko with : selectedWithdrawal()-->
+<!-- ko if: cardTypeId -->
+
+<h3 class="title">
+	Credit Card
+</h3>
+<div class="holder">
+	<table class="data-holder">
+		<tr>
+			<td class="blue">Card Type</td>
+			<td data-bind="text: cardTypeName"></td>
+		</tr>
+		<tr>
+			<td class="blue">Last 4</td>
+			<td data-bind="text: last4"></td>
+		</tr>
+		<tr>
+			<td class="blue">Is Owner</td>
+			<td data-bind="text: isOwner"></td>
+		</tr>
+		<tr>
+			<td class="blue">Approved</td>
+			<td data-bind="text: isApproved"></td>
+		</tr>
+	</table>
+</div>
+<!-- /ko -->
+<!-- ko if: !cardTypeId -->
+
+<h3 class="title">
+	Bank
+</h3>
+<div class="holder">
+    <table class="data-holder">
+        <tr>
+            <td class="blue">Bank Name</td>
+            <td data-bind="text: bankName"></td>
+        </tr>
+        <tr>
+            <td class="blue">Bank account no.</td>
+            <td data-bind="text: bankAccount"></td>
+        </tr>
+        <tr>
+            <td class="blue">Beneficiary</td>
+            <td data-bind="text: beneficiary"></td>
+        </tr>
+
+        <!-- ko if: $parent.expanded() -->
+        <tr>
+            <td class="blue">Swift code</td>
+            <td data-bind="text: swiftCode"></td>
+        </tr>
+        <tr>
+            <td class="blue">Branch no.</td>
+            <td data-bind="text: branch"></td>
+        </tr>
+        <tr>
+            <td class="blue">Bank address</td>
+            <td data-bind="text: bankAddress"></td>
+        </tr>
+        <tr>
+            <td class="blue">Bank country</td>
+            <td data-bind="text: bankCountryName"></td>
+        </tr>
+        <tr data-bind="visible: $parent.expanded()">
+            <td colspan="2"><a data-bind="click: $parent.clickLess" href="">Show Less...</a></td>
+        </tr>
+        <!-- /ko-->
+
+        <tr data-bind="visible: !$parent.expanded()">
+            <td colspan="2"><a data-bind="click: $parent.clickExpand" href="">Additional Info...</a></td>
+        </tr>
+    </table>
+</div>
+<!-- /ko -->
+<!-- /ko -->

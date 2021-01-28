@@ -1,0 +1,45 @@
+video
+  - if grace -> show continue button
+  - if viewed and continue button -> select continue button and show feedback
+  - if continue button without view -> do not show feedback at all
+ 
+  - grace goto block
+  - viewed goto block
+
+feedback
+  - grace - after grace disable
+
+- show flowchart of all blocks
+  
+
++ no need for options in +
++ if user changes id, check if exists already and do not allow. else, save and refresh the block list
++ alias name
++ re-order blocks
++ update id - should update all goto/blockIds
++ video: how to show fullscreen button and get rid of the settings button
+
+- analytics:
+  - onLoad, onClick (TEXT)
+  - video: onView, onGrace
+  - First parameter - event name, all other - get parameter name + parameter value:
+   "onClick":["video-feedback", "video_name=What is CFD trading", "feedback_type=[TYPE]"]
+  -    "onClick":["quiz-what-is-CFD-trading", "answer=[TEXT]"]
+
+- add callback mechanism
+ {
+   "id":1000,
+   "callback":["goto", "<deeplink>"]
+ },
+ {
+   "id":1001,
+   "callback":["walkthrough", "welcome"]
+ }
+
+- fix scrolling (3 dots + video lessons)
+- wrapper should expose "loadJSON" and "showBlock"
+- choices - white background for buttons
+
+- Like "Video" -> "Preview"
+
+- Add language, persona and version to JSON and pass it with all analytics

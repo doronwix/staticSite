@@ -1,0 +1,471 @@
+﻿<div class="form-upload">
+    <h1 class="form-upload-title" data-bind="dictionaryBinding: 'lblTitle', resourceName: 'compliance_UploadDocuments'"></h1>
+    <div>
+        <div class="content">
+            <p data-bind="dictionaryBinding: 'lblDescription', resourceName: 'compliance_UploadDocuments'"></p>
+        </div>
+        <div class="docs" id="uploadWraper">
+            <div>
+                <div class="inner-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="3" data-bind="dictionaryBinding: 'lblTitlePleaseUpload', resourceName: 'compliance_UploadDocuments'"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Proof of ID-->
+                            <!-- ko with : Data.documentsData().GetItem(eUploadDocumentType.ProofOfID) -->
+                            <tr data-bind="visible: IsVisible, attr: { 'id': 'uploadSection' + eUploadDocumentType.ProofOfID }">
+                                <td>
+                                    <span class="strong" data-bind="text: $parent.GetIndexInc(IsVisible) + '.'"></span>
+                                    <label data-bind="attr: {id:$parent.GetIndex() + 'Label'}">
+                                        <span class="strong" data-bind="dictionaryBinding: Category, resourceName: 'Category'"></span>
+                                        <fx-tooltip params="tooltip: Dictionary.GetItem(Tooltip, 'Tooltip'), id: $parent.GetIndex()"></fx-tooltip>
+                                    </label>
+                                    <!-- ko if: uploadVm.Form.isIdByShuftiEnabled() -->
+                                    <div>
+                                        <span data-bind="dictionaryBinding: DocumentStatusText, resourceName: 'Status', attr: {class: $parent.GetStatusColor(DocumentStatus, eUploadDocumentType.ProofOfID)}, visible: uploadVm && !uploadVm.Form.successFirst() && uploadVm.Form.showDocStatusText()"></span>
+                                    </div>
+                                    <!-- /ko -->
+                                    <!-- ko if: !uploadVm.Form.isIdByShuftiEnabled() -->
+                                    <div>
+                                        <span data-bind="dictionaryBinding: DocumentStatusText, resourceName: 'Status', attr: {class: $parent.GetStatusColor(DocumentStatus, eUploadDocumentType.ProofOfID)}, visible: uploadVm && !uploadVm.Form.successFirst()"></span>
+                                    </div>
+                                    <!-- /ko -->
+                                </td>
+                                <td></td>
+
+                                <td class="last">
+                                    <!-- ko if: uploadVm.Form.isIdByShuftiEnabled() -->
+                                    <!-- ko component: { name: 'fx-confirm-documentverification', params: { documentTypeId: DocumentTypeID, documentType: Category,  documentStatus: DocumentStatus    } } --><!-- /ko -->
+                                    <!-- /ko -->
+                                    <div class="upload-action-wrap" data-bind="visible: !uploadVm.Form.isIdByShuftiEnabled()">
+                                        <!-- ko with : uploadVm -->
+                                        <div class="upload-browsebtn-container">
+                                            <iframe class="uploadIframe" data-bind="iframeElement: Form.iframeElement, attr:{src: Form.iframeSrc}"></iframe>
+                                        </div>
+                                        <button id="browseBtn" class="btn action colored" data-bind="click: Browse, specificUploadButton: Form.isBrowseEnabled, enable: Form.isBrowseEnabled, 'data-automation': 'browse-button', dictionaryBinding: 'btnBrowse', resourceName: 'compliance_UploadDocuments'"></button>
+                                        <!-- /ko -->
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- ko with : uploadVm -->
+                            <!-- ko if: Form.files().length -->
+                            <tr class="doc-row" data-bind="attr: { 'id': 'uploadedDocuments' + eUploadDocumentType.ProofOfID }">
+                                <td colspan="3" class="uploaded-documents">
+                                    <!-- ko foreach: Form.files -->
+                                    <div class="document-line" data-bind="css: {'error':  !isSuccessfull && isFinished}">
+                                        <div class="document-title" data-bind="nonRtlText: name"></div>
+                                        <div class="status-indicator" colspan="2">
+                                            <span class="loader-background" data-bind="visible: showProgress">
+                                                <span class="loader"></span>
+                                            </span>
+                                            <span data-bind="if: isSuccessfull && isFinished">
+                                                <i class="upload_ok" id="uploadOK"></i>
+                                            </span>
+                                            <p data-bind="visible: !isSuccessfull && isFinished">
+                                                <i class="upload_err"></i><span class="upload_error" data-bind="text: errorText"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- /ko -->
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- Proof of Residence -->
+                            <!-- ko with : Data.documentsData().GetItem(eUploadDocumentType.ProofOfResidence) -->
+                            <tr data-bind="visible: IsVisible, attr: { 'id': 'uploadSection' + eUploadDocumentType.ProofOfResidence }">
+                                <td colspan="2">
+                                    <span class="strong" data-bind="text: $parent.GetIndexInc(IsVisible) + '.'"></span>
+                                    <label data-bind="attr: {id:$parent.GetIndex() + 'Label'}">
+                                        <span class="strong" data-bind="dictionaryBinding: Category, resourceName: 'Category'"></span>
+                                        <fx-tooltip params="tooltip: Dictionary.GetItem(Tooltip, 'Tooltip'), id: $parent.GetIndex()"></fx-tooltip>
+                                    </label>
+                                    <!-- ko if: uploadVm.Form.isUbByShuftiEnabled() -->
+                                    <div>
+                                        <span data-bind="dictionaryBinding: DocumentStatusText, resourceName: 'Status', attr: {class: $parent.GetStatusColor(DocumentStatus, eUploadDocumentType.ProofOfResidence)}, visible: uploadVm && !uploadVm.Form.successFirst() && uploadVm.Form.showDocStatusText()"></span>
+
+                                    </div>
+                                    <!-- /ko -->
+                                    <!-- ko if: !uploadVm.Form.isUbByShuftiEnabled() -->
+                                    <div>
+                                        <span data-bind="dictionaryBinding: DocumentStatusText, resourceName: 'Status', attr: {class: $parent.GetStatusColor(DocumentStatus, eUploadDocumentType.ProofOfResidence)}, visible: uploadVm && !uploadVm.Form.successFirst()"></span>
+
+                                    </div>
+                                    <!-- /ko -->
+                                </td>
+                                <td class="last">
+                                    <!-- ko if: uploadVm.Form.isUbByShuftiEnabled() -->
+                                    <!-- ko component: { name: 'fx-confirm-documentverification', params: { documentTypeId: DocumentTypeID, documentType: Category,  documentStatus: DocumentStatus    } } --><!-- /ko -->
+                                    <!-- /ko -->
+                                    <div class="upload-action-wrap" data-bind="visible: !uploadVm.Form.isUbByShuftiEnabled()">
+                                        <!-- ko with : uploadVm -->
+                                        <div class="upload-browsebtn-container">
+                                            <iframe class="uploadIframe" data-bind="iframeElement: Form.iframeElement, attr:{src: Form.iframeSrc}"></iframe>
+                                        </div>
+                                        <button id="browseBtn" class="btn action colored" data-bind="click: Browse, specificUploadButton: Form.isBrowseEnabled, enable: Form.isBrowseEnabled, 'data-automation': 'browse-button', dictionaryBinding: 'btnBrowse', resourceName: 'compliance_UploadDocuments'"></button>
+                                        <!-- /ko -->
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- ko with : uploadVm -->
+                            <!-- ko if: Form.files().length -->
+                            <tr class="doc-row" data-bind="attr: { 'id': 'uploadedDocuments' + eUploadDocumentType.ProofOfResidence }">
+                                <td colspan="3" class="uploaded-documents">
+                                    <!-- ko foreach: Form.files -->
+                                    <div class="document-line" data-bind="css: {'error':  !isSuccessfull && isFinished}">
+                                        <div class="document-title" data-bind="nonRtlText: name"></div>
+                                        <div class="status-indicator" colspan="2">
+                                            <span class="loader-background" data-bind="visible: showProgress">
+                                                <span class="loader"></span>
+                                            </span>
+                                            <span data-bind="if: isSuccessfull && isFinished">
+                                                <i class="upload_ok" id="uploadOK"></i>
+                                            </span>
+                                            <p data-bind="visible: !isSuccessfull && isFinished">
+                                                <i class="upload_err"></i><span class="upload_error" data-bind="text: errorText"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- /ko -->
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- Tax Card -->
+                            <!-- ko with : Data.documentsData().GetItem(eUploadDocumentType.TaxCard) -->
+                            <tr data-bind="visible: IsVisible, attr: { 'id': 'uploadSection' + eUploadDocumentType.TaxCard }">
+                                <td colspan="2">
+                                    <span class="strong" data-bind="text: $parent.GetIndexInc(IsVisible) + '.'"></span>
+                                    <label data-bind="attr: {id:$parent.GetIndex() + 'Label'}">
+                                        <span class="strong" data-bind="dictionaryBinding: Category, resourceName: 'Category'"></span>
+                                        <fx-tooltip params="tooltip: Dictionary.GetItem(Tooltip, 'Tooltip'), id: $parent.GetIndex()"></fx-tooltip>
+                                    </label>
+                                    <div>
+                                        <span data-bind="dictionaryBinding: DocumentStatusText, resourceName: 'Status', attr: {class: $parent.GetStatusColor(DocumentStatus)}, visible: uploadVm && !uploadVm.Form.successFirst()"></span>
+                                    </div>
+                                </td>
+                                <td class="last">
+                                    <!-- ko with : uploadVm -->
+                                    <div class="upload-action-wrap">
+                                        <div class="upload-browsebtn-container">
+                                            <iframe class="uploadIframe" data-bind="iframeElement: Form.iframeElement, attr:{src: Form.iframeSrc}"></iframe>
+                                        </div>
+                                        <button id="browseBtn" class="btn action colored" data-bind="click: Browse, specificUploadButton: Form.isBrowseEnabled, enable: Form.isBrowseEnabled, 'data-automation': 'browse-button', dictionaryBinding: 'btnBrowse', resourceName: 'compliance_UploadDocuments'"></button>
+                                    </div>
+                                    <!-- /ko -->
+                                </td>
+                            </tr>
+                            <!-- ko with : uploadVm -->
+                            <!-- ko if: Form.files().length -->
+                            <tr class="doc-row" data-bind="attr: { 'id': 'uploadedDocuments' + eUploadDocumentType.TaxCard }">
+                                <td colspan="3" class="uploaded-documents">
+                                    <!-- ko foreach: Form.files -->
+                                    <div class="document-line" data-bind="css: {'error':  !isSuccessfull && isFinished}">
+                                        <div class="document-title" data-bind="nonRtlText: name"></div>
+                                        <div class="status-indicator" colspan="2">
+                                            <span class="loader-background" data-bind="visible: showProgress">
+                                                <span class="loader"></span>
+                                            </span>
+                                            <span data-bind="if: isSuccessfull && isFinished">
+                                                <i class="upload_ok" id="uploadOK"></i>
+                                            </span>
+                                            <p data-bind="visible: !isSuccessfull && isFinished">
+                                                <i class="upload_err"></i><span class="upload_error" data-bind="text: errorText"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- /ko -->
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- Credit Card copy -->
+                            <!-- ko with : Data.documentsData().GetItem(eUploadDocumentType.CreditCardCopy) -->
+                            <tr data-bind="visible: IsVisible, attr: { 'id': 'uploadSection' + eUploadDocumentType.CreditCardCopy }">
+                                <td colspan="2">
+                                    <span class="strong" data-bind="text: $parent.GetIndexInc(IsVisible) + '.'"></span>
+                                    <label data-bind="attr: {id:$parent.GetIndex() + 'Label'}">
+                                        <span class="strong" data-bind="dictionaryBinding: Category, resourceName: 'Category'"></span>
+                                        <div class="pointed-tooltip cc-copy-tooltip">
+                                            <i class="ask" data-bind="ttFadeIn: { tt_data_id: $parent.GetIndex(), updown: true}"></i>
+                                            <div class="tooltips top" data-bind="attr: {id: $parent.GetIndex()}">
+                                                <div class="tooltip-text">
+                                                    <div class="paragraph">
+                                                        <div class="uppertext" data-bind="dictionaryBinding: 'lblCardConceal', resourceName: 'compliance_UploadDocuments'"></div>
+                                                    </div>
+                                                    <div class="paragraph">
+                                                        <div class="text">
+                                                            <div class="img cvv_conseal1"></div>
+                                                            <div class="cctext" data-bind="dictionaryBinding: 'tootip_ccnumber', resourceName: 'compliance_UploadDocuments'"></div>
+                                                        </div>
+                                                        <div class="text middle">
+                                                            <span class="yellow_arrow"></span>
+                                                        </div>
+                                                        <div class="text">
+                                                            <div class="img cvv_conseal2"></div>
+                                                            <div class="cctext" data-bind="dictionaryBinding: 'tootip_conseled_ccnumber', resourceName: 'compliance_UploadDocuments'"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="paragraph">
+                                                        <div class="text">
+                                                            <div class="img cvv_conseal3"></div>
+                                                            <div class="cctext" data-bind="dictionaryBinding: 'tootip_cvv_number', resourceName: 'compliance_UploadDocuments'"></div>
+                                                        </div>
+                                                        <div class="text middle">
+                                                            <span class="yellow_arrow"></span>
+                                                        </div>
+                                                        <div class="text">
+                                                            <div class="img cvv_conseal4"></div>
+                                                            <div class="cctext" data-bind="dictionaryBinding: 'tootip_consealed_cvv_number', resourceName: 'compliance_UploadDocuments'"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="horizontal_dotted_line"></div>
+                                                    <div class="paragraph">
+                                                        <div class="uppertext" data-bind="dictionaryBinding: 'lblCardWithoutName', resourceName: 'compliance_UploadDocuments'"></div>
+                                                    </div>
+                                                    <div class="paragraph">
+                                                        <div class="text">
+                                                            <div class="img cvv_conseal5"></div>
+                                                            <div class="cctext" data-bind="dictionaryBinding: 'tootip_ccnumber', resourceName: 'compliance_UploadDocuments'"></div>
+                                                        </div>
+                                                        <div class="text middle">
+                                                            <span class="yellow_arrow"></span>
+                                                        </div>
+                                                        <div class="text">
+                                                            <div class="img cvv_conseal6"></div>
+                                                            <div class="cctext" data-bind="dictionaryBinding: 'tootip_conseled_ccnumber', resourceName: 'compliance_UploadDocuments'"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <i class="close" data-bind="ttFadeOut: { tt_icon_id: 'some', tt_data_id: $parent.GetIndex() }"></i>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <p class="comment" data-bind="dictionaryBinding: 'creditcardlbl', resourceName: 'compliance_UploadDocuments'" ></p>
+                                    <div>
+                                        <span data-bind="dictionaryBinding: DocumentStatusText, resourceName: 'Status', attr: {class: $parent.GetStatusColor(DocumentStatus)}, visible: uploadVm && !uploadVm.Form.successFirst()"></span>
+                                        <ul data-bind="foreach: $parent.Data.notApprovedCreditCards()">
+                                            <li class="CC-list">
+                                                <span data-bind="text: CardType"></span>
+                                                <span data-bind="text: Last4"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <!-- ko with : uploadVm -->
+                                <td class="last">
+                                    <div class="upload-action-wrap">
+                                        <div class="upload-browsebtn-container">
+                                            <iframe class="uploadIframe" data-bind="iframeElement: Form.iframeElement, attr:{src: Form.iframeSrc}"></iframe>
+                                        </div>
+                                        <button id="browseBtn" class="btn action colored" data-bind="click: Browse, specificUploadButton: Form.isBrowseEnabled, enable: Form.isBrowseEnabled, 'data-automation': 'browse-button', dictionaryBinding: 'btnBrowse', resourceName: 'compliance_UploadDocuments'"></button>
+                                    </div>
+                                </td>
+                                <!-- /ko -->
+                            </tr>
+                            <!-- ko with : uploadVm -->
+                            <!-- ko if: Form.files().length -->
+                            <tr class="doc-row" data-bind="attr: { 'id': 'uploadedDocuments' + eUploadDocumentType.CreditCardCopy }">
+                                <td colspan="3" class="uploaded-documents">
+                                    <!-- ko foreach: Form.files -->
+                                    <div class="document-line" data-bind="css: {'error':  !isSuccessfull && isFinished}">
+                                        <div class="document-title" data-bind="nonRtlText: name"></div>
+                                        <div class="status-indicator" colspan="2">
+                                            <span class="loader-background" data-bind="visible: showProgress">
+                                                <span class="loader"></span>
+                                            </span>
+                                            <span data-bind="if: isSuccessfull && isFinished">
+                                                <i class="upload_ok" id="uploadOK"></i>
+                                            </span>
+                                            <p data-bind="visible: !isSuccessfull && isFinished">
+                                                <i class="upload_err"></i><span class="upload_error" data-bind="text: errorText"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- /ko -->
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- Deposit Confirmation -->
+                            <!-- ko with: Data.documentsData().GetItem(eUploadDocumentType.DepositConfirmation) -->
+                            <tr data-bind="visible: IsVisible, attr: { 'id': 'uploadSection' + eUploadDocumentType.DepositConfirmation }">
+                                <td colspan="2" class="section-title">
+                                    <span class="strong" data-bind="text: $parent.GetIndexInc(IsVisible) + '.'"></span>
+                                    <label data-bind="attr: {id:$parent.GetIndex() + 'Label'}">
+                                        <span class="strong" data-bind="dictionaryBinding: Category, resourceName: 'Category'"></span>
+                                        <fx-tooltip params="tooltip: Dictionary.GetItem(Tooltip, 'Tooltip'), id: $parent.GetIndex()"></fx-tooltip>
+                                    </label>
+                                    <div class="section-status">
+                                        <span data-bind="dictionaryBinding: DocumentStatusText, resourceName: 'Status', attr: { class: $parent.GetStatusColor(DocumentStatus) }, visible: uploadVm && !uploadVm.Form.successFirst()"></span>
+                                    </div>
+                                </td>
+                                <td class="last">
+                                    <div class="upload-action-wrap" data-bind="with: uploadVm">
+                                        <div class="upload-browsebtn-container">
+                                            <iframe class="uploadIframe" data-bind="iframeElement: Form.iframeElement, attr:{src: Form.iframeSrc}"></iframe>
+                                        </div>
+                                        <button id="browseBtn" class="btn action colored" data-bind="click: Browse, specificUploadButton: Form.isBrowseEnabled, enable: Form.isBrowseEnabled, 'data-automation': 'browse-button', dictionaryBinding: 'btnBrowse', resourceName: 'compliance_UploadDocuments'"></button>
+                                    </div>
+                                    <div class="dc-actions">
+                                        <a class="dc-action" href="javascript:void(0)" data-bind="
+                                           click: function () { if (uploadVm.Form.isBrowseEnabled()) { $parent.OpenDepositconfirmationPopup(uploadVm.UploadStringImage); } },
+                                           css: { disabled: !uploadVm.Form.isBrowseEnabled() },
+                                           triggerClickWhen: { postboxTopic: 'triggerUploadDepositConfirmationClick', isActive: uploadVm.Form.isBrowseEnabled }">
+                                            <i class="ico-sh-pen-signature"></i>
+                                        </a>
+                                        <a class="dc-action" href="javascript:void(0)" data-bind="click: $parent.SendEmail, css: { disabled: $parent.Data.isEmailClicked }">
+                                            <i class="ico-sh-send-email"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- ko with : uploadVm -->
+                            <!-- ko if: Form.files().length -->
+                            <tr class="doc-row" data-bind="attr: { 'id': 'uploadedDocuments' + eUploadDocumentType.DepositConfirmation }">
+                                <td colspan="3" class="uploaded-documents">
+                                    <!-- ko foreach: Form.files -->
+                                    <div class="document-line" data-bind="css: {'error':  !isSuccessfull && isFinished}">
+                                        <div class="document-title" data-bind="nonRtlText: name"></div>
+                                        <div class="status-indicator" colspan="2">
+                                            <span class="loader-background" data-bind="visible: showProgress">
+                                                <span class="loader"></span>
+                                            </span>
+                                            <span data-bind="if: isSuccessfull && isFinished">
+                                                <i class="upload_ok" id="uploadOK"></i>
+                                            </span>
+                                            <p data-bind="visible: !isSuccessfull && isFinished">
+                                                <i class="upload_err"></i><span class="upload_error" data-bind="text: errorText"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- /ko -->
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- Withdrawal pending request -->
+                            <!-- ko with: Data.documentsData().GetItem(eUploadDocumentType.WithdrawalPendingRequest) -->
+                            <tr data-bind="visible: IsVisible, attr: { 'id': 'uploadSection' + eUploadDocumentType.WithdrawalPendingRequest }">
+                                <td colspan="2">
+                                    <span class="strong" data-bind="text: $parent.GetIndexInc(IsVisible) + '.'"></span>
+                                    <label data-bind="attr: {id:$parent.GetIndex() + 'Label'}">
+                                        <span class="strong" data-bind="dictionaryBinding: Category, resourceName: 'Category'"></span>
+                                        <fx-tooltip params="tooltip: Dictionary.GetItem(Tooltip, 'Tooltip'), id: $parent.GetIndex()"></fx-tooltip>
+                                    </label>
+                                    <div>
+                                        <span data-bind="dictionaryBinding: DocumentStatusText, resourceName: 'Status', attr: {class: $parent.GetStatusColor(DocumentStatus)}, visible: uploadVm && !uploadVm.Form.successFirst()"></span>
+                                    </div>
+                                </td>
+                                <!-- ko with : uploadVm -->
+                                <td class="last">
+                                    <div class="upload-action-wrap">
+                                        <div class="upload-browsebtn-container">
+                                            <iframe class="uploadIframe" data-bind="iframeElement: Form.iframeElement, attr:{src: Form.iframeSrc}"></iframe>
+                                        </div>
+                                        <button id="browseBtn" class="btn action colored" data-bind="click: Browse, specificUploadButton: Form.isBrowseEnabled, enable: Form.isBrowseEnabled, 'data-automation': 'browse-button', dictionaryBinding: 'btnBrowse', resourceName: 'compliance_UploadDocuments'"></button>
+                                    </div>
+                                </td>
+                                <!-- /ko -->
+                            </tr>
+                            <!-- ko with : uploadVm -->
+                            <!-- ko if: Form.files().length -->
+                            <tr class="doc-row" data-bind="attr: { 'id': 'uploadedDocuments' + eUploadDocumentType.WithdrawalPendingRequest }">
+                                <td colspan="3" class="uploaded-documents">
+                                    <!-- ko foreach: Form.files -->
+                                    <div class="document-line" data-bind="css: {'error':  !isSuccessfull && isFinished}">
+                                        <div class="document-title" data-bind="nonRtlText: name"></div>
+                                        <div class="status-indicator" colspan="2">
+                                            <span class="loader-background" data-bind="visible: showProgress">
+                                                <span class="loader"></span>
+                                            </span>
+                                            <span data-bind="if: isSuccessfull && isFinished">
+                                                <i class="upload_ok" id="uploadOK"></i>
+                                            </span>
+                                            <p data-bind="visible: !isSuccessfull && isFinished">
+                                                <i class="upload_err"></i><span class="upload_error" data-bind="text: errorText"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- /ko -->
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- Other Documents -->
+                            <!--ko with: Data.documentsData().GetItem(eUploadDocumentType.OtherDocuments)-->
+                            <tr data-bind="attr: { 'id': 'uploadSection' + eUploadDocumentType.OtherDocuments }">
+                                <td colspan="2">
+                                    <span class="strong" data-bind="text: $parent.GetIndexInc(true) + '.'"></span>
+                                    <span class="strong" data-bind="dictionaryBinding: 'C_OtherDocuments', resourceName: 'Category'"></span>
+
+                                </td>
+                                <!-- ko with : uploadVm -->
+                                <td class="last">
+                                    <div class="upload-action-wrap">
+                                        <div class="upload-browsebtn-container">
+                                            <iframe class="uploadIframe" data-bind="iframeElement: Form.iframeElement, attr:{src: Form.iframeSrc}"></iframe>
+                                        </div>
+                                        <button id="browseBtn" class="btn action colored" data-bind="click: Browse, specificUploadButton: Form.isBrowseEnabled, enable: Form.isBrowseEnabled, 'data-automation': 'browse-button', dictionaryBinding: 'btnBrowse', resourceName: 'compliance_UploadDocuments'"></button>
+                                    </div>
+                                </td>
+                                <!-- /ko -->
+                            </tr>
+                            <!-- ko with : uploadVm -->
+                            <!-- ko if: Form.files().length -->
+                            <tr class="doc-row" data-bind="attr: { 'id': 'uploadedDocuments' + eUploadDocumentType.OtherDocuments }">
+                                <td colspan="3" class="uploaded-documents">
+                                    <!-- ko foreach: Form.files -->
+                                    <div class="document-line" data-bind="css: {'error':  !isSuccessfull && isFinished}">
+                                        <div class="document-title" data-bind="nonRtlText: name"></div>
+                                        <div class="status-indicator" colspan="2">
+                                            <span class="loader-background" data-bind="visible: showProgress">
+                                                <span class="loader"></span>
+                                            </span>
+                                            <span data-bind="if: isSuccessfull && isFinished">
+                                                <i class="upload_ok" id="uploadOK"></i>
+                                            </span>
+                                            <p data-bind="visible: !isSuccessfull && isFinished">
+                                                <i class="upload_err"></i><span class="upload_error" data-bind="text: errorText"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- /ko -->
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- /ko -->
+                        </tbody>
+                    </table>
+                    <!-- ko if: !Dictionary.ValueIsEmpty('lblUploadDocTutorial', 'compliance_UploadDocuments') && !Dictionary.ValueIsEmpty('uploadDocsVideoLink', 'compliance_UploadDocuments')-->
+                    <a class="tutorial-wrapper" data-bind="attr: { href: Dictionary.GetItem('uploadDocsVideoLink', 'compliance_UploadDocuments'), target:'_blank'}">
+                        <span class="tutorial" data-bind="dictionaryBinding: 'lblUploadDocTutorial', resourceName: 'compliance_UploadDocuments'"></span>
+                    </a>
+                    <!-- /ko -->
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="note">
+                    <div class="info"></div>
+                    <div class="info-note" data-bind="dictionaryBinding: 'lblPleaseNote', resourceName: 'compliance_UploadDocuments'"></div>
+
+                    <ul data-bind="dictionaryBinding: 'section-note-list', resourceName: 'compliance_UploadDocuments'">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<fx-component-question-mark params="faqKey: eResourcesNames.FaqUploadDocuments, formToShow:  eForms.HelpUploadDocuments"></fx-component-question-mark>

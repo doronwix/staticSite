@@ -1,0 +1,59 @@
+﻿<div class="PageTitleNoBG" id="PageTitleDiv">
+    <ul>
+        <li>
+            <!-- ko if: VManager.ActiveFormType() == eForms.Deposit || VManager.ActiveFormType() == eForms.ConcretePaymentForm || VManager.ActiveFormType() == eForms.WireTransferSuccess -->
+            <fx-component-payments-title></fx-component-payments-title>
+            <!-- /ko -->
+
+            <!-- ko if: VManager.ActiveFormType() == eForms.Withdrawal -->
+                <span data-bind="dictionaryBinding: 'lblPageTitleWithdrwal', resourceName: 'general_pagetitle'">%Withdrawal</span>
+            <!-- /ko -->
+
+            <!-- ko if: VManager.ActiveFormType() == eForms.ViewAndPrintWithdrawal -->
+                <span data-bind="dictionaryBinding: 'lblPageTitleViewAndPrintWithdrawal', resourceName: 'general_pagetitle'">%View and Print Withdrawal</span>
+            <!-- /ko -->
+
+            <!-- ko if: VManager.ActiveFormType() == eForms.PersonalDetails -->
+                <span data-bind="dictionaryBinding: 'lblPageTitlePersonalDetails', resourceName: 'general_pagetitle'">%Customer Details</span>
+            <!-- /ko -->
+
+            <!-- ko if: VManager.ActiveFormType() == eForms.ClientQuestionnaire -->
+                <span data-bind="dictionaryBinding: 'lblPageTitleFinancialDetails', resourceName: 'general_pagetitle'">%Client Questionnaire</span>
+            <!-- /ko -->
+
+            <!-- ko if: VManager.ActiveFormType() == eForms.UploadDocuments -->
+                <span data-bind="dictionaryBinding: 'lblPageTitleUploadDocuments', resourceName: 'general_pagetitle'">%Upload Documents</span>
+            <!-- /ko -->
+
+            <!-- ko if: VManager.ActiveFormType() == eForms.Tutorials -->
+                <span data-bind="dictionaryBinding: 'lblPageTitleTutorials', resourceName: 'general_pagetitle'">%Tutorials</span>
+            <!-- /ko -->
+
+            <!-- ko if: VManager.ActiveFormType() == eForms.EducationalTutorials -->
+                <span data-bind="dictionaryBinding: 'lblPageTitleEducationalTutorials', resourceName: 'general_pagetitle'">%Educational Tutorials</span>
+            <!-- /ko -->
+
+            <!-- ko if: VManager.ActiveFormType() == eForms.TradingSignals -->
+                <span data-bind="dictionaryBinding: 'lblPageTitleTradingSignals', resourceName: 'general_pagetitle'">%Trading Signals</span>
+            <!-- /ko -->
+
+            <!-- ko if: VManager.ActiveFormType() == eForms.AdvinionChart -->
+                <span data-bind="dictionaryBinding: 'lblPageTitleAdvinionChart', resourceName: 'general_pagetitle'">%Chart Analysis</span>
+            <!-- /ko -->
+
+            <!-- ko if: VManager.ActiveFormType() == eForms.NotificationsSettings -->
+                <span data-bind="dictionaryBinding: 'lblPageTitleNotificationsSettings', resourceName: 'general_pagetitle'">%Notification Settings</span>
+            <!-- /ko -->
+			<!-- ko if: VManager.ActiveFormType() == eForms.PriceAlerts -->
+                <span data-bind="dictionaryBinding: 'lblPageTitlePriceAlerts', resourceName: 'general_pagetitle'">%Price Alerts</span>
+            <!-- /ko -->
+            <!-- ko if: VManager.ActiveFormType() == eForms.PendingWithdrawal -->
+                <span data-bind="dictionaryBinding: 'lblPageTitlePendingWithdrawal', resourceName: 'general_pagetitle'"></span>
+            <!-- /ko -->
+            <!-- ko if: VManager.ActiveFormType() == eForms.WithdrawalThankYou -->
+                <span data-bind="dictionaryBinding: 'lblPageWithdrawalThankYou', resourceName: 'general_pagetitle'">%Withdrawal</span>
+            <!-- /ko -->
+        </li>
+    </ul>
+    <div class="clear"></div>
+</div>

@@ -1,0 +1,74 @@
+{
+  "_args": [
+    [
+      "@cliotech/grunt-contrib-uglify@1.1.1",
+      "D:\\Projects\\Branches\\StaticFxnetSite\\site"
+    ]
+  ],
+  "_development": true,
+  "_from": "@cliotech/grunt-contrib-uglify@1.1.1",
+  "_id": "@cliotech/grunt-contrib-uglify@1.1.1",
+  "_inBundle": false,
+  "_integrity": "sha1-drq7/LMPiZbADY9PntcUbMO5Bws=",
+  "_location": "/@cliotech/grunt-contrib-uglify",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@cliotech/grunt-contrib-uglify@1.1.1",
+    "name": "@cliotech/grunt-contrib-uglify",
+    "escapedName": "@cliotech%2fgrunt-contrib-uglify",
+    "scope": "@cliotech",
+    "rawSpec": "1.1.1",
+    "saveSpec": null,
+    "fetchSpec": "1.1.1"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "http://nuget.efix.local/npm/DevNpm/@cliotech/grunt-contrib-uglify/-/grunt-contrib-uglify-1.1.0.tgz",
+  "_spec": "1.1.1",
+  "_where": "D:\\Projects\\Branches\\StaticFxnetSite\\site",
+  "author": {
+    "name": "Grunt Team",
+    "url": "https://gruntjs.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/gruntjs/grunt-contrib-uglify/issues"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "maxmin": "^2.1.0",
+    "uglify-js": "^3.5.0",
+    "uri-path": "^1.0.0"
+  },
+  "description": "Minify JavaScript files with UglifyJS",
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-internal": "^5.0.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-nodeunit": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "tasks"
+  ],
+  "homepage": "https://github.com/gruntjs/grunt-contrib-uglify#readme",
+  "keywords": [
+    "gruntplugin"
+  ],
+  "license": "MIT",
+  "main": "tasks/uglify.js",
+  "name": "@cliotech/grunt-contrib-uglify",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gruntjs/grunt-contrib-uglify.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "version": "1.1.0"
+}

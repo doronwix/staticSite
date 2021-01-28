@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/fx_personal_guide.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"fx-personal-guide\":\"1\",\"fx-personal-guide-bubble-abort-button\":\"Maybe Later\",\"fx-personal-guide-bubble-chatbot-button\":\"Start now\",\"fx-personal-guide-bubble-title\":\"Hi I'm Max, your Personal Guide\",\"fx-personal-guide-bubble-v4-common-message\":\"Let’s get you started\",\"fx-personal-guide-lexi-bubble-message\":\"I'm here to assist you with your trading experience...\",\"fx-personal-guide-lexi-bubble-title\":\"Hi I'm Lexi, your Personal Guide\",\"fx-personal-guide-lexi-bubble-v4-message\":\"Hi, I’m Lexi, your Personal Guide.\",\"fx-personal-guide-max-bubble-message\":\"I'm here to assist you with your trading experience...\",\"fx-personal-guide-max-bubble-title\":\"Hi I'm Max, your Personal Guide\",\"fx-personal-guide-max-bubble-v4-message\":\"Hi, I’m Max, your Personal Guide.\"}",
+  "isBase64": false
+}

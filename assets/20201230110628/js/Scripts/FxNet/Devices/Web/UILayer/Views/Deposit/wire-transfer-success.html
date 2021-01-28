@@ -1,0 +1,122 @@
+﻿<div class="paymentFormContainer">
+    <div class="payment-form-wrapper">
+        <div class="form-note">
+            <table class="depositPrint">
+                <tr>
+                    <td class="print-logo-container">
+                        <img data-bind="attr: {src: LogoImagePath}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h3>
+                            <span id="lblTitle" data-bind="dictionaryBinding: 'lblTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                        </h3>
+                    </td>
+                </tr>
+                <tr class="printContent">
+                    <td>
+                        <div class="wired amount">
+                            <span id="lblAmountWithCurrency" class="main_text4" data-bind="dictionaryBinding: 'lblAmountWithCurrency', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                            <span id="txtAmount" data-bind="text: Data.amount" class="main_text5"></span>
+                            <span id="ddlCCY" data-bind="text: Data.depCurrency" class="main_text5"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="printContent">
+                    <td colspan="2" class="wire-details">
+                        <span id="lblIntro" class="main_text5" data-bind="dictionaryBinding: 'lblIntro', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                    </td>
+                </tr>
+                <tr class="instructions">
+                    <td>
+                        <div class="lblInstructions"> 
+                            <p class="bold" data-bind="dictionaryBinding: 'lblInstructions', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                        </div>
+                    </td>
+                </tr>   
+                <tr>
+                    <td colspan="2">
+                        <p class="instructions" data-bind="dictionaryBinding: 'lblLogin', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                        <span class="instructions" data-bind="dictionaryBinding: 'lblChoiceBeneficiaryDetails', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                        <div id="bankInfoContainer">
+                            <div class="bankDetails wired full">
+                                <ul>
+                                    <li>
+                                        <span id="lblBeneficiaryTitle" class="main_text4" data-bind="dictionaryBinding: 'lblBeneficiaryTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                                        <span id="lblBeneficiary" class="value" data-bind="text: Data.beneficiary" class="main_text5"></span>
+                                    </li>
+                                    <li>
+                                        <span id="lblBankNameTitle" class="main_text4" data-bind="dictionaryBinding: 'lblBankNameTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                                        <span id="lblBankName" class="value" data-bind="text: Data.bank" class="main_text5 ltr"></span>
+                                    </li>
+                                    <li data-bind="visible: Data.bankCity">
+                                        <span id="lblCityTitle" class="main_text4" data-bind="dictionaryBinding: 'lblCityTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                                        <span id="lblCity" class="value" data-bind="text: Data.bankCity" class="main_text5 ltr"></span>
+                                    </li>
+                                    <li data-bind="visible: Data.bankCountry">
+                                        <span id="lblCountryDescriptionTitle" class="main_text4" data-bind="dictionaryBinding: 'lblCountryDescriptionTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                                        <span id="lblCountryDescription" class="value" data-bind="text: Data.bankCountry" class="main_text5 ltr"></span>
+                                    </li>
+                                    <li data-bind="visible: Data.specialID">
+                                        <span id="lblSpecialIDTitle" class="main_text4" data-bind="dictionaryBinding: 'lblSpecialIDTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                                        <span id="lblSpecialID" class="value" data-bind="text: Data.specialID" class="main_text5 ltr"></span>
+                                    </li>
+                                    <li data-bind="visible: Data.bankAccNumber">
+                                        <span id="lblBankAccountNumberTitle" class="main_text4" data-bind="dictionaryBinding: 'lblBankAccountNumber', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                                        <span id="lblBankAccountNumber" class="value" data-bind="text: Data.bankAccNumber" class="main_text5 ltr"></span>
+                                    </li>
+                                    <li data-bind="visible: Data.iban">
+                                        <span class="main_text4">
+                                            <span id="lblIbanTitlePrint" data-bind="dictionaryBinding: 'lblIbanTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                                            <span id="lblIbanTitle" data-bind="dictionaryBinding: 'lblIban', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                                            <i class="ico-sh-tooltip customTooltipPurpose" id="left-offset" data-bind="attr: { title: Dictionary.GetItem('lblIbanInfo', 'payments_regularWireTransferDeposit')}, balloon: { tooltipClass: 'tooltip tooltipBottom transparent-tooltip', position: { my: 'center bottom-10', at: 'center top' } }"></i>
+                                        </span>
+                                        <span id="lblIBAN" class="value" data-bind="text: Data.iban" class="main_text5 ltr"></span>
+                                    </li>
+                                    <li data-bind="visible: Data.swift">
+                                        <span id="lblSwiftTitle" class="main_text4" data-bind="dictionaryBinding: 'lblSwiftTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                                        <span id="lblSwift" class="value" data-bind="text: Data.swift" class="main_text5 ltr"></span>
+                                    </li>
+                                    <li data-bind="visible: Data.paymentRefForView">
+                                        <span id="lblPaymentReferenceTitle" class="main_text4" data-bind="dictionaryBinding: 'lblPaymentReferenceTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                                        <span id="lblPaymentReference" class="value" data-bind="text: Data.paymentRefForView" class="main_text5 ltr"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="instructions">
+                            <!-- ko if: !Dictionary.ValueIsEmpty('lblAdditional', 'payments_regularWireTransferDeposit') -->
+                            <p class="lblObservation" data-bind="dictionaryBinding: 'lblAdditional', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                            <!-- /ko -->
+                            <p class="lblTransfer" data-bind="html: String.format( Dictionary.GetItem('lblTransferToBeneficiary', 'payments_regularWireTransferDeposit'), Data.depCurrency, Data.amount)"></p>
+                            <p class="lblObservation" data-bind="dictionaryBinding: 'lblTransferObservation', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                            <p data-bind="dictionaryBinding: 'lblScreenShot', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                            <!-- ko if: !Dictionary.ValueIsEmpty('lblWaitTime', 'payments_regularWireTransferDeposit') -->
+                            <p data-bind="dictionaryBinding: 'lblWaitTime', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                            <!-- /ko -->
+                            <!--ko if: ShouldShowCddNotice-->
+                            <p data-bind="dictionaryBinding: 'lblPersonalDetails', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                            <!-- /ko -->
+                        </div>
+                    </td>   
+                </tr>
+                <tr class="printContent">
+                    <td colspan="*">
+                        <span id="lblWireDisclamer" class="bordered wired full">
+                            <p data-bind="dictionaryBinding: 'lblWireDisclamer', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                        </span>
+                    </td>
+                </tr>
+                <tr class="instructions">
+                    <td colspan="2" class="print-button-container line">
+                        <a href="javascript:print();">
+                            <i class="blue ico-wb-print"></i>
+                            <span class="blue" data-bind="dictionaryBinding: 'lblPrint', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

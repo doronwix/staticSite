@@ -1,0 +1,15 @@
+{
+  "requestUrl": "/webpl3/customer/customerDetails",
+  "contentType": "application/json; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "brokerID": 1,
+    "contactFirst": "Doron",
+    "contactLast": "test",
+    "phone": "9145***923",
+    "mobile": "9145***923",
+    "expiryDate": null
+  },
+  "isBase64": false
+}

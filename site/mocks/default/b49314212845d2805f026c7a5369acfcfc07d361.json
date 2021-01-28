@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/withdrawal-wrapper.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<!-- ko component: { name: 'fx-component-navigation-wizard', params: {  } } --><!-- /ko -->\r\n\r\n<script id=\"customMessageTemplate\" type=\"text/html\">\r\n\t<div class=\"balloon-holder\">\r\n\t\t<div class=\"balloonError\" data-bind=\"css: { visible: field.isDirty() && !field.isValid() }\">\r\n\t\t\t<i class=\"ico-sh-error\"></i>\r\n\t\t\t<p data-bind=\"validationMessage: field\"></p>\r\n\t\t</div>\r\n\t</div>\r\n</script>\r\n",
+  "isBase64": false
+}

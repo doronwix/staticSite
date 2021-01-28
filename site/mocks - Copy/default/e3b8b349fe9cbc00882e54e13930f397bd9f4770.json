@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/skins/Shared/svg/instruments/JPY.svg",
+  "contentType": "image/svg+xml",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgwIiB3aWR0aD0iNjQwIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+ICA8ZGVmcz4gICAgPGNsaXBQYXRoIGlkPSJhIj4gICAgICA8cGF0aCBmaWxsLW9wYWNpdHk9Ii42NyIgZD0iTS04OC4wMDEgMzJoNjQwdjQ4MGgtNjQweiIvPiAgICA8L2NsaXBQYXRoPiAgPC9kZWZzPiAgPGcgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXBhdGg9InVybCgjYSkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDg4LjAwMSAtMzIpIiBzdHJva2Utd2lkdGg9IjFwdCI+ICAgIDxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0tMTI4IDMyaDcyMHY0ODBoLTcyMHoiLz4gICAgPGVsbGlwc2Ugcng9IjE5NC45MyIgcnk9IjE5NC45MyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE2OC40NCA4LjYxOCkgc2NhbGUoLjc2NTU0KSIgY3k9IjM0NC4wNSIgY3g9IjUyMy4wOCIgZmlsbD0iI2QzMDAwMCIvPiAgPC9nPjwvc3ZnPg==",
+  "isBase64": true
+}

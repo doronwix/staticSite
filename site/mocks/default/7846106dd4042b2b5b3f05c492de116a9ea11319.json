@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/account/user-flow-wrap.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<!-- ko component: { name: UserFlowComponent } --><!-- /ko -->\r\n<template id=\"fx-template-flow-line\">\r\n    <svg id=\"flowMap_FundYourAccount_Line\" class=\"line\" data-bind=\"visible: !$data.hide, css: {'start-step-line': $data.startLine, 'end-step-line': $data.endLine }, attr: {'id': $data.id}\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"100\" data-bind=\"css: { greenColor: $data.isComplete }\" /></svg>\r\n</template>\r\n<template id=\"fx-template-arrow-current\">\r\n    <div class=\"arrow ico-wb-arr-point-right hiddenElement\" data-bind=\"attr: {'id': $data.id}, css:{ hiddenElement: $data.hide }\"></div>\r\n</template>\r\n",
+  "isBase64": false
+}

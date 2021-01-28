@@ -1,0 +1,113 @@
+﻿<div id="depositsFrame" class="deposit-confirmation-content" data-bind="with: DepositsInfo, componentLoaded: { appEvent: eAppEvents.depositConfirmationLoadedEvent }, elementToImage">
+	<div class="header-logo">
+		<div class="logo"></div>
+	</div>
+
+	<div class="account-details">
+		<p>
+			<span data-bind="dictionaryBinding: 'lblAccountName', resourceName: 'compliance_DepositConfirmation'" class="main_text">%Account Name:</span>
+			<span data-bind="text: $parent.data.userName">%Account Name:</span>
+		</p>
+		<p>
+			<span data-bind="dictionaryBinding: 'lblFullName', resourceName: 'compliance_DepositConfirmation'" class="main_text">%Full Name:</span>
+			<span data-bind="text: $parent.data.fullName">%full Name:</span>
+		</p>
+		<p>
+			<span data-bind="dictionaryBinding: 'labelAccountNumber', resourceName: 'compliance_DepositConfirmation'" class="main_text">%Account Number:</span>
+			<span data-bind="text: $parent.data.accountNumber">%Account number:</span>
+		</p>
+		<p>
+			<span data-bind="dictionaryBinding: 'lblDate', resourceName: 'compliance_DepositConfirmation'" class="main_text"></span>
+			<span data-bind="text: $parent.data.dateNow.ExtractDateLongYear()">%Account number:</span>
+		</p>
+	</div>
+
+	<div class="deposit-details">
+		<!-- ko if: withdrawalFlow -->
+		<p data-bind="dictionaryBinding: 'depositConfirmationIntroWithdrawal', resourceName: 'compliance_DepositConfirmation'"></p>
+		<!-- /ko -->
+		<!-- ko ifnot: withdrawalFlow -->
+		<p data-bind="dictionaryBinding: 'depositConfirmationIntro', resourceName: 'compliance_DepositConfirmation'"></p>
+		<!-- /ko -->
+		<p>
+			<span id="lblSignText" data-bind="dictionaryBinding: 'lblSignText', resourceName: 'compliance_DepositConfirmation'"></span><br />
+			<span id="lblDepositsInterval" data-bind="formattedText: [(firstDepositDate() != 'undefined' ? firstDepositDate() : ''), (lastDepositDate() != 'undefined' ? lastDepositDate() : '')]">({0}-{1})</span>
+		</p>
+	</div>
+	<table class="grid-table" id="Withdrawal_dgCC" data-bind="visible: deposits().length > 0">
+		<thead>
+			<tr>
+				<th class="datetime">
+					<span data-bind="dictionaryBinding: 'lblDateTime', resourceName: 'compliance_DepositConfirmation'" id="lblCCYDate">%DATE</span>
+				</th>
+				<th>
+					<span data-bind="dictionaryBinding: 'lblLast4', resourceName: 'compliance_DepositConfirmation'" id="lblLast4">%LAST 4 DIGITS</span>
+				</th>
+				<th>
+					<span data-bind="dictionaryBinding: 'lblCCY', resourceName: 'compliance_DepositConfirmation'" id="lblCCY">%CURRENCY</span>
+				</th>
+				<th class="amount">
+					<span data-bind="dictionaryBinding: 'lblCCYAmount', resourceName: 'compliance_DepositConfirmation'" id="lblCCYAmount">%AMOUNT</span>
+				</th>
+			</tr>
+		</thead>
+		<tbody data-bind="foreach: deposits">
+			<tr>
+				<td class="datetime" data-bind="text: RunDate"></td>
+				<td data-bind="text: CCnum"></td>
+				<td data-bind="text: $parents[1].getTranslatedSymbolByName(Currency)"></td>
+				<td class="amount" data-bind="text: Credit"></td>
+			</tr>
+		</tbody>
+		<tfoot data-bind="foreach: depositsTotal">
+			<tr>
+				<td class="total" colspan="3">
+					<span data-bind="dictionaryBinding: 'lblTotDep', resourceName: 'compliance_DepositConfirmation'">%Total Deposits in</span>
+					<span data-bind="text: $parents[1].getTranslatedSymbolByName(Currency)"></span>
+				</td>
+				<td class="amount">
+					<span data-bind="text: Format.toFixedAmount(Amount), 'data-automation':'depositinfo-amount'" id="totalAmount"></span>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<div class="wrap-data-fields" data-bind="if: deposits().length > 0, css: {'save-ready': $parent.Data.isLoading()}">
+		<div class="field-row">
+			<label data-bind="dictionaryBinding: 'lblFullName', resourceName: 'compliance_DepositConfirmation'"></label>
+			<!-- ko if: !$parent.data.isLoading() -->
+			<input class="text-field" type="text" data-bind="textInput: $parent.data.editFullName" />
+			<!-- /ko -->
+			<!-- ko if: $parent.data.isLoading() -->
+			<span class="blockspan text-field" type="text" data-bind="text: $parent.data.editFullName"></span>
+			<!-- /ko -->
+		</div>
+		<div class="field-row">
+			<label data-bind="dictionaryBinding: 'labelPhone', resourceName: 'compliance_DepositConfirmation'"></label>
+			<!-- ko if: !$parent.data.isLoading() -->
+			<input class="text-field" type="tel" data-bind="textInput: $parent.data.editPhoneNumber" />
+			<!-- /ko -->
+			<!-- ko if: $parent.data.isLoading() -->
+			<span class="blockspan text-field" type="text" data-bind="text: $parent.data.editPhoneNumber"></span>
+			<!-- /ko -->
+		</div>
+		<div class="field-row">
+			<label data-bind="dictionaryBinding: 'lblElectronicSignature', resourceName: 'compliance_DepositConfirmation'"></label>
+			<!-- ko component: { name: 'fx-component-electronic-signature', params: { callback: $parent.data.drawStatus, isLoading: $parent.data.isLoading } } -->
+			<!-- /ko -->
+		</div>
+	</div>
+
+	<div class="action-row" id="SendActionContainer">
+		<p class="error-message"><span data-bind="visible: $parent.data.hasErrors(), dictionaryBinding: 'lblFailedImgConvert', resourceName: 'compliance_DepositConfirmation'"></span></p>
+		<button class="send-action" data-bind="click: $parent.sendDepositConfirmation, disable: !$parent.data.drawStatus() || $parent.data.editFullName().trim().length === 0 || $parent.data.editPhoneNumber().trim().length === 0 || $parent.data.isLoading()">
+			<!-- ko if: !$parent.data.isLoading() -->
+			<span data-bind="dictionaryBinding: 'lblSend'"></span>
+			<!-- /ko -->
+			<!-- ko if: $parent.data.isLoading() -->
+			<span class="loading-action"></span>
+			<!-- /ko -->
+		</button>
+	</div>
+
+	<p class="footer-line" data-bind="dictionaryBinding: 'depositConfirmationPrintFooter', resourceName: 'compliance_DepositConfirmation'"></p>
+</div>

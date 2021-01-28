@@ -1,0 +1,15 @@
+﻿<h3 class="title">Method</h3>
+<div class="holder">
+	<table class="data-holder">
+		<tr>
+			<td>
+				<select data-bind="options: methods,
+					optionsText: 'method',
+					optionsValue: 'value',
+					value: selectedMethod" class="long"></select>
+				<button data-bind="click: applyMethodClick" class="short">Apply</button>
+                <span data-bind="text: spinnerText">Processing...</span>
+			</td>
+		</tr>
+	</table>
+</div>

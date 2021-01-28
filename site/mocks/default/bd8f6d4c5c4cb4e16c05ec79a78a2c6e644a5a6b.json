@@ -1,0 +1,198 @@
+{
+  "requestUrl": "/webpl3/Compliance/GetNotificationsSettings",
+  "contentType": "application/json; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "Result": {
+      "AccountNumber": 2000015630,
+      "MinPctEQXP": 0.5,
+      "SendingCategoryList": [
+        {
+          "CampaignCategoryID": 12,
+          "CampaignCategoryName": "Test",
+          "CategoryMethods": [
+            {
+              "SendingMethodId": 6,
+              "SendingMethodName": "Email Marketing",
+              "Enable": true,
+              "Allowed": true,
+              "DailyAllowedMsgCount": -1
+            },
+            {
+              "SendingMethodId": 7,
+              "SendingMethodName": "Mobile Notification",
+              "Enable": true,
+              "Allowed": true,
+              "DailyAllowedMsgCount": -1
+            }
+          ]
+        },
+        {
+          "CampaignCategoryID": 7,
+          "CampaignCategoryName": "Price Alert",
+          "CategoryMethods": [
+            {
+              "SendingMethodId": 6,
+              "SendingMethodName": "Email Marketing",
+              "Enable": false,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 0
+            },
+            {
+              "SendingMethodId": 7,
+              "SendingMethodName": "Mobile Notification",
+              "Enable": true,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 100
+            }
+          ]
+        },
+        {
+          "CampaignCategoryID": 3,
+          "CampaignCategoryName": "Major Market Movements",
+          "CategoryMethods": [
+            {
+              "SendingMethodId": 6,
+              "SendingMethodName": "Email Marketing",
+              "Enable": false,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 0
+            },
+            {
+              "SendingMethodId": 7,
+              "SendingMethodName": "Mobile Notification",
+              "Enable": true,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 5
+            }
+          ]
+        },
+        {
+          "CampaignCategoryID": 6,
+          "CampaignCategoryName": "Economic Calendar",
+          "CategoryMethods": [
+            {
+              "SendingMethodId": 6,
+              "SendingMethodName": "Email Marketing",
+              "Enable": false,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 0
+            },
+            {
+              "SendingMethodId": 7,
+              "SendingMethodName": "Mobile Notification",
+              "Enable": true,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 6
+            }
+          ]
+        },
+        {
+          "CampaignCategoryID": 8,
+          "CampaignCategoryName": "Limit Execution",
+          "CategoryMethods": [
+            {
+              "SendingMethodId": 6,
+              "SendingMethodName": "Email Marketing",
+              "Enable": false,
+              "Allowed": false,
+              "DailyAllowedMsgCount": 0
+            },
+            {
+              "SendingMethodId": 7,
+              "SendingMethodName": "Mobile Notification",
+              "Enable": true,
+              "Allowed": false,
+              "DailyAllowedMsgCount": 1000
+            }
+          ]
+        },
+        {
+          "CampaignCategoryID": 9,
+          "CampaignCategoryName": "Insufficient Funds Alert",
+          "CategoryMethods": [
+            {
+              "SendingMethodId": 6,
+              "SendingMethodName": "Email Marketing",
+              "Enable": false,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 0
+            },
+            {
+              "SendingMethodId": 7,
+              "SendingMethodName": "Mobile Notification",
+              "Enable": true,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 5
+            }
+          ]
+        },
+        {
+          "CampaignCategoryID": 10,
+          "CampaignCategoryName": "Account Liquidation",
+          "CategoryMethods": [
+            {
+              "SendingMethodId": 6,
+              "SendingMethodName": "Email Marketing",
+              "Enable": false,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 0
+            },
+            {
+              "SendingMethodId": 7,
+              "SendingMethodName": "Mobile Notification",
+              "Enable": true,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 10
+            }
+          ]
+        },
+        {
+          "CampaignCategoryID": 11,
+          "CampaignCategoryName": "Customer Support & Education",
+          "CategoryMethods": [
+            {
+              "SendingMethodId": 6,
+              "SendingMethodName": "Email Marketing",
+              "Enable": true,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 1
+            },
+            {
+              "SendingMethodId": 7,
+              "SendingMethodName": "Mobile Notification",
+              "Enable": true,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 1
+            }
+          ]
+        },
+        {
+          "CampaignCategoryID": 4,
+          "CampaignCategoryName": "Promotions",
+          "CategoryMethods": [
+            {
+              "SendingMethodId": 6,
+              "SendingMethodName": "Email Marketing",
+              "Enable": true,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 1
+            },
+            {
+              "SendingMethodId": 7,
+              "SendingMethodName": "Mobile Notification",
+              "Enable": true,
+              "Allowed": true,
+              "DailyAllowedMsgCount": 2
+            }
+          ]
+        }
+      ],
+      "MinExposureCoverage": 0.25,
+      "MaxExposureCoverage": 10
+    },
+    "Status": 1
+  },
+  "isBase64": false
+}

@@ -1,0 +1,9 @@
+﻿<div class="faq">
+	<header>
+		<h4 data-bind="dictionaryBinding: 'lblTitleFAQ', resourceName: 'support'"></h4>
+	</header>
+
+	<div class="accordion" data-bind="foreach: keys">
+		<div data-bind="resourceName: $parent.faqKey, dictionaryBinding: $data, with: $parent"></div>
+	</div>
+</div>

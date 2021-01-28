@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/api/activitylog/GetData",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "POST",
+  "statusCode": 200,
+  "data": "{ \"status\":\"Success\", \"totalItems\": 9, \"activityLogs\":[[30,\"27/01/21 06:39:36\",7,\"2000015630 ordered limit no. 5602547 (T/P) Buy USD Sell 430 China Top-50 Long x3 at rate 28.610\"],[1,\"27/01/21 05:43:55\",7,\"2000015630 logged in \\u003cFXNetWeb3\\u003e\"],[1,\"27/01/21 05:37:55\",7,\"2000015630 logged in \\u003cFXNetWeb3\\u003e\"],[1,\"27/01/21 04:34:00\",7,\"2000015630 logged in \\u003cFXNetWeb3\\u003e\"],[1,\"25/01/21 21:06:19\",7,\"2000015630 logged in \\u003cFXNetWeb3\\u003e\"],[1,\"25/01/21 19:26:33\",7,\"2000015630 logged in \\u003cFXNetWeb3\\u003e\"],[1,\"25/01/21 09:41:54\",7,\"2000015630 logged in \\u003cFXNetWeb3\\u003e\"],[2,\"25/01/21 09:41:43\",7,\"2000015630 logged off \\u003cFXNetWeb3\\u003e\"],[1,\"25/01/21 09:39:34\",7,\"2000015630 logged in \\u003cFXNetWeb3\\u003e\"]] }",
+  "isBase64": false
+}

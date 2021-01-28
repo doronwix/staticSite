@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/menus_mainmenu.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"liAccountStatment2\":\"Account Statement\",\"liActivityLog2\":\"Activity Log\",\"liAdvinionChart2\":\"Chart Station\",\"liDepositFunds2\":\"Deposit Funds \",\"liEducation2\":\"Education\",\"liEducationalForexTutorial2\":\"Videos\",\"liForexTutorial2\":\"\",\"liFunds1\":\"Funds\",\"liOpenDeals2\":\"Open Deals\",\"liPendingWithdrawals\":\"Pending Withdrawals\",\"liPriceAlert\":\"Price Alerts\",\"liReports1\":\"Reports\",\"liTools2\":\"Tools\",\"liTrading1\":\"Trading\",\"liTradingSignals2\":\"Trading Signals\",\"liTransactionsReport2\":\"Transactions Report\",\"liWithdrawFunds2\":\"Withdraw Funds \"}",
+  "isBase64": false
+}

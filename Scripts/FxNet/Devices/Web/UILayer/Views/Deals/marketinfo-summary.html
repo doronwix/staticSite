@@ -1,0 +1,17 @@
+<div class="market-summary">
+    <div class="summary-item" data-bind="css: { 'red': parseFloat(Data.change()) < 0, 'green': parseFloat(Data.change()) > 0 }">
+        <div class="item-value change" data-bind="text: NewDealData.formattedChange()"></div>
+    </div>
+    <div class="summary-item">
+        <span class="item-label" data-bind="dictionaryBinding: 'lblHighBid', resourceName: 'deals_DealMarketInfoTool'"></span>
+        <span class="item-value" data-bind="template: { name: 'rate-template', data: Format.tenthOfPipSplitRate(NewDealData.highBid(), NewDealData.selectedInstrument()).label }"></span>
+    </div>
+    <div class="summary-item">
+        <span class="item-label" data-bind="dictionaryBinding: 'lblLowAsk', resourceName: 'deals_DealMarketInfoTool'"></span>
+        <span class="item-value" data-bind="template: { name: 'rate-template', data: Format.tenthOfPipSplitRate(NewDealData.lowAsk(), NewDealData.selectedInstrument()).label }"></span>
+    </div>
+    <div class="summary-item">
+        <span class="item-label" data-bind="dictionaryBinding: 'lblTradeTime', resourceName: 'deals_DealMarketInfoTool'"></span>
+        <span class="item-value trade-time" data-bind="text: NewDealData.tradeTime"></span>
+    </div>
+</div>

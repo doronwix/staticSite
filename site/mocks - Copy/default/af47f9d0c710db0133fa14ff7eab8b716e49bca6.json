@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/datagrids_opendeals.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"btnCloseDeal\":\"Close\",\"clickHereDeposit\":\"Click here to deposit and open a deal\",\"clickHereOpenDeal\":\"Click to open a new deal\",\"hasNoDeals\":\"You do not have any deals open\",\"openDeals_AddSL\":\"Add S/L\",\"openDeals_AddTP\":\"Add T/P\",\"openDeals_ADJ\":\"OFH\",\"openDeals_Amount\":\"Amount\",\"openDeals_CloseSelected\":\"Close Selected Deals\",\"openDeals_ClosingRate\":\"Closing Rate\",\"openDeals_Commission\":\"Commission \",\"openDeals_Deal\":\"Deal\",\"openDeals_GrossPL\":\"Gross P/L\",\"openDeals_OpenDealsTitle\":\"Open Deals\",\"openDeals_OpenRate\":\"Open Rate\",\"openDeals_PL\":\"Open P/L\",\"openDeals_SpreadDiscount\":\"Spread Discount\",\"openDeals_StopLoss\":\"Stop Loss\",\"openDeals_TakeProfit\":\"Take Profit\",\"openDeals_ValueDate\":\"Value Date\",\"waitForOpenDealsLoadMsg\":\"Please wait\"}",
+  "isBase64": false
+}

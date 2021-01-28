@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/Compliance/confirm-verification-document.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<div class=\"upload-action-wrap\">\r\n    <button class=\"btn action colored\" data-bind=\"click: OnClick, 'data-automation': 'browse-button', dictionaryBinding: 'lblConfirm', resourceName: 'compliance_UploadDocuments', enable: Data.enableConfirm\"></button>\r\n</div>",
+  "isBase64": false
+}

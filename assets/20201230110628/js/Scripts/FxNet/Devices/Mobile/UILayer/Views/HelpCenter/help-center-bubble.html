@@ -1,0 +1,7 @@
+﻿<div class="pg-wrap" id="pgWrap" data-bind="click: showHelpCenter, css: {'show': Data.bubbleVisible() }">
+    <div class="pg-content">
+        <span class="closebtn" data-bind="click: hideBubble, clickBubble: false, animatePgbubbleHide">&times;</span>
+        <h2 class="pg-title" data-bind="html: Data.showBubble().title"></h2>
+        <p class="pg-line" data-bind="html: Data.showBubble().message"></p>
+    </div>
+</div>

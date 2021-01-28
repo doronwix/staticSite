@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/tooltipsStaticResource.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"closedDeals_ADJ_tooltip\":\"Overnight Financing History\",\"closedDeals_PL_CURRENCY_tooltip\":\"Profit or Loss\",\"closedDeals_PL_Tooltip\":\"Profit or Loss\",\"limits_LimitNoToolTip\":\"Limit Order No: <b>{0}</b>\",\"openDeals_ADJ_tooltip\":\"Overnight Financing History\",\"openDeals_AmountToolTip\":\"Amount in {0}: {1}\",\"openDeals_DealIdToolTip\":\"Deal no: <b>{0}</b>\",\"openDeals_GrossPL_Tooltip\":\"Profit or Loss of your Open Deals excluding Commission\",\"openDeals_PL_Tooltip\":\"Profit or Loss of your Open Deals\"}",
+  "isBase64": false
+}

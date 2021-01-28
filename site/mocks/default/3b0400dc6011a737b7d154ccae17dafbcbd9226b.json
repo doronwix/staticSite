@@ -1,0 +1,234 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/Payments/Deposit/ConcretePayments/co100-uco100-br1.js",
+  "contentType": "application/x-javascript; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "payments": [
+      {
+        "id": 98,
+        "name": "Offline international bank transfer",
+        "paymentType": 20,
+        "currencies": [],
+        "categories": [
+          3
+        ],
+        "paymentData": "2",
+        "textContentKey": "eConcretePayment_98",
+        "imageClass": "unavailable offline",
+        "isRecommended": false,
+        "subtitleContentKey": ""
+      },
+      {
+        "id": 99,
+        "name": "Offline local bank transfer",
+        "paymentType": 20,
+        "currencies": [],
+        "categories": [
+          3
+        ],
+        "paymentData": "5",
+        "textContentKey": "eConcretePayment_99",
+        "imageClass": "",
+        "isRecommended": false,
+        "subtitleContentKey": "eConcretePayment_99"
+      },
+      {
+        "id": 142,
+        "name": "Neteller",
+        "paymentType": 37,
+        "currencies": [
+          14,
+          16,
+          21,
+          23,
+          47
+        ],
+        "categories": [
+          2
+        ],
+        "paymentData": "",
+        "textContentKey": "eConcretePayment_142",
+        "imageClass": "deposit-ico-neteller",
+        "isRecommended": false,
+        "subtitleContentKey": ""
+      },
+      {
+        "id": 144,
+        "name": "Yandex",
+        "paymentType": 37,
+        "currencies": [],
+        "categories": [
+          2
+        ],
+        "paymentData": "",
+        "textContentKey": "eConcretePayment_144",
+        "imageClass": "deposit-ico-Yandex_eng",
+        "isRecommended": false,
+        "subtitleContentKey": ""
+      },
+      {
+        "id": 560,
+        "name": "Astropay",
+        "paymentType": 36,
+        "currencies": [
+          47
+        ],
+        "categories": [
+          1,
+          2
+        ],
+        "paymentData": "",
+        "textContentKey": "",
+        "imageClass": "",
+        "isRecommended": true,
+        "subtitleContentKey": ""
+      },
+      {
+        "id": 563,
+        "name": "Bradesco",
+        "paymentType": 36,
+        "currencies": [],
+        "categories": [
+          3
+        ],
+        "paymentData": "BD",
+        "textContentKey": "eConcretePayment_563",
+        "imageClass": "deposit-ico-Bradesco",
+        "isRecommended": false,
+        "subtitleContentKey": ""
+      },
+      {
+        "id": 627,
+        "name": "Wiseline",
+        "paymentType": 42,
+        "currencies": [],
+        "categories": [
+          2
+        ],
+        "paymentData": "{\"logInfo\": \"Wiseline\", \"paymentInfo\": \"eConcretePaymentData_Wiseline\"}",
+        "textContentKey": "eConcretePayment_627",
+        "imageClass": "deposit-ico-UnionPay",
+        "isRecommended": false,
+        "subtitleContentKey": ""
+      },
+      {
+        "id": 628,
+        "name": "EcoPayz",
+        "paymentType": 43,
+        "currencies": [
+          4,
+          14,
+          16,
+          23,
+          47
+        ],
+        "categories": [
+          1,
+          2
+        ],
+        "paymentData": "ecopayz",
+        "textContentKey": "eConcretePayment_628",
+        "imageClass": "deposit-ico-ecopayz",
+        "isRecommended": false,
+        "subtitleContentKey": ""
+      },
+      {
+        "id": 629,
+        "name": "EcoVoucher",
+        "paymentType": 43,
+        "currencies": [
+          47
+        ],
+        "categories": [
+          4
+        ],
+        "paymentData": "ecopayzVoucher",
+        "textContentKey": "eConcretePayment_629",
+        "imageClass": "deposit-ico-ecopayzVoucher",
+        "isRecommended": false,
+        "subtitleContentKey": ""
+      },
+      {
+        "id": 648,
+        "name": "PayPal1",
+        "paymentType": 5,
+        "currencies": [
+          47
+        ],
+        "categories": [
+          2
+        ],
+        "paymentData": "",
+        "textContentKey": "eConcretePayment_600",
+        "imageClass": "deposit-ico-paypal",
+        "isRecommended": false,
+        "subtitleContentKey": ""
+      },
+      {
+        "id": 686,
+        "name": "AutoDetect Credit Card",
+        "paymentType": 1,
+        "currencies": [],
+        "categories": [
+          1
+        ],
+        "paymentData": "{\"viewType\":\"genericcreditcard\",\"paymentData\":\"generic\"}",
+        "textContentKey": "eConcretePayment_655",
+        "imageClass": "deposit-ico-generic-card",
+        "isRecommended": false,
+        "subtitleContentKey": ""
+      },
+      {
+        "id": 722,
+        "name": "BitWallet",
+        "paymentType": 52,
+        "currencies": [],
+        "categories": [
+          2
+        ],
+        "paymentData": "",
+        "textContentKey": "eConcretePayment_BitWallet",
+        "imageClass": "deposit-ico-bitwallet",
+        "isRecommended": false,
+        "subtitleContentKey": ""
+      },
+      {
+        "id": 727,
+        "name": "GlobePay",
+        "paymentType": 54,
+        "currencies": [],
+        "categories": [
+          2
+        ],
+        "paymentData": "",
+        "textContentKey": "",
+        "imageClass": "deposit-ico-globepay",
+        "isRecommended": false,
+        "subtitleContentKey": ""
+      },
+      {
+        "id": 733,
+        "name": "Astropay",
+        "paymentType": 55,
+        "currencies": [],
+        "categories": [
+          2
+        ],
+        "paymentData": "",
+        "textContentKey": "eConcretePayment_728",
+        "imageClass": "deposit-ico-AstroPay",
+        "isRecommended": false,
+        "subtitleContentKey": ""
+      }
+    ],
+    "categories": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "maxRecommended": 4
+  },
+  "isBase64": false
+}

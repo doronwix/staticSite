@@ -1,0 +1,64 @@
+﻿<div class="paymentFormContainer thank-you">
+	<div class="container">
+		<h3 data-bind="dictionaryBinding: 'depositPendingThankYou', resourceName: 'deposit_thankyou_pending'"></h3>
+
+		<dl>
+			<dt>
+				<span data-bind="dictionaryBinding: 'depositLabel', resourceName: 'deposit_thankyou_pending'"></span>
+			</dt>
+			<dd>
+				<span data-bind="text: Format.toAmountWithCurrency(Format.toFixedAmount, Data.depositAmount, Data.depositCurrency)"></span>
+			</dd>
+
+			<dt>
+				<span data-bind="dictionaryBinding: 'paymentLabel', resourceName: 'deposit_thankyou_pending'"></span>
+			</dt>
+			<dd>
+				<!-- ko if: Data.depositPaymentLast4 -->
+				<span data-bind="formattedText: [Data.depositPaymentLast4], contentKey: 'lblCCLastDigits', resourceName: 'deposit_thankyou_pending'"></span>
+				<!-- /ko -->
+				<!-- ko if: !Data.depositPaymentLast4 -->
+				<span data-bind="text: Data.isCCDeposit ? Dictionary.GetItem('dpCreditCard','deposit_thankyou_pending') : Data.originalPaymentName"></span>
+				<!-- /ko -->
+			</dd>
+
+			<dt>
+				<span data-bind="dictionaryBinding: 'statusLabel', resourceName: 'deposit_thankyou_pending'"></span>
+			</dt>
+			<dd>
+				<span data-bind="dictionaryBinding: 'statusPending', resourceName: 'deposit_thankyou_pending'" class="blue"></span>
+			</dd>
+		</dl>
+		<!-- ko if: Data.existsNoticesToShow -->
+		<div class="info-note red-hls">
+			<h4 data-bind="dictionaryBinding: 'importantLabel', resourceName: 'deposit_thankyou'"></h4>
+			<p>
+				<span data-bind="dictionaryBinding: 'importantMessage', resourceName: 'deposit_thankyou_pending'"></span>
+				<!-- ko if: Data.shouldShowAmlNotice() -->
+				<span data-bind="formattedText: [Data.countDownDays], contentKey: 'importantMessageUploadDocument', resourceName: 'deposit_thankyou_pending'"></span>
+				<!-- /ko -->
+			</p>
+			<!-- ko if: Data.shouldShowAmlNotice() -->
+			<a data-bind="dictionaryBinding: 'uploadDocumentsNowLabel', resourceName: 'deposit_thankyou',
+				click: function() {
+					$viewModelsManager.VManager.SwitchViewVisible(eForms.UploadDocuments);
+				}" href="javascript:void(0)" class="upload"></a>
+			<!-- /ko -->
+		</div>
+		<!-- /ko -->
+
+		<div class="form-note">
+			<!-- ko if: Data.paymentTypeId === eDepositingActionType.Regular || Data.paymentTypeId === eDepositingActionType.Astropay -->
+			<fx-componet-creditcard-regular-note></fx-componet-creditcard-regular-note>
+			<!-- /ko -->
+			<!-- ko if: Data.paymentTypeId === eDepositingActionType.WireTransfer -->
+			<fx-componet-wiretransfer-regular-note></fx-componet-wiretransfer-regular-note>
+			<!-- /ko -->
+			<!-- ko if: Data.paymentTypeId === eDepositingActionType.EcoPayz -->
+			<fx-componet-ecopayz-note></fx-componet-ecopayz-note>
+			<!-- /ko -->
+		</div>
+		<a data-bind="html: Dictionary.GetItem('btnContinue'), click: onContinue" href="javascript:void(0)" class="btn big right"></a>
+		<div class="clear"></div>
+	</div>
+</div>

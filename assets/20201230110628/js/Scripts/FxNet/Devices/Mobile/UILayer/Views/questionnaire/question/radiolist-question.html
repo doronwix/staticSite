@@ -1,0 +1,32 @@
+﻿<!--ko if: visible-->
+<div class="row" data-bind="css: {valid : isValid() && validationOn(), error : !isValid() && validationOn(), focused:focused() }">
+    <div class="select-question">
+        <div class="vertical-list">
+            <p>
+                <label data-bind="attr: {id:name + 'Label'}" class="cdd-lesson-title">
+                    <span data-bind="html: text"></span>
+                    <!--ko if: tooltip !== '' -->
+                    <fx-tooltip params="tooltip:tooltip, id: name"></fx-tooltip>
+                    <!--/ko-->
+                </label>
+            </p>
+
+            <ul class="list" data-bind="foreach : optionalAnswers">
+                <li>
+                    <div class="custom-input-wrapper" data-bind="css: {checked: ( answerValue === parseInt($parent.answer()) ) }">
+                        <input type="radio" data-bind="attr:{ name: $parent.id, id: answerId + '_' + $index(), value: answerValue }, checked: $parent.answer, event: { click: function(){ $parent.closeAllPopups(); if (popup) {popup.visible(true);} return true;}, blur: function(){ if (!Browser.isSafariOnMacIOS()) $parent.closeAllPopups(); $parent.focused(false); },focus: function(){ $parent.focused(true); }}">
+                        <span></span>
+                    </div>
+                    <label class="radiotext" data-bind="html: text, attr: {for: answerId  + '_' + $index()}">Employed</label>
+                    <!--ko if: popup -->
+                    <fx-question-tooltip-balloon params="headerText: popup.headerText, bodyText: popup.bodyText, visible: popup.visible"></fx-question-tooltip-balloon>
+	                <!--/ko-->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--ko ifnot: isValid -->
+    <fx-question-validation-balloon></fx-question-validation-balloon>
+    <!--/ko-->
+</div>
+<!--/ko-->

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta name="version" content="20201230110628" />
+		<link rel="icon" href="data:;" />
+		<link rel="apple-touch-icon" href="data:;" />
+		<div
+			id="cssloadOverlay"
+			style="
+				background-color: #fff;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				z-index: 2000;
+			"
+		></div>
+
+		<link rel="dns-prefetch" href="##CSMPushServiceUrl" />
+		<link rel="preconnect" href="##CSMPushServiceUrl" crossorigin />
+		<link rel="dns-prefetch" href="##TradingInfoSrv_SignalR" />
+		<link rel="preconnect" href="##TradingInfoSrv_SignalR" crossorigin />
+		<link rel="dns-prefetch" href="##InteractiveMessagesUrl" />
+		<link rel="preconnect" href="##InteractiveMessagesUrl" crossorigin />
+
+		<link rel="prefetch" href="##FileUpload" />
+		<link rel="prefetch" href="##FileAmlUpload" />
+		<link rel="prefetch" href="##GenericCCNumber" />
+
+		<script type="text/javascript">
+			(function (head) {
+				var eLoginLogoutReason = {
+					webTrader_filepathNotAccessible: 7770007,
+					webTrader_noViewModeCookie: 7770008,
+					webTrader_noVersionCookie: 7770009,
+					webTrader_noBrokerCookie: 7770010,
+					webTrader_unsupportedError: 7770011,
+				};
+
+				window.onerror = function (message, url, lineNumber, columnNumber, error) {
+					try {
+						window.sessionStorage.removeItem("TrackingSessionId");
+					} catch (e) {}
+
+					error = error || {};
+
+					var errorCode = message || error.message;
+					if (errorCode && !isNaN(errorCode)) {
+						window.location.assign("account/logout?reason=" + errorCode);
+					} else {
+						addLoginReasonCookie(
+							(message || error.message) +
+								(error.stack ? " Stack: " + error.stack.toString().substring(0, 1500) : "") +
+								" ,u:" +
+								url +
+								" ,l:" +
+								lineNumber
+						);
+
+						window.location.assign(
+							"account/logout?reason=" + eLoginLogoutReason.webTrader_unsupportedError
+						);
+					}
+				};
+
+				function addLoginReasonCookie(reason) {
+					if (reason) {
+						document.cookie = "loginReason=" + encodeURIComponent(reason) + "; path=/";
+					}
+				}
+
+				function kickOut(errorCode, message) {
+					if (message) {
+						addLoginReasonCookie(message);
+					}
+
+					window.location.assign("account/login?reason=" + errorCode);
+				}
+
+				function loadScript(filePath, fallback) {
+					var script = document.createElement("script");
+					script.src = filePath;
+					script.crossOrigin = "anonymous";
+					script.async = true;
+					script.onerror = function (e) {
+						if (e.target.src.indexOf("tryagain") !== -1) {
+							var msg = e.srcElement ? e.srcElement.src : eLoginLogoutReason.webTrader_unsupportedError;
+							addLoginReasonCookie(eLoginLogoutReason.webTrader_unsupportedError + "," + msg);
+							window.location.assign(
+								"account/logout?reason=" + eLoginLogoutReason.webTrader_filepathNotAccessible
+							);
+						} else {
+							if (fallback) {
+								fallback();
+							}
+						}
+					};
+
+					head.appendChild(script);
+				}
+
+				function setApplicationStyleTheme() {
+					var ThemeCookie = (document.cookie.match(/(^|; )Theme=([^;]*)/i) || "")[2] || null;
+
+					if (ThemeCookie === null) {
+						ThemeCookie = "light|false";
+						document.cookie = "Theme=" + ThemeCookie + "; path=/";
+					}
+
+					window.ApplicationTheme = ThemeCookie.split("|")[0];
+				}
+
+				if (new RegExp("(^|; )ViewMode=FullSite", "i").test(document.cookie) !== true) {
+					kickOut(eLoginLogoutReason.webTrader_noViewModeCookie, "ViewMode");
+					return;
+				}
+
+				var versionMetaEl = document.querySelector("meta[name=version]"),
+					versionMeta = versionMetaEl ? versionMetaEl.getAttribute("content") : "",
+					versionQueryString = (window.location.search.match(/v=(\d+)/i) || "")[1],
+					versionCookie = (document.cookie.match(/(^|; )Version=([^;]+)/i) || "")[2];
+
+				function refreshWithNewVersion() {
+					var newLocation = versionQueryString
+						? window.location.href.replace(versionQueryString, versionCookie)
+						: window.location.href.split("?")[0] + "?v=" + versionCookie + "#tryagain";
+					window.location.assign(newLocation);
+				}
+
+				if (!versionCookie) {
+					kickOut(eLoginLogoutReason.webTrader_noVersionCookie, "Version");
+					return;
+				}
+
+				if (versionMeta > versionCookie) {
+					kickOut(eLoginLogoutReason.mobileTrader_noVersionCookie, "VersionCookieIsStale");
+					return;
+				}
+
+				if (versionMeta !== versionCookie) {
+					if (window.location.href.indexOf("tryagain") !== -1) {
+						kickOut(eLoginLogoutReason.mobileTrader_noVersionCookie, "VersionMetaIsStale");
+					} else {
+						refreshWithNewVersion();
+					}
+					return;
+				}
+
+				if (versionQueryString && versionQueryString !== versionCookie) {
+					refreshWithNewVersion();
+					return;
+				}
+
+				var broker = (document.cookie.match(/(^|; )CS=([^;]*)/i) || "")[2] || "";
+				if (!parseInt(broker)) {
+					kickOut(eLoginLogoutReason.webTrader_noBrokerCookie, "Broker");
+					return;
+				}
+
+				var cdnPath = (document.cookie.match(/(^|; )CDN=([^;]*)/i) || "")[2] || "",
+					appRelativePath = window.location.pathname.substring(0, window.location.pathname.indexOf("/", 1)),
+					language = (document.cookie.match(/(^|; )Language=([^;]+)/i) || "")[2] || "English";
+
+				setApplicationStyleTheme();
+
+				var link = document.createElement("link");
+				link.rel = "stylesheet";
+				link.href = (
+					cdnPath +
+					appRelativePath +
+					"/assets/" +
+					versionCookie +
+					"/skins/web/broker" +
+					broker +
+					"/" +
+					language +
+					"/splash-screen." +
+					window.ApplicationTheme +
+					".css"
+				).toLowerCase();
+				head.appendChild(link);
+
+				var scriptFilesToInject = [("assets/" + versionCookie + "/js/scripts/preloader-web.js").toLowerCase()];
+
+				for (var i = 0; i < scriptFilesToInject.length; i++) {
+					var fallback = loadScript.bind(this, scriptFilesToInject[i] + "#tryagain");
+					loadScript(cdnPath + appRelativePath + "/" + scriptFilesToInject[i], fallback);
+				}
+			})(document.head || document.getElementsByTagName("head")[0]);
+		</script>
+
+		<link rel="manifest" href="manifest.json" />
+	</head>
+	<body data-bind="css: 'page-' + $viewModelsManager.VManager.ActiveFormName()">
+		<div class="mainWrapper">
+			<!-- ko if: Browser.isInternetExplorer() && !Browser.isIEVersionGreaterThen(8) -->
+			<div data-bind="loadHtml: { url: 'Customer/BrowserUpdateBanner' }"></div>
+			<!-- /ko -->
+
+			<div id="popup_overlay" class="popup_overlay"></div>
+
+			<div id="popupContainer" class="popupContainer">
+				<div class="popupContainer_content"></div>
+			</div>
+
+			<!-- ko ifnot: FxNet.IsLoaded && FxNet.IsVisible && FxNet.IsCacheLoaded -->
+			<div id="splash_page">
+				<div class="logo-container">
+					<div class="logo-center">
+						<div class="logo"></div>
+					</div>
+				</div>
+				<div class="main-menu-bg-wide">&nbsp;</div>
+				<div class="splash-text">
+					<p>
+						<span id="lblSplashWait" class="wait"></span>
+					</p>
+					<div class="splash-sub-text">
+						<span id="lblSplashText" class="request"></span>
+					</div>
+					<div class="splash-loader"><div class="loader"></div></div>
+				</div>
+			</div>
+			<!-- /ko -->
+			<!-- ko if: FxNet.IsLoaded -->
+			<div
+				data-bind="template: { name: 'mainTemplate', afterRender: FxNet.UiAfterRender }, visible: FxNet.IsVisible && FxNet.IsCacheLoaded"
+				style="display: none"
+			></div>
+
+			<div
+				id="CsmOutOfDateOverlay"
+				class="alert-overlay"
+				data-bind="visible: FxNet.CsmOutOfDate"
+				style="display: none"
+			>
+				<div class="js_processing2"></div>
+			</div>
+			<!-- /ko -->
+
+			<script id="mainTemplate" type="text/html"></script>
+		</div>
+	</body>
+</html>

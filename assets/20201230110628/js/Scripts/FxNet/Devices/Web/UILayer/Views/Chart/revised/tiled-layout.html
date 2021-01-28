@@ -1,0 +1,56 @@
+﻿<div class="tiles-wrap">
+    <div class="tiles-header">
+        <div class="tiles-control">
+            <div class="controlwr tilechoose">
+                <button class="tiledisplay" data-bind="
+                    css: 'display_' + $component.Data.selectedLayout(),
+                    clickBubble: false,
+                    click: ToggleLayoutSelector,
+                    attr: { title: Dictionary.GetItem('tile_layout_' + $component.Data.selectedLayout(), 'chart_station') },
+                    'data-automation': 'charts-layout-selector'
+                "></button>
+
+                <div class="tileswitch" data-bind="foreach: $component.Data.layouts, visible: $component.Data.isLayoutSelectorExpanded()">
+                    <button class="tiledisplay" data-bind="
+                        clickBubble: false, 
+                        click: function(){ $component.SelectLayout($data); },
+                        attr: { title: Dictionary.GetItem('tile_layout_' + $data, 'chart_station') },
+                        css: 'display_' + $data
+                    "></button>
+                </div>
+            </div>
+            <div class="controlwr">
+                <button class="charttoggle" data-bind="
+                    css: !$component.Data.isFullScreen() ? 'expand' : 'collapse',
+                    attr: { title: Dictionary.GetItem($component.Data.isFullScreen() ? 'ExitFullScreen' : 'FullScreen', 'chart_station') },
+                    click: ToggleFullScreen,
+                    dealSlipToggle: { isFullScreen: $component.Data.isFullScreen, trakingEventName: 'chart-interaction' },
+                    'data-automation': 'charts-fullscreen-toogle'
+                "></button>
+            </div>
+
+        </div>
+    </div>
+    <div class="tiles-content-wrap" data-bind="css: 'contain_' + $component.Data.selectedLayout()">
+        <!-- ko foreach: $component.Data.templates -->
+            <div class="chart-tile-container" data-bind="css: { 'active': $component.Data.activeTileId() === $index() }, attr: { id: 'TileContainer_' + $index()}">
+                <div class="chart-tile" data-bind="css: { 'active': $component.Data.activeTileId() === $index() }">
+                    <div class="tile-overlay" data-bind="click: function(){ $component.SetActiveTile($index()); },
+                        visible: $component.Data.activeTileId() !== $index()"></div>
+                    <div class="chart-content">
+                        <!-- ko component: {
+                            name: 'fx-component-chart',
+                            params: {
+                                index: $index(),
+                                isFullScreen: $component.Data.isFullScreen,
+                                isSingleMode: $component.Data.isSingleMode,
+                                isActive: ko.pureComputed(function isActive(){ return $component.Data.activeTileId() === $index(); }),
+                                activeChangedHandler: function activeChangedHandler(idx) { $component.Data.setActiveHandler($index(), idx); }
+                            }
+                        } --><!-- /ko -->
+                    </div>
+                </div>
+            </div>
+        <!-- /ko -->
+    </div>
+</div>

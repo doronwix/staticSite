@@ -1,0 +1,8 @@
+node_modules/
+coverage/
+docs/
+dist/
+*.log
+.git/
+.gitignore
+team-extension.log

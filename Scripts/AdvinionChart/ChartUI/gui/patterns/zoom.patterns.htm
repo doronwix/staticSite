@@ -1,0 +1,70 @@
+﻿  <zoom-container>
+            <div id="divZoom" class="adv-svgchart-zoom2">
+                 %html%
+            </div>
+        </zoom-container>
+        
+        
+        <zoom-chart-container-old>
+            <div class="zoom-chart-container"  %style% >
+                <div style="position: relative">
+                    <canvas id="svgZoomChart"  %stylecanvas%></canvas>
+                    <div class="zoom-rect-left"  %styleleft%></div>
+                    <div class="zoom-rect-right" %styleright%></div> 
+                </div>
+                
+            </div>
+        </zoom-chart-container-old>
+
+
+        <zoom-chart-container>
+            <div class="zoom-chart-container"  %style%  id="%id%">
+                <div style="position: relative">
+ 
+                </div>
+                
+            </div>
+        </zoom-chart-container>
+
+        
+        <zoom-slider>
+            <div class="slider-zoom" %style% >
+                <div id="slider"  >
+                </div>
+            </div>
+        </zoom-slider>
+
+        
+        <zoom-date-range>
+           <div class="zoom-date-range"  %style%  id="%id%">
+                <span class="date-start"></span>-<span class="date-end"></span>
+            </div>
+        </zoom-date-range>      
+        
+        
+        <zoom-toolbox-pattern>
+        <div class="zoom-buttons">
+                <button class="chart-button  icon-button   %icon-source% "  data-localize="tools.view.zoom_left" tid="zoom_left" type="button" title="zoom-left">
+                    <span class=" %icon-prefix%zoom-left"></span>
+                </button>
+                <button class="chart-button  icon-button   %icon-source%"  data-localize="tools.view.zoom_in" tid="zoom_in" type="button" title="zoom-plus">
+                    <span class=" %icon-prefix%zoom-plus"></span>
+                </button>
+                <button class="chart-button   icon-button   %icon-source%" data-localize="tools.view.zoom_out" tid="zoom_out" type="button"
+                        title="zoom-minus">
+                    <span class=" %icon-prefix%zoom-minus"></span>
+                </button>
+                <button class="chart-button  icon-button   %icon-source%" data-localize="tools.view.zoom_all" tid="zoom_all" type="button" title="zoom-all">
+                    <span class=" %icon-prefix%zoom-all"></span>
+                </button>
+                <button class="chart-button   icon-button   %icon-source%" data-localize="tools.view.zoom_default" tid="zoom_default" type="button" title="zoom-default">
+                    <span class=" %icon-prefix%zoom-default"></span>
+                </button>
+                <button class="chart-button   icon-button   %icon-source% " data-localize="tools.view.zoom_right" tid="zoom_right" type="button" title="zoom-right">
+                    <span class=" %icon-prefix%zoom-right"></span>
+                </button>
+                <div class="clear">
+                </div>
+       </div>
+
+    </zoom-toolbox-pattern>

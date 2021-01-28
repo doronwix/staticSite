@@ -1,0 +1,199 @@
+.emily_container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 300px;
+  bottom: 50px;
+  background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Verdana, Arial;
+}
+#json-editor-outer-box {
+  position: absolute !important;
+  top: 0px;
+  left: 200px;
+  right: 300px;
+  bottom: 50px;
+  width: auto !important;
+  height: auto !important;
+}
+#json-editor-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+#json-editor-warning-box {
+  position: absolute;
+  bottom: 0px;
+}
+.fullscreen #json-editor-outer-box,
+.fullscreen textarea {
+  position: absolute !important;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  bottom: 50px;
+  width: auto !important;
+  height: auto !important;
+  font-family: 'Roboto Mono', Monaco, monospace;
+  font-size: 11px;
+  color: #9cdcfe;
+  background: #000000;
+  box-sizing: border-box;
+}
+.fullscreen textarea {
+  width: 100% !important;
+}
+
+.fullscreen-title {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: sans-serif;
+  background: #ffffff;
+  color: #000000;
+  padding: 0px 20px;
+}
+
+.error {
+  position: absolute;
+  bottom: 50px;
+  right: 0px;
+  left: 0px;
+  color: red;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  z-index: 1;
+  font-family: sans-serif;
+  font-weight: bold;
+  background: #cccccc;
+  text-align: center;
+}
+
+.message {
+  position: absolute;
+  bottom: 50px;
+  right: 0px;
+  left: 0px;
+  color: green;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  z-index: 1;
+  font-family: sans-serif;
+  font-weight: bold;
+  background: #cccccc;
+  text-align: center;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 0px;
+  height: 50px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  right: 300px;
+  justify-content: center;
+  background: #616161;
+  border-top: thin solid rgba(0, 0, 0, 0.2);
+}
+.button-container > button {
+  height: 40px;
+  border-radius: 5px;
+  border: 0px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 40px;
+  width: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 0px 5px;
+  border: thin solid white;
+  background-color: transparent;
+}
+.button-container > button.delete {
+}
+.button-container > button.reset {
+}
+.button-container > button:focus {
+  outline: none;
+}
+
+.fullscreen ~ .button-container {
+  right: 0px;
+}
+
+.prompt {
+  position: absolute;
+  z-index: 10;
+  bottom: 80px;
+  margin-left: 5px;
+  background: #cccccc;
+  padding: 30px;
+  border-radius: 10px;
+  width: 250px;
+  font-family: sans-serif;
+  transform-origin: bottom center;
+  transition: transform 0.5s ease-out;
+}
+.prompt::after {
+  content: ' ';
+  border: 20px solid transparent;
+  border-top: 20px solid #cccccc;
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+}
+.prompt .row {
+  display: flex;
+  padding: 5px 0px;
+  align-items: center;
+}
+
+.prompt .row.agent {
+  cursor: pointer;
+  line-height: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.prompt .row.agent:hover {
+  background: #9cdcfe;
+}
+.prompt .row .label {
+  font-weight: bold;
+  padding-right: 10px;
+  font-size: 14px;
+  flex-grow: 1;
+}
+.prompt .row .value input {
+  padding: 5px 5px;
+  font-family: sans-serif;
+  border: 1px solid #ffffff;
+}
+.prompt .row .value input.fieldError {
+  border: 1px solid red;
+}
+
+.prompt .buttons {
+  padding: 20px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prompt .buttons button {
+  border: 0px;
+  background: #ffffff;
+  padding: 10px 5px;
+  border-radius: 5px;
+  margin: 0px 5px;
+  width: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
+}

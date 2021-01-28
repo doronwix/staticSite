@@ -1,0 +1,273 @@
+﻿    //version 2.1 
+    //panel's pattern  
+     <panel_container>
+            <div class="chart-panels-container"  id="%id%">
+                
+            </div>
+        </panel_container>
+        <!-- Price -->
+        <panel_price>
+            <div class="chart-pane-price chartpane" id="%id%" guiid="%guiid%" %pane-style%>
+                <div class="chart-pane-main" id="%main-id%"  %main-style%>
+                    <span class="chart-pane-watermark" id="%wm-id%" %watermark-style% ></span>
+                    <canvas id="%canvas-axisxinmain-id%" class="pos-abs on-top-75 events-none"     %axisxinmain-size%   %axisxinmain-style% ></canvas> 
+                </div>
+                 <div class="chart-price-alert pos-abs on-top-75 events-none" id="%pricealert-id%" %pricealert-style% >
+                        <div class="pos-rel">
+                              <div class="alertdata pos-abs" %pricealert-style%></div>
+                              <canvas id="%cancas-price-id%" class="pos-abs" style="pointer-events:none;"   %pricealert-size% ></canvas>
+                        </div>
+                </div> 
+                <div class="chart-pane-legend chart-pane-legend-price" id="%legend-id%"  %legend-style%></div>
+                <div class="chart-date-axis" id="%x-id%"  %date-style% ></div>
+                <div class="chart-price-axis" id="%y-id%"   %price-style% ></div>
+                <div class="chart-price-axis-msg" id="%xmsg-id%"   %xmsg-style% ></div>
+                <div class="chart-price-zoom" id="%zoom-id%"   %zoom-style% ></div>
+                <div class="chart-controlpanel" id="%cp-id%"   %cp-style% >
+                    <div class="controlpanel-buttons">
+                        <a href="javascript:void(0);" class="controlpanel-down %visible%" itemid="%item-id%"  >
+                            <span class="%icon-prefix%controlpanel-down-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="controlpanel-up %visible%" itemid="%item-id%"  >
+                            <span class="%icon-prefix%controlpanel-up-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="controlpanel-window " itemid="%item-id%"  >
+                            <span class="%icon-prefix%controlpanel-window-icon %icon-source%"></span>
+                        </a>
+                    </div> 
+                </div>
+                <div class="chart-price-latupdate" id="%lastupdate-id%"  %lastupdate-style%></div>
+                <div class="chart-price-communic" id="%communic-id%"  %communic-style%>
+                       <span class="panel-communic ComOff %font-icon% %icon-source%"></span>
+                </div>
+                <button class="legend-price-collapsebutton  button-action  legend-collapsebutton no-icon-button %collapsebuttoncss%"  tid="legend-collapse"  collapseopen="%collapseopen%"  id="%collapselegend-id%" %collapselegend-style%    data-localize="legend.collapse" type="button" title="%caption%" >
+                       <b>%title1%</b>
+                </button>  
+                <div class="chart-price-infomsg" id="%infomsg-id%"   %infomsg-style% >
+                    <b>%infomsg_title%</b>
+                    <div>
+                        %html-info%
+                    </div>
+                </div>
+                %htmlcontainers%
+            </div>
+             
+        </panel_price>
+        
+ 
+
+        <!-- Study -->
+        <panel_study>
+            <div class="chart-pane-study chartpane" id="%id%" guiid="%guiid%" %pane-style%>
+                <div class="chart-pane-main" id="%main-id%"  %main-style%></div>
+                <div class="chart-pane-legend  chart-pane-legend-study " id="%legend-id%" %legend-style%></div>
+                <div class="chart-date-axis" id="%x-id%" %date-style% ></div>
+                <div class="chart-price-axis" id="%y-id%" %price-style% ></div>
+                <div class="chart-controlpanel" id="%cp-id%"   %cp-style% >
+                    <div class="controlpanel-buttons">
+                        <a href="javascript:void(0);" class="controlpanel-down %visible%" itemid="%item-id%"  >
+                            <span class="%icon-prefix%controlpanel-down-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="controlpanel-up %visible%" itemid="%item-id%"  >
+                            <span class="%icon-prefix%controlpanel-up-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class= "controlpanel-window " itemid="%item-id%"  >
+                            <span class="%icon-prefix%controlpanel-window-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="controlpanel-close " itemid="%item-id%"  panelid="%panel-id%" >
+                            <span class="%icon-prefix%controlpanel-close-icon %icon-source%"></span>
+                        </a> 
+                    </div> 
+                </div>
+
+            </div>
+        </panel_study>
+        <!-- Panel splitter -->
+        <panel_splitter>
+            <div class="chart-pane-splitter" id="%id%" guiid="%guiid%" %pane-style%>
+                <div class="chart-pane-splitter-inner"  id="%main-id%" %main-style%></div>
+            </div>
+        </panel_splitter>
+        <legends>
+            <legend_price>
+                <div id="%id%" class="legend-price">
+                    <span  class = "legend-price-description legend-description"></span>
+                    <div class="legend-buttons">
+                        <a href="javascript:void(0);" class="legend-button-visible %visible%" itemid="%item_id%"  itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-visible-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="legend-button-properties " itemid="%item_id%"  itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-properties-icon %icon-source%"></span>
+                        </a>
+                    </div>
+                    <div  class="legend-price-container"> 
+                        <span  class = "legend-price-open legend-title" data-localize="chart.open"></span>:
+                        <span  class = "legend-price-open legend-value"></span>
+                        <span  class = "legend-price-high legend-title" data-localize="chart.high"></span>:
+                        <span  class = "legend-price-high legend-value"></span>
+                        <span  class = "legend-price-low legend-title" data-localize="chart.low"></span>:
+                        <span  class = "legend-price-low legend-value"></span>
+                        <span  class = "legend-price-close legend-title" data-localize="chart.close"></span>:
+                        <span  class = "legend-price-close legend-value"></span>
+                        <span ></span>
+                    </div>
+                </div>
+            </legend_price>
+            <legend_price_collapsebutton>
+                  <button id="%id%" class="legend-price-collapsebutton" %css% %hide% %collapse%    tid="%id%"  data-localize="legend.collapse" type="button" title="%caption%" >
+                       <b>%title1%<sup>%title2%</sup> </b>
+                   </button> 
+            </legend_price_collapsebutton>
+            <legend_study>
+                <div id="%id%" class="legend-study %css%">
+                    <span  class = "legend-study-description"></span>
+                    <span  class = "legend-study-params"></span>
+                    <div class="legend-buttons">
+                        <a href="javascript:void(0);" class="legend-button-visible %visible%" itemid="%item_id%"  itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-visible-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="legend-button-properties" itemid="%item_id%"  itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-properties-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="legend-button-close" style="%display-closebt%"  itemid="%item_id%"  itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-close-icon %icon-source%" ></span>
+                        </a>
+                       
+                    </div>
+                    <span  class = "legend-study-title legend-title"></span>:
+                    <div class="legend-study-values">
+                        <span  class = "legend-study-value legend-value"></span>
+                    </div>
+                    
+                    |
+                    
+                     
+                </div>
+            </legend_study>
+            <legend_compare>
+                <div id="%id%" class="legend-compare %css%">
+                    <span  class = "legend-compare-description legend-description"></span>
+                    <div class="legend-buttons">
+                        <a href="javascript:void(0);" class="legend-button-visible %visible%" itemid="%item_id%"  itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-visible-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="legend-button-properties " itemid="%item_id%"  itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-properties-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="legend-button-close " itemid="%item_id%"  itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-close-icon %icon-source%"></span>
+                        </a>
+                    </div>
+                    <span  class = "legend-compare-title legend-title" data-localize="chart.close"></span>:
+                    <span  class = "legend-compare-value legend-value"></span>
+                </div>
+            </legend_compare>
+            
+            <legend_signaltc>
+                <div id="%id%" class="legend-signaltc %css%">
+                    <span  class = "legend-signaltc-description legend-description"></span>
+                    <div class="legend-buttons">
+                        <a href="javascript:void(0);" class="legend-button-visible %visible%" itemid="%item_id%"  style="display:none;"  itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-visible-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="legend-button-properties " itemid="%item_id%"  style="display:none;" itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-properties-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="legend-button-close " itemid="%item_id%"  itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-close-icon %icon-source%"></span>
+                        </a>
+                    </div>
+                </div>
+            </legend_signaltc>
+
+            <legend_plugin>
+               <div    id="%id%" class="legend-plugin">
+                    <span %legend_title_localization%  class = "legend-plugin-description  "></span>
+   
+                    |
+                    <div class="legend-buttons">
+ <!--                       <a href="javascript:void(0);" class="legend-button-visible %visible%" itemid="%item_id%"  itemtype="%item_type%">
+                            <span class="legend-visible-icon %icon-source%"></span>
+                        </a>-->
+                        <a href="javascript:void(0);" class="legend-button-properties" itemid="%item_id%"  itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-properties-icon %icon-source%"></span>
+                        </a>
+                        <a href="javascript:void(0);" class="legend-button-close" style="%display-closebt%"  itemid="%item_id%"  itemtype="%item_type%">
+                            <span class="%icon-prefix%legend-close-icon %icon-source%" ></span>
+                        </a>
+                       
+                    </div>
+                     
+                </div>
+            </legend_plugin>
+        </legends>
+        <signals>
+            <signal>
+                <div class="chart-pane-signal chartpane pane-signal" id="%id%" guiid="%guiid%" %pane-style%>
+                    <div class="chart-pane-main" id="%main-id%"  %main-style%></div>
+                    <div class="chart-pane-legend chart-pane-legend-signal" id="%legend-id%"  %legend-style%></div>
+                    <div class="chart-controlpanel" id="%cp-id%"   %cp-style% >
+                        <div class="controlpanel-buttons">
+                            <a href="javascript:void(0);" class="controlpanel-down %visible%" itemid="%item-id%"  >
+                                <span class="%icon-prefix%controlpanel-down-icon"></span>
+                            </a>
+                            <a href="javascript:void(0);" class="controlpanel-up %visible%" itemid="%item-id%"  >
+                                <span class="%icon-prefix%controlpanel-up-icon"></span>
+                            </a>
+                            <a href="javascript:void(0);" class="controlpanel-window " itemid="%item-id%"  >
+                                <span class="%icon-prefix%controlpanel-window-icon"></span>
+                            </a>
+                        </div> 
+                    </div>
+                    <div class="chart-pane-alert " id="%alert-id%"  %alert-style%>
+                        
+                    </div> 
+                </div>
+            </signal>
+        </signals>
+        <freepanel>
+            <div class="chart-pane-free  chartpane pane-free" id="%id%" guiid="%guiid%" %pane-style%>
+                <div class="chart-pane-main" id="%main-id%"  %main-style%></div>
+                <div class="chart-pane-legend chart-pane-legend-signal" id="%legend-id%"  %legend-style%></div>
+                <div class="chart-pane-alert " id="%alert-id%"  %alert-style%>
+                        
+                </div> 
+            </div>
+        </freepanel>
+        
+        <htmlcontainer>
+             <div %style%  id="%id%" class="%css%">
+                %html%
+              </div>
+        </htmlcontainer>
+        
+        <panels-toolbar>
+           <div  id="%id%" class=" panels-toolbar noselect" %style%>%html%</div>
+        </panels-toolbar> 
+        
+        
+<!-- FLOATING PANEL  **********************************        -->
+
+
+<floatingpanel-container>
+    <div class="floating-panel %css%" id="%id%" %style%>
+    <!-- <div class="floating-panel-inner" > -->
+         <div class="dragg-left" id="%idleft%" >
+             <div class="dragg-left-inner">
+                 <span class="dragg-dot dot1" ></span>
+                 <span class="dragg-dot dot2"></span>
+                 <span class="dragg-dot dot3" ></span>
+             </div>
+         </div>
+        <div class="dragg-main">%html%</div>
+         <div class="dragg-right" id="%idright%">
+             <div class="dragg-right-inner">
+                <span class="dragg-dot dot1" ></span>
+                <span class="dragg-dot dot2"></span>
+                <span class="dragg-dot dot3" ></span>
+             </div>
+         </div>
+     </div>
+   <!-- </div>-->
+</floatingpanel-container>
+       

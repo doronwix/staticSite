@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/skins/Shared/svg/instruments/CHF.svg",
+  "contentType": "image/svg+xml",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgwIiB3aWR0aD0iNjQwIiB2aWV3Qm94PSIwIDAgNjQwIDQ4MCI+ICA8ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS13aWR0aD0iMXB0Ij4gICAgPHBhdGggZmlsbD0iI2Q1MmIxZSIgZD0iTTAgMGg2NDB2NDgwSDB6Ii8+ICAgIDxnIGZpbGw9IiNmZmYiPiAgICAgIDxwYXRoIGQ9Ik0xNzAgMTk0Ljk5N2gyOTkuOTk2djg5Ljk5N0gxNzB6Ii8+ICAgICAgPHBhdGggZD0iTTI3NSA4OS45OTdoODkuOTk2djI5OS45OTZIMjc1eiIvPiAgICA8L2c+ICA8L2c+PC9zdmc+",
+  "isBase64": true
+}

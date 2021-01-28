@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/AccountHub/AccountHeader.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<ul class=\"user-details accountHub\" style=\"float:left\">\r\n    <li class=\"new-msg-action messages\" id=\"envelope\" data-bind=\"css: Data.MessageCSS\">\r\n        <a href=\"javascript:void(0)\" class=\"envelope\" data-bind=\"css: Data.MessageCSS\">\r\n            <span class=\"ico-wb ico-wb-announcment\"></span>\r\n        </a>\r\n    </li>\r\n    <!-- ko component: { name: 'fx-component-help-center-action' } --><!-- /ko -->\r\n    <li class=\"account headerMenu\" id=\"account\" data-bind=\"menu: {css: 'headerMenu'}, click: toggleAccountHub, css: {\r\n        'activeMenu': AccountButtonSelected } \">\r\n        <div class=\"person\">\r\n            <span class=\"iconPerson\" data-bind=\"css: Data.userStatusName\" style=\"display:inline-block;\"></span>\r\n        </div>\r\n        <!-- ko if: permissionsModule.CheckActionAllowed('accountNumber') -->\r\n        <div class=\"personInfo\">\r\n            <span class=\"userName\" data-bind=\"visible: Data.userName, text: Data.userName\"></span>\r\n\r\n            <span class=\"accountNumberText\"\r\n                  data-bind=\"visible: !Data.userName, dictionaryBinding: 'accountNumber', resourceName:'account_hub'\"></span>\r\n\r\n            <span data-bind=\"text: Customer.prop.accountNumber, css: Data.userName? 'accountNumber' : 'accountNumberBig'\"></span>\r\n        </div>\r\n        <!-- /ko -->\r\n    </li>\r\n</ul>",
+  "isBase64": false
+}

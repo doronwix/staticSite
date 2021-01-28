@@ -1,0 +1,16 @@
+﻿<!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vPaymentTypes).visible -->
+<div class="payment-types fx-concrete-payments-deposit-form" id="mobilePaymentTypes"
+	 data-bind="click: function() { ko.postbox.publish('trading-event', 'deposit-interaction'); return true; }"
+	 FXNetResource="views_vMobilePaymentTypes">
+
+	<!-- ko ifnot: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vMissingCustomerInformation).visible -->
+		<!-- ko component: { name: 'fx-concrete-payments' } --><!-- /ko -->
+
+		<fx-deposit-notice></fx-deposit-notice>
+	<!-- /ko -->
+
+	<!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vMissingCustomerInformation).visible -->
+	<fx-customer-activation></fx-customer-activation>
+	<!-- /ko -->
+</div>
+<!-- /ko -->

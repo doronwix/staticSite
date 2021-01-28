@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/FxNet/Common/Utils/Version/versionPci.require.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "define('FxNet/Common/Utils/Version/versionPci.require', function () {  return '637472542577790000'  } );\r\n",
+  "isBase64": false
+}

@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/devices/web/uilayer/viewmodels/ToolbarViewModel.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define(\"deviceviewmodels/ToolbarViewModel\", [\r\n\t\"require\",\r\n\t\"helpers/KoComponentViewModel\",\r\n\t\"handlers/general\",\r\n\t\"devicecustommodules/ToolbarModule\"\r\n], function ToolbarDef(require) {\r\n\tvar general = require(\"handlers/general\"),\r\n\t\tKoComponentViewModel = require('helpers/KoComponentViewModel'),\r\n\t\ttoolbarModule = require(\"devicecustommodules/ToolbarModule\");\r\n\r\n\tvar ToolbarViewModel = general.extendClass(KoComponentViewModel, function ToolbarClass() {\r\n\t\tvar self = this,\r\n\t\t\tparent = this.parent;\r\n\t\t\r\n\t\tfunction init() {\r\n\t\t\ttoolbarModule.Init();\r\n\t\t}\r\n\r\n\t\tfunction dispose() {\r\n\t\t\ttoolbarModule.dispose();\r\n\t\t\tparent.dispose.call(self);  // inherited from KoComponentViewModel\r\n\t\t}\r\n\r\n\t\treturn {\r\n\t\t\tInit: init,\r\n\t\t\tdispose: dispose,\r\n\t\t\tToolbarInfo: toolbarModule.ToolbarInfo,\r\n\t\t\tNewDealHandler: toolbarModule.NewDealHandler,\r\n\t\t\tNewLimitHandler: toolbarModule.NewLimitHandler,\r\n\t\t\tCloseDealHandler: toolbarModule.CloseDealHandler,\r\n\t\t\tOpenInDialog: toolbarModule.OpenInDialogDelegate\r\n\t\t};\r\n\t});\r\n\r\n\tvar createViewModel = function (params) {\r\n\t\tvar viewModel = new ToolbarViewModel();\r\n\r\n\t\tviewModel.Init(params);\r\n\r\n\t\treturn viewModel;\r\n\t};\r\n\r\n\treturn {\r\n\t\tviewModel: {\r\n\t\t\tcreateViewModel: createViewModel\r\n\t\t}\r\n\t};\r\n});\r\n",
+  "isBase64": false
+}

@@ -1,0 +1,69 @@
+﻿<div class="paymentFormContainer thank-you">
+	<div class="container">
+		<h3 data-bind="dictionaryBinding: 'depositAcceptedThankYou', resourceName: 'deposit_thankyou_success'"></h3>
+
+		<table class="deposit-data">
+			<tr>
+				<td>
+					<span data-bind="dictionaryBinding: 'depositLabel', resourceName: 'deposit_thankyou_success'"></span>
+					<span class="bold" data-bind="text: Format.toAmountWithCurrency(Format.toFixedAmount, Data.depositAmount, Data.depositCurrency)"></span>
+				</td>
+				<td>
+					<span data-bind="dictionaryBinding: 'paymentLabel', resourceName: 'deposit_thankyou_success'"></span>
+					<!-- ko if: Data.depositPaymentLast4 -->
+					<span class="bold" data-bind="formattedText: [Data.depositPaymentLast4], contentKey: 'lblCCLastDigits', resourceName: 'deposit_thankyou_success'"></span>
+					<!-- /ko -->
+					<!-- ko if: !Data.depositPaymentLast4 -->
+					<span class="bold" data-bind="text: Data.isCCDeposit ? Dictionary.GetItem('dpCreditCard','deposit_thankyou_success') : Data.originalPaymentName"></span>
+					<!-- /ko -->
+				</td>
+			</tr>
+			<tr>
+				<!-- ko if: Data.depositConfirmationCode -->
+				<td>
+					<span data-bind="dictionaryBinding: 'confirmationNoLabel', resourceName: 'deposit_thankyou_success'"></span>
+					<span class="bold confirmationNo" data-bind="text: Data.depositConfirmationCode"></span>
+				</td>
+				<!-- /ko -->
+				<td>
+					<span data-bind="dictionaryBinding: 'statusLabel', resourceName: 'deposit_thankyou_success'"></span>
+					<span data-bind="dictionaryBinding: 'statusApproved', resourceName: 'deposit_thankyou_success'" class="green bold"></span>
+				</td>
+			</tr>
+		</table>
+
+		<!-- ko if: Data.existsNoticesToShow -->
+		<div class="info-note red-hls">
+			<h4 data-bind="dictionaryBinding: 'importantLabel', resourceName: 'deposit_thankyou'"></h4>
+			<!-- ko if: Data.shouldShowCddNotice() || Data.shouldShowKycNotice() -->
+			<p data-bind="dictionaryBinding: 'questionnaireRequired', resourceName: 'deposit_thankyou'"></p>
+			<!-- /ko -->
+			<!-- ko if: Data.shouldShowChangePassword -->
+			<p data-bind="dictionaryBinding: 'changePasswordRequired', resourceName: 'deposit_thankyou'"></p>
+			<!-- /ko -->
+			<!-- ko if: Data.shouldShowAmlNotice -->
+			<p data-bind="formattedText: [Data.countDownDays], contentKey: 'importantMessage', resourceName: 'deposit_thankyou_success'"></p>
+			<a data-bind="dictionaryBinding: 'uploadDocumentsNowLabel', resourceName: 'deposit_thankyou',
+					click: function() {
+						$viewModelsManager.VManager.SwitchViewVisible(eForms.UploadDocuments);
+					}" href="javascript:void(0)" class="upload">
+			</a>
+			<!-- /ko -->
+		</div>
+		<!-- /ko -->
+
+		<div class="form-note">
+			<!-- ko if: Data.paymentTypeId === eDepositingActionType.Regular || Data.paymentTypeId === eDepositingActionType.Astropay -->
+			<fx-componet-creditcard-regular-note></fx-componet-creditcard-regular-note>
+			<!-- /ko -->
+			<!-- ko if: Data.paymentTypeId === eDepositingActionType.WireTransfer -->
+			<fx-componet-wiretransfer-regular-note></fx-componet-wiretransfer-regular-note>
+			<!-- /ko -->
+			<!-- ko if: Data.paymentTypeId === eDepositingActionType.EcoPayz -->
+			<fx-componet-ecopayz-note></fx-componet-ecopayz-note>
+			<!-- /ko -->
+		</div>
+		<a data-bind="html: Dictionary.GetItem('btnContinue'), click: onContinue" href="javascript:void(0)" class="btn big right"></a>
+		<div class="clear"></div>
+	</div>
+</div>

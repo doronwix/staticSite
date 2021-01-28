@@ -1,0 +1,9 @@
+{
+    "extends": "./fxnet-eslint-rules.json",
+    "rules": {
+        "eqeqeq": 2
+    },
+    "globals": {
+        "chartVersion": true
+    }
+}

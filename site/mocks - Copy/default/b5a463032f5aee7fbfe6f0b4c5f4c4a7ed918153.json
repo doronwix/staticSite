@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/uilayer/viewmodels/questionnaire/SupportViewModel.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define(\r\n    'viewmodels/questionnaire/SupportViewModel',\r\n    [\r\n        'require',\r\n        'knockout',\r\n        'Dictionary',\r\n        'LoadDictionaryContent!Support'\r\n    ],\r\n    function () {\r\n        var dictionary = require('Dictionary'), ko = require('knockout');\r\n\r\n        function onCallBackClick() {\r\n            ko.postbox.publish('support-interaction', 'callback');\r\n        }\r\n\r\n        var createViewModel = function () {\r\n            return {\r\n                lnkEmailResponse: dictionary.GetItem(\"lnkEmailResponse\", \"support\"),\r\n                lblCompliancePhone: dictionary.GetItem(\"lblCompliancePhone\", \"support\"),\r\n                callBackLink: dictionary.GetItem(\"callBackLink\", \"support\"),\r\n                enableChat: dictionary.GetItem(\"enableGTMChat\", \"support\") === \"1\",\r\n                isClickChatEnabled: !dictionary.ValueIsEmpty(\"lnkClickChat\", \"support\"),\r\n                isCallMeBackEnabled: !dictionary.ValueIsEmpty(\"lblCallMeBack\", \"support\"),\r\n                onCallBackClick: onCallBackClick\r\n            };\r\n        };\r\n\r\n        return {\r\n            viewModel: {\r\n                createViewModel: createViewModel\r\n            }\r\n        };\r\n    }\r\n);\r\n",
+  "isBase64": false
+}

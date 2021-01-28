@@ -1,0 +1,19 @@
+﻿<div class="note">
+	<h3>
+		<i class="icon-info"></i>
+		<!-- ko text: Dictionary.GetItem('pleasenotice', 'views_vmobilepaymenttypes') --><!-- /ko -->
+	</h3>
+    <p>
+        <!-- ko foreach: $parent.Data.depositMessages || [] -->
+        <span data-bind="html: $data"></span>
+        <!-- /ko -->
+        <!-- ko ifnot: $parent.Data.depositMessages -->
+        <span data-bind="dictionaryBinding: 'lblAppearNotice', resourceName: 'views_vmobilepaymenttypes'"></span>
+        <!-- /ko -->
+        <span data-bind="dictionaryBinding: 'lblAdditionalNotice', resourceName: 'views_vmobilepaymenttypes'"></span>
+        <a class="blue-line" id="contactUsLink"
+           data-bind="click: function () {$viewModelsManager.VManager.SwitchViewVisible(eViewTypes.vContact)}, 
+            dictionaryBinding: 'contactUsLink', 
+            resourceName: 'views_vmobilepaymenttypes'"></a>
+    </p>
+</div>

@@ -1,0 +1,14 @@
+﻿<div class="userActivationSlip" data-bind="visible: data.isVisible">
+    <div class="infoIcon">
+        <a href="javascript:void(0)"><span class="ico-wb icon-info"></span></a>
+    </div>
+    <div class="vertContent">
+        <span class="userActivationSlipTitle" data-bind="dictionaryBinding: 'txtActivationRequired', resourceName:'account_hub'"></span>
+        <p class="userActivationSlipText" data-bind="dictionaryBinding: data.userFlowMsg, resourceName:'account_hub'"></p>
+    </div>
+    <div class="CTAButton">
+        <a class="btn action" data-bind="click: ctaClick">
+            <p data-bind="dictionaryBinding: data.ctaText, resourceName:'account_hub'"></p>
+        </a>
+    </div>
+</div>

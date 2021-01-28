@@ -1,0 +1,145 @@
+﻿       <header-container>
+           <div  class="chart-header" id="%id%" >
+               %html%
+           </div>
+           <div class="clear"></div>
+       </header-container> 
+            
+        <header-searchbutton>
+           <div %style% id="%id%"> 
+            <span class="%font-icon% search-symbolics  %icon-source%"></span>
+            <span class="search-symbolics-subpoint"></span>
+           </div> 
+        </header-searchbutton>
+
+        
+        <header-symboltitle>
+            <div %style%  id="%id%">
+              <span class="symbol-title"></span>
+            </div> 
+        </header-symboltitle>
+
+        <header-symbolsearch>
+            <div class="chart-header-search"  %style%  id="%id%">
+                <div class="chart-header-search-input">
+                    <input   autocomplete="off" autofocus="" class="chart-header-search-input-text" maxlength="50" max="50"    />
+                </div> 
+                <div class="chart-header-search-output" style="display:none  ">
+                    <div class="search-properties-filters">
+                        <ul class="search-properties-filters-list clearfix">
+                            <li class="search-properties-filter clearfix" idx="markets"  >
+                                <span  data-localize="search.markets">Markets:</span>
+                                <a href="javascript:void(0)" idx="markets" class="action-change-value" data-localize="search.filter-markets-all" >All</a>
+                                <ul class="search-properties-filter-values" style="display: none">
+                       
+                                </ul>
+                                <div class="filter-up-range"></div>
+                                <div class="filter-down-point"></div>
+
+                            </li>
+                            <li class="search-properties-filter clearfix" idx="exchanges" >
+                                <span  data-localize="search.exchanges">Exchanges:</span>
+                                <a href="javascript:void(0)" idx="exchanges" class="action-change-value" data-localize="search.filter-exchanges-all" >All</a>
+                                <ul class="search-properties-filter-values" style="display: none">
+                        
+                                </ul>
+                                <div class="filter-up-range"></div>
+                                <div class="filter-down-point"></div>
+                            </li>
+                            <li class="search-properties-filter clearfix" idx="countries" >
+                                <span  data-localize="search.countries">Countries:</span>
+                                <a href="javascript:void(0)" idx="countries" class="action-change-value" data-localize="search.filter-countries-all" >All</a>
+                                <ul class="search-properties-filter-values" style="display: none">
+                            
+                                </ul>
+                                <div class="filter-up-range"></div>
+                                <div class="filter-down-point"></div>
+                            </li>
+                        </ul>
+                    </div> 
+                    <div class="search-properties-tabs-labels">
+                
+                    </div>
+                    <div class="search-main-properties-tabs">
+                  
+                    </div>
+                </div>
+                <div class="chart-search-preload"></div>
+            </div> 
+        </header-symbolsearch>
+        
+        
+        <template-search>
+            
+          <template-search-output-list>
+                <li id="%itemid%" n="%name%" d="%caption%" idx="%itemid%" > 
+                    <button class="favorite star-majors star-button seaech-add-favorite  %icon-source%  %status-favorite% fl-l" type="button"    >
+                    </button> 
+                              
+                    <a href="javascript:void(0)" class="search-change-symbol" idx="%itemid%" > 
+                        <span>%name%  </span> 
+                        <span>%caption%</span>
+                    </a>    
+                                
+                              
+                </li>
+          </template-search-output-list>
+          
+           <template-search-main-properties>
+                <div class="search-main-properties  %groupactive% "  idx="%groupid%"   >
+                    <ul class="search-output-list" ></ul>
+                </div>
+            </template-search-main-properties> 
+        
+        
+            <template-search-properties-tabs-label>
+                <a class ="search-properties-tabs-label %groupactive%" href="javascript:void(0);" data-localize="search.%groupid%">%groupname%</a>
+            </template-search-properties-tabs-label>
+        
+            <template-search-notfound>
+                <li class="search-not-found"  data-localize="search.notfound">No results matched your search</li>
+            </template-search-notfound>
+        
+     
+            <template-search-properties-filter-values>
+                <li class="search-properties-filter-value">
+                    <a href="javascript:void(0)" idx="%id%" data-localize="search.%id%"  >%name%</a> 
+                </li>
+            </template-search-properties-filter-values>
+            
+            
+
+        </template-search>
+        
+        <header-timeframe>
+            <div %style% id="%id%"> 
+            <span class="header-timeframe"><span  data-localize="menu.timescale.5M" ></span></span>
+            </div>
+        </header-timeframe>
+ 
+    
+
+        <header-lastupdate>
+             <div %style% id="%id%" >
+              <span class="header-lastupdate"></span>
+             </div>
+        </header-lastupdate>
+    
+        <header-communic>
+             <div %style% id="%id%" >
+             <span class="header-communic ComOff %font-icon% %icon-source%"></span>
+              </div>
+        </header-communic>
+    
+ 
+         <header-htmlcontainer>
+             <div %style%  id="%id%" class="%css%">
+                %html%
+              </div>
+        </header-htmlcontainer>
+        
+        <header-toolbar>
+            <div  id="%id%"  %style%  class=" header-toolbar noselect" >
+                
+            </div>
+       </header-toolbar> 

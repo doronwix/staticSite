@@ -1,0 +1,14 @@
+﻿<div>
+    <div class="amount-input input-special" data-bind="amountSpinner: value, spinnerOptions: { input: '.spinnerAmountInput', min: min, max: max, step: step, page: step, numberFormat: 'n' + format(), startSpinFrom: ko.observable(eStartSpinFrom.Above) }">
+        <div class="validation-holder" data-bind="css: { error: !isSelectedAmountValid() }, validationOptions: { decorateInputElement: false, insertMessages: false } ">
+            <!-- ko if: label -->
+                <label class="spinnerLabel" data-bind="text: label, css: { 'hasamount': !General.isNullOrUndefined(value()) && value().toString().length > 0 }"></label>
+            <!-- /ko -->
+            <input type="tel"
+                   autocomplete="off"
+                   maxlength="16"
+                   class="spinnerAmountInput"
+                   data-bind="textInput: value, attr: { id: id, name: name }, adjustUiPerDevice" />
+        </div>
+    </div>
+</div>

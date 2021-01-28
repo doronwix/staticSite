@@ -1,0 +1,8 @@
+﻿<!-- ko component: { name: 'fx-component-navigation-wizard', params: {  } } --><!-- /ko -->
+
+<script id="customMessageTemplate" type="text/html">
+	<div class="balloonError" data-bind="css: { visible: field.isDirty() && !field.isValid() }">
+		<i class="ico-wb-warning"></i>
+		<p data-bind="validationMessage: field"></p>
+	</div>
+</script>

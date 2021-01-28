@@ -1,0 +1,50 @@
+<div class="dscol dtools" data-bind="visible: Data.showTools()">
+    <!-- ko if: Data.isVisible() && Data.isDataLoaded() && !Data.showToolsWhenTradingDisabled() -->
+    <div class="deal-tools-container">
+        <div class="dt-header">
+            <div class="dt-tabh" id="btnChart" data-bind="css: { active: Data.isChartToolVisible }, attr: { 'title': Dictionary.GetItem('btnChart', 'deals_DealTools') },
+            click: function () { Handlers.chartBtnClick(); ko.postbox.publish('deal-slip-switch-tab', { tabName: Data.tabName() }); }">
+                <span data-bind="dictionaryBinding: 'btnChart', resourceName: 'deals_DealTools'"></span>
+            </div>
+            <div class="dt-tabh" id="btnMarketLiveInfo" data-bind="css: { active: Data.isMarketInfoToolVisible }, attr: { 'title': Dictionary.GetItem('btnMarketLiveInfo', 'deals_DealTools') }, 
+                click: function () { Handlers.marketInfoBtnClick(); ko.postbox.publish('deal-slip-switch-tab', { tabName: Data.tabName() }); }">
+                <span data-bind="dictionaryBinding: 'btnMarketLiveInfo', resourceName: 'deals_DealTools'"></span>
+            </div>
+            <div class="dt-tabh" id="btnEconomicCalendar" data-bind="css: { active: Data.isCalendarToolVisible }, attr: { 'title': Dictionary.GetItem('btnEconomicCalendar', 'deals_DealTools') },
+                click: function () { Handlers.calendarBtnClick(); ko.postbox.publish('deal-slip-switch-tab', { tabName: Data.tabName() }); }">
+                <span data-bind="dictionaryBinding: 'btnEconomicCalendar', resourceName: 'deals_DealTools'"></span>
+            </div>
+            <div class="dt-tabh" id="btnSignals" data-bind="css: { active: Data.isSignalsToolVisible }, attr: { 'title': Dictionary.GetItem('btnSignals', 'deals_DealTools') },
+                click: function () { Handlers.signalsBtnClick(); ko.postbox.publish('deal-slip-switch-tab', { tabName: Data.tabName() }); }">
+                <span data-bind="dictionaryBinding: 'btnSignals', resourceName: 'deals_DealTools'"></span>
+            </div>
+            <div class="dt-tabh" id="btnInstrumentInfo"data-bind="css: { active: Data.isInstrumentInfoToolVisible }, attr: { 'title': Dictionary.GetItem('btnInstrumentInfo', 'deals_DealTools') },
+                click: function () { Handlers.instrumentInfoBtnClick(); ko.postbox.publish('deal-slip-switch-tab', { tabName: Data.tabName() }); }">
+                <span data-bind="dictionaryBinding: 'btnInstrumentInfo', resourceName: 'deals_DealTools'"></span>
+            </div>
+        </div>
+        <div class="dt-content styled-scroll" data-bind="attr: { id: 'tab-' + Data.selectedToolTab() }, css: { 'chart-tab': Data.isChartToolVisible(),
+            'market-info-tab': Data.isMarketInfoToolVisible(),
+            'instrument-info-tab': Data.isInstrumentInfoToolVisible(),
+            'economic-calendar': Data.isCalendarToolVisible(),
+            'signals-tab': Data.isSignalsToolVisible()
+        }">
+            <!-- ko if: Data.isChartToolVisible -->
+                <!-- ko component: { name: 'fx-component-chart-tool', params: {} } --><!-- /ko -->
+            <!-- /ko -->
+            <!-- ko if: Data.isMarketInfoToolVisible -->
+                <!-- ko component: { name: 'fx-component-market-info-tool' } --><!-- /ko -->
+            <!-- /ko -->
+            <!-- ko if: Data.isCalendarToolVisible -->
+                <fx-component-economic-calendar-tool params="{ ccyPair: DealData.ccyPair, viewName: 'calendarNewDeal' }"></fx-component-economic-calendar-tool>
+            <!-- /ko -->
+            <!-- ko if: Data.isSignalsToolVisible -->
+                <!-- ko component: { name: 'fx-component-signals-tool', params: { filterData: { instrumentId : DealData.selectedInstrument } } } --><!-- /ko -->
+            <!-- /ko -->
+            <!-- ko if: Data.isInstrumentInfoToolVisible -->
+                <!-- ko component: { name: 'fx-component-instrument-info-tool' } --><!-- /ko -->
+            <!-- /ko -->
+        </div>
+    </div>
+<!-- /ko -->
+</div>

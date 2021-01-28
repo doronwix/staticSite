@@ -1,0 +1,67 @@
+﻿<div id="helpCenter" class="helpc-container" data-bind="unchainMainScroll: { dependOn: Data.visible }, css: {
+     'inview': Data.visible() && !Data.visibleFirstTime(),
+     'inviewft': Data.visibleFirstTime(),
+     'hideft': !Data.visible()  && Data.visibleFirstTime()
+     }">
+    <div class="helpc-wrap" data-bind="css: {'pg-present': Data.pgPresent()}">
+        <div class="helpc-header">
+            <span class="closebtn" data-bind="click: CloseHub">&times;</span>
+            <div class="tab-header active" data-bind="click: function () {ko.postbox.publish('help-center', {event: 'tab-switch', tab: 'help'}); Data.activeSection(eHelpcSections.default); }, css: {'active': Data.activeSection() === eHelpcSections.default}">
+                <span class="header-label" data-bind="dictionaryBinding: 'Title', resourceName: 'HelpCenterWalkthroughs'"></span>
+            </div>
+            <div class="tab-header pg-tabh" data-bind="click: function () {ko.postbox.publish('help-center', {event: 'tab-switch', tab: 'guide'});  Data.activeSection(eHelpcSections.personalguide); },  css: {'active': Data.activeSection() === eHelpcSections.personalguide}">
+                <span class="header-label" data-bind="dictionaryBinding: 'Title', resourceName: 'HelpCenterTradingGuide'"></span>
+            </div>
+        </div>
+        <div class="helpc-content">
+            <div class="tab-content" id="helpc-tab" data-bind="visible: Data.activeSection() === eHelpcSections.default">
+                <div class="section" data-bind="visible: Data.listData().length > 0">
+                    <h3 class="section-title" data-bind="dictionaryBinding: 'IntroductionSentece', resourceName: 'HelpCenterWalkthroughs'"></h3>
+                    <div class="list-wrapper" data-bind="foreach: Data.listData()">
+                        <div class="list-item">
+                            <span class="item-title" data-bind="click: function(){$parent.CloseHub(); ko.postbox.publish('help-center', {event: 'interaction', element: $data.trackElement});}, html: $data.text, 'play-walkthroug': $data.walkthrougId"></span>
+                        </div>
+                    </div>
+                    <!-- ko if: Data.uploadDocsLink() -->
+                    <div class="list-wrapper">
+                        <a class="list-item uploaddoc" data-bind="attr: { href: Data.uploadDocsLink(), target:'_blank'}, trackingEvent: { name: 'help-center', data: { event: 'interaction', element: 'UploadDocumentsTutorial' } }">
+                            <span class="item-title tutorial" data-bind="dictionaryBinding: 'lblUploadDocTutorial', resourceName: 'HelpCenterTradingGuide'"></span>
+                        </a>
+                    </div>
+                    <!-- /ko -->
+                </div>
+                <div class="section lower-section">
+                    <h3 class="section-title" data-bind="dictionaryBinding: 'Title', resourceName: 'HelpCenterTradingGuide'"></h3>
+                    <div class="list-wrapper">
+                        <!-- ko if: Data.wireTransferGuideLink() -->
+                        <a class="list-item wiretransferguide" data-bind="visible: Data.wireTransferGuideLink(), attr: { href: Data.wireTransferGuideLink(),  target: '_blank' }, trackingEvent: { name: 'help-center', data: { event: 'interaction', element: 'WireTransferGuide' } }">
+                            <span class="item-title" data-bind="dictionaryBinding: 'LocalWireTransferGuide', resourceName: 'HelpCenterTradingGuide'"></span>
+                        </a>
+                        <!-- /ko -->
+                        <!-- ko if: Data.tradingGuideLink() -->
+                        <a class="list-item pdfguide" data-bind="visible: Data.tradingGuideLink(), attr: { href: Data.tradingGuideLink(), target:'_blank'}, trackingEvent: { name: 'help-center', data: { event: 'interaction', element: 'TradingGuide' } }">
+                            <span class="item-title" data-bind="dictionaryBinding: 'TradingGuide', resourceName: 'HelpCenterTradingGuide'"></span>
+                        </a>
+                        <!-- /ko -->
+                        <!-- ko if: Data.secureTradingLink() -->
+                        <a class="list-item securetradingguide" data-bind="visible: Data.secureTradingLink(), attr: { href: Data.secureTradingLink(), target:'_blank' }, trackingEvent: { name: 'help-center', data: { event: 'interaction', element: 'SecureTrading' } }">
+                            <span class="item-title" data-bind="dictionaryBinding: 'SecureTradingGuide', resourceName: 'HelpCenterTradingGuide'"></span>
+                        </a>
+                        <!-- /ko -->
+                        <div class="list-item azguide" data-bind="click: function(){ko.postbox.publish('help-center', {event: 'interaction', element: 'Education'}); $data.CloseHub(); $viewModelsManager.VManager.RedirectToForm(eForms.EducationalTutorials);}">
+                            <span class="item-title" data-bind="dictionaryBinding: 'TheA-ZofForexTrading', resourceName: 'HelpCenterTradingGuide'"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="pg-tab" data-bind="visible: Data.activeSection() === eHelpcSections.personalguide">
+                <div class="loader-background" data-bind="visible: Data.pcLoading()">
+                    <div class="loader"></div>
+                </div>
+                <div class="" id="personalGuideHelpcenterContainer" data-bind="visible: !Data.pcLoading()"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

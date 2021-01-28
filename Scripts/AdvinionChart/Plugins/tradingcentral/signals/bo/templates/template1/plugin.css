@@ -1,0 +1,25 @@
+prochart .tradingcentral-bo {
+  font-size: 11px;
+  overflow-y: scroll;
+  padding-right: 5px;
+  background-color: #ffffff; }
+  prochart .tradingcentral-bo .tradingcentral-bo-legend {
+    width: 40%;
+    padding: 5px;
+    vertical-align: top; }
+  prochart .tradingcentral-bo .waiting-forsignal {
+    pointer-events: none;
+    z-index: 20;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 30px;
+    width: 30px; }
+prochart .tradingcentral-bo-story {
+  width: 60%;
+  padding: 5px;
+  vertical-align: top; }
+prochart .tradingcentral-bo-error div {
+  padding: 10px;
+  background-color: #FF9191; }
+

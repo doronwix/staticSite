@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/Deposit/PaymentsTitle.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<!-- ko if: VManager.ActiveFormType() == eForms.Deposit -->\r\n<span data-bind=\"dictionaryBinding: 'lblPageTitleDeposit', resourceName: 'general_pagetitle'\"></span>\r\n<!-- /ko -->\r\n\r\n<!-- ko if: VManager.ActiveFormType() == eForms.ConcretePaymentForm -->\r\n<span data-bind=\"dictionaryBinding: 'lblPageTitleDepositForm', resourceName: 'general_pagetitle'\"></span>\r\n<!-- /ko -->\r\n\r\n<!-- ko if: VManager.ActiveFormType() == eForms.WireTransferSuccess -->\r\n<span data-bind=\"dictionaryBinding: 'lblPageTitleDepositForm', resourceName: 'general_pagetitle'\"></span>\r\n<!-- /ko -->",
+  "isBase64": false
+}

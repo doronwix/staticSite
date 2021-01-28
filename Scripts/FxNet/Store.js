@@ -1,0 +1,120 @@
+﻿define(
+    'fxnet/Store',
+    [
+        'require',
+        'deviceviewmodels/account/UserFlowCTA',
+        'initdatamanagers/Customer',
+        'viewmodels/dialogs/DialogViewModel',
+        'managers/CustomerProfileManager',
+        'cachemanagers/ClientStateHolderManager',
+        'cachemanagers/PortfolioStaticManager',
+        'Dictionary',
+        'StateObject!DealerParams',
+        'configuration/initconfiguration',
+        'cachemanagers/bonusmanager',
+        'fx-core-api/StoreAPI',
+        'devicemanagers/ViewModelsManager',
+        'managers/viewsmanager',
+        'dataaccess/dalDemoAccount',
+        'handlers/AmountConverter',
+        'modules/BuilderForInBetweenQuote',
+        'modules/systeminfo',
+        'StateObject!userFlow',
+        'modules/PresetsManager',
+        'FxNet/Common/Constants/Collections/PresetsDefinitions',
+        'initdatamanagers/InitialDataManager',
+        'cachemanagers/QuotesManager',
+        'generalmanagers/RegistrationManager',
+        'managers/instrumentTranslationsManager',
+        'devicemanagers/StatesManager',
+        'cachemanagers/activelimitsmanager',
+        'cachemanagers/ClientStateFlagsManager',
+        'modules/FavoriteInstrumentsManager'
+    ],
+    function (require) {
+        var Customer = require('initdatamanagers/Customer'),
+            DialogViewModel = require('viewmodels/dialogs/DialogViewModel'),
+            CustomerProfileManager = require('managers/CustomerProfileManager'),
+            ClientStateHolderManager = require('cachemanagers/ClientStateHolderManager'),
+            PortfolioStaticManager = require('cachemanagers/PortfolioStaticManager'),
+            DealerParams = require('StateObject!DealerParams'),
+            initConfiguration = require('configuration/initconfiguration'),
+            Dictionary = require('Dictionary'),
+            BonusManager = require('cachemanagers/bonusmanager'),
+            ViewModels = require('devicemanagers/ViewModelsManager'),
+            ViewsManager = require('managers/viewsmanager'),
+            storeApi = require('fx-core-api/StoreAPI'),
+            dalDemoAccount = require('dataaccess/dalDemoAccount'),
+            AmountConverter = require('handlers/AmountConverter'),
+            BuilderForInBetweenQuote = require('modules/BuilderForInBetweenQuote'),
+            systemInfo = require('modules/systeminfo'),
+            userFlowCTA = require('deviceviewmodels/account/UserFlowCTA'),
+            presetsManager = require('modules/PresetsManager'),
+            presetDefinitions = require('FxNet/Common/Constants/Collections/PresetsDefinitions'),
+            initialDataManager = require('initdatamanagers/InitialDataManager'),
+            quotesManager = require('cachemanagers/QuotesManager'),
+            registrationManager = require('generalmanagers/RegistrationManager'),
+            instrumentTranslationsManager = require('managers/instrumentTranslationsManager'),
+            statesManager = require('devicemanagers/StatesManager'),
+            userFlow = require('StateObject!userFlow'),
+            activeLimitsManager = require('cachemanagers/activelimitsmanager'),
+            favoriteInstrumentsManager = require('modules/FavoriteInstrumentsManager'),
+            clientStateFlagsManager = require('cachemanagers/ClientStateFlagsManager'),
+            dealsManager = require('cachemanagers/dealsmanager');
+
+        var facade = {
+            Customer: Customer,
+            DialogViewModel: DialogViewModel,
+            CustomerProfileManager: CustomerProfileManager,
+            ClientStateHolderManager: ClientStateHolderManager,
+            PortofolioStaticManager: PortfolioStaticManager,
+            Dictionary: Dictionary,
+            StateObject: {
+                DealerParams: DealerParams,
+                UserFlow: userFlow,
+            },
+            InitialConfiguration: {
+                WalletConfiguration: initConfiguration.WalletConfiguration
+            },
+            BonusManager: BonusManager,
+            ViewModels: ViewModels,
+            ViewsManager: ViewsManager,
+            AmountConverter: AmountConverter,
+            BuilderForInBetweenQuote: BuilderForInBetweenQuote,
+            DalDemoAccount: dalDemoAccount,
+            SystemInfo: systemInfo,
+            UserFlowCTA: userFlowCTA,
+            PresetsManager: presetsManager,
+            PresetsDefinitions: presetDefinitions,
+            PresetTypes: ePresetType,
+            InitialDataManager: initialDataManager,
+            QuotesManager: quotesManager,
+            RegistrationManager: registrationManager,
+            InstrumentTranslationsManager: instrumentTranslationsManager,
+            SystemConsts: {
+                // exposed from global scope
+                // eslint-disable-next-line no-undef
+                cArabicChars: cArabicChars,
+            },
+            StatesManager: statesManager,
+            ClientStateFlagsManager: clientStateFlagsManager,
+            ActiveLimitsManager: activeLimitsManager,
+            FavoriteInstrumentsManager: favoriteInstrumentsManager,
+            dealsManager: dealsManager
+        };
+
+        var store = storeApi.createStore({
+            appConfig: { walletConfiguration: {} },
+            clientState: {},
+            customer: {},
+            customerProfile: {},
+            portofolio: {},
+            bonus: {},
+            dictionary: {},
+            dialog: {},
+            dealsManager: {}
+        }, facade);
+
+        return store;
+    }
+);

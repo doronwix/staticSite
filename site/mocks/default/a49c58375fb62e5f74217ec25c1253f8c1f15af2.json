@@ -1,0 +1,16 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/schgrp12066.js",
+  "contentType": "application/json; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": [
+    {
+      "SchedulerFormattedString_GMT": "Sun 22:05 - Fri 21:00",
+      "TradingBreak1_GMT": "",
+      "TradingBreak2_GMT": "",
+      "GMTCloseTime": "26/01/21 22:00",
+      "WeekendFinancingType": 1
+    }
+  ],
+  "isBase64": false
+}

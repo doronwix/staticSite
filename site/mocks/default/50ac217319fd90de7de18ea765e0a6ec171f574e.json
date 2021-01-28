@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/api/clientprofile/UpdateScreen",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "POST",
+  "statusCode": 200,
+  "data": "{ \"status\":\"Success\" }",
+  "isBase64": false
+}

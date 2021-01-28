@@ -1,0 +1,24 @@
+﻿<ul class="user-details accountHub" style="float:left">
+    <li class="new-msg-action messages" id="envelope" data-bind="css: Data.MessageCSS">
+        <a href="javascript:void(0)" class="envelope" data-bind="css: Data.MessageCSS">
+            <span class="ico-wb ico-wb-announcment"></span>
+        </a>
+    </li>
+    <!-- ko component: { name: 'fx-component-help-center-action' } --><!-- /ko -->
+    <li class="account headerMenu" id="account" data-bind="menu: {css: 'headerMenu'}, click: toggleAccountHub, css: {
+        'activeMenu': AccountButtonSelected } ">
+        <div class="person">
+            <span class="iconPerson" data-bind="css: Data.userStatusName" style="display:inline-block;"></span>
+        </div>
+        <!-- ko if: permissionsModule.CheckActionAllowed('accountNumber') -->
+        <div class="personInfo">
+            <span class="userName" data-bind="visible: Data.userName, text: Data.userName"></span>
+
+            <span class="accountNumberText"
+                  data-bind="visible: !Data.userName, dictionaryBinding: 'accountNumber', resourceName:'account_hub'"></span>
+
+            <span data-bind="text: Customer.prop.accountNumber, css: Data.userName? 'accountNumber' : 'accountNumberBig'"></span>
+        </div>
+        <!-- /ko -->
+    </li>
+</ul>

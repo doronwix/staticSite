@@ -1,0 +1,11 @@
+﻿<a data-bind="if: Data.visible,
+   css: { enabled: Data.enableTrading() === false, disabled:  Data.enableTrading() === true},
+   disable: Data.configLoading,
+   click: OnClickEnable"
+   class="enable-trading-button">
+    <span class="warn-icon"></span>
+    <span class="label"
+          data-bind="visible: Data.enableTrading() === false, dictionaryBinding: 'lblEnableTrading', resourceName: ''"></span>
+    <span class="label"
+          data-bind="visible: Data.enableTrading() === true, dictionaryBinding: 'lblDisableTrading', resourceName: ''"></span>
+</a>

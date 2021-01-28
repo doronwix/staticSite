@@ -1,0 +1,28 @@
+﻿<div id="AdvinionChartDiv" class="deal-slip revised-slip mainchart">
+    <div class="mcharth">
+        <div class="slip-custom-header mcharth-title">
+            <!-- ko component: { name: 'fx-component-dynamic-title-slip' } --><!-- /ko -->
+            <!-- ko component: { name: 'fx-component-slip-toggle', params: { chartStationPage: true } } --><!-- /ko -->
+        </div>
+    </div>
+    <div class="mchartc">
+        <div class="mchartcol tilesc">
+            <!-- ko if: !AdvinionChartsManager.IsChartManagerLoaded() -->
+            <div class="simple-loader charts-tile-layout tile-loader visible">
+                <div></div>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko component: { name: 'fx-component-tiled-layout', params: {
+                templates: ['fx-template-chart-tile', 'fx-template-chart-tile' , 'fx-template-chart-tile' , 'fx-template-chart-tile'],
+                layouts: window.screen.availWidth > cTileLayout.FourTilesContainerMinWidth ? [eTileLayout.Single, eTileLayout.FourSplit] : [eTileLayout.Single, eTileLayout.Split],
+                selectedLayout:  window.screen.availWidth > cTileLayout.FourTilesContainerMinWidth ? eTileLayout.FourSplit : eTileLayout.Split,
+                fullscreenPageId: eFullScreenControl.ChartPage
+            } } --><!-- /ko -->
+        </div>
+        <div class="mchartcol tradeticket" data-bind="visible: Data.showTransaction">
+            <!-- ko component: { name: 'fx-component-tile-transaction-switcher' } --><!-- /ko -->
+        </div>
+
+    </div>
+</div>

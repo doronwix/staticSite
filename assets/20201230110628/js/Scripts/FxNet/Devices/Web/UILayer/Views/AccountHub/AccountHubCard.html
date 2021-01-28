@@ -1,0 +1,50 @@
+<div ondragstart="return false;" id="mySidenav" class="sidenav" data-bind="css: { full: Data.visible, displaynone: Data.none }">
+    <div id="fixedHub" class="fixedHub">
+        <a href="javascript:void(0)" class="closebtn" data-bind="click: Close">&times;</a>
+        <div class="title" data-bind="text: Dictionary.GetItem('myAccount', 'account_hub')"></div>
+        <!-- ko if: hasDemoBlock() -->
+        <div class="switch">
+            <ul class="demo">
+                <li><a href="javascript:void(0)" data-bind="click: switchFromRealToDemo, css: { active: IsDemo() }, 'data-automation': 'demoaccount-button'" class="demo"><span data-bind="text: Dictionary.GetItem('lblDemoAccount', 'account_hub')"></span></a></li>
+                <li><a href="javascript:void(0)" data-bind="click: switchFromDemoToReal, css: { active: !IsDemo() }, 'data-automation': 'realaccount-button'" class="real"><span data-bind="text: Dictionary.GetItem('lblRealAccount', 'account_hub')"></span></a></li>
+            </ul>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: Data.visible() -->
+            <!-- ko component: { name: 'fx-component-userflow-wrap' } --><!-- /ko -->
+        <!-- /ko -->
+        <ul>
+            <li id="liPersonalDetails2">
+                <a href="javascript:void(0)" class="menu" data-bind="click: function(){ SwitchView(eForms.Settings, eViewTypes.vPersonalDetails);}"><span class="ico-wb ico-wb-personal-info"></span><span class="text" data-bind="text: Dictionary.GetItem('personalInformation', 'account_hub')"></span></a>
+            </li>
+            <li id="liAccountPreferences">
+                <a href="javascript:void(0)" class="menu" data-bind="click: function() {SwitchView(eForms.Settings, eViewTypes.vAccountPreferences);}"><span class="ico-wb ico-wb-account-pref"></span><span class="text" data-bind="text: Dictionary.GetItem('accountPreferences', 'account_hub')"></span></a>
+            </li>
+            <li id="liChangePassword1">
+                <a href="javascript:void(0)" class="menu" data-bind="click: ChangePassword"><span class="ico-wb ico-wb-change-pass"></span><span class="text" data-bind="text: Dictionary.GetItem('changePassword', 'account_hub')"></span></a>
+            </li>
+            <li id="liNotificationsSettings2">
+                <a href="javascript:void(0)" class="menu" data-bind="click: function() {SwitchView(eForms.Settings, eViewTypes.vNotificationsSettings);}"><span class="ico-wb icon-notifications"></span><span class="text" data-bind="text: Dictionary.GetItem('notificationSettings', 'account_hub')"></span></a>
+            </li>
+            <li id="divider-settings" class="divider">
+                <span></span>
+            </li>
+            <li id="liUploadDocuments2" class="lastBeforeDivider">
+                <a href="javascript:void(0)" class="menu" data-bind="click: function() {SwitchView(eForms.UploadDocuments);}"><span class="ico-wb ico-wb-upload-docs"></span><span class="text" data-bind="text: Dictionary.GetItem('uploadDocuments', 'account_hub')"></span></a>
+            </li>
+            <!-- ko if: showLogoutButton() -->
+            <li id="divider-uploaddocuments" class="divider">
+                <span></span>
+            </li>
+            <li id="liLogout" class="firstAfterDivider">
+                <a id="logout" href="javascript:void(0)" class="menu" data-bind="click: Logout"><span class="ico-wb ico-wb-logout"></span><span class="text" data-bind="text: Dictionary.GetItem('logout', 'account_hub')"></span></a>
+            </li>
+            <!-- /ko -->
+        </ul>
+    </div>
+</div>
+
+
+
+
+

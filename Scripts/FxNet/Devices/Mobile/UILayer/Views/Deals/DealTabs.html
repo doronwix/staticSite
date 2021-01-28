@@ -1,0 +1,15 @@
+﻿<div class="list-menu-wrapper">
+	<div class="list-menu full-width">
+		<div class="list-item" data-bind="click: function () { VManager.SwitchViewVisible(eForms.OpenDeals) }, css: { active: VManager.GetActiveFormViewProperties(eViewTypes.vOpenDeals).visible() == true }">
+			<a href="javascript:void(0)"><span data-bind="dictionaryBinding: 'opentab', resourceName:'static_controlTitle'">%open</span></a>
+		</div>
+
+		<div class="list-item" data-bind="click: function () { VManager.SwitchViewVisible(eForms.Limits) }, css: { active: VManager.GetActiveFormViewProperties(eViewTypes.vLimits).visible() == true }">
+			<a href="javascript:void(0)"><span data-bind="dictionaryBinding: 'limitstab', resourceName:'static_controlTitle'">%limits</span></a>
+		</div>
+
+		<div class="list-item" data-bind="click: function () { VManager.SwitchViewVisible(eForms.ClosedDeals) }, css: { active: VManager.GetActiveFormViewProperties(eViewTypes.vClosedDealsSummaries).visible() == true }">
+			<a href="javascript:void(0)"><span data-bind="dictionaryBinding: 'closedtab', resourceName:'static_controlTitle'">%closed</span></a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,5 @@
+﻿<div class="canvas-wrap" data-bind="css: { drew: Data.drawStatus() }">
+	<canvas id="signature-canvas" data-bind="electronicSignature"></canvas>
+	<button class="clear-action" id="ClearAction" data-bind="dictionaryBinding: 'lblClear', click: function () { ClearSignature(); }, disable: !Data.drawStatus() || Data.isLoading()"></button>
+	<div id="DisableOverlay" class="disable-overlay" data-bind="visible: Data.isLoading()"></div>
+</div>

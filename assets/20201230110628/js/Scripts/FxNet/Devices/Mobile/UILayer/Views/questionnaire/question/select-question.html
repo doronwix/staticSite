@@ -1,0 +1,31 @@
+﻿<!--ko if: visible-->
+<div class="row" data-bind="css: { valid : isValid() && validationOn(), error: !isValid() && validationOn(), focused: focused() }">
+    <div data-bind="if: visible" class="select-question select-optional-answers">
+        <label data-bind="attr: { id: name + 'Label'}">
+            <span data-bind="html: text"></span>
+            <!--ko if: tooltip !== '' -->
+            <fx-tooltip params="tooltip: tooltip, id: name"></fx-tooltip>
+            <!--/ko-->
+        </label>
+        <select  data-bind="options: optionalAnswers,
+                            optionsText: 'text',
+                            optionsValue: 'answerValue',
+                            value: answer,
+                            nonRtlOptions,
+                            attr: { name: htmlname, id: htmlname },
+                            attrIf: { autocomplete: autofillTagValue },
+                            optionsCaption: placeholder,
+                            optionsAfterRender: function(option, item) { ko.applyBindingsToNode(option, { disable: !item }, item); if (answer() === -1 && option.value === '') { option.setAttribute('selected', ''); } },
+                            event: {
+                                  blur: function(){ focused(false); if (!Browser.isSafariOnMacIOS()) { popup.visible(false); } }, 
+                                  focus: function(){ focused(true); },
+                                  change: function() { showPopup(); }
+                                }" class="select-country select-optional-answers">
+        </select>
+    </div>
+    <fx-question-tooltip-balloon params="headerText: popup.headerText, bodyText: popup.bodyText, visible: popup.visible"></fx-question-tooltip-balloon>
+    <!--ko ifnot: isValid -->
+    <fx-question-validation-balloon></fx-question-validation-balloon>
+    <!--/ko-->
+</div>
+<!--/ko-->

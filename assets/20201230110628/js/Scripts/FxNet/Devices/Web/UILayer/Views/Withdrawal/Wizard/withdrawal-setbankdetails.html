@@ -1,0 +1,71 @@
+﻿<!-- ko if: isDataReady -->
+<div class="withdrawal-wrapper">
+    <h1 class="page-title" data-bind="text: Dictionary.GetItem('title_withdrawFunds', 'withdrawal_withdrawalrequest')"></h1>
+    <!-- ko component: { name: 'fx-component-amount-requested'} --><!-- /ko -->
+    <p class="padbot" data-bind="dictionaryBinding: 'txt_refundInfo', resourceName: 'withdrawal_withdrawalrequest', visible: Data.showSkippedStepInfo"></p>
+    <div class="wrap-content top-separator">
+        <div class="data-fields center-area">
+            <div class="field-columns">
+                <div class="field-column">
+                    <label for="inputBankName" id="labelbankName" data-bind="dictionaryBinding: 'lblBankName', resourceName: 'withdrawal_withdrawalrequest'"></label>
+                    <input class="text-field" id="inputBankName" type="text"
+                           data-bind="validationOptions: { decorateInputElement: true, messageTemplate: 'customMessageTemplate' },
+                           textInput: Data.bankName,
+                           css: {'has-error': Data.bankName.isDirty() && !Data.bankName.isValid()}" />
+                </div>
+
+                <div class="field-column">
+                    <label for="inputAccountNumber" id="labelAccountNumber" data-bind="dictionaryBinding: 'lblNewAccountNumber', resourceName: 'withdrawal_withdrawalrequest'"></label>
+                    <input class="text-field" id="inputAccountNumber" type="text"
+                           data-bind="validationOptions: { decorateInputElement: true, messageTemplate: 'customMessageTemplate' },
+                           textInput: Data.bankAccount,
+                           css: {'has-error': Data.bankAccount.isDirty() && !Data.bankAccount.isValid()}" />
+                </div>
+            </div>
+
+            <div class="field-columns">
+                <div class="field-column">
+                    <label for="inputBranchCode" id="labelBranchCode" data-bind="dictionaryBinding: 'lblBranch', resourceName: 'withdrawal_withdrawalrequest'"></label>
+                    <input class="text-field" id="inputBranchCode" type="text" data-bind="textInput: Data.branchCode" />
+                </div>
+
+                <div class="field-column">
+                    <label for="inputSwiftCode" id="labelSwiftCode" data-bind="dictionaryBinding: 'lblSwiftCode', resourceName: 'withdrawal_withdrawalrequest'"></label>
+                    <input class="text-field" id="inputSwiftCode" type="text" data-bind="textInput: Data.swiftCode" />
+                </div>
+
+            </div>
+
+            <div class="field-columns">
+                <div class="field-column">
+                    <label for="inputBeneficiaryName" id="labelBeneficiaryName" class="beneficiaryName" data-bind="dictionaryBinding: 'lblBenef', resourceName: 'withdrawal_withdrawalrequest'"></label>
+                    <input class="text-field" id="inputBeneficiaryName" type="text"
+                           data-bind="validationOptions: { decorateInputElement: true, messageTemplate: 'customMessageTemplate' },
+                           textInput: Data.beneficiaryName,
+                           css: {'has-error': Data.beneficiaryName.isDirty() && !Data.beneficiaryName.isValid()}" />
+                </div>
+
+                <div class="field-column new-select">
+                    <label id="labelCountryId" data-bind="dictionaryBinding: 'lblCountry', resourceName: 'withdrawal_withdrawalrequest'"></label>
+                    <!-- ko component: {name: 'fx-component-search-country', params: {  countries: Data.countries, countryId: Data.bankCountryID } }  -->
+                    <!-- /ko -->
+                </div>
+            </div>
+
+            <div class="field-columns">
+                <div class="field-column no-padding">
+                    <label for="inputBankAddress" id="labelBankAddress" data-bind="dictionaryBinding: 'lblBankAddress', resourceName: 'withdrawal_withdrawalrequest'"></label>
+                    <input class="text-field" id="inputBankAddress" type="text" data-bind="textInput: Data.bankAddress" />
+                </div>
+            </div>
+            <div class="bank-fee-wrap">
+                <p class="bankfee">
+                    <span class="warn-icon"></span>
+                    <span data-bind="dictionaryBinding: 'msg_bankfeeInfo', resourceName: 'withdrawal_withdrawalrequest'"></span>
+                </p>
+            </div>
+            <p data-bind="text: Dictionary.GetItem('txt_beneficiaryInfo', 'withdrawal_withdrawalrequest')"></p>
+        </div>
+    </div>
+</div>
+<!--/ko-->

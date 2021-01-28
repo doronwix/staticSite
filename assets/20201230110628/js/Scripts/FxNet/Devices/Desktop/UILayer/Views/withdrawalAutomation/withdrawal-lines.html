@@ -1,0 +1,167 @@
+﻿<section>
+    <div class="withdrawal-comments">
+        <label for="comments">Comments</label>
+        <textarea data-bind="value : comment" name="comments" id="comments" class="full comments" maxlength="255"></textarea>
+    </div>
+
+    <div class="control-wrapper">
+        <ul class="controls left">
+            <li><button data-bind="click: newClick">New</button></li>
+            <li data-bind="text: spinnerText">Processing...</li>
+        </ul>
+
+        <ul class="controls right">
+            <li><button data-bind="click: saveCommentClick">Save Comment</button></li>
+            <li data-bind="visible: showCancelButton">
+                <button data-bind="click: cancelClick">Cancel withdrawal</button>
+            </li>
+            <li data-bind="visible: showClearAmountsButton">
+                <button data-bind="click: clearAmountsClick">Clear Amounts</button>
+            </li>
+            <li data-bind="visible: showApproveButton">
+                <button data-bind="click: approveClick">Approve</button>
+            </li>
+            <li data-bind="visible: showProcessButton">
+                <button data-bind="click: processClick">Process</button>
+            </li>
+            <li data-bind="visible: showFailedAndSuccessButton">
+                <button data-bind="click: resendClick">Resend</button>
+            </li>
+            <li data-bind="visible: showFailedAndSuccessButton">
+                <button data-bind="click: successClick">Success</button>
+            </li>
+            <li data-bind="visible: (showFailedAndSuccessButton() && !allWithdrawalLinesAreSelected())">
+                <button data-bind="click: failedClick, disable: allWithdrawalLinesAreSelected">Failed</button>
+            </li>
+            <li data-bind="visible: showRependingButton">
+                <button data-bind="click: rependingClick">Re-Pending</button>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+
+    <!-- ko if: showWithdrawalLines -->
+
+    <h3 class="title" data-bind="css: {invalid: !totalConvertedAmountValid()}">
+        <span>Transfers – Cumulative amount in</span>
+        <span data-bind="text: selectedWithdrawal().currency"></span>:
+        <span data-bind="text: totalConvertedAmount().toFixed(2)"></span>
+    </h3>
+    <div class="holder transfers">
+        <table class="data-holder striped" id="withdrawals-table-transfers">
+            <tr class="blue">
+                <!-- ko if: $parent.selectedWithdrawal().status === 'Approved' -->
+                <th></th>
+                <th></th>
+                <th>Clearer State</th>
+                <th>Trans ID</th>
+                <!-- /ko -->
+                <!-- ko if: selectedWithdrawal().status === 'Processing' -->
+                <th>Trans ID</th>
+                <!-- /ko -->
+                <th>Deposit Date</th>
+                <th>Transfer Type</th>
+                <th>Last 4</th>
+                <th>Exp.</th>
+                <th>Approved</th>
+                <th>Is owner</th>
+                <th>Card Type</th>
+                <th>Provider</th>
+                <th>CCY</th>
+                <th>Amount</th>
+                <th>Remaining</th>
+                <th>Withd. amount</th>
+                <th>Rate</th>
+                <th>Converted amo.</th>
+                <th>Confirmed</th>
+            </tr>
+            <!-- ko foreach: withdrawalLines-->
+            <tr>
+                <!-- ko if: $parent.selectedWithdrawal().status === 'Approved' -->
+                <td class="expand-sign">
+                    <!--ko if: withdrawalResponseLogs.length > 0 -->
+                    <a href="#" data-bind="click: expand, text:expandLabel"></a>
+                    <!-- /ko -->
+                </td>
+                <!-- /ko -->
+                <!-- ko if: $parent.selectedWithdrawal().status === 'Approved' -->
+                <td><input type="checkbox" data-bind="checked: isSelected" /></td>
+                <td data-bind="text: clearerState">N/A</td>
+                <td data-bind="text: CardId">N/A</td>
+                <!-- /ko -->
+                <!-- ko if: $parent.selectedWithdrawal().status === 'Processing' -->
+                <td data-bind="text: lineType === $parent.withdrawalLineType.CreditCardRefund ? TransId : ''">N/A</td>
+                <!-- /ko -->
+                <td data-bind="text: dateOfDeposit" class="date">N/A</td>
+                <td data-bind="text: lineTypeName">N/A</td>
+                <td data-bind="text: last4">N/A</td>
+                <td data-bind="text: expirationDate">N/A</td>
+                <td data-bind="text: isApprovedFormatted">N/A</td>
+                <td data-bind="text: isOwnerFormatted, css: { red: isOwnerFormatted === 'No'}">N/A</td>
+
+                <!-- ko if: $index() === 0 && ($parent.selectedWithdrawal().status === 'Processing' || lineType === $parent.withdrawalLineType.WireTransfer ) -->
+                <td></td>
+                <td>
+                    <select data-bind="options: $parent.nostroBanks,
+							optionsText: 'BankName',
+							optionsValue: 'BankId',
+							value: $parent.selectedNostroBank,
+							optionsCaption: 'Choose...',
+							attr: {disabled : $parent.selectedWithdrawal().status !== 'Processing'}"></select>
+                </td>
+                <!-- /ko -->
+                <!-- ko if: $index() !== 0 || ($parent.selectedWithdrawal().status !== 'Processing' && lineType === $parent.withdrawalLineType.CreditCardRefund ||  lineType === $parent.withdrawalLineType.CreditCardTransfer) -->
+                <td data-bind="text:cardTypeName">N/A</td>
+                <!-- /ko -->
+                <!-- ko ifnot: $index() === 0 && ($parent.selectedWithdrawal().status === 'Processing' || lineType === $parent.withdrawalLineType.WireTransfer ) -->
+                <td data-bind="text: clearerName">N/A</td>
+                <!-- /ko -->
+
+                <td data-bind="text: depositCurrency">N/A</td>
+                <td data-bind="text: Format.toNumberWithThousandsSeparator(depositAmount, -1, '')">N/A</td>
+                <td data-bind="text: Format.toNumberWithThousandsSeparator(remainingAmount, -1, '')">N/A</td>
+                <!--ko ifnot: $parent.selectedWithdrawal().status === 'Processing'-->
+                <td data-bind="text: Format.toNumberWithThousandsSeparator(withdrawalAmount(), -1, '')">N/A</td>
+                <!-- /ko -->
+                <!--ko if: $parent.selectedWithdrawal().status === 'Processing'-->
+                <td>
+                    <input type="number" name="withdrawalAmount" data-bind="textInput: withdrawalAmount" />
+                </td>
+                <!--/ko-->
+                <td data-bind="text: withdrawalConvertRate">N/A</td>
+                <td data-bind="text: Format.toNumberWithThousandsSeparator(convertedAmount(), 2, '')">N/A</td>
+                <td data-bind="text: isSignedFormatted, css: { red: isSignedFormatted === 'No'}">N/A</td>
+            </tr>
+            <!--ko if: withdrawalResponseLogs.length > 0 -->
+            <tr></tr>
+            <tr data-bind="visible:isExpanded">
+                <td colspan="19">
+                    <table class="withdrawal-log-table striped">
+                        <tbody>
+                            <tr>
+                                <th class="withdrawal-log">Response Code</th>
+                                <th class="withdrawal-log">Response Message</th>
+                                <th class="withdrawal-log">Clearer</th>
+                                <th class="withdrawal-log">Response Time</th>
+                            </tr>
+                            <!-- ko foreach: withdrawalResponseLogs-->
+                            <tr>
+                                <td class="withdrawal-log" data-bind="text: responseCode">N/A</td>
+                                <td class="withdrawal-log" data-bind="text: responseMessage">N/A</td>
+                                <td class="withdrawal-log" data-bind="text: providerName">N/A</td>
+                                <td class="withdrawal-log" data-bind="text: responseTime">N/A</td>
+                            </tr>
+                            <!-- /ko -->
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+
+            <!-- /ko -->
+            <!-- /ko -->
+        </table>
+    </div>
+
+    <!-- /ko -->
+</section>

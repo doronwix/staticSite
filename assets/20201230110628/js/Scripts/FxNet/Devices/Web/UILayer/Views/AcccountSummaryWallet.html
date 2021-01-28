@@ -1,0 +1,411 @@
+﻿<div>
+    <div data-bind="with: Data.WalletInfo">
+        <div class="header">
+            <div id="accSummaryTitle"
+                 class="accountSummaryTitle"
+                 data-bind="dictionaryBinding: 'accSummaryTitle', resourceName: 'summaryview_accountsummary'">
+            </div>
+
+            <div class="accountSummaryMode"
+                 data-bind="visible: showFinancialSummaryDetails">
+                <ul>
+                    <li data-bind="visible: !isAdvancedView()">
+                        <a class="ExpandDiv"
+                           id="ASExpend"
+                           href="javascript:void(0);"
+                           data-bind="click: function () { $parent.Data.ViewProperties.setAdvancedView(true); ko.postbox.publish('trading-event', 'account-summary-advanced'); }">
+                            <span id="hlExpand"
+                                  data-bind="dictionaryBinding: 'btnAdvancedView', resourceName: 'summaryview_accountsummary'">
+                            </span>
+                            <i class="ico-sh-plus"></i>
+                        </a>
+                    </li>
+                    <li data-bind="visible: isAdvancedView()">
+                        <a class="CollapseDiv"
+                           id="ASCollapse"
+                           href="javascript:void(0)"
+                           data-bind="click: function () { $parent.Data.ViewProperties.setAdvancedView(false); ko.postbox.publish('trading-event', 'account-summary-simple'); }">
+                            <span id="hlCollapse"
+                                  data-bind="dictionaryBinding: 'btnSimpleView', resourceName: 'summaryview_accountsummary'"></span>
+                            <i class="ico-sh-minus"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="AccountSummaryTblArea">
+            <div class="viewport">
+                <account-summary-not-active></account-summary-not-active>
+                <div class="overview" data-bind="visible: showFinancialSummaryDetails">
+                    <table id="AccountSummaryTbl"
+                           data-bind="css: { pendingBonus: isAdvancedView() ? (0 < General.toNumeric(pendingBonus.value())) : (0 != General.toNumeric(pendingBonus.value())) }">
+                        <tbody>
+                            <tr class="bordered">
+                                <td>
+                                    <!-- ko template: {
+                                                              name: 'summaryActionsItem',
+                                                              data:{
+                                                                  head: true,
+                                                                  id: 'accSummaryMarginTitle',
+                                                                  text: Dictionary.GetItem('accSummaryMarginTitle', 'summaryview_accountsummary'),
+                                                                  toolTip: Dictionary.GetItem('accSummaryAvailableMarginToolTip', 'summaryview_accountsummary'),
+                                                                  plusAction: function() { showDetailedMarginStatus('summary-available-margin'); }
+                                                              }
+                                                          } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td>
+                                    <span class="ltr"
+                                          id="accSummaryMargin"
+                                          data-bind="numberWithCurrencySymbol: {currencyId: $customer.prop.selectedCcyId(), value: $data.availableMargin.toNumeric(), decimals: 2}, css: { greenText: $data.availableMargin.toNumeric() >= 0, redText: $data.availableMargin.toNumeric() < 0 }">0.0</span>
+                                </td>
+                            </tr>
+                            <!-- ko if: usedMargin.visibility() -->
+                            <tr>
+                                <td>
+                                    <!-- ko template: {
+                                                                  name: 'summaryActionsItem',
+                                                                  data: {
+                                                                      id: "accSummaryUsedMarginTitle",
+                                                                      text:  Dictionary.GetItem('accSummaryUsedMarginTitle', 'summaryview_accountsummary'),
+                                                                      toolTip: Dictionary.GetItem('accSummaryUsedMarginToolTip', 'summaryview_accountsummary'),
+                                                                      plusAction: function() { showDetailedMarginStatus('summary-used-margin'); }
+                                                                  }
+                                                              } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td>
+                                    <span id="accSummaryUsedMargin"
+                                          data-bind="numberWithCurrencySymbol: {currencyId: $customer.prop.selectedCcyId(), value: usedMargin.toNumeric(), decimals: 2}"
+                                          class="ltr">0.0</span>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- ko if: marginUtilizationPercentage.visibility() -->
+                            <tr>
+                                <td>
+                                    <!-- ko template: {
+                                                              name: 'summaryActionsItem',
+                                                              data: {
+                                                                  id: "accSummaryMarginUtilizationTitle",
+                                                                  text: Dictionary.GetItem('accSummaryMarginUtilizationTitle', 'summaryview_accountsummary'),
+                                                                  toolTip:  Dictionary.GetItem('accSummaryMarginUtilizationToolTip', 'summaryview_accountsummary'),
+                                                                  plusAction: function() { showDetailedMarginStatus('summary-used-margin'); }
+                                                              }
+                                                          } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td>
+                                    <span id="accSummaryMarginUtilization"
+                                          data-bind="percentage: marginUtilizationPercentage.value()">0.0</span>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- ko if: marginLevel.visibility() -->
+                            <tr class="MarginLevelDisplay">
+                                <td>
+                                    <!-- ko template: {
+                                                              name: 'summaryActionsItem',
+                                                              data: {
+                                                                  id: "accSummaryMarginLevelTitle",
+                                                                  text: Dictionary.GetItem('accSummaryMarginLevelTitle', 'summaryview_accountsummary')
+                                                              }
+                                                          } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td>
+                                    <span id="accSummaryMarginLevel"
+                                          data-bind="text: Format.toAmount(marginLevel.value(), 2)">0.0</span>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+
+                            <tr class="bordered">
+                                <td>
+                                    <!-- ko template: {
+                                                              name: 'summaryActionsItem',
+                                                              data: {
+                                                                  head: true,
+                                                                  id: "AccSummaryEquityTitle",
+                                                                  text: Dictionary.GetItem('AccSummaryEquityTitle', 'summaryview_accountsummary'),
+                                                                  toolTip: Dictionary.GetItem('accSummaryEquityTooltip', 'summaryview_accountsummary')
+                                                              }
+                                                          } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td class="equity-value-wrapper">
+                                    <fx-component-demo-deposit-icon params="equity: equity.value"></fx-component-demo-deposit-icon>
+                                    <div class="equity-value-span-wrapper">
+                                        <span class="ltr"
+                                              id="accSummaryEquity"
+                                              data-bind="numberWithCurrencySymbol: {currencyId: $customer.prop.selectedCcyId(), value: $data.equity.toNumeric(), decimals: 2}, css: { greenText: $data.equity.toNumeric() >= 0, redText: $data.equity.toNumeric() < 0 }">0.0</span>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- ko if: isAdvancedView() -->
+                            <tr>
+                                <td>
+                                    <!-- ko template: {
+                                                          name: 'summaryActionsItem',
+                                                          data: {
+                                                              id: "accSummaryAccountBalanceTitle",
+                                                              text: Dictionary.GetItem('accSummaryAccountBalanceTitle', 'summaryview_accountsummary')
+                                                          }
+                                                      } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td>
+                                    <span id="accSummaryAccountBalance"
+                                          data-bind="numberWithCurrencySymbol: {currencyId: $customer.prop.selectedCcyId(), value:  $data.accountBalance.toNumeric(), decimals: 2}"
+                                          class="ltr">0.0</span>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- ko if: isAdvancedView() && tradingBonus.visibility() -->
+                            <tr>
+                                <td>
+                                    <!-- ko template: {
+                                                              name: 'summaryActionsItem',
+                                                              data: {
+                                                                  id: "accSummaryTradingBonusTitle",
+                                                                  text: Dictionary.GetItem('accSummaryTradingBonusTitle', 'summaryview_accountsummary'),
+                                                                  toolTip: Dictionary.GetItem('accSummaryTradingBonusToolTip', 'summaryview_accountsummary')
+                                                              }
+                                                          } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td>
+                                    <span id="accSummaryTradingBonus"
+                                          class="greenText ltr"
+                                          data-bind="numberWithCurrencySymbol: { currencyId: $customer.prop.selectedCcyId(), value: tradingBonus.toNumeric(), digits: 0 }">0.0</span>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- ko ifnot: isAdvancedView() -->
+                            <tr class="bordered">
+                                <td>
+                                    <!-- ko template: {
+                                                          name: 'summaryActionsItem',
+                                                          data: {
+                                                              head: true,
+                                                              id: "accSummaryOpenPLTitle",
+                                                              text: Dictionary.GetItem('accSummaryOpenPLTitle', 'summaryview_accountsummary'),
+                                                              toolTip: Dictionary.GetItem('accSummaryOpenPLTooltip', 'summaryview_accountsummary')
+                                                          }
+                                                      } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td>
+                                    <span class="ltr"
+                                          id="accSummaryOpenPL"
+                                          data-bind="numberWithCurrencySymbol: { currencyId: $customer.prop.selectedCcyId(), value: $data.openPL.toNumeric(), decimals: 2}, css: { greenText: openPL.toNumeric() > 0, redText: openPL.toNumeric() < 0 }">0.0</span>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+
+                            <tr class="exposure-coverage bordered">
+                                <td colspan="2">
+                                    <!-- ko template: {
+                                                          name: 'summaryActionsItem',
+                                                          data: {
+                                                              head: true,
+                                                              id: "accSummaryExposureCoverageTitle",
+                                                              text: Dictionary.GetItem('accSummaryExposureCoverageTitle', 'summaryview_accountsummary'),
+                                                              toolTip:  !isMaintenanceMargin ?
+                                                              Dictionary.GetItem('accSummaryExposureCoverageTooltip', 'summaryview_accountsummary'):
+                                                              Dictionary.GetItem('accSummaryExposureCoverageWhenMaintenanceMarginTooltip', 'summaryview_accountsummary')
+                                                          }
+                                                      } -->
+                                    <!-- /ko -->
+                                    <span class="exposure_percent">
+                                        <span class="ltr"
+                                              id="accSummaryExposureCoverage"
+                                              data-bind="toppedPercentage: exposureCoverage.value(),  css: { redText: !isValidExposureCoverage() }">0.0</span>
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <!-- ko if: isMaintenanceMargin && isAdvancedView() -->
+                            <tr>
+                                <td>
+                                    <!-- ko template: {
+                                                          name: 'summaryActionsItem',
+                                                          data: {
+                                                              head: false,
+                                                              id: "accSummaryMaintenanceMarginTitle",
+                                                              text: Dictionary.GetItem('accSummaryMaintenanceMarginTitle', 'summaryview_accountsummary'),
+                                                              toolTip: Dictionary.GetItem('accSummaryMaintenanceMarginTooltip', 'summaryview_accountsummary')
+                                                          }
+                                                      } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td>
+                                    <span class="ltr"
+                                          id="accSummaryMaintenanceMargin"
+                                          data-bind="numberWithCurrencySymbol: {currencyId: $customer.prop.selectedCcyId(), value: $data.maintenanceMargin.toNumeric(), decimals: 2}">0.0</span>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- ko if: isAdvancedView() -->
+                            <tr>
+                                <td>
+                                    <!-- ko template: {
+                                                          name: 'summaryActionsItem',
+                                                          data: {
+                                                              id:"accSummaryNetExposureTitle",
+                                                              text: Dictionary.GetItem('accSummaryNetExposureTitle', 'summaryview_accountsummary'),
+                                                              plusActionArgs:  { title: Dictionary.GetItem('lblExposureTitle', 'summaryview_exposures') },
+                                                              plusAction: function(){showExposureSummary({ title: Dictionary.GetItem('lblExposureTitle', 'summaryview_exposures') })},
+                                                              plusActionDisabled:showExposureSummary.disabled
+                                                          }
+                                                      } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td>
+                                    <span class="ltr"
+                                          id="accSummaryNetExposure"
+                                          data-bind="numberWithCurrencySymbol: { currencyId: $customer.prop.selectedCcyId(), value: netExposure.toNumeric(), decimals: 0 }">0.0</span>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- ko if: maxExposure.visibility() -->
+                            <tr>
+                                <td>
+                                    <!-- ko template: {
+                                                          name: 'summaryActionsItem',
+                                                          data: {
+                                                              id: "accSummaryMaxExposureTitle",
+                                                              text: Dictionary.GetItem('accSummaryMaxExposureTitle', 'summaryview_accountsummary')
+                                                          }
+                                                      } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td>
+                                    <span class="ltr"
+                                          id="accSummaryMaxExposure"
+                                          data-bind="numberWithCurrencySymbol: { currencyId: $customer.prop.selectedCcyId(), value: maxExposure.toNumeric(), decimals: 0 }">0.0</span>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- ko if: isAdvancedView() -->
+                            <tr class="bordered">
+                                <td>
+                                    <!-- ko template: {
+                                                              name: 'summaryActionsItem',
+                                                              data: {
+                                                                  head: true,
+                                                                  id: "accSummaryOpenPLTitle",
+                                                                  text: Dictionary.GetItem('accSummaryOpenPLTitle', 'summaryview_accountsummary'),
+                                                                  toolTip: Dictionary.GetItem('accSummaryOpenPLTooltip', 'summaryview_accountsummary')
+                                                              }
+                                                          } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td>
+                                    <span class="ltr"
+                                          id="accSummaryOpenPL"
+                                          data-bind="numberWithCurrencySymbol: {currencyId: $customer.prop.selectedCcyId(), value: $data.openPL.toNumeric(), decimals: 2}, css: { greenText: openPL.toNumeric() > 0, redText: openPL.toNumeric() < 0 }">0.0</span>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- BONUS -->
+                            <!-- ko if: 0 < bonusAmount() -->
+                            <!-- ko if: ePendingBonusType.cashBack === pendingBonusType() -->
+                            <tr class="bordered">
+                                <td colspan="2">
+                                    <div id="live-cash-back">
+                                        <div class="cashback-wrapper right">
+                                            <!-- ko template: { name: 'summaryActionsItem',
+                                                                      data: {
+                                                                          head: true,
+                                                                          id: 'accSummaryPendingBonusTitle',
+                                                                          text: Dictionary.GetItem('accSummaryPendingBonusTitle', 'summaryview_accountsummary'),
+                                                                          plusAction: function() { showCashBack({dialogTitle: " ", tradingEvent: "cashback-from-wallet"}); }
+                                                                      }} -->
+                                            <!-- /ko -->
+                                            <!-- ko component: { name: "fx-component-live-cash-back", params: { isAdvancedView: isAdvancedView } } -->
+                                            <!-- /ko -->
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- ko if: ePendingBonusType.spreadDiscount === pendingBonusType() -->
+                            <tr class="bordered">
+                                <td colspan="2">
+                                    <div class="data-wrapper">
+                                        <!-- ko template: {
+                                                            name: 'summaryActionsItem',
+                                                            data: {
+                                                                head: true,
+                                                                id: 'accSummaryPendingBonusTitle',
+                                                                text: Dictionary.GetItem('accSummarySpreadDiscountTitle', 'summaryview_accountsummary'),
+                                                                toolTip: Dictionary.GetItem('accSummarySpreadDiscountTooltip', 'summaryview_accountsummary'),
+                                                            }} -->
+                                        <!-- /ko -->
+                                        <!-- ko component: { name: "fx-component-spread-discount", params: { isAdvancedView: isAdvancedView } } -->
+                                        <!-- /ko -->
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                            <!-- /ko -->
+                            <!-- end of BONUS -->
+                            <!-- ko if: isAdvancedView() ? (0 <General.toNumeric(pendingWithdrawals.value())) : (0 !=General.toNumeric(pendingWithdrawals.value())) -->
+                            <tr id="trAccSummaryPendingWithdrawals" class="bordered">
+                                <td>
+                                    <!-- ko template: {
+                                                      name: 'summaryActionsItem',
+                                                      data:{
+                                                          head: true,
+                                                          id:"accSummaryPendingWithdrawalsTitle",
+                                                          text:Dictionary.GetItem('accSummaryPendingWithdrawalsTitle', 'summaryview_accountsummary'),
+                                                          toolTip:Dictionary.GetItem('accSummaryPendingWithdrawalsToolTip', 'summaryview_accountsummary'),
+                                                          rightAction: function() { ko.postbox.publish('trading-event', 'summary-pending-withdrawals'); $root.VManager.SwitchViewVisible(eForms.PendingWithdrawal, {}); }
+                                                      }
+                                                  } -->
+                                    <!-- /ko -->
+                                </td>
+                                <td>
+                                    <span class="ltr"
+                                          id="accSummaryPendingWithdrawals"
+                                          data-bind="numberWithCurrencySymbol: { currencyId: $customer.prop.selectedCcyId(), value: pendingWithdrawals.toNumeric(), digits: 0 }">0.0</span>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ActionDiv">
+        <div class="AccSummaryExpandCollapse">
+            <a id="btnDeposit"
+               class="btn action deposit"
+               data-bind="click: function () { ko.postbox.publish('action-source', 'FinancialSummaryButton'); $root.VManager.RedirectToForm(eForms.Deposit); }, visible: Data.WalletInfo.showFinancialSummaryDetails">
+                <p class="center"
+                   data-bind="dictionaryBinding: 'btnDeposit', resourceName: 'summaryview_accountsummary'">
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<template id="summaryActionsItem">
+    <div class="info-wrapper">
+        <span data-bind="html: $data.text, css: { bold: $data.head }, attr: { 'id': $data.id }"></span>
+
+        <div class="icon-wrapper">
+            <i class="ico-sh-tooltip customTooltipPurpose"
+               data-bind="'data-automation': 'tooltip-' + $data.id, balloon: { tooltipClass: 'tooltip tooltipBottom summary-tooltip customTooltip', position: { my: 'center bottom', at: 'center top-9' } }, attr: { title: $data.toolTip }, visible: $data.toolTip"></i>
+            <i class="ico-wb-more-info"
+               data-bind="ifnot: $data.plusActionDisabled, click: $data.plusAction, visible: $data.plusAction, 'data-automation': 'button-1-' + $data.id, attr: { 'title': Dictionary.GetItem('tooltipMoreInfo') }"></i>
+            <i class="ico-wb-link"
+               data-bind="click: $data.rightAction, visible: $data.rightAction, 'data-automation': 'button-2-' + $data.id, attr: { 'title': Dictionary.GetItem('tooltipViewAll') }"></i>
+        </div>
+    </div>
+</template>

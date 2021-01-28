@@ -1,0 +1,88 @@
+﻿<!-- ko ifnot: Data.isApproveViewVisible() -->
+<h3 class="title" data-bind="text: Dictionary.GetItem('txtNewWireTransferDone', 'DepositBackOffice')"></h3>
+<!-- /ko -->
+<!-- ko if: Data.isApproveViewVisible() -->
+<div>
+    <!-- ko ifnot: Data.isApprovedChecked() -->
+    <h3 class="title" data-bind="text: Dictionary.GetItem('txtNewWireTransfer', 'DepositBackOffice')"></h3>
+    <!-- /ko -->
+    <!-- ko if: Data.isApprovedChecked() -->
+    <h3 class="title" data-bind="text: Dictionary.GetItem('txtApproveWireTransfer', 'DepositBackOffice')"></h3>
+    <!-- /ko -->
+    <div class="holder forced-deposit">
+        <table class="data-holder loading" data-bind="css: { loading:  Data.isGetBanksInProgress() || Data.isSaveSpinnerOn() }">
+            <tr>
+                <td class="blue" data-bind=" text: Dictionary.GetItem('lblAccountNumber', 'DepositBackOffice')"></td>
+                <td><input type="text" data-bind="value: Data.accountNumber" disabled/></td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind=" text: Dictionary.GetItem('lblBroker', 'DepositBackOffice')"></td>
+                <td>
+                    <input data-bind="value: Data.brokerName" disabled/>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblComment', 'DepositBackOffice')"></td>
+                <td>
+                    <select data-bind="options: Data.banksForSelectedBroker, optionsText: 'name', value: Data.selectedBank, attr: {'disabled': Data.hasSelectedWireTransfer()}"></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('txtAmount', 'DepositBackOffice')"></td>
+                <td>
+                    <input type="text" data-bind="value: Data.amount,  validationOptions: { insertMessages: false, decorateInputElement: true, errorElementClass: 'error'}"/>
+                    <select data-bind="options: Data.currenciesForSelectedBank, optionsText: 'Name', value: Data.selectedCcy, valueAllowUnset: true"></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblExchangeRate', 'DepositBackOffice')"></td>
+                <td>
+                    <input type="text" data-bind="value: Data.exchangeRate, attr : {'disabled' : Data.isDisabledExchangeRate()}"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue">
+                    <label data-bind="text : String.format(Dictionary.GetItem('lblAmountCcy', 'DepositBackOffice'),Data.customerSymbolName)"></label>
+                </td>
+                <td>
+                    <input type="text" data-bind="value: Format.formatDealAmount(Data.convertedAmount())" disabled/>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblComment', 'DepositBackOffice')"></td>
+                <td>
+                    <fx-wire-transfer-comments params="comment: Data.selectedComment"></fx-wire-transfer-comments>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblValueDate', 'DepositBackOffice')"></td>
+                <td>
+                    <span class="calendar" data-bind="datepickerbutton: Data.valueDate,
+                          field: 'txtValueDate',
+                          maxDate: Data.maxDate,
+                          datepickeroptions: { maxDate: 'now'}"></span>
+                    <input id="txtValueDate" data-bind="attr : {'disabled' : !Data.isApprovedChecked()}" class="date" columns="10" maxlength="10" readonly="readonly"/>
+                </td>
+            </tr>
+            <!-- ko ifnot: Data.hasSelectedWireTransfer() -->
+            <tr>
+                <td>
+                    <input type="checkbox" id="chkApprove" data-bind="checked: Data.isApprovedChecked"/>
+                    <label for="chkApprove" data-bind="text: Dictionary.GetItem('lblApproved', 'DepositBackOffice')"></label>
+                </td>
+            </tr>
+            <!-- /ko -->
+            <tr>
+                <td>
+                    <!-- ko if: Data.hasSelectedWireTransfer() -->
+                    <button data-bind="click: closeClick, text: Dictionary.GetItem('btnClose', 'DepositBackOffice')" class="short"></button>
+                    <!-- /ko -->
+                </td>
+                <td>
+                    <button data-bind="click: saveClick, text: Dictionary.GetItem('btnSave', 'DepositBackOffice')" class="short right"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- /ko -->

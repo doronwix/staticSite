@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/Category.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"C_Credit_Card_Copy\":\"Credit Card Copy\",\"C_DepositConfirmation\":\"Deposit Confirmation\",\"C_GeneralDocuments\":\"General Documents\",\"C_OtherDocuments\":\"Other Documents (if required)\",\"C_ProofofID\":\"Proof of ID\",\"C_ProofofResidence\":\"Proof of Residence\",\"C_TIN\":\"Taxpayer Identification Number (TIN)\",\"C_Withdrawal_Pending_Request\":\"Withdrawal Pending Request\"}",
+  "isBase64": false
+}

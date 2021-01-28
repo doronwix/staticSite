@@ -1,0 +1,18 @@
+﻿<div class="tutorials-extension">
+    <div data-bind="visible: Data.isExtensionNotSubmitted">
+        <div class="row-wrapper">
+            <span data-bind="dictionaryBinding: 'lblVideoLessonsRequestExtension', resourceName: 'accessRequest'"></span>
+            <a class="btn small center" data-bind="click: OnClickSubmitRequest">
+                <span id="btnContent" data-bind="dictionaryBinding: 'btnRequestExtension', resourceName: 'accessRequest'"></span>
+            </a>
+        </div>
+    </div>
+    <div data-bind="visible: Data.isExtensionSubmitted">
+        <div class="row-wrapper">
+            <h3 data-bind="dictionaryBinding: 'lblRequestSubmittedTitle', resourceName: 'accessRequest'" class="bold"></h3>
+        </div>
+        <div class="row-wrapper">
+            <span id="btnContent" data-bind="dictionaryBinding: 'lblVideoLessonsExtensionSubmitted', resourceName: 'accessRequest'"></span>
+        </div>
+    </div>
+</div>

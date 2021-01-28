@@ -1,0 +1,22 @@
+<div class="dscol tradeticket" data-bind="visible: Data.showTransaction()">
+    <div id="TransactionDropDown" class="slip-custom-header">
+        <!-- ko component: { name: 'fx-component-dynamic-title-slip' } --><!-- /ko -->
+        <!-- ko component: { name: 'fx-component-slip-toggle' } --><!-- /ko -->
+    </div>
+    <div class="ticket-tabs">
+        <!-- ko foreach: Data.transactionsList -->
+        <div class="ticket-tab" data-bind="css: { 'selected': transactionType === $parent.Data.selectedTransactionTab().transactionType  },
+            click: function () { $parent.Data.selectedTransactionTab($data); }">
+            <span class="tab-title" data-bind="text: transactionLabel"></span>
+        </div>
+        <!-- /ko -->
+    </div>
+    <div class="ticket-content">
+        <!-- ko if: Data.isNewDealVisible -->
+            <!-- ko component: { name: 'fx-component-new-deal-slip', params: { chartStationPage: false } } --><!-- /ko -->
+        <!-- /ko -->
+        <!-- ko if: Data.isNewLimitVisible -->
+            <!-- ko component: { name: 'fx-component-new-limit', params: { chartStationPage: false } } --><!-- /ko -->
+        <!-- /ko -->
+    </div>
+</div>

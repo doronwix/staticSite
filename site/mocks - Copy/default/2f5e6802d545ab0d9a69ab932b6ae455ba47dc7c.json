@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/common/utils/handlers/StateMachine.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿function TStateMachine() {\r\n    var machineStates;\r\n    var indexes = {}; //just for convinience\r\n    var currentState;\r\n\r\n    function init(states) {\r\n        machineStates = states;\r\n\r\n        for (var i = 0, length = machineStates.length; i < length; i++) {\r\n            indexes[machineStates[i].name] = i;\r\n\r\n            if (machineStates[i].initial) {\r\n                currentState = states[i];\r\n            }\r\n        }\r\n    }\r\n\r\n    function consumeEvent(e) {\r\n        if (currentState.events[e]) {\r\n            currentState = machineStates[indexes[currentState.events[e]]];\r\n        }\r\n    }\r\n\r\n    function getStatus() {\r\n        return currentState.name;\r\n    }\r\n\r\n    return {\r\n        Init: init,\r\n        ConsumeEvent: consumeEvent,\r\n        GetStatus: getStatus\r\n    };\r\n}",
+  "isBase64": false
+}

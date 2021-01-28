@@ -1,0 +1,47 @@
+﻿<!--ko if: visible-->
+<div class="row medium-input" data-bind="css: {valid : isValid() && validationOn(), error : !isValid() && validationOn(),  focused: focused()  }">
+    <label data-bind="attr: {id:name + 'Label'}">
+        <span data-bind="html: text">%Date of birth:</span>
+        <!--ko if: tooltip !== '' -->
+        <fx-tooltip params="tooltip:tooltip, id: name"></fx-tooltip>
+        <!--/ko-->
+    </label>
+    <ul class="b-date">
+        <li>
+	        <select name="day" data-bind="options: days, 
+					optionsCaption: placeholderDay,  
+					optionsAfterRender: function(option, item) { ko.applyBindingsToNode(option, {disable: !item}, item); if (answer() === -1 && option.value === '') option.setAttribute('selected', ''); },
+					value:day,
+					event :{
+						blur: function(){ focused(false); },
+						focus: function(){ focused(true); }
+					}"></select>
+        </li>
+        <li>
+	        <select name="month" id="month" data-bind="options: months, 
+					optionsCaption: placeholderMonth, 
+					optionsAfterRender: function(option, item) { ko.applyBindingsToNode(option, {disable: !item}, item); if (answer() === -1 && option.value === '') option.setAttribute('selected', ''); },
+					value:month,
+					event :{
+						blur: function(){ focused(false); },
+						focus: function(){ focused(true); }
+					}"></select>
+        </li>
+        <li>
+	        <select name="year" id="year" data-bind="options: years, 
+					optionsCaption: placeholderYear, 
+					value:year,
+					optionsAfterRender: function(option, item) { ko.applyBindingsToNode(option, {disable: !item}, item); if (answer() === -1 && option.value === '') option.setAttribute('selected', ''); },
+					event :{
+						blur: function(){ focused(false); },
+						focus: function(){ focused(true); }
+					}">
+            </select>
+        </li>
+    </ul>
+    <!-- validation balloon -->
+    <!--ko ifnot: isValid -->
+    <fx-question-validation-balloon></fx-question-validation-balloon>
+    <!--/ko-->
+</div>
+<!--/ko-->

@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/uilayer/viewmodels/Account/UserFlowWrapViewModel.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define(\"viewmodels/Account/UserFlowWrapViewModel\", [\"require\", \"global/UrlResolver\"], function (require) {\r\n\tvar urlResolver = require(\"global/UrlResolver\");\r\n\r\n\treturn {\r\n\t\tviewModel: {\r\n\t\t\tcreateViewModel: function () {\r\n\t\t\t\treturn {\r\n\t\t\t\t\tUserFlowComponent: \"fx-component-account-userflow-br\" + urlResolver.getBroker(),\r\n\t\t\t\t};\r\n\t\t\t},\r\n\t\t},\r\n\t};\r\n});\r\n",
+  "isBase64": false
+}

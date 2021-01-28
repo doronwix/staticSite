@@ -1,0 +1,68 @@
+﻿<!-- ko if: isDataReady -->
+<div class="withdrawal-wrapper">
+    <!-- ko if: Data.isLoading -->
+    <div class="loader-background">
+        <div class="loader"></div>
+    </div>
+    <!-- /ko -->
+    <h1 class="page-title" data-bind="text: Dictionary.GetItem('title_withdrawFunds', 'withdrawal_withdrawalrequest')"></h1>
+    <!-- ko component: { name: 'fx-component-amount-requested'} --><!-- /ko -->
+    <p class="padbot" data-bind="dictionaryBinding: 'txt_refundInfo', resourceName: 'withdrawal_withdrawalrequest'"></p>
+    <!-- ko if: !Data.isLoading() && Data.summary -->
+    <!-- ko if: Data.isBankWithdrawal -->
+    <div class="summary-wrap" data-bind="with: Data.summary">
+        <p class="summary-row" data-bind="visible: BankName">
+            <span class="row-label" data-bind="dictionaryBinding: 'lblBankName', resourceName: 'withdrawal_withdrawalrequest'"></span>
+            <span class="row-value" data-bind="text: BankName"></span>
+        </p>
+        <p class="summary-row" data-bind="visible: BankAccount">
+            <span class="row-label" data-bind="dictionaryBinding: 'lblNewAccountNumber', resourceName: 'withdrawal_withdrawalrequest'"></span>
+            <span class="row-value" data-bind="text: BankAccount"></span>
+        </p>
+        <p class="summary-row" data-bind="visible: BankBranch">
+            <span class="row-label" data-bind="dictionaryBinding: 'approve_lblBranchCode', resourceName: 'withdrawal_withdrawalrequest'"></span>
+            <span class="row-value" data-bind="text: BankBranch"></span>
+        </p>
+        <p class="summary-row" data-bind="visible: SwiftCode">
+            <span class="row-label" data-bind="dictionaryBinding: 'swiftCode', resourceName: 'withdrawal_withdrawalrequest'"></span>
+            <span class="row-value" data-bind="text: SwiftCode"></span>
+        </p>
+        <p class="summary-row" data-bind="visible: BankBeneficiary">
+            <span class="row-label" data-bind="dictionaryBinding: 'approve_lblBeneficiaryName', resourceName: 'withdrawal_withdrawalrequest'"></span>
+            <span class="row-value" data-bind="text: BankBeneficiary"></span>
+        </p>
+        <p class="summary-row" data-bind="visible: BankCountryName">
+            <span class="row-label" data-bind="dictionaryBinding: 'lblCountry', resourceName: 'withdrawal_withdrawalrequest'"></span>
+            <span class="row-value" data-bind="dictionaryBinding: 'cntr_' + BankCountryID, resourceName: 'country_names'"></span>
+        </p>
+        <p class="summary-row" data-bind="visible: BankAddress">
+            <span class="row-label" data-bind="dictionaryBinding: 'lblBankAddress', resourceName: 'withdrawal_withdrawalrequest'"></span>
+            <span class="row-value" data-bind="text: BankAddress"></span>
+        </p>
+    </div>
+    <!-- /ko -->
+    <!-- ko if: !Data.isBankWithdrawal() -->
+    <div class="summary-wrap" data-bind="with: Data.summary">
+        <p class="summary-row">
+            <span class="row-label" data-bind="dictionaryBinding: 'lblCardType', resourceName: 'withdrawal_withdrawalrequest'"></span>
+            <span class="row-value" data-bind="text: CardType"></span>
+        </p>
+        <p class="summary-row">
+            <span class="row-label" data-bind="dictionaryBinding: 'lblLastFour', resourceName: 'withdrawal_withdrawalrequest'"></span>
+            <span class="row-value" data-bind="text: LastFourDigits"></span>
+        </p>
+        <p class="summary-row">
+            <span class="row-label" data-bind="dictionaryBinding: 'lblExpirationDate', resourceName: 'withdrawal_withdrawalrequest'"></span>
+            <span class="row-value" data-bind="text: CardExpiryDate"></span>
+        </p>
+    </div>
+    <!-- /ko -->
+    <!-- /ko -->
+    <div class="wrap-content top-separator" data-bind="visible: Data.isBankWithdrawal">
+        <p class="bankfee">
+            <span class="warn-icon"></span>
+            <span data-bind="dictionaryBinding: 'msg_bankfeeInfo', resourceName: 'withdrawal_withdrawalrequest'"></span>
+        </p>
+    </div>
+</div>
+<!--/ko-->

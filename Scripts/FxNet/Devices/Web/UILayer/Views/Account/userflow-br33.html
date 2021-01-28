@@ -1,0 +1,110 @@
+﻿<div class="userFlow user-flow-wrap" data-bind="css: data.generalStatusColor(), visible: data.isVisible, adjustMainContainerSize: { elementId: 'fixedHub', topOffset: 71 }">
+    <div class="userFlowStatus" data-bind="click: data.toggleUserFlow">
+        <span id="flowMap_StatusIcon" class="statusIcon" data-bind="css: data.generalStatusIcon()"></span>
+        <div class="statusDiv">
+            <span id="flowMap_UserStatusTxt" data-bind="dictionaryBinding: 'userStatusTxt', resourceName:'account_hub'"></span>
+            <span id="flowMap_GeneralStatusIcon" class="statusTxt" data-bind="dictionaryBinding: data.generalStatusName(), resourceName:'account_hub'"></span>
+        </div>
+        <div id="flowMap_flowToggleIcon" class="ddIcon ico-down-triangle" data-bind="css: { ddUpIcon: data.userFlowToggle() }"></div>
+    </div>
+    <div class="seperator"></div>
+    <div id="toggleFlow" class="toggleFlow" data-bind="slideUp: data.userFlowToggle(), css: (data.ctaVisible() ? 'flowWrapBorder' : 'flowWrapBorderFull' )">
+        <p id="flowMap_UserFlowMsg" class="flowMsg" data-bind="dictionaryBinding: data.userMessage(), resourceName:'account_hub'"></p>
+        <!-- ko if: Browser.isInternetExplorer(true) && data.isLocked() -->
+        <div class="lockedWrapper">
+            <div id="flowMap_IeBlurImg" class="ieBlurImg"></div>
+            <div id="flowMap_LockImg" class="ico-locked lockImg" data-bind="visible: data.isLocked()">
+            </div>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: !(Browser.isInternetExplorer(true) && data.isLocked()) -->
+        <div class="lockedWrapper flow-wrap">
+            <div id="flowMap_Flow" class="flow" data-bind="css: { blurFlow: data.isLocked() }">
+                <!-- Opened an account -->
+                <div class="step-wrap start-flow">
+                    <!-- ko template: { name: 'fx-template-flow-line', data: { isComplete: data.isComplete('GeneralInforamtionQuestionnaire'), endLine: true} } --><!-- /ko -->
+                    <!-- ko template: { name: 'fx-template-arrow-current', data: { id: 'flowMap_OpenedAnAccount_Arrow', hide: data.isLocked() || !data.isCurrent('OpenedAnAccount')} } --><!-- /ko -->
+                    <div id="flowMap_OpenedAnAccount_Step" class="flowStep" data-bind="css: data.stepStatus('OpenedAnAccount')"></div>
+                    <span id="flowMap_OpenedAnAccount_Txt" class="flowText" data-bind="dictionaryBinding: data.isCurrent('OpenedAnAccount') ? 'openAccountTxt' : 'openedAccountTxt', resourceName:'account_hub', css: { greenColor: data.isComplete('OpenedAnAccount'), blueColor: data.isCurrent('OpenedAnAccount') }"></span>
+                    <div id="flowMap_OpenedAnAccount_Click" class="flowClickArea" data-bind="click: data.stepClick.bind(null,eCta.Seamless), css: { hiddenElement: !(data.isCurrent('OpenedAnAccount')) }"></div>
+                </div>
+                <!-- General Information Questionnaire -->
+                <!-- ko template: { name: 'fx-template-flow-line', data: { isComplete: data.isComplete('GeneralInforamtionQuestionnaire'), id: 'flowMap_FundYourAccount_Line' } } --><!-- /ko -->
+                <div class="step-wrap">
+                    <!-- ko template: { name: 'fx-template-flow-line', data: { isComplete: data.isComplete('GeneralInforamtionQuestionnaire'), startLine: true} } --><!-- /ko -->
+                    <!-- ko template: { name: 'fx-template-flow-line', data: { isComplete: (!data.isHidden('TradingKnowledgeQuiz') && data.isComplete('TradingKnowledgeQuiz')) || (data.isHidden('TradingKnowledgeQuiz') && data.isComplete('FundYourAccount')), endLine: true} } --><!-- /ko -->
+                    <!-- ko template: { name: 'fx-template-arrow-current', data: { id: 'flowMap_GeneralInforamtionQuestionnaire_Arrow', hide: data.isLocked() || !data.isCurrent('GeneralInforamtionQuestionnaire')} } --><!-- /ko -->
+                    <div id="flowMap_GeneralInforamtionQuestionnaire_Step" class="flowStep" data-bind="css: data.stepStatus('GeneralInforamtionQuestionnaire')"></div>
+                    <span id="flowMap_GeneralInforamtionQuestionnaire_Txt" class="flowText" data-bind="dictionaryBinding: 'generalInfoTxt', resourceName:'account_hub', css: { greenColor: data.isComplete('GeneralInforamtionQuestionnaire'), blueColor: data.isCurrent('GeneralInforamtionQuestionnaire') }"></span>
+                    <div id="flowMap_GeneralInforamtionQuestionnaire_Click" class="flowClickArea" data-bind="click: data.stepClick.bind(null,eCta.ClientQuestionnaire), css: { hiddenElement: !(data.isAvailable('GeneralInforamtionQuestionnaire') || data.isComplete('GeneralInforamtionQuestionnaire')) }"></div>
+                </div>
+                <!-- Trading Knowledge Test\Quiz (Optional)-->
+                <!-- ko template: { name: 'fx-template-flow-line', data: { isComplete: data.isComplete('TradingKnowledgeQuiz'), id: 'flowMap_TradingKnowledgeQuiz_Line', hide: data.isHidden('TradingKnowledgeQuiz') } } --><!-- /ko -->
+                <div class="step-wrap" id="flowMap_TradingKnowledgeQuiz_Div" data-bind="visible: !data.isHidden('TradingKnowledgeQuiz')">
+                    <!-- ko template: { name: 'fx-template-flow-line', data: { isComplete: data.isComplete('TradingKnowledgeQuiz'), startLine: true} } --><!-- /ko -->
+                    <!-- ko template: { name: 'fx-template-flow-line', data: { isComplete: data.isComplete('FundYourAccount'), endLine: true} } --><!-- /ko -->
+                    <!-- ko template: { name: 'fx-template-arrow-current', data: { id: 'flowMap_TradingKnowledgeQuiz_Arrow', hide: data.isLocked() || !data.isCurrent('TradingKnowledgeQuiz')} } --><!-- /ko -->
+                    <div id="flowMap_TradingKnowledgeQuiz_Step" class="flowStep" data-bind="css: data.stepStatus('TradingKnowledgeQuiz')"></div>
+                    <span id="flowMap_TradingKnowledgeQuiz_Txt" class="flowText" data-bind="dictionaryBinding: 'quizTxt', resourceName:'account_hub', css: { greenColor: data.isComplete('TradingKnowledgeQuiz'), redColor: data.isCurrent('TradingKnowledgeQuiz') && data.isLocked(), blueColor: data.isCurrent('TradingKnowledgeQuiz') && !data.isLocked() }"></span>
+                    <div id="flowMap_TradingKnowledgeQuiz_Click" class="flowClickArea" data-bind="click: data.stepClick.bind(null,eCta.ClientQuestionnaire), css: { hiddenElement: !(data.isAvailable('TradingKnowledgeQuiz') || data.isComplete('TradingKnowledgeQuiz')) }"></div>
+                </div>
+                <div class="conditional-flow">
+                    <svg id="flowMap_ConditionalFlowLine" class="line conditionalFlowLine">
+                        <line x1="0" y1="0" x2="0" y2="120" data-bind="css: { greenColor: data.isComplete('FundYourAccount') }" />
+                        <path d="M 20 50 L 20 25 Q 20 10 10 10 L 5 10 Q 0 10 0 5 L 0 5" class="curvedLine" data-bind="css: { greenColor: data.isComplete('ProofOfIdentity') }" />
+                    </svg>
+                    <svg id="flowMap_ConditionalFlowStepClose" class="line conditionalFlowStepClose">
+                        <path d="M 20 0 L 20 30 Q 20 40 10 40 L 5 40 Q 0 40 0 45 L 0 50" class="curvedLine" data-bind="css: { greenColor: data.isComplete('ProofOfIdentity') && data.isComplete('FundYourAccount') }" />
+                    </svg>
+                    <!-- Proof of Identity -->
+                    <div class="step-wrap">
+                        <!-- ko template: { name: 'fx-template-arrow-current', data: { id: 'flowMap_ProofOfIdentity_Arrow', hide: data.isLocked() || !data.isCurrent('ProofOfIdentity')} } --><!-- /ko -->
+                        <div id="flowMap_ProofOfIdentity_Step" class="flowStep" data-bind="css: data.stepStatus('ProofOfIdentity')"></div>
+                        <span id="flowMap_ProofOfIdentity_Txt" class="flowText" data-bind="dictionaryBinding: 'identityTxt', resourceName:'account_hub', css: { greenColor: data.isComplete('ProofOfIdentity'), blueColor: data.isAvailable('ProofOfIdentity') || data.isCurrent('ProofOfIdentity') }"></span>
+                        <div id="flowMap_ProofOfIdentity_Click" class="flowClickArea" data-bind="click: data.stepClick.bind(null,eCta.UploadDocuments), css: { hiddenElement: !(data.isAvailable('ProofOfIdentity') || data.isComplete('ProofOfIdentity')) }"></div>
+                        <!-- Proof of Identity Icons -->
+                        <div class="poi-icons">
+                            <div id="flowMap_ProofOfIdentity_ID" class="poi" data-bind="css: data.poiState('id'), event: { mouseenter: function(){ data.tooltipIdToggle(true); }, mouseleave: function(){ data.tooltipIdToggle(false); }}"></div>
+                            <div class="poi-tooltip poi-id-tooltip" data-bind="visible: !data.isLocked(), css: { active: data.tooltipIdToggle() }">
+                                <span data-bind="dictionaryBinding: 'poiIdTooltip', resourceName:'account_hub'"></span>
+                            </div>
+                            <div id="flowMap_ProofOfIdentity_Addr" class="poi" data-bind="css: data.poiState('addr'), event: { mouseenter: function(){ data.tooltipAddrToggle(true); }, mouseleave: function(){data.tooltipAddrToggle(false); }}"></div>
+                            <div class="poi-tooltip poi-addr-tooltip" data-bind="visible: !data.isLocked(), css: { active: data.tooltipAddrToggle() }">
+                                <span data-bind="dictionaryBinding: 'poiAddrTooltip', resourceName:'account_hub'"></span>
+                            </div>
+                            <div id="flowMap_ProofOfIdentity_Num" class="poi" data-bind="css: data.poiState('num'), event: { mouseenter: function(){ data.tooltipNumToggle(true); }, mouseleave: function(){ data.tooltipNumToggle(false); }}"></div>
+                            <div class="poi-tooltip poi-num-tooltip" data-bind="visible: !data.isLocked(), css: { active: data.tooltipNumToggle() }">
+                                <span data-bind="dictionaryBinding: 'poiNumTooltip', resourceName:'account_hub'"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fund Your Account -->
+                <!-- ko template: { name: 'fx-template-flow-line', data: { isComplete: data.isComplete('FundYourAccount'), id: 'flowMap_FundYourAccount_Line', hide: true } } --><!-- /ko -->
+                <div class="step-wrap">
+                    <!-- ko template: { name: 'fx-template-flow-line', data: { isComplete: data.isComplete('FundYourAccount'), startLine: true} } --><!-- /ko -->
+                    <!-- ko template: { name: 'fx-template-flow-line', data: { isComplete: data.isComplete('Trade'), endLine: true} } --><!-- /ko -->
+                    <!-- ko template: { name: 'fx-template-arrow-current', data: { id: 'flowMap_FundYourAccount_Arrow', hide: data.isLocked() || !data.isCurrent('FundYourAccount') } } --><!-- /ko -->
+                    <div id="flowMap_FundYourAccount_Step" class="flowStep" data-bind="css: data.stepStatus('FundYourAccount')"></div>
+                    <span id="flowMap_FundYourAccount_Txt" class="flowText" data-bind="dictionaryBinding: 'fundTxt', resourceName:'account_hub', css: { greenColor: data.isComplete('FundYourAccount'), blueColor: (data.isAvailable('FundYourAccount') || data.isCurrent('FundYourAccount')) && !(data.isLocked() || data.isRestricted()), redColor: data.isCurrent('FundYourAccount') &&  (data.isLocked() || data.isRestricted()) }"></span>
+                    <div id="flowMap_FundYourAccount_Click" class="flowClickArea" data-bind="click: data.stepClick.bind(null,eCta.Deposit), css: { hiddenElement: !(data.isAvailable('FundYourAccount') || data.isComplete('FundYourAccount')) }"></div>
+                </div>
+                <!-- Trade -->
+                <!-- ko template: { name: 'fx-template-flow-line', data: { isComplete: data.isComplete('Trade'), id: 'flowMap_Trade_Line' } } --><!-- /ko -->
+                <div class="step-wrap" data-bind="css: {'not-restricted': !data.isRestricted()}">
+                    <!-- ko template: { name: 'fx-template-flow-line', data: { isComplete: data.isComplete('Trade'), startLine: true} } --><!-- /ko -->
+                    <!-- ko template: { name: 'fx-template-arrow-current', data: { id: 'flowMap_Trade_Arrow', hide: true } } --><!-- /ko -->
+                    <div id="flowMap_Trade_Step" class="flowStep" data-bind="css: data.stepStatus('Trade')"></div>
+                    <span id="flowMap_Trade_Txt" class="flowText" data-bind="dictionaryBinding: 'tradeTxt', resourceName:'account_hub', css: { greenColor: data.isComplete('Trade'), redColor: data.isCurrent('Trade') && (data.isLocked() || data.isRestricted()) }"></span>
+                </div>
+            </div>
+            <div id="flowMap_LockImg" class="ico-locked lockImg" data-bind="visible: data.isLocked()"></div>
+        </div>
+        <!-- /ko -->
+    </div>
+    <div id="flowMap_CTAButton" class="CTAButton" data-bind="visible: data.ctaVisible()">
+        <a class="btn action" data-bind="click: data.ctaClick">
+            <p id="flowMap_CTAButtonTxt" data-bind="dictionaryBinding: data.ctaTxt(), resourceName:'account_hub'"></p>
+        </a>
+    </div>
+</div>

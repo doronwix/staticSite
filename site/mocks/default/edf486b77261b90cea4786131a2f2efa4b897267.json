@@ -1,0 +1,10 @@
+{
+  "requestUrl": "/webpl3/Customer/ShouldChangePassword",
+  "contentType": "application/json; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "ShouldChangePassword": false
+  },
+  "isBase64": false
+}

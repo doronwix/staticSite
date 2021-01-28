@@ -1,0 +1,14 @@
+﻿<!-- ko if: Data.isVisible -->
+<div class="demo-banner-container">
+    <div class="banner-content">
+        <ul>
+            <li data-bind="html: Data.message"></li>
+            <!-- ko if: Data.buttonMessage -->
+            <li>
+                <a class="buttons demo" href="javascript:void(0)" data-bind="attr: { href: Data.urlToRedirect }, html: Data.buttonMessage"></a>
+            </li>
+            <!-- /ko-->
+        </ul>
+    </div>
+</div>
+<!-- /ko -->

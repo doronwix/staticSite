@@ -1,0 +1,36 @@
+﻿<!-- ko if: isDataReady -->
+<div class="withdrawal-wrapper">
+    <h1 class="page-title" data-bind="text: Dictionary.GetItem('title_withdrawFunds', 'withdrawal_withdrawalrequest')"></h1>
+    <!-- ko component: { name: 'fx-component-amount-requested'} --><!-- /ko -->
+    <p class="padbot" data-bind="dictionaryBinding: 'txt_refundInfo', resourceName: 'withdrawal_withdrawalrequest'"></p>
+
+    <div class="wrap-content top-separator" data-bind="visible: Data.ccTiles().length">
+        <p class="highlight padbot" data-bind="dictionaryBinding: 'lbl_ccSelect', resourceName: 'withdrawal_withdrawalrequest'"></p>
+        <div class="cc-wrap">
+            <!-- ko foreach: Data.ccTiles -->
+            <div class="info-row cc-row" data-bind="click: $parent.OnSelectCC, css: { 'cc-row-selected': $parent.Data.selectedCC() && $parent.Data.selectedCC().CCId === CCId }">
+                <div data-bind="attr: { 'class': 'cc-icon ' + ImageClass }"></div>
+                <div class="cc-details">
+                    <p class="highlight" data-bind="text: CardHolder"></p>
+                    <p>
+                        <span data-bind="text: $parent.GetCCName($data)"></span>
+                        <span data-bind="text: $parent.GetLast4($data)"></span>
+                        <span data-bind="text: CCExpiry"></span>
+                    </p>
+                    <div class="remove-cc-wrapper">
+                        <div class="remove-cc">
+                            <a data-bind="click: $parent.OnClickRemoveCard, dictionaryBinding: 'lbl_ccRemoveCard', resourceName: 'withdrawal_withdrawalrequest', clickBubble: false"></a>
+                        </div>
+                        <div data-bind="visible: !IsApproved">
+                            <i class="ico-sh-warn"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--/ko-->
+        </div>
+    </div>
+    <p data-bind="dictionaryBinding: 'txt_ccFailureInfo', resourceName: 'withdrawal_withdrawalrequest'"></p>
+</div>
+<!--/ko-->

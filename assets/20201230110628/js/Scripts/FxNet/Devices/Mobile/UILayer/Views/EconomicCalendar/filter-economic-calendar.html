@@ -1,0 +1,52 @@
+﻿<div class="list-menu-wrapper" data-bind="hidden: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vEconomicCalendarFilter).visible">
+    <div class="list-menu" data-bind="setArrows">
+        <!-- ko foreach: Data.dateTabs -->
+        <div class="list-item" data-bind="css: { active: $parent.Data.selectedDateFilter() == DateFilterType }, ScrollToElement: $parent.Data.selectedDateFilter() == DateFilterType">
+            <a title="" class="active" data-bind="attr: { 'data-tab': 'tab-' + DateFilterType, id: ContentKey }, click: function () { $parent.Handlers.selectDateTab(DateFilterType); }, text: Dictionary.GetItem(ContentKey,'customerTools_EconomicCalendarFilter')">
+            </a>
+        </div>
+        <!-- /ko -->
+
+        <div class="left-arrow arrow-hidden"></div>
+        <div class="right-arrow arrow-hidden"></div>
+    </div>
+</div>
+<!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vEconomicCalendarFilter).visible -->
+<section class="ecpage-section-wrap filters-wrap">
+    <section class="events-list">
+        <article class="event-row header" id="h-importance" data-bind="click: function () { ToggleList(Data.importanceCodes, Data.importanceList); }, css: { checked: Data.importanceCodes().length === Data.importanceList.length }">
+            <div class="date-header" data-bind="dictionaryBinding: 'lblImportance', resourceName: 'customerTools_EconomicCalendarFilter'"></div>
+        </article>
+        <!-- ko foreach: Data.importance -->
+        <article class="event-row" data-bind="click: function () { $parent.ToggleInList($parent.Data.importanceCodes, ImportanceCode)}, attr: { id: 'imp-' + ImportanceCode }, css: { checked: $parent.Data.importanceCodes.indexOf(ImportanceCode) !== -1 }">
+            <section class="row-content">
+                <aside class="row-aside">
+                    <figure data-bind="css: 'relevance importance-' + ImportanceCode"><mark></mark></figure>
+                </aside>
+                <section class="row-main">
+                    <h3 class="event-title" data-bind="html: Dictionary.GetItem(ContentKey,'customerTools_EconomicCalendarFilter')"></h3>
+                </section>
+            </section>
+        </article>
+        <!-- /ko -->
+    </section>
+
+    <section class="events-list">
+        <article class="event-row header" id="h-countries" data-bind="click: function () { ToggleList(Data.countryCodes, Data.countryList); }, css: { checked: Data.countryCodes().length === Data.countryList.length }">
+            <div class="date-header" data-bind="dictionaryBinding: 'lblCountry', resourceName: 'customerTools_EconomicCalendarFilter'"></div>
+        </article>
+        <!-- ko foreach: Data.countries -->
+        <article class="event-row" data-bind="click: function () { $parent.ToggleInList($parent.Data.countryCodes, CountryCode)}, attr: { id: CountryCode }, css: { checked: $parent.Data.countryCodes.indexOf(CountryCode) !== -1 }">
+            <section class="row-content">
+                <aside class="row-aside">
+                    <figure class="flag" data-bind="css: CountryCode.toLowerCase()"></figure>
+                </aside>
+                <section class="row-main">
+                    <h3 class="event-title" data-bind="html: Dictionary.GetItem(ContentKey,'customerTools_EconomicCalendarFilter')"></h3>
+                </section>
+            </section>
+        </article>
+        <!-- /ko -->
+    </section>
+</section>
+<!-- /ko -->

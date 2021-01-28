@@ -1,0 +1,88 @@
+﻿<html>
+    <head>
+        <title>ToolbarTop</title>
+    </head>
+<body>
+    <div class="adv-panels-content" id="gui-toolbar" >
+   
+    <toolbar_container>
+              <div  id="gui-toolbar-adv">%html%</div>
+     </toolbar_container> 
+      
+      
+    <toolbar_toolbar>
+        <ul class="toolbar-adv" id="%id%"  >%html%</ul>
+        <div class="clear"></div> 
+ </toolbar_toolbar>  
+    
+    
+    <toolbar-button-charttype>
+      <li class="tlb-item"><button class="chart-button %css% %hide% %selected% change-typechart " data-localize="menu.charttype.%id%" tid="%id%"  type="button" title="%caption%" >
+            </button></li>
+    </toolbar-button-charttype>
+
+    <toolbar-button-timeframe>
+        <li class="tlb-item"><button class="timescale-button  %css% %hide% %selected% time-frame-toolbar-button change-timeframe"  tid="%id%"  data-localize="menu.timescale.%id%" type="button" title="%caption%" >
+            </button></li>
+    </toolbar-button-timeframe>
+    
+   <toolbar-caption>
+         <li class="tlb-caption"><span class="toolbar-adv-label %css%" tid="%id%" data-localize="%localization%">%caption%</span></li>
+    </toolbar-caption>
+    
+    <toolbar-space>
+         <li class="tlb-space"><span class="toolbar-adv-space %css%"  tid="%id%" >%caption%</span></li>
+    </toolbar-space>
+
+        <toolbar-button>
+        <li class="tlb-item"><button class="%css% button-action"  tid="%id%"  type="button" data-localize="%localization%"  title="%caption%">
+                             </button></li>
+    </toolbar-button>
+    
+    <toolbar-more>
+        <li class="tlb-more" ><button class="button-more icon-more"  tid="showmore"  type="button" data-localize="tools.general.more"  title="Show more">
+                              </button>
+                              <div class="sub-point"></div>
+                <div class="tlb-more-items a-bottom" style="display: none;" >
+                    <div class="tlb-array">
+                        <div ></div>
+                    </div> 
+                    
+                    
+                    <ul>%html%</ul>
+                </div></li>                             
+    </toolbar-more>
+   
+        
+    <toolbar-more-item>
+       <li class="tlb-more-item"><button class="%css%"  tid="%id%"  type="button" data-localize="%localization%"  title="%caption%">%caption%
+                                 </button></li>      
+    </toolbar-more-item> 
+    
+   <toolbar-button-group>
+       <li class="tlb-item tlb-item-group" ><button class="%css% button-group"  tid="%id%"  type="button" data-localize="%localization%"  title="%caption%">
+                             </button>
+                <div class="sub-point"></div>
+           <div class="tlb-button-groups %cssgroup% " style="display: none;" >
+               <div class="tlb-array">
+                   <div ></div>
+               </div> 
+               <ul>%html%</ul>
+               <div class="clear"></div>
+           </div>
+           
+       </li>                             
+    </toolbar-button-group>
+
+    
+    <toolbar-item>
+       <li class="tlb-item"><button class="%css% button-action caption-button"  tid="%id%"  type="button" data-localize="%localization%"  title="%caption%">%caption%
+                                 </button></li>      
+     </toolbar-item> 
+
+
+    </div>
+</body>
+</html>
+
+ 

@@ -1,0 +1,46 @@
+﻿<div class="trading-signals-grid-access">
+    <div class="trading-signals-access-request trading-signals-access">
+        <div class="trading-signals-access-notallowed" data-bind="visible: Data.isRequestNotSubmitted">
+            <div class="row-wrapper signals-icon">
+                <i class="ico-sh-signals"></i>
+            </div>
+            <div class="row-wrapper">
+                <span data-bind="dictionaryBinding: 'lblSignalsNotAllowed', resourceName: 'accessRequest'"></span>
+            </div>
+            <div class="row-wrapper">
+                <a class="btn medium center" data-bind="click: OnClickSubmitRequest">
+                    <span id="btnContent" data-bind="dictionaryBinding: 'btnRequestVIPSignals', resourceName: 'accessRequest'"></span>
+                </a>
+            </div>
+        </div>
+        <div data-bind="visible: Data.isRequestSubmitted">
+            <div class="row-wrapper signals-icon">
+                <i class="ico-sh-signals"></i>
+            </div>
+            <div class="row-wrapper">
+                <h3 data-bind="dictionaryBinding: 'lblRequestSubmittedTitle', resourceName: 'accessRequest'"></h3>
+            </div>
+            <div class="row-wrapper">
+                <span data-bind="dictionaryBinding: 'lblSignalsRequestSubmitted', resourceName: 'accessRequest'"></span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div data-bind="visible: Data.isExtensionNotSubmitted">
+            <div class="row-wrapper">
+                <span data-bind="dictionaryBinding: 'lblSignalsRequestExtension', resourceName: 'accessRequest'"></span>
+                <a class="btn small center" data-bind="click: OnClickSubmitRequest">
+                    <span id="btnContent" data-bind="dictionaryBinding: 'btnRequestExtension', resourceName: 'accessRequest'"></span>
+                </a>
+            </div>
+        </div>
+        <div data-bind="visible: Data.isExtensionSubmitted">
+            <div class="row-wrapper">
+                <h3 data-bind="dictionaryBinding: 'lblRequestSubmittedTitle', resourceName: 'accessRequest'"></h3>
+            </div>
+            <div class="row-wrapper">
+                <span id="btnContent" data-bind="dictionaryBinding: 'lblSignalsExtensionSubmitted', resourceName: 'accessRequest'"></span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+{
+  "requestUrl": "/webpl3/Deals/OpenDeal",
+  "contentType": "application/json; charset=utf-8",
+  "method": "POST",
+  "statusCode": 200,
+  "data": {
+    "status": 1,
+    "result": 1,
+    "itemId": 21076011,
+    "action": -1,
+    "type": -1,
+    "responseArgumentsJson": null,
+    "instrumentId": 12066,
+    "direction": true,
+    "baseAmount": "10,000.00",
+    "serverRate": "4.02406",
+    "usdValue": "0.00",
+    "convRate": "0.00000",
+    "pandLCalc": "-27.44",
+    "plAccountCcy": "0.00",
+    "bulkPlAccountCcy": "0.00",
+    "rateCalc": "4.02406",
+    "limLevel": "0.00000",
+    "slRate": "0.00000",
+    "tpRate": "0.00000",
+    "ask": "0.00000",
+    "bid": "0.00000",
+    "lastUpdate": "/Date(-62135596800000)/",
+    "expirationDate": ""
+  },
+  "isBase64": false
+}

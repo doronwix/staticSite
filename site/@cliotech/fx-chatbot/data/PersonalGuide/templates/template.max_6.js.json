@@ -1,0 +1,2079 @@
+[
+  {
+    "messages": [
+      {
+        "for": 1,
+        "url": "@@chatbot_max_msg_1_0@@",
+        "type": "image"
+      },
+      [
+        "...",
+        0.5
+      ],
+      "@@chatbot_max_msg_1_2@@",
+      "...",
+      [
+        "@@chatbot_max_msg_1_4@@",
+        5
+      ],
+      "...",
+      [
+        "@@chatbot_max_msg_1_6@@",
+        1
+      ],
+      [
+        "...",
+        3
+      ],
+      [
+        "@@chatbot_max_msg_1_8@@",
+        1
+      ],
+      [
+        "...",
+        1
+      ],
+      {
+        "choices": [
+          {
+            "goto": 2,
+            "postback": "@@chatbot_max_msg_1_10_0_postback@@",
+            "text": "@@chatbot_max_msg_1_10_0_text@@",
+            "type": "button",
+            "id": 1
+          },
+          {
+            "goto": 100,
+            "postback": "@@chatbot_max_msg_1_10_1_postback@@",
+            "text": "@@chatbot_max_msg_1_10_1_text@@",
+            "type": "button",
+            "id": 2
+          }
+        ],
+        "type": "choices"
+      }
+    ],
+    "onClick": [
+      "trading-experience-select",
+      "text=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "welcome-message",
+      "block_id=[blockId]"
+    ],
+    "name": "welcome message",
+    "id": 1,
+    "blockid": 1
+  },
+  {
+    "blockid": 2,
+    "messages": [
+      [
+        "...",
+        4
+      ],
+      [
+        "@@chatbot_max_msg_2_1@@",
+        12
+      ],
+      [
+        "...",
+        2
+      ],
+      "@@chatbot_max_msg_2_3@@",
+      [
+        "...",
+        2
+      ],
+      {
+        "blockId": 3,
+        "type": "goto"
+      }
+    ],
+    "name": "no Exp welcome",
+    "onLoad": [
+      "no Exp welcome",
+      "block_id=[blockId]"
+    ],
+    "id": 2
+  },
+  {
+    "blockid": 3,
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 10,
+            "postback": "@@chatbot_max_msg_3_0_0_postback@@",
+            "text": "@@chatbot_max_msg_3_0_0_text@@",
+            "type": "button",
+            "id": 1000
+          }
+        ],
+        "type": "choices"
+      }
+    ],
+    "name": "Tell me more",
+    "onClick": [
+      "tell me more",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "tell-me-more",
+      "text=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "id": 3
+  },
+  {
+    "messages": [
+      [
+        "@@chatbot_max_msg_10_0@@",
+        3
+      ],
+      [
+        "...",
+        2
+      ],
+      [
+        "@@chatbot_max_msg_10_2@@",
+        3
+      ],
+      [
+        "...",
+        3
+      ],
+      "@@chatbot_max_msg_10_4@@",
+      [
+        "...",
+        3
+      ],
+      [
+        "@@chatbot_max_msg_10_6@@",
+        5
+      ],
+      [
+        "...",
+        4
+      ],
+      "@@chatbot_max_msg_10_8@@",
+      [
+        "...",
+        3
+      ],
+      {
+        "choices": [
+          {
+            "goto": 11,
+            "postback": "@@chatbot_max_msg_10_10_0_postback@@",
+            "text": "@@chatbot_max_msg_10_10_0_text@@",
+            "type": "button",
+            "id": 1
+          },
+          {
+            "onClick": [
+              "deposit",
+              null,
+              true
+            ],
+            "postback": "@@chatbot_max_msg_10_10_1_postback@@",
+            "text": "@@chatbot_max_msg_10_10_1_text@@",
+            "type": "button",
+            "id": 2
+          }
+        ],
+        "type": "choices"
+      }
+    ],
+    "onClick": [
+      "ready-to-learn",
+      "text=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "no-ex-trading-Benefits",
+      "block_id=[blockId]"
+    ],
+    "name": "no ex trading Benefits",
+    "id": 10
+  },
+  {
+    "messages": [
+      [
+        "@@chatbot_max_msg_11_0@@",
+        1
+      ],
+      "...",
+      {
+        "blockId": 12,
+        "type": "goto"
+      }
+    ],
+    "onLoad": [
+      "ready-to-learn",
+      "block_id=[blockId]"
+    ],
+    "name": "ready to learn",
+    "id": 11
+  },
+  {
+    "messages": [
+      {
+        "goto": 13,
+        "grace": 8,
+        "gotoGrace": 16,
+        "url": "@@chatbot_max_msg_12_0_url@@",
+        "thumbnailDimensions": [
+          200,
+          109
+        ],
+        "thumbnail": "@@chatbot_max_msg_12_0_thumbnail@@",
+        "type": "video",
+        "description": "@@chatbot_max_msg_12_0_description@@",
+        "title": "@@chatbot_max_msg_12_0_title@@"
+      }
+    ],
+    "name": "lesson 1/3",
+    "onView": [
+      "what-is-CFD-trading-view",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "what-is-CFD-trading",
+      "block_id=[blockId]"
+    ],
+    "id": 12
+  },
+  {
+    "messages": [
+      "@@chatbot_max_msg_13_0@@",
+      {
+        "choices": [
+          {
+            "goto": 15,
+            "type": "positive",
+            "id": 1000
+          },
+          {
+            "goto": 14,
+            "type": "negative",
+            "id": 1001
+          }
+        ],
+        "type": "feedback"
+      }
+    ],
+    "name": "lesson 1/3 feedback",
+    "onClick": [
+      "video-feedback-what-is-CFD-trading",
+      "feedback_type=[TYPE]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "feedback-what-is-CFD-trading",
+      "block_id=[blockId]"
+    ],
+    "id": 13
+  },
+  {
+    "messages": [
+      [
+        "...",
+        0.5
+      ],
+      "@@chatbot_max_msg_14_1@@",
+      "...",
+      {
+        "blockId": 20,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 1/3 negative",
+    "onLoad": [
+      "lesson-1/3-negative",
+      "block_id=[blockId]"
+    ],
+    "id": 14
+  },
+  {
+    "messages": [
+      [
+        "...",
+        0.5
+      ],
+      "@@chatbot_max_msg_15_1@@",
+      "...",
+      {
+        "blockId": 20,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 1/3 positive",
+    "onLoad": [
+      "lesson-1/3-positive",
+      "block_id=[blockId]"
+    ],
+    "id": 15
+  },
+  {
+    "id": 16,
+    "name": "Lesson 1/3 timeout",
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 20,
+            "postback": "@@chatbot_max_msg_16_0_0_postback@@",
+            "text": "@@chatbot_max_msg_16_0_0_text@@",
+            "type": "button",
+            "id": 1
+          }
+        ],
+        "type": "choices"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "goto": 21,
+        "grace": 8,
+        "gotoGrace": 24,
+        "url": "@@chatbot_max_msg_20_0_url@@",
+        "thumbnail": "@@chatbot_max_msg_20_0_thumbnail@@",
+        "thumbnailDimensions": [
+          200,
+          109
+        ],
+        "type": "video",
+        "description": "@@chatbot_max_msg_20_0_description@@",
+        "title": "@@chatbot_max_msg_20_0_title@@"
+      }
+    ],
+    "name": "lesson 2/3",
+    "onView": [
+      "What-is-leverage-trading-view",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "What-is-leverage-trading",
+      "block_id=[blockId]"
+    ],
+    "id": 20
+  },
+  {
+    "messages": [
+      "@@chatbot_max_msg_21_0@@",
+      {
+        "choices": [
+          {
+            "goto": 23,
+            "type": "positive",
+            "id": 1000
+          },
+          {
+            "goto": 22,
+            "type": "negative",
+            "id": 1001
+          }
+        ],
+        "type": "feedback"
+      }
+    ],
+    "name": "lesson 2/3 feedback",
+    "onClick": [
+      "video-feedback-What-is-leverage-trading",
+      "feedback_type=[TYPE]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "feedback-What-is-leverage-trading",
+      "block_id=[blockId]"
+    ],
+    "id": 21
+  },
+  {
+    "messages": [
+      [
+        "...",
+        0.5
+      ],
+      "@@chatbot_max_msg_22_1@@",
+      "...",
+      {
+        "blockId": 27,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 2/3 negative",
+    "onLoad": [
+      "lesson-2/3-negative",
+      "block_id=[blockId]"
+    ],
+    "id": 22
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_23_1@@",
+      "...",
+      {
+        "blockId": 27,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 2/3 positive",
+    "onLoad": [
+      "lesson-2/3-positive",
+      "block_id=[blockId]"
+    ],
+    "id": 23
+  },
+  {
+    "id": 24,
+    "name": "Lesson 2/3 timeout",
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 27,
+            "postback": "@@chatbot_max_msg_24_0_0_postback@@",
+            "text": "@@chatbot_max_msg_24_0_0_text@@",
+            "type": "button",
+            "id": 1
+          }
+        ],
+        "type": "choices"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "goto": 28,
+        "grace": 8,
+        "gotoGrace": 31,
+        "url": "@@chatbot_max_msg_27_0_url@@",
+        "thumbnail": "@@chatbot_max_msg_27_0_thumbnail@@",
+        "thumbnailDimensions": [
+          49,
+          48
+        ],
+        "type": "lesson",
+        "subtitle": "@@chatbot_max_msg_27_0_subtitle@@",
+        "description": "@@chatbot_max_msg_27_0_description@@",
+        "title": "@@chatbot_max_msg_27_0_title@@"
+      }
+    ],
+    "name": "lesson 3/3",
+    "onView": [
+      "Trading-example-view",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "Trading-example",
+      "block_id=[blockId]"
+    ],
+    "id": 27
+  },
+  {
+    "messages": [
+      "@@chatbot_max_msg_28_0@@",
+      {
+        "choices": [
+          {
+            "goto": 30,
+            "type": "positive",
+            "id": 1000
+          },
+          {
+            "goto": 29,
+            "type": "negative",
+            "id": 1001
+          }
+        ],
+        "type": "feedback"
+      }
+    ],
+    "name": "lesson 3/3 feedback",
+    "onClick": [
+      "video-feedback-Trading-example",
+      "feedback_type=[TYPE]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "feedback-Trading-example",
+      "block_id=[blockId]"
+    ],
+    "id": 28
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_29_1@@",
+      "...",
+      {
+        "blockId": 33,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 3/3 negative",
+    "onLoad": [
+      "lesson-3/3-negative",
+      "block_id=[blockId]"
+    ],
+    "id": 29
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_30_1@@",
+      "...",
+      {
+        "blockId": 33,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 3/3 positive",
+    "onLoad": [
+      "lesson-3/3-positive",
+      "block_id=[blockId]"
+    ],
+    "id": 30
+  },
+  {
+    "id": 31,
+    "name": "Lesson 3/3 timeout",
+    "messages": [
+      {
+        "type": "choices",
+        "choices": [
+          {
+            "goto": 33,
+            "postback": "@@chatbot_max_msg_31_0_0_postback@@",
+            "text": "@@chatbot_max_msg_31_0_0_text@@",
+            "type": "button",
+            "id": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "messages": [
+      "@@chatbot_max_msg_33_0@@",
+      "...",
+      {
+        "blockId": 34,
+        "type": "goto"
+      }
+    ],
+    "name": "quiz start message",
+    "onLoad": [
+      "quiz1-start-message",
+      "block_id=[blockId]"
+    ],
+    "id": 33
+  },
+  {
+    "messages": [
+      {
+        "response": {
+          "wrong": {
+            "goto": 36
+          },
+          "correct": {
+            "goto": 35
+          }
+        },
+        "choices": [
+          {
+            "correct": true,
+            "text": "@@chatbot_max_msg_34_0_0@@",
+            "type": "button",
+            "id": 1
+          },
+          {
+            "correct": false,
+            "text": "@@chatbot_max_msg_34_0_1@@",
+            "type": "button",
+            "id": 2
+          }
+        ],
+        "text": "@@chatbot_max_msg_34_0_text@@",
+        "type": "quiz"
+      }
+    ],
+    "name": "quiz - what is CFD",
+    "onClick": [
+      "quiz-what-is-CFD-trading",
+      "answer=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "quiz-what-is-CFD-trading",
+      "block_id=[blockId]"
+    ],
+    "id": 34
+  },
+  {
+    "messages": [
+      {
+        "response": {
+          "wrong": {
+            "goto": 37,
+            "text": "@@chatbot_max_msg_35_0__text_wrong@@",
+            "type": "text"
+          },
+          "correct": {
+            "goto": 37,
+            "text": "@@chatbot_max_msg_35_0__text__correct@@",
+            "type": "text"
+          }
+        },
+        "choices": [
+          {
+            "correct": true,
+            "text": "@@chatbot_max_msg_35_0_0@@",
+            "type": "button",
+            "id": 1
+          },
+          {
+            "correct": false,
+            "text": "@@chatbot_max_msg_35_0_1@@",
+            "type": "button",
+            "id": 2
+          }
+        ],
+        "text": "@@chatbot_max_msg_35_0_text@@",
+        "type": "quiz"
+      }
+    ],
+    "name": "Quiz - leverage (correct)",
+    "onClick": [
+      "quiz-Which-leverage",
+      "answer=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "quiz-Which-leverage",
+      "block_id=[blockId]"
+    ],
+    "id": 35
+  },
+  {
+    "messages": [
+      {
+        "response": {
+          "wrong": {
+            "goto": 37,
+            "text": "@@chatbot_max_msg_36_0__text_wrong@@",
+            "type": "text"
+          },
+          "correct": {
+            "goto": 37,
+            "text": "@@chatbot_max_msg_36_0__text__correct@@",
+            "type": "text"
+          }
+        },
+        "choices": [
+          {
+            "correct": true,
+            "text": "@@chatbot_max_msg_36_0_0@@",
+            "type": "button",
+            "id": 1
+          },
+          {
+            "correct": false,
+            "text": "@@chatbot_max_msg_36_0_1@@",
+            "type": "button",
+            "id": 2
+          }
+        ],
+        "text": "@@chatbot_max_msg_36_0_text@@",
+        "type": "quiz"
+      }
+    ],
+    "name": "quiz - leverage (wrong)",
+    "onClick": [
+      "quiz-Which-leverage",
+      "answer=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "quiz-Which-leverage",
+      "block_id=[blockId]"
+    ],
+    "id": 36
+  },
+  {
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 38,
+            "postback": "@@chatbot_max_msg_37_0_0_postback@@",
+            "text": "@@chatbot_max_msg_37_0_0_text@@",
+            "type": "button",
+            "id": 1000
+          }
+        ],
+        "type": "choices"
+      }
+    ],
+    "name": "continue",
+    "onClick": [
+      "continue-after-quiz1",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "continue-after-quiz1",
+      "block_id=[blockId]"
+    ],
+    "id": 37
+  },
+  {
+    "messages": [
+      [
+        "@@chatbot_max_msg_38_0@@",
+        3
+      ],
+      [
+        "...",
+        2
+      ],
+      {
+        "choices": [
+          {
+            "goto": 39,
+            "postback": "@@chatbot_max_msg_38_2_0_postback@@",
+            "text": "@@chatbot_max_msg_38_2_0_text@@",
+            "type": "button",
+            "id": 1000
+          },
+          {
+            "onClick": [
+              "deposit",
+              null,
+              true
+            ],
+            "postback": "@@chatbot_max_msg_38_2_1_postback@@",
+            "text": "@@chatbot_max_msg_38_2_1_text@@",
+            "type": "button",
+            "id": 1000
+          }
+        ],
+        "type": "choices"
+      }
+    ],
+    "name": "show the tools?",
+    "onClick": [
+      "show-the-tools",
+      "text=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "show-the-tools",
+      "block_id=[blockId]"
+    ],
+    "id": 38
+  },
+  {
+    "messages": [
+      "...",
+      [
+        "@@chatbot_max_msg_39_1@@",
+        1
+      ],
+      "...",
+      {
+        "blockId": 40,
+        "type": "goto"
+      }
+    ],
+    "name": "interested in tools",
+    "onLoad": [
+      "interested-in-tools",
+      "block_id=[blockId]"
+    ],
+    "id": 39
+  },
+  {
+    "messages": [
+      {
+        "goto": 41,
+        "grace": 8,
+        "gotoGrace": 44,
+        "url": "@@chatbot_max_msg_40_0_url@@",
+        "thumbnail": "@@chatbot_max_msg_40_0_thumbnail@@",
+        "thumbnailDimensions": [
+          200,
+          109
+        ],
+        "type": "video",
+        "description": "@@chatbot_max_msg_40_0_description@@",
+        "title": "@@chatbot_max_msg_40_0_title@@"
+      }
+    ],
+    "name": "lesson 4/6",
+    "onView": [
+      "What-is-signals-view",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "What-is-signals",
+      "block_id=[blockId]"
+    ],
+    "id": 40
+  },
+  {
+    "messages": [
+      "@@chatbot_max_msg_41_0@@",
+      {
+        "choices": [
+          {
+            "goto": 43,
+            "type": "positive",
+            "id": 1000
+          },
+          {
+            "goto": 42,
+            "type": "negative",
+            "id": 1001
+          }
+        ],
+        "type": "feedback"
+      }
+    ],
+    "name": "lesson 4/6 feedback",
+    "onClick": [
+      "video-feedback-What-are-signals",
+      "feedback_type=[TYPE]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "feedback-What-are-signals",
+      "block_id=[blockId]"
+    ],
+    "id": 41
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_42_1@@",
+      "...",
+      {
+        "blockId": 50,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 4/6 negative",
+    "onLoad": [
+      "lesson-4/6-negative",
+      "block_id=[blockId]"
+    ],
+    "id": 42
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_43_1@@",
+      "...",
+      {
+        "blockId": 50,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 4/6 positive",
+    "onLoad": [
+      "lesson-4/6-positive",
+      "block_id=[blockId]"
+    ],
+    "id": 43
+  },
+  {
+    "id": 44,
+    "name": "Lesson 4/6 timeout",
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 50,
+            "postback": "@@chatbot_max_msg_44_0_0_postback@@",
+            "text": "@@chatbot_max_msg_44_0_0_text@@",
+            "type": "button",
+            "id": 1
+          }
+        ],
+        "type": "choices"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "goto": 51,
+        "grace": 8,
+        "gotoGrace": 54,
+        "url": "@@chatbot_max_msg_50_0_url@@",
+        "thumbnail": "@@chatbot_max_msg_50_0_thumbnail@@",
+        "thumbnailDimensions": [
+          200,
+          109
+        ],
+        "type": "video",
+        "description": "@@chatbot_max_msg_50_0_description@@",
+        "title": "@@chatbot_max_msg_50_0_title@@"
+      }
+    ],
+    "name": "lesson 5/6",
+    "onView": [
+      "What-is-market-sentiment-view",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "What-is-market-sentiment",
+      "block_id=[blockId]"
+    ],
+    "id": 50
+  },
+  {
+    "messages": [
+      "@@chatbot_max_msg_51_0@@",
+      {
+        "choices": [
+          {
+            "goto": 52,
+            "type": "positive",
+            "id": 1000
+          },
+          {
+            "goto": 53,
+            "type": "negative",
+            "id": 1001
+          }
+        ],
+        "type": "feedback"
+      }
+    ],
+    "name": "lesson 5/6 feedback",
+    "onClick": [
+      "video-feedback-What-is-market-sentiment",
+      "feedback_type=[TYPE]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "feedback-What-is-market-sentiment",
+      "block_id=[blockId]"
+    ],
+    "id": 51
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_52_1@@",
+      "...",
+      {
+        "blockId": 60,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 5/6 positive",
+    "onLoad": [
+      "lesson-5/6-positive",
+      "block_id=[blockId]"
+    ],
+    "id": 52
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_53_1@@",
+      "...",
+      {
+        "blockId": 60,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 5/6 negative",
+    "onLoad": [
+      "lesson-5/6-negative",
+      "block_id=[blockId]"
+    ],
+    "id": 53
+  },
+  {
+    "id": 54,
+    "name": "Lesson 5/6 timeout",
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 60,
+            "postback": "@@chatbot_max_msg_54_0_0_postback@@",
+            "text": "@@chatbot_max_msg_54_0_0_text@@",
+            "type": "button",
+            "id": 1
+          }
+        ],
+        "type": "choices"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "goto": 61,
+        "grace": 8,
+        "gotoGrace": 64,
+        "url": "@@chatbot_max_msg_60_0_url@@",
+        "thumbnail": "@@chatbot_max_msg_60_0_thumbnail@@",
+        "thumbnailDimensions": [
+          200,
+          109
+        ],
+        "type": "video",
+        "subtitle": "",
+        "description": "@@chatbot_max_msg_60_0_description@@",
+        "title": "@@chatbot_max_msg_60_0_title@@"
+      }
+    ],
+    "name": "lesson 6/6",
+    "onView": [
+      "What-are-trading-factors-view",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "What-are-trading-factors",
+      "block_id=[blockId]"
+    ],
+    "id": 60
+  },
+  {
+    "messages": [
+      "@@chatbot_max_msg_61_0@@",
+      {
+        "choices": [
+          {
+            "goto": 63,
+            "type": "positive",
+            "id": 1000
+          },
+          {
+            "goto": 62,
+            "type": "negative",
+            "id": 1001
+          }
+        ],
+        "type": "feedback"
+      }
+    ],
+    "name": "lesson 6/6 feedback",
+    "onClick": [
+      "video-feedback-What-are-trading-factors",
+      "feedback_type=[TYPE]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "feedbac-kWhat-are-trading-factors",
+      "block_id=[blockId]"
+    ],
+    "id": 61
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_62_1@@",
+      "...",
+      {
+        "blockId": 84,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 6/6 negative",
+    "onLoad": [
+      "lesson-6/6-negative",
+      "block_id=[blockId]"
+    ],
+    "id": 62
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_63_1@@",
+      "...",
+      {
+        "blockId": 84,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 6/6 positive",
+    "onLoad": [
+      "lesson-6/6-positive",
+      "block_id=[blockId]"
+    ],
+    "id": 63
+  },
+  {
+    "id": 64,
+    "name": "Lesson 6/6 timeout",
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 84,
+            "postback": "@@chatbot_max_msg_64_0_0_postback@@",
+            "text": "@@chatbot_max_msg_64_0_0_text@@",
+            "type": "button",
+            "id": 1
+          }
+        ],
+        "type": "choices"
+      }
+    ]
+  },
+  {
+    "messages": [
+      "@@chatbot_max_msg_84_0@@",
+      "...",
+      {
+        "blockId": 85,
+        "type": "goto"
+      }
+    ],
+    "name": "quiz start message",
+    "onLoad": [
+      "quiz2-start-message",
+      "block_id=[blockId]"
+    ],
+    "id": 84
+  },
+  {
+    "messages": [
+      {
+        "response": {
+          "wrong": {
+            "goto": 87
+          },
+          "correct": {
+            "goto": 86
+          }
+        },
+        "choices": [
+          {
+            "correct": true,
+            "text": "@@chatbot_max_msg_85_0_0@@",
+            "type": "button",
+            "id": 1
+          },
+          {
+            "correct": false,
+            "text": "@@chatbot_max_msg_85_0_1@@",
+            "type": "button",
+            "id": 2
+          }
+        ],
+        "text": "@@chatbot_max_msg_85_0_text@@",
+        "type": "quiz"
+      }
+    ],
+    "name": "quiz - weather events",
+    "onClick": [
+      "quiz-Extreme weather events",
+      "answer=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "quiz-Extreme weather events",
+      "block_id=[blockId]"
+    ],
+    "id": 85
+  },
+  {
+    "messages": [
+      {
+        "response": {
+          "wrong": {
+            "goto": 88,
+            "text": "@@chatbot_max_msg_86_0__text_wrong@@",
+            "type": "text"
+          },
+          "correct": {
+            "goto": 88,
+            "text": "@@chatbot_max_msg_86_0__text__correct@@",
+            "type": "text"
+          }
+        },
+        "choices": [
+          {
+            "correct": true,
+            "text": "@@chatbot_max_msg_86_0_0@@",
+            "type": "button",
+            "id": 1
+          },
+          {
+            "correct": false,
+            "text": "@@chatbot_max_msg_86_0_1@@",
+            "type": "button",
+            "id": 2
+          }
+        ],
+        "text": "@@chatbot_max_msg_86_0_text@@",
+        "type": "quiz"
+      }
+    ],
+    "name": "Quiz - sentiments (correct)",
+    "onClick": [
+      "quiz-What-is-trading-sentiment",
+      "answer=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "quiz-What-is-trading-sentiment",
+      "block_id=[blockId]"
+    ],
+    "id": 86
+  },
+  {
+    "messages": [
+      {
+        "response": {
+          "wrong": {
+            "goto": 88,
+            "text": "@@chatbot_max_msg_87_0__text_wrong@@",
+            "type": "text"
+          },
+          "correct": {
+            "goto": 88,
+            "text": "@@chatbot_max_msg_87_0__text__correct@@",
+            "type": "text"
+          }
+        },
+        "choices": [
+          {
+            "correct": true,
+            "text": "@@chatbot_max_msg_87_0_0@@",
+            "type": "button",
+            "id": 1
+          },
+          {
+            "correct": false,
+            "text": "@@chatbot_max_msg_87_0_1@@",
+            "type": "button",
+            "id": 2
+          }
+        ],
+        "text": "@@chatbot_max_msg_87_0_text@@",
+        "type": "quiz"
+      }
+    ],
+    "name": "Quiz - sentiments (wrong)",
+    "onClick": [
+      "quiz-What-is-trading-sentiment",
+      "answer=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "quiz-What-is-trading-sentiment",
+      "block_id=[blockId]"
+    ],
+    "id": 87
+  },
+  {
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 89,
+            "postback": "@@chatbot_max_msg_88_0_0_postback@@",
+            "text": "@@chatbot_max_msg_88_0_0_text@@",
+            "type": "button",
+            "id": 1000
+          }
+        ],
+        "type": "choices"
+      }
+    ],
+    "name": "continue",
+    "onClick": [
+      "continue-after-quiz2",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "continue-after-quiz2",
+      "block_id=[blockId]"
+    ],
+    "id": 88
+  },
+  {
+    "messages": [
+      [
+        "...",
+        3
+      ],
+      [
+        "@@chatbot_max_msg_89_1@@",
+        4
+      ],
+      [
+        "...",
+        3
+      ],
+      {
+        "blockId": 91,
+        "type": "goto"
+      }
+    ],
+    "name": "laid the foundation",
+    "onLoad": [
+      "laid-the-foundation",
+      "block_id=[blockId]"
+    ],
+    "id": 89
+  },
+  {
+    "messages": [
+      [
+        "@@chatbot_max_msg_91_0@@",
+        3
+      ],
+      "...",
+      {
+        "blockId": 92,
+        "type": "goto"
+      }
+    ],
+    "name": "The choice is yours",
+    "onLoad": [
+      "The-choice-is-yours",
+      "block_id=[blockId]"
+    ],
+    "id": 91
+  },
+  {
+    "messages": [
+      {
+        "choices": [
+          {
+            "postback": "@@chatbot_max_msg_92_0_0_postback@@",
+            "text": "@@chatbot_max_msg_92_0_0_text@@",
+            "type": "button",
+            "onClick": [
+              "deposit",
+              null,
+              true
+            ],
+            "id": 1000
+          },
+          {
+            "goto": 93,
+            "onClick": [
+              "walkthrough",
+              "introduction",
+              true
+            ],
+            "postback": "@@chatbot_max_msg_92_0_1_postback@@",
+            "text": "@@chatbot_max_msg_92_0_1_text@@",
+            "type": "buton",
+            "id": 1001
+          }
+        ],
+        "type": "choices"
+      }
+    ],
+    "name": "ready to deposit?",
+    "onClick": [
+      "walkthrough-open",
+      "text=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "end-non-exp-flow-button",
+      "block_id=[blockId]"
+    ],
+    "id": 92
+  },
+  {
+    "messages": [
+      {
+        "choices": [
+          {
+            "postback": "@@chatbot_max_msg_93_0_0_postback@@",
+            "text": "@@chatbot_max_msg_93_0_0_text@@",
+            "type": "button",
+            "onClick": [
+              "deposit",
+              null,
+              true
+            ],
+            "id": 1000
+          }
+        ],
+        "type": "choices"
+      }
+    ],
+    "name": "after walkthrough",
+    "onClick": [
+      "after-walkthrough",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "after-walkthrough",
+      "block_id=[blockId]"
+    ],
+    "id": 93
+  },
+  {
+    "messages": [
+      [
+        "@@chatbot_max_msg_94_0@@",
+        1
+      ],
+      null
+    ],
+    "name": "after deposit",
+    "id": 94
+  },
+  {
+    "messages": [
+      [
+        "...",
+        2
+      ],
+      [
+        "@@chatbot_max_msg_100_1@@",
+        3
+      ],
+      [
+        "...",
+        2
+      ],
+      [
+        "@@chatbot_max_msg_100_3@@",
+        3
+      ],
+      "...",
+      [
+        "@@chatbot_max_msg_100_5@@",
+        2
+      ],
+      [
+        "..."
+      ],
+      [
+        "@@chatbot_max_msg_100_7@@"
+      ],
+      "...",
+      [
+        "@@chatbot_max_msg_100_9@@"
+      ],
+      "...",
+      [
+        "@@chatbot_max_msg_100_11@@",
+        1
+      ],
+      {
+        "blockId": 101,
+        "type": "goto"
+      }
+    ],
+    "name": "EXp welcome",
+    "onLoad": [
+      "Exp-welcome",
+      "block_id=[blockId]"
+    ],
+    "id": 100
+  },
+  {
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 102,
+            "postback": "@@chatbot_max_msg_101_0_0_postback@@",
+            "text": "@@chatbot_max_msg_101_0_0_text@@",
+            "type": "button",
+            "id": 1000
+          }
+        ],
+        "type": "choices"
+      }
+    ],
+    "name": "show me more",
+    "onLoad": [
+      "show-me-more",
+      "block_id=[blockId]"
+    ],
+    "id": 101
+  },
+  {
+    "messages": [
+      [
+        "...",
+        1
+      ],
+      [
+        "@@chatbot_max_msg_102_1@@",
+        1
+      ],
+      [
+        "...",
+        1
+      ],
+      [
+        "@@chatbot_max_msg_102_3@@",
+        2
+      ],
+      "...",
+      [
+        "@@chatbot_max_msg_102_5@@",
+        1.5
+      ],
+      "...",
+      [
+        "@@chatbot_max_msg_102_7@@"
+      ],
+      "...",
+      [
+        "@@chatbot_max_msg_102_9@@",
+        4
+      ],
+      "...",
+      {
+        "blockId": 103,
+        "type": "goto"
+      }
+    ],
+    "name": "EXp BENEFITS",
+    "onLoad": [
+      "Exp-benefits",
+      "block_id=[blockId]"
+    ],
+    "id": 102
+  },
+  {
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 104,
+            "postback": "@@chatbot_max_msg_103_0_0_postback@@",
+            "text": "@@chatbot_max_msg_103_0_0_text@@",
+            "type": "button",
+            "id": 1000
+          },
+          {
+            "goto": 11,
+            "postback": "@@chatbot_max_msg_103_0_1_postback@@",
+            "text": "@@chatbot_max_msg_103_0_1_text@@",
+            "type": "button",
+            "id": 1000
+          },
+          {
+            "onClick": [
+              "deposit",
+              null,
+              true
+            ],
+            "postback": "@@chatbot_max_msg_103_0_2_postback@@",
+            "text": "@@chatbot_max_msg_103_0_2_text@@",
+            "type": "buton",
+            "id": 1001
+          }
+        ],
+        "type": "choices"
+      }
+    ],
+    "onClick": [
+      "trading-tools",
+      "text=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "buttons-trading-tools",
+      "block_id=[blockId]"
+    ],
+    "name": "ready to learn?",
+    "id": 103
+  },
+  {
+    "messages": [
+      [
+        "...",
+        2
+      ],
+      [
+        "@@chatbot_max_msg_104_1@@",
+        2
+      ],
+      [
+        "...",
+        2
+      ],
+      [
+        "@@chatbot_max_msg_104_3@@",
+        7
+      ],
+      [
+        "...",
+        2
+      ],
+      [
+        "@@chatbot_max_msg_104_5@@"
+      ],
+      [
+        "...",
+        1
+      ],
+      [
+        "@@chatbot_max_msg_104_7@@"
+      ],
+      "...",
+      {
+        "blockId": 110,
+        "type": "goto"
+      }
+    ],
+    "name": "good information",
+    "onLoad": [
+      "good-information",
+      "block_id=[blockId]"
+    ],
+    "id": 104
+  },
+  {
+    "messages": [
+      {
+        "goto": 111,
+        "grace": 8,
+        "gotoGrace": 114,
+        "url": "@@chatbot_max_msg_110_0_url@@",
+        "thumbnail": "@@chatbot_max_msg_110_0_thumbnail@@",
+        "type": "video",
+        "description": "@@chatbot_max_msg_110_0_description@@",
+        "title": "@@chatbot_max_msg_110_0_title@@"
+      }
+    ],
+    "name": "lesson 1/3",
+    "onView": [
+      "What-are-signals-view",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "What-are-signals",
+      "block_id=[blockId]"
+    ],
+    "id": 110
+  },
+  {
+    "messages": [
+      "@@chatbot_max_msg_111_0@@",
+      {
+        "choices": [
+          {
+            "goto": 113,
+            "type": "positive",
+            "id": 1000
+          },
+          {
+            "goto": 112,
+            "type": "negative",
+            "id": 1001
+          }
+        ],
+        "type": "feedback"
+      }
+    ],
+    "name": "lesson 1/3 feedback",
+    "onClick": [
+      "video-feedback-What-is-signals",
+      "feedback_type=[TYPE]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "feedback-What-is-signals",
+      "block_id=[blockId]"
+    ],
+    "id": 111
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_112_1@@",
+      "...",
+      {
+        "blockId": 120,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 1/3 negaitive",
+    "onLoad": [
+      "lesson-1/3-negative",
+      "block_id=[blockId]"
+    ],
+    "id": 112
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_113_1@@",
+      "...",
+      {
+        "blockId": 120,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 1/3 positive",
+    "onLoad": [
+      "lesson-1/3-positive",
+      "block_id=[blockId]"
+    ],
+    "id": 113
+  },
+  {
+    "id": 114,
+    "name": "Lesson 1/3 timeout",
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 120,
+            "postback": "@@chatbot_max_msg_114_0_0_postback@@",
+            "text": "@@chatbot_max_msg_114_0_0_text@@",
+            "type": "button",
+            "id": 1
+          }
+        ],
+        "type": "choices"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "goto": 121,
+        "grace": 5,
+        "gotoGrace": 124,
+        "url": "@@chatbot_max_msg_120_0_url@@",
+        "thumbnail": "@@chatbot_max_msg_120_0_thumbnail@@",
+        "type": "video",
+        "description": "@@chatbot_max_msg_120_0_description@@",
+        "title": "@@chatbot_max_msg_120_0_title@@"
+      }
+    ],
+    "name": "Lesson 2/3",
+    "onView": [
+      "market-indicators-view",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "market-indicators",
+      "block_id=[blockId]"
+    ],
+    "id": 120
+  },
+  {
+    "messages": [
+      "@@chatbot_max_msg_121_0@@",
+      {
+        "choices": [
+          {
+            "goto": 122,
+            "type": "positive",
+            "id": 1000
+          },
+          {
+            "goto": 123,
+            "type": "negative",
+            "id": 1001
+          }
+        ],
+        "type": "feedback"
+      }
+    ],
+    "name": "lesson 2/3 feedback",
+    "onClick": [
+      "video-feedback-Market-indicators",
+      "feedback_type=[TYPE]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "feedback-Market-indicators",
+      "block_id=[blockId]"
+    ],
+    "id": 121
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_122_1@@",
+      "...",
+      {
+        "blockId": 130,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 2/3 positive",
+    "onLoad": [
+      "lesson-2/3-positive",
+      "block_id=[blockId]"
+    ],
+    "id": 122
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_123_1@@",
+      "...",
+      {
+        "blockId": 130,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 2/3 negaitive",
+    "onLoad": [
+      "lesson-2/3-negative",
+      "block_id=[blockId]"
+    ],
+    "id": 123
+  },
+  {
+    "id": 124,
+    "name": "Lesson 2/3 timeout",
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 130,
+            "postback": "@@chatbot_max_msg_124_0_0_postback@@",
+            "text": "@@chatbot_max_msg_124_0_0_text@@",
+            "type": "button",
+            "id": 1
+          }
+        ],
+        "type": "choices"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "goto": 131,
+        "grace": 5,
+        "gotoGrace": 134,
+        "url": "@@chatbot_max_msg_130_0_url@@",
+        "thumbnail": "@@chatbot_max_msg_130_0_thumbnail@@",
+        "thumbnailDimensions": [
+          49,
+          48
+        ],
+        "type": "lesson",
+        "description": "@@chatbot_max_msg_130_0_description@@",
+        "title": "@@chatbot_max_msg_130_0_title@@"
+      }
+    ],
+    "name": "Lesson 3/3",
+    "onView": [
+      "basic-technical-analysis-view",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "basic-technical-analysis",
+      "block_id=[blockId]"
+    ],
+    "id": 130
+  },
+  {
+    "messages": [
+      "@@chatbot_max_msg_131_0@@",
+      {
+        "choices": [
+          {
+            "goto": 132,
+            "type": "positive",
+            "id": 1000
+          },
+          {
+            "goto": 133,
+            "type": "negative",
+            "id": 1001
+          }
+        ],
+        "type": "feedback"
+      }
+    ],
+    "name": "lesson 3/3 feedback",
+    "onClick": [
+      "video-feedback-basic-technical-analysis",
+      "feedback_type=[TYPE]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "feedback-basic-technical-analysis",
+      "block_id=[blockId]"
+    ],
+    "id": 131
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_132_1@@",
+      "...",
+      {
+        "blockId": 140,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 3/3 positive",
+    "onLoad": [
+      "lesson-3/3-positive",
+      "block_id=[blockId]"
+    ],
+    "id": 132
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_133_1@@",
+      "...",
+      {
+        "blockId": 140,
+        "type": "goto"
+      }
+    ],
+    "name": "lesson 3/3 negaitive",
+    "onLoad": [
+      "lesson-3/3-negative",
+      "block_id=[blockId]"
+    ],
+    "id": 133
+  },
+  {
+    "id": 134,
+    "name": "Lesson 3/3 timeout",
+    "messages": [
+      {
+        "choices": [
+          {
+            "goto": 140,
+            "postback": "@@chatbot_max_msg_134_0_0_postback@@",
+            "text": "@@chatbot_max_msg_134_0_0_text@@",
+            "type": "button",
+            "id": 1
+          }
+        ],
+        "type": "choices"
+      }
+    ]
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_140_1@@",
+      "...",
+      {
+        "blockId": 141,
+        "type": "goto"
+      }
+    ],
+    "name": "Like what you see?",
+    "onLoad": [
+      "Like-what-you-see",
+      "block_id=[blockId]"
+    ],
+    "id": 140
+  },
+  {
+    "messages": [
+      "...",
+      "@@chatbot_max_msg_141_1@@",
+      "...",
+      {
+        "blockId": 142,
+        "type": "goto"
+      }
+    ],
+    "name": "if you change your mind",
+    "onLoad": [
+      "if-you-change-your-mind",
+      "block_id=[blockId]"
+    ],
+    "id": 141
+  },
+  {
+    "blockid": 142,
+    "messages": [
+      {
+        "choices": [
+          {
+            "postback": "@@chatbot_max_msg_142_0_0_postback@@",
+            "text": "@@chatbot_max_msg_142_0_0_text@@",
+            "type": "button",
+            "onClick": [
+              "deposit",
+              null,
+              true
+            ],
+            "id": 1000
+          },
+          {
+            "goto": 143,
+            "onClick": [
+              "walkthrough",
+              "introduction",
+              true
+            ],
+            "postback": "@@chatbot_max_msg_142_0_1_postback@@",
+            "text": "@@chatbot_max_msg_142_0_1_text@@",
+            "type": "buton",
+            "id": 1001
+          }
+        ],
+        "type": "choices"
+      }
+    ],
+    "name": "Deposit",
+    "onClick": [
+      "end-exp-flow-button",
+      "text=[TEXT]",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "end-exp-flow-button",
+      "block_id=[blockId]"
+    ],
+    "id": 142
+  },
+  {
+    "blockid": 143,
+    "messages": [
+      {
+        "choices": [
+          {
+            "postback": "@@chatbot_max_msg_143_0_0_postback@@",
+            "text": "@@chatbot_max_msg_143_0_0_text@@",
+            "type": "button",
+            "onClick": [
+              "deposit",
+              null,
+              true
+            ],
+            "id": 1000
+          }
+        ],
+        "type": "choices"
+      }
+    ],
+    "name": "after walkthrough",
+    "onClick": [
+      "after-walkthrough",
+      "block_id=[blockId]"
+    ],
+    "onLoad": [
+      "after-walkthrough",
+      "block_id=[blockId]"
+    ],
+    "id": 143
+  }
+]

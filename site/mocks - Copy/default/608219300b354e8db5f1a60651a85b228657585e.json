@@ -1,0 +1,39 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/initialdata-environmentdata-web.js?v=20201230110628",
+  "contentType": "application/json; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "Title": "iFOREX's Web Trading Platform",
+    "Labels": {
+      "lblSplashWait": "Please wait",
+      "lblSplashText": "While the platform is loading..",
+      "lblSplashTextDemo": "Your demo account is loading…",
+      "lblSplashTextReal": "Your real money account is loading…"
+    },
+    "Icons": [
+      {
+        "rel": "shortcut icon",
+        "href": "/webpl3/assets/20201230110628/Skins/Web/Broker0/Default/img/favicon.ico",
+        "type": "image/x-icon"
+      },
+      {
+        "rel": "apple-touch-icon",
+        "href": "/webpl3/assets/20201230110628/Skins/Web/Broker0/Default/img/FOREX57.png",
+        "type": "image/png"
+      }
+    ],
+    "pciPath": "https://tokenizationdev.iforex.com/",
+    "pciFileUploadPage": "FileUpload.aspx",
+    "pciCCNumberPage": "CCNumber.aspx?dir=ltr",
+    "pciGenericCCNumberPage": "GenericCCNumber.aspx?dir=ltr",
+    "fileTypes": "(\\.|\\/)(zip|csv|docx|doc|jpe|jpeg|jpg|png|gif|pdf|bmp|eml|tif|tiff|msg|ppt|pptx|txt|xps)$|^$",
+    "fileNumbers": "10",
+    "CSMPushServiceUrl": "https://csmlocal.iforex.com/csmstream",
+    "maxPriceAlertsCount": "50",
+    "csmPushServicekeepAlivePeriod": "10",
+    "csmPushServicekeepAliveBuffer": "3",
+    "biServiceURL": "https://fxeventsdev.iforex.com/index.png"
+  },
+  "isBase64": false
+}

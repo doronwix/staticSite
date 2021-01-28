@@ -1,0 +1,33 @@
+﻿<div class="questionaire">
+    <div class="bg-wrapper">
+        <div class="left-side">
+            <div class="thx">
+                <header class="text-center" data-bind="css: {'active-deposit' : isActiveAndDeposit }">
+                    <h3 data-bind="dictionaryBinding: title1, resourceName: 'client_questionnaire'">%Thank you!</h3>
+                    <h4 data-bind="dictionaryBinding: title2, resourceName: 'client_questionnaire'">%We appreciate you taking the time to complete  our client questionnaire.</h4>
+                </header>
+                <div class="gesture" data-bind="css: {'ok' : isActiveAndDeposit, 'ok-new' : !isActiveAndDeposit }"></div>
+                <p class="text-center" data-bind="dictionaryBinding: title3, resourceName: 'client_questionnaire', visible: title3">
+                    %To comply with the aforementioned and to provide the highest level of security to your account,
+                    we require proof of ID, proof of residence and a credit card copy.
+                </p>
+
+                <form action="javascript:void(0)" enctype="multipart/form-data">
+                    <div class="btn-area text-center">
+                        <ul>
+                            <li class="text-center" data-bind="visible: showReturnToSite">
+                                <a class="btn big" data-bind="dictionaryBinding: returnTxt, resourceName: 'client_questionnaire', click:goToSite, css: {'active-deposit' : isActiveAndDeposit }" href="javascript:void(0)">%Return to the site</a>
+                            </li>
+                            <li data-bind="dictionaryBinding:title4, resourceName: 'client_questionnaire', visible:showReturnToSite && showUploadDocuments">%OR</li>
+                            <li class="text-center" data-bind="visible:showUploadDocuments">
+                                <a class="btn big action colored" data-bind="dictionaryBinding:'thankyou_btnUploadDocuments', resourceName: 'client_questionnaire', click:goToUploadDocuments" href="javascript:void(0)">%Upload Documents</a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div><!--end thank-you-->
+        </div><!--end left-side-->
+        <fx-questionnaire-right-side></fx-questionnaire-right-side>
+        <div class="clear"></div>
+    </div>
+</div>

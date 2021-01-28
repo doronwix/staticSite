@@ -1,0 +1,46 @@
+﻿<!-- ko ifnot: Data.isFormVisible() -->
+<div class="half left">
+    <h3 class="title" data-bind="text: Dictionary.GetItem('txtDoneAlert', 'AccountStatementBackOffice')"></h3>
+</div>
+<!-- /ko -->
+<!-- ko if: Data.isFormVisible() -->
+<div class="half left account-statement">
+    <h3 class="title" data-bind="text: Dictionary.GetItem('lblConvertAccountLine', 'AccountStatementBackOffice')"></h3>
+    <div class="holder forced-deposit">
+        <table class="data-holder loading" data-bind="css: { loading: Data.isSaveSpinnerOn }">
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblAccountNumber', 'AccountStatementBackOffice')"></td>
+                <td><input type="text" data-bind="value: Data.accountNumber" disabled /></td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblConvert', 'AccountStatementBackOffice')"></td>
+                <td>
+                    <input type="text" data-bind="value: Data.sign() * Format.toAmount(Data.amount(), 2), css: { red: !Data.isCredit(), green: Data.isCredit() }" disabled />
+                    <input type="text" data-bind="value: Data.symbolName()" disabled />
+                </td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblToCurrency', 'AccountStatementBackOffice')"></td>
+                <td><select data-bind="options: Data.symbols, optionsText: 'SymbolName', value: Data.selectedToCcy, valueAllowUnset: true"></select></td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblExchangeRate', 'AccountStatementBackOffice')"></td>
+                <td><input type="text" data-bind="value: Data.exchangeRate" /></td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblAmount', 'AccountStatementBackOffice')"></td>
+                <td><input type="text" data-bind="value:  Format.toAmount(Data.convertedAmount(), 2)" disabled /></td>
+            </tr>
+            <tr>
+                <td class="blue" data-bind="text: Dictionary.GetItem('lblComment', 'AccountStatementBackOffice')"></td>
+                <td><textarea rows="3" data-bind="value: Data.comment"></textarea></td>
+            </tr>
+            <tr>
+                <td>
+                    <button data-bind="click: saveClick, text: Dictionary.GetItem('btnSave', 'AccountStatementBackOffice')" class="short"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- /ko -->

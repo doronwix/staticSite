@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/uilayer/viewmodels/Content/FaqQuestionViewModel.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define(\r\n    'viewmodels/Content/FaqQuestionViewModel',\r\n    ['handlers/general'],\r\n    function(general) {\r\n        var createViewModel = function(params, componentInfo) {\r\n            return {\r\n                question: componentInfo.templateNodes[0].innerText,\r\n                answer: componentInfo.templateNodes[1].innerHTML,\r\n                id: general.createGuid()\r\n            }\r\n        };\r\n        return {\r\n            viewModel: {\r\n                createViewModel: createViewModel\r\n            }\r\n        };\r\n    });",
+  "isBase64": false
+}

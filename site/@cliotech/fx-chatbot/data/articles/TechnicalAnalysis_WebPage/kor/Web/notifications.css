@@ -1,0 +1,198 @@
+article {
+    &.article {
+        .PopupWrapper {
+            margin: 0px auto;
+            padding: 40px 20px 20px 20px;
+            max-width: 645px;
+            height: auto;
+            min-height: auto;
+            filter: inherit;
+            font-family: Verdana, Arial;
+            background-color: #ffffff;
+        }
+
+        .PopupWrapper .content {
+            width: 100%;
+            margin: 0px auto;
+            text-align: left;
+        }
+
+        .PopupWrapper .content .depHeader {
+            max-width: 100%;
+            background-repeat: no-repeat;
+            background-image: url("../../images/TechnicalAnalysis_br1_eng.png");
+            background-position: bottom;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-bottom: 0px solid black;
+        }
+
+        .PopupWrapper .content .depHeader p#MainTitle {
+            max-width: 100%;
+            color: #2a3b4d;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 34px;
+            text-align: left;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 29px;
+            padding-right: 5%;
+        }
+
+        .PopupWrapper .content .depHeader .ImgHeader {
+            max-width: 259px;
+            display: inline;
+            text-align: right;
+            padding-left: 5%;
+            vertical-align: bottom;
+        }
+
+
+
+
+        .PopupWrapper .content .dep {
+            width: 100%;
+            background-color: #ffffff;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .PopupWrapper .content .dep p#FirstTitle {
+            color: #000000;
+            font-size: 22px;
+            line-height: 27px;
+            text-align: left;
+            display: inline-block;
+            width: 100%;
+            vertical-align: middle;
+            margin: 0;
+            padding-top: 20px;
+            padding-bottom: 2px;
+        }
+
+
+        .PopupWrapper .content .dep p#SecondaryTitle {
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 19px;
+            font-weight: bold;
+            text-align: left;
+            display: inline-block;
+            width: 100%;
+            vertical-align: middle;
+            margin: 0;
+            padding-top: 20px;
+            padding-bottom: 0px;
+        }
+
+        .PopupWrapper .content .dep p#SecondaryTitle span {
+            background-color: #00305a;
+            padding: 5px 10px;
+        }
+
+        .PopupWrapper .content .dep p#text1 {
+            color: #000000;
+            font-size: 14px;
+            line-height: 19px;
+            text-align: left;
+            display: inline-block;
+            width: 100%;
+            vertical-align: middle;
+            margin: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .PopupWrapper .content .dep p#text2 {
+            color: #000000;
+            font-size: 14px;
+            line-height: 19px;
+            text-align: left;
+            display: inline-block;
+            width: 100%;
+            vertical-align: middle;
+            padding-top: 14px;
+            padding-bottom: 30px;
+            margin: 0;
+        }
+
+
+        .PopupWrapper .content .dep .img {
+            max-width: 100%;
+            display: block;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        .PopupWrapper .content .dep .img1 {
+            max-width: 100%;
+            display: block;
+            padding-bottom: 30px;
+            padding-top: 20px;
+        }
+
+
+        .PopupWrapper .content .dep .IconSection {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .PopupWrapper .content .dep .IconSection .icon {
+            vertical-align: middle;
+            display: inline;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        .PopupWrapper .content .dep .IconSection p#IconTitle {
+            color: #000000;
+            padding-left: 5px;
+            vertical-align: middle;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: left;
+            display: inline;
+            width: 100%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+
+
+        @media only screen and (max-width: 680px) {
+
+            .PopupWrapper .content .depHeader .ImgHeader {
+                display: none;
+            }
+
+            .PopupWrapper .content .depHeader .ImgHeader {
+                display: none;
+            }
+
+            .PopupWrapper .content .depHeader {
+                max-width: 100%;
+                background-repeat: no-repeat;
+                background-image: none;
+                background-position: bottom;
+                margin: 0;
+            }
+
+            .PopupWrapper .content .depHeader p#MainTitle {
+                max-width: 100%;
+                color: #000000;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 34px;
+                text-align: left;
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                padding-right: 5%;
+            }
+
+        }
+    }
+}

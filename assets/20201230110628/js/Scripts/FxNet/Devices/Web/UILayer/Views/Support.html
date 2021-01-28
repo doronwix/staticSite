@@ -1,0 +1,52 @@
+﻿<div class="questionnaire-support">
+    <div>
+        <header class="text-center">
+            <h4 data-bind="dictionaryBinding: 'lblAnyQuestions', resourceName: 'support'"></h4>
+            <span data-bind="dictionaryBinding: 'lblExperts', resourceName: 'support'"></span>
+        </header>
+    </div>
+
+    <div>
+        <ul>
+            <!-- ko if: isClickChatEnabled -->
+            <li class="live-chat">
+                <a id="lnkClickSnapChat" href="javascript:void(0);" data-bind="click: function(){ googleTagManager.StartChat();  ko.postbox.publish('support-interaction', 'livechat'); }">
+                    <i class="ico-sh-live-chat"></i>
+                </a>
+                <span data-bind="dictionaryBinding: 'lnkClickChat', resourceName: 'support'"></span>
+            </li>
+            <!-- /ko -->
+            <li>
+                <a id="lnkEmailResponse" data-bind="attr: { 'href': lnkEmailResponse }, click: function(){ ko.postbox.publish('support-interaction', 'email'); return true;}">
+                    <i class="ico-sh-email"></i>
+                </a>
+                <span data-bind="dictionaryBinding:'lblEmailResponse', resourceName: 'support'"></span>
+            </li>
+            <li>
+                <a id="lnkPhoneUs">
+                    <i class="ico-sh-outgoing-call"></i>
+                </a>
+                <span data-bind="dictionaryBinding:'lblCallUs', resourceName: 'support'"></span>
+                <br>
+                <span class="compliancePhoneDirection" data-bind="dictionaryBinding:'lblCompliancePhone', resourceName: 'support'"></span>
+            </li>
+            <!-- ko if: isCallMeBackEnabled -->
+            <li>
+                <!-- ko if: enableChat -->
+                <a id="lnkCallBack" data-bind="click: function(){ onCallBackClick(); ko.postbox.publish('start-callback-request-chat');}">
+                    <i class="ico-sh-incomming-call"></i>
+                </a>
+                <span data-bind="dictionaryBinding: 'lblCallMeBack', resourceName: 'support'"></span>
+                <!-- /ko -->
+                <!-- ko ifnot: enableChat -->
+                <a id="lnkCallBack" data-bind="attr: { 'href': callBackLink, 'target': '_blank'}, click: function(){ onCallBackClick(); return true;}">
+                    <i class="ico-sh-incomming-call"></i>
+                </a>
+                <span data-bind="dictionaryBinding: 'lblCallMeBack', resourceName: 'support'"></span>
+                <!-- /ko -->
+            </li>
+            <!-- /ko -->
+        </ul>
+    </div>
+</div>
+

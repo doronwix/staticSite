@@ -1,0 +1,16 @@
+{
+  "requestUrl": "/webpl3/FeedsHistory/GetCandles?instrumentId=12066&periodId=1&numCandles=500&rateType=0&fromDate=&toDate=",
+  "contentType": "application/json; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": [
+    [
+      "12/11/20 13:11:00",
+      "4.14276",
+      "4.14276",
+      "4.14235",
+      "0.00000"
+    ]
+  ],
+  "isBase64": false
+}

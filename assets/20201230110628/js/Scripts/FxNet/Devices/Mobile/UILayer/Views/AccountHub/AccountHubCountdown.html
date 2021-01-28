@@ -1,0 +1,14 @@
+﻿<!-- ko if: $data.Data.daysCounter >= 0 -->
+<div id="flowMap_DaysCounter" class="daysCounter">
+    <p id="flowMap_DaysCounterMsg"
+       data-bind="html: String.format(Dictionary.GetItem($data.Data.remainingDaysUpdateMsg, 'account_hub'), $data.Data.daysCounter), click: $data.Data.stepClick, css: $data.Data.requireUpdateCssClass">
+    </p>
+    <!-- ko if: $data.Data.isProgressBarVisible -->
+    <div class="progress" data-bind="css: $data.Data.requireUpdateCssClass">
+        <div id="flowMap_DaysCounterBar" class="bar"
+             data-bind="css: $data.Data.requireUpdateCssClass, style: { width: (($data.Data.daysCounter * 100) / $data.Data.maxDaysCounter + '%') }">
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+<!-- /ko -->

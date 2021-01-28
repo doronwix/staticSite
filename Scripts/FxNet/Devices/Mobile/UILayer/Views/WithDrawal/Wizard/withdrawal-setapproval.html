@@ -1,0 +1,68 @@
+﻿<!-- ko if: isDataReady -->
+<div class="withdrawal-wrapper">
+    <!-- ko if: Data.isLoading -->
+    <div class="loader-background">
+        <div class="loader"></div>
+    </div>
+    <!-- /ko -->
+    <h1 class="page-title" data-bind="text: Dictionary.GetItem('title_withdrawFunds', 'views_vMobileWithdrawal')"></h1>
+    <!-- ko component: { name: 'fx-component-amount-requested'} --><!-- /ko -->
+    <p class="padbot" data-bind="dictionaryBinding: 'txt_refundInfo', resourceName: 'views_vMobileWithdrawal'"></p>
+    <!-- ko if: !Data.isLoading() && Data.summary -->
+    <!-- ko if: Data.isBankWithdrawal -->
+    <div class="summary-wrap" data-bind="with: Data.summary">
+        <p class="summary-row" data-bind="visible: BankName">
+            <span data-bind="dictionaryBinding: 'approve_lblBankName', resourceName: 'views_vMobileWithdrawal'"></span>
+            <span class="row-value" data-bind="text: BankName"></span>
+        </p>
+        <p class="summary-row" data-bind="visible: BankAccount">
+            <span data-bind="dictionaryBinding: 'approve_lblAccountNumber', resourceName: 'views_vMobileWithdrawal'"></span>
+            <span class="row-value" data-bind="text: BankAccount"></span>
+        </p>
+        <p class="summary-row" data-bind="visible: BankBranch">
+            <span data-bind="dictionaryBinding: 'approve_lblBranchCode', resourceName: 'views_vMobileWithdrawal'"></span>
+            <span class="row-value" data-bind="text: BankBranch"></span>
+        </p>
+        <p class="summary-row" data-bind="visible: SwiftCode">
+            <span data-bind="dictionaryBinding: 'approve_lblSwiftCode', resourceName: 'views_vMobileWithdrawal'"></span>
+            <span class="row-value" data-bind="text: SwiftCode"></span>
+        </p>
+        <p class="summary-row" data-bind="visible: BankBeneficiary">
+            <span data-bind="dictionaryBinding: 'approve_lblBeneficiaryName', resourceName: 'views_vMobileWithdrawal'"></span>
+            <span class="row-value" data-bind="text: BankBeneficiary"></span>
+        </p>
+        <p class="summary-row" data-bind="visible: BankCountryName">
+            <span data-bind="dictionaryBinding: 'approve_lblCountry', resourceName: 'views_vMobileWithdrawal'"></span>
+            <span class="row-value" data-bind="dictionaryBinding: 'cntr_' + BankCountryID, resourceName: 'country_names'"></span>
+        </p>
+        <p class="summary-row" data-bind="visible: BankAddress">
+            <span data-bind="dictionaryBinding: 'approve_lblBankAddress', resourceName: 'views_vMobileWithdrawal'"></span>
+            <span class="row-value" data-bind="text: BankAddress"></span>
+        </p>
+    </div>
+    <!-- /ko -->
+    <!-- ko if: !Data.isBankWithdrawal() -->
+    <div class="summary-wrap" data-bind="with: Data.summary">
+        <p class="summary-row">
+            <span data-bind="dictionaryBinding: 'lblCardType', resourceName: 'views_vMobileWithdrawal'"></span>
+            <span class="row-value" data-bind="text: CardType"></span>
+        </p>
+        <p class="summary-row">
+            <span data-bind="dictionaryBinding: 'lblLastFour', resourceName: 'views_vMobileWithdrawal'"></span>
+            <span class="row-value" data-bind="text: LastFourDigits"></span>
+        </p>
+        <p class="summary-row">
+            <span data-bind="dictionaryBinding: 'lblExpirationDate', resourceName: 'views_vMobileWithdrawal'"></span>
+            <span class="row-value" data-bind="text: CardExpiryDate"></span>
+        </p>
+    </div>
+    <!-- /ko -->
+    <!-- /ko -->
+    <div class="top-separator" data-bind="visible: Data.isBankWithdrawal">
+        <p class="bankfee">
+            <span class="warn-icon"></span>
+            <span data-bind="dictionaryBinding: 'msg_bankfeeInfo', resourceName: 'views_vMobileWithdrawal'"></span>
+        </p>
+    </div>
+</div>
+<!--/ko-->

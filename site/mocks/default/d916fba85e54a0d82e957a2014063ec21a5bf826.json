@@ -1,0 +1,90 @@
+{
+  "requestUrl": "/webpl3/FeedsHistory/GetCandlePeriods",
+  "contentType": "application/json; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "result": [
+      {
+        "periodID": 0,
+        "periodName": "Ticks",
+        "candlePeriodScale": 0,
+        "scaleUnits": 0
+      },
+      {
+        "periodID": 1,
+        "periodName": "1 Minute",
+        "candlePeriodScale": 2,
+        "scaleUnits": 1
+      },
+      {
+        "periodID": 2,
+        "periodName": "5 Minutes",
+        "candlePeriodScale": 2,
+        "scaleUnits": 5
+      },
+      {
+        "periodID": 3,
+        "periodName": "15 Minutes",
+        "candlePeriodScale": 2,
+        "scaleUnits": 15
+      },
+      {
+        "periodID": 4,
+        "periodName": "30 Minutes",
+        "candlePeriodScale": 2,
+        "scaleUnits": 30
+      },
+      {
+        "periodID": 5,
+        "periodName": "1 Hour",
+        "candlePeriodScale": 3,
+        "scaleUnits": 1
+      },
+      {
+        "periodID": 12,
+        "periodName": "2 Hours",
+        "candlePeriodScale": 3,
+        "scaleUnits": 2
+      },
+      {
+        "periodID": 13,
+        "periodName": "4 Hours",
+        "candlePeriodScale": 3,
+        "scaleUnits": 4
+      },
+      {
+        "periodID": 6,
+        "periodName": "6 Hours",
+        "candlePeriodScale": 3,
+        "scaleUnits": 6
+      },
+      {
+        "periodID": 7,
+        "periodName": "12 Hours",
+        "candlePeriodScale": 3,
+        "scaleUnits": 12
+      },
+      {
+        "periodID": 8,
+        "periodName": "1 Day",
+        "candlePeriodScale": 4,
+        "scaleUnits": 1
+      },
+      {
+        "periodID": 9,
+        "periodName": "1 Week",
+        "candlePeriodScale": 5,
+        "scaleUnits": 1
+      },
+      {
+        "periodID": 10,
+        "periodName": "1 Month",
+        "candlePeriodScale": 6,
+        "scaleUnits": 1
+      }
+    ],
+    "status": 1
+  },
+  "isBase64": false
+}

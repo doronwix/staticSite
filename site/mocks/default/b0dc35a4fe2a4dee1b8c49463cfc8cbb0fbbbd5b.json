@@ -1,0 +1,306 @@
+{
+  "requestUrl": "/webpl3/InitialData/GetData?",
+  "contentType": "application/json; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "systemInfo": {
+      "config": {
+        "MaxCloseLimitDist": 50,
+        "MaxOpenLimitDist": 50,
+        "DataUpdateRate": 500,
+        "PageSize": 6,
+        "MobilePageSize": 20,
+        "CurrentLanguageName": "English",
+        "CurrentLanguageId": 1,
+        "BrokerId": 1,
+        "SharedFormsList": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46"
+        ],
+        "LocalTutorialsAvailableLanguages": [
+          "1",
+          "2",
+          "10",
+          "17"
+        ],
+        "ActivityLogFromDateDefaultRange": -2,
+        "MaxEquityForDemoDepositInUsd": 100
+      },
+      "securityToken": 1409145685,
+      "tokenLibRoot": "https://tokenizationdev.iforex.com/",
+      "isNative": 0,
+      "countryNameByIP": "",
+      "limitRatePercentage": 0.5,
+      "tradingInfoSrvUrl": "https://tradinginfodev.fihtrader.com",
+      "isRestrictedUser": false,
+      "fingerprintMaxScanAttempts": 3,
+      "signalsTutorialsDomainUrl": "https://videotutorialdev.fihtrader.com/",
+      "hasTradingPermission": false
+    },
+    "personalInfo": {
+      "customer": {
+        "InteractiveMessagesToken": "api/retention/MessagesTokenUrl",
+        "InteractiveMessagesUrl": "https://imservicedev.fihtrader.com/Service/InteractiveMessagesService.svc",
+        "RatesServiceHost": "https://ratesdev.iforex.com/",
+        "DefaultCcy": "USD",
+        "AccountBaseSymbol": 47,
+        "DealPermit": 4,
+        "AllowFXnet": 1,
+        "Language": "1",
+        "UserName": "dor***@test.com",
+        "AccountNumber": 2000015630,
+        "CountryID": "100",
+        "BrokerID": "1",
+        "FirstName": "Doron",
+        "LastName": "test",
+        "MinPctEQXP": "0.5",
+        "FuturesTradingPermission": "1",
+        "StocksTradingPermission": "3",
+        "AutoConvert": true,
+        "HasTransactionsReport": "False",
+        "isQA": false,
+        "AgreementType": 2,
+        "SignAgreementDate": "",
+        "SignalsEndDate": "01/01/0001",
+        "DateAdded": "29/12/2020",
+        "IsLive": "True",
+        "IsPending": "False",
+        "AccountType": 1,
+        "SAProcess": 0,
+        "Serial": 0,
+        "BrokerName": "FIH",
+        "BrokerAllowLimitsOnNoRates": true,
+        "IsDemo": false,
+        "HasActiveDemo": false,
+        "HasMissingInformation": false,
+        "LiquidationPercentage": 0,
+        "HasWeightedVolumeFactor": false,
+        "RelatedFolderId": 0,
+        "IsAccountExpired": false,
+        "IsOvernightOnForex": true,
+        "sjcKey": "d149e01b5ee4cc67bb2b7d0e712293e9f4b82bceee2e95305fa746c312750e50",
+        "ABTestings": [
+          {
+            "GroupName": "HasRegistrationDate",
+            "TestName": "TestRegistrationData",
+            "Configuration": "{\"ABTest-RegistrationDate\": true}"
+          },
+          {
+            "GroupName": "FX Tracking",
+            "TestName": "tracking config for prod",
+            "Configuration": "{\"disable-gtm\": false, \"disable-gtm-fxtracking\": true, \"disable-gtm-hotjar\": true, \"disable-gtm-snapchat\": true, \"disable-gtm-gglanalytics\": true, \"disable-gtm-fbevents\": true}"
+          },
+          {
+            "GroupName": "ThemeChangeTestGroup",
+            "TestName": "ThemeChageComponent",
+            "Configuration": "{\"themeChangeEnabled\": true}"
+          },
+          {
+            "GroupName": "feedback visible on site",
+            "TestName": "enable feedback also on non device",
+            "Configuration": "{\"fx-feedback\": true}"
+          },
+          {
+            "GroupName": "2020WebSlips",
+            "TestName": "2020WebSlips",
+            "Configuration": "{\"fx-revised-deal-slips\": false}"
+          },
+          {
+            "GroupName": "SaveWithdrawalWithTradingProcessor",
+            "TestName": "[US446767] Save and process withdrawals with TP fo",
+            "Configuration": "{}"
+          },
+          {
+            "GroupName": "ProcessWithdrawalWithTradingProcessor",
+            "TestName": "[US446767] Save and process withdrawals with TP fo",
+            "Configuration": "{}"
+          },
+          {
+            "GroupName": "2020CCclasicDesign",
+            "TestName": "2021CCDesign",
+            "Configuration": "{\"fx-cc-deposit\": false}"
+          },
+          {
+            "GroupName": "Lexi personal guide Mobile Bubble Change",
+            "TestName": "enable personal guide with Lexi",
+            "Configuration": "{\"fx-personal-guide\": \"LexiTestVariation4\"}"
+          }
+        ],
+        "IDByShufti": true,
+        "UBByShufti": false,
+        "compliance": {
+          "AmlStatus": 3,
+          "CddStatus": 3,
+          "KycStatus": 0,
+          "KycReviewStatus": 0,
+          "PepStatus": 3,
+          "IsActive": true
+        },
+        "maintenanceMargin": 0,
+        "IsSeamless": false
+      },
+      "customQuotesUIOrder": [],
+      "initialScreen": 124,
+      "initialQuotesUIOrder": [
+        [
+          35631,
+          "0"
+        ],
+        [
+          35634,
+          "0"
+        ],
+        [
+          7985,
+          "130"
+        ],
+        [
+          8240,
+          "10,000"
+        ],
+        [
+          9519,
+          "350"
+        ],
+        [
+          10031,
+          "340"
+        ],
+        [
+          11790,
+          "0"
+        ],
+        [
+          11801,
+          "0"
+        ],
+        [
+          11823,
+          "1"
+        ],
+        [
+          12046,
+          "100"
+        ],
+        [
+          12057,
+          "97"
+        ],
+        [
+          12079,
+          "100"
+        ],
+        [
+          12303,
+          "0"
+        ],
+        [
+          35598,
+          "0"
+        ],
+        [
+          35608,
+          "0"
+        ],
+        [
+          35633,
+          "0"
+        ],
+        [
+          56623,
+          "0"
+        ],
+        [
+          12335,
+          "0"
+        ]
+      ],
+      "defaultFirstPage": 2,
+      "profileCustomer": {
+        "activeFirstLogin": -1,
+        "advancedWalletView": 1,
+        "dealSlipVersion": 0,
+        "homePage": 2,
+        "limits": 1,
+        "tools": 1,
+        "defaultTab": 5,
+        "isAllowedSwitchView": 0,
+        "defaultSlLimitTab": 1,
+        "defaultTpLimitTab": 1,
+        "editClosingLimitTools": 1,
+        "editClosingLimitTab": null,
+        "closeDealTools": 1,
+        "closeDealTab": null,
+        "newLimitOrders": 1,
+        "defaultSlOrderTab": 1,
+        "defaultTpOrderTab": 1,
+        "editLimitIfDoneExpanded": 1,
+        "editLimitTools": 1,
+        "editLimitTab": null,
+        "defaultEditSlLimitTab": 2,
+        "defaultEditTpLimitTab": 1,
+        "chartUserSettings": "",
+        "chartFavorites": "",
+        "tileChartSettings": "",
+        "tileSettings": "",
+        "chartIndicatorsSettings": "",
+        "chartsZoomSettings": "",
+        "displaySymbol": null,
+        "viewSentimentsDisclaimerClicked": "Wed, 01 Aug 2018 18:39:43 GMT",
+        "isAdditionalInfoExpanded": null,
+        "isEditLimitInfoExpanded": null,
+        "demoDepositAmount": 5000,
+        "showSignalsCharts": 1,
+        "tsArea": null,
+        "miArea": null,
+        "hlArea": null,
+        "iiArea": null,
+        "riTab": 0
+      },
+      "profileInstrument": {
+        "list": [
+          {
+            "instrument": 55601,
+            "defaultAmount": "430"
+          }
+        ],
+        "selected": 55601
+      },
+      "availableScreens": [
+        0,
+        124
+      ],
+      "csmg": "2257c6b2-bfdf-40d3-9587-a5d72f7045ee"
+    },
+    "clientParams": [
+      "500",
+      "FullSite",
+      "14400000",
+      "180000",
+      "https://videotutorial{0}.{1}/Broker{2}/{3}/Tutorials/",
+      "uplListener|jsbSmile",
+      "101",
+      "109",
+      "201",
+      "215",
+      "3000"
+    ],
+    "initialServerTime": "27/01/2021 10:22:33"
+  },
+  "isBase64": false
+}

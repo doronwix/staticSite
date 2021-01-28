@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/demoDeposit/demo-deposit-icon.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<!-- ko if: isCustomerDemo -->\r\n<div class=\"equity-demo-deposit\" data-bind=\"visible: isEligableToDemoDeposit() || obs.isProcessing()\">\r\n    <!-- ko if: isEligableToDemoDeposit() -->\r\n    <i class=\"icon-equity\" data-bind=\"click: onClick, clickBubble: false,\r\n       balloon: {\r\n        tooltipClass: 'tooltip tooltipBottom summary-tooltip customTooltip',\r\n        position: { my: 'center bottom', at: 'center top-9' },\r\n        timeout: 2000\r\n       },\r\n       attr: { title: tooltipMessage },\r\n       'data-automation': 'demodeposit-button'\">\r\n    </i>\r\n    <!-- /ko -->\r\n    <!-- ko if: obs.isProcessing() -->\r\n    <div class=\"equity-spinner\"></div>\r\n    <!-- /ko -->\r\n</div>\r\n<!-- /ko -->",
+  "isBase64": false
+}

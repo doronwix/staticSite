@@ -1,0 +1,270 @@
+﻿<table id="tblOpenDeals" class="Grid deals-grid" data-bind="with: model, printing: {}">
+    <caption class="hidden show-on-print">
+        <span data-bind="dictionaryBinding: 'openDeals_OpenDealsTitle', resourceName: 'datagrids_opendeals'"></span>
+        <!-- ko if: OpenDeals().length > 0 -->
+        <span data-bind="text: '(' + OpenDeals().length + ')'"></span>
+        <!-- /ko -->
+    </caption>
+
+    <thead id="tblOpenDeals-header-area">
+        <tr class="deals-grid-actions">
+            <th colspan="12" class="hide-on-print">
+                <a class="dark-btn"
+                   data-bind="click: function() { Positions.CloseSelected(); },
+						css: { disabled: $statesManager.States.IsMarketClosed() || $statesManager.States.IsPortfolioInactive() || !Positions.HasSelections() },
+						'data-automation': 'btnCloseDeals'">
+                    <span data-bind="dictionaryBinding: 'openDeals_CloseSelected', resourceName: 'datagrids_opendeals', isProcessing: { switchText: true }"></span>
+
+                    <!-- ko if: !OnCloseDealsEnable() -->
+                    <span class="js_processing"></span>
+                    <!-- /ko -->
+                </a>
+            </th>
+        </tr>
+        <!-- ko ifnot: OpenDeals().length <= 0 -->
+        <tr>
+            <th class="checkbox hide-on-print" data-bind="'data-automation': 'select-all-column'">
+                <div class="custom-input-wrapper">
+                    <input id="openDeals_ChkCloseDeal" type="checkbox" data-bind="checked: Positions.CheckAll" />
+                    <span></span>
+                </div>
+            </th>
+            <th colspan="2" class="th-sort" data-bind="'data-automation':'deal-column'">
+                <div class="th-cw has-action">
+                    <span data-bind="dictionaryBinding: 'openDeals_Deal', resourceName: 'datagrids_opendeals'"></span>
+                </div>
+                <div class="th-cw th-action">
+                    <fx-component-sort params="sortProperty: 'positionNumber', sortPropertiesObs: SortProperties, setSorting: SetSorting">
+                    </fx-component-sort>
+                </div>
+            </th>
+            <th data-bind="'data-automation':'amount-column'">
+                <span data-bind="dictionaryBinding: 'openDeals_Amount', resourceName: 'datagrids_opendeals'"></span>
+            </th>
+            <th class="th-sort" data-bind="'data-automation':'openrate-column'">
+                <div class="th-cw has-action">
+                    <span data-bind="dictionaryBinding: 'openDeals_OpenRate', resourceName: 'datagrids_opendeals'"></span>
+                </div>
+                <div class="th-cw th-action">
+                    <fx-component-sort params="sortProperty: 'orderRateNumeric', sortPropertiesObs: SortProperties, setSorting: SetSorting"></fx-component-sort>
+                </div>
+            </th>
+            <!-- ko if: IsValueDateColumnVisible -->
+            <th data-bind="'data-automation':'valuedate-column'">
+                <span data-bind="dictionaryBinding: 'openDeals_ValueDate', resourceName: 'datagrids_opendeals'"></span>
+            </th>
+            <!-- /ko -->
+            <th data-bind="'data-automation':'closignrate-column'">
+                <span data-bind="dictionaryBinding: 'openDeals_ClosingRate', resourceName: 'datagrids_opendeals'"></span>
+            </th>
+            <!-- ko if: DealPermissions.CustomerDealPermit() == eDealPermit.ZeroSpread-->
+            <th class="hide-resulotion" data-bind="'data-automation':'grosspl-column'">
+                <span data-bind="dictionaryBinding: 'openDeals_GrossPL', resourceName: 'datagrids_opendeals'"></span>
+                <i class="ico-wb-help customTooltipPurpose" data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom transparent-tooltip', position: { my: 'center bottom', at: 'center top-9' }, contentKey: 'openDeals_GrossPL_Tooltip', resourceName:'tooltipsStaticResource' }"></i>
+            </th>
+            <th data-bind="'data-automation':'commission-column'">
+                <span data-bind="dictionaryBinding: 'openDeals_Commission', resourceName: 'datagrids_opendeals'"></span>
+            </th>
+            <!-- /ko -->
+            <!-- ko if: DealPermissions.HasSpreadDiscount() -->
+            <th class="hide-resulotion" data-bind="'grosspl-automation':'dela-column'">
+                <span data-bind="dictionaryBinding: 'openDeals_GrossPL', resourceName: 'datagrids_opendeals'"></span>
+            </th>
+            <th data-bind="'data-automation':'spreaddiscount-column'">
+                <span data-bind="dictionaryBinding: 'openDeals_SpreadDiscount', resourceName: 'datagrids_opendeals'"></span>
+            </th>
+            <!-- /ko -->
+            <th class="min-80 th-sort" data-bind="'data-automation':'pl-column'">
+                <div class="th-cw has-action">
+                    <span data-bind="dictionaryBinding: 'openDeals_PL', resourceName: 'datagrids_opendeals'"></span>
+                    <i class="ico-wb-help customTooltipPurpose" data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom transparent-tooltip', position: { my: 'center bottom', at: 'center top-9' }, contentKey: 'openDeals_PL_Tooltip', resourceName:'tooltipsStaticResource' }"></i>
+                </div>
+                <div class="th-cw th-action">
+                    <fx-component-sort params="sortProperty: 'plNumeric', sortPropertiesObs: SortProperties, setSorting: SetSorting"></fx-component-sort>
+                </div>
+            </th>
+            <th data-bind="'data-automation':'stoploss-column'">
+                <span data-bind="dictionaryBinding: 'openDeals_StopLoss', resourceName: 'datagrids_opendeals'"></span>
+            </th>
+            <th data-bind="'data-automation':'takeprofit-column'">
+                <span data-bind="dictionaryBinding: 'openDeals_TakeProfit', resourceName: 'datagrids_opendeals'"></span>
+            </th>
+            <th class="arh hide-on-print" data-bind="'data-automation':'adj-column'">
+                <span data-bind="dictionaryBinding: 'openDeals_ADJ', resourceName: 'datagrids_opendeals'"></span>
+                <i class="ico-wb-help customTooltipPurpose" data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom transparent-tooltip', position: { my: 'center bottom', at: 'center top-9' }, contentKey: 'openDeals_ADJ_tooltip', resourceName:'tooltipsStaticResource' }"></i>
+            </th>
+        </tr>
+        <!-- /ko -->
+    </thead>
+
+    <!-- ko if: IsLoadingData() || OpenDeals().length <= 0 -->
+    <tbody>
+        <tr>
+            <td class="no-data" colspan="11">
+                <div>
+                    <!-- ko if: IsLoadingData() -->
+                    <span class="no-data-msg" data-bind="dictionaryBinding: 'waitForOpenDealsLoadMsg', resourceName: 'datagrids_opendeals'"></span>
+                    <!-- /ko -->
+                    <!-- ko if: ((OpenDeals().length <= 0) && !IsLoadingData()) -->
+                    <span class="no-data-msg" data-bind="dictionaryBinding: 'hasNoDeals', resourceName: 'datagrids_opendeals'"></span>
+
+                    <div class="no-data-lnk">
+                        <a href="javascript:void(0)" id="lnkOpenDealsNewDeal"
+                           data-bind="hidden: TotalEquity() <= 0,
+								setDialogPos: { dialogPosition: $viewModelsManager.VmDialog.dialogPosition, parentIsCollapsed: $viewModelsManager.VmAccountMarket.IsCollapsed, parentTopElement: eRefDomElementsIds.newDealRefParentTopElement, topOffset: -3, parentLeftElement: '#QuotesTable .ask-column', leftOffset: 3, RTLoffset: 10 },
+								click: function () { DialogViewModel.open(eDialog.TransactionSwitcher, {title: '', width: 700, dragStart: function () { ko.postbox.publish('new-deal-dragged', {}); }, customTitle: 'TransactionDropDown', persistent: false, dialogClass: 'deal-slip'}, eViewTypes.vTransactionSwitcher, {transactionType: eTransactionSwitcher.NewDeal}); }">
+                            <span data-bind="dictionaryBinding: 'clickHereOpenDeal', resourceName: 'datagrids_opendeals'"></span>
+                        </a>
+
+                        <a href="javascript:void(0)" id="lnkOpenDealsDeposit" data-bind="hidden: TotalEquity() > 0, click: function () { ko.postbox.publish('action-source', 'OpenDeal'); $root.VManager.RedirectToForm(eForms.Deposit, { paymentMethod: eDepositingActionType.Regular}); } ">
+                            <span data-bind="dictionaryBinding: 'clickHereDeposit', resourceName: 'datagrids_opendeals'"></span>
+                        </a>
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    <!-- /ko -->
+    <!-- ko ifnot: IsLoadingData() || OpenDeals().length <= 0 -->
+    <tbody id="tblOpenDeals-data-area" data-bind="foreach: OpenDeals">
+        <tr data-bind="css: { cursorpointer: !$parent.FlagsState.isMarketClosed() && window.componentsLoaded() }, data-automation: 'openeddeal-row'">
+            <td class="checkbox cursordefault hide-on-print">
+                <div class="custom-input-wrapper">
+                    <input type="checkbox" data-bind="checked: isChecked" />
+                    <span></span>
+                </div>
+            </td>
+            <td class="no-border align-left" data-bind="click: $component.closeDeal">
+                <div class="deal-details" data-bind="attr: { title: String.format(Dictionary.GetItem('openDeals_DealIdToolTip', 'tooltipsStaticResource'), positionNumber) }, balloon: { tooltipClass: 'tooltip tooltipBottom transparent-tooltip', position: { my: 'center bottom', at: 'center top-9' } }">
+                    <div class="bold">
+                        <span data-bind="dictionaryBinding: orderDir, prefix: 'orderDirection'" class="uppercase"></span>
+                        <span class="instrument" data-bind="instrumentName: instrumentID"></span>
+                    </div>
+
+                    <div class="smaller-font-size deal-datetime">
+                        <span data-bind="text: exeTime"></span>
+                        <span class="timezone">GMT</span>
+                    </div>
+                </div>
+            </td>
+            <td data-bind="click: $component.closeDeal">
+                <a href="javascript:void(0)" class="btn action small colored right hide-on-print"
+                   data-bind="css: { disabled: $parent.FlagsState.isMarketClosed() || !window.componentsLoaded() }">
+                    <span data-bind="dictionaryBinding: 'btnCloseDeal', resourceName: 'datagrids_opendeals'"></span>
+                </a>
+            </td>
+            <td data-bind="click: $component.closeDeal">
+                <span data-bind="text: Format.formatDealAmount(dealAmount)"></span>
+            </td>
+            <td data-bind="click: $component.closeDeal, template: { name: 'rate-template', data: Format.tenthOfPipSplitRate($data.orderRate, $data.instrumentID).label }"></td>
+            <!-- ko if: $parent.IsValueDateColumnVisible -->
+            <td class="date align-left" data-bind="click: $component.closeDeal">
+                <span data-bind="valueDateText: { valueDate: valueDate, showHour: false }"></span>
+            </td>
+            <!-- /ko -->
+            <td data-bind="click: $component.closeDeal, template: { name: 'rate-template', data: Format.tenthOfPipSplitRate($data.closingRate(), $data.instrumentID).label } ,css: { disabled: !$data.quoteIsActive() }"></td>
+            <!-- ko if: $parent.DealPermissions.CustomerDealPermit() == eDealPermit.ZeroSpread-->
+            <td class="hide-resulotion" data-bind="html: Format.addCurrencyToNumber(Format.toNumberWithThousandsSeparator($data.grosspl(), 2), $customer.prop.selectedCcyId())"></td>
+            <td data-bind="click: $component.closeDeal, html: Format.addCurrencyToNumber($data.commission(), $customer.prop.selectedCcyId())"></td>
+            <!-- /ko -->
+            <!-- ko if: $parent.DealPermissions.HasSpreadDiscount() -->
+            <td class="hide-resulotion" data-bind="click: $component.closeDeal, html: Format.addCurrencyToNumber(Format.toNumberWithThousandsSeparator($data.grosspl(), 2), $customer.prop.selectedCcyId())"></td>
+            <td data-bind="click: $component.closeDeal, html: Format.addCurrencyToNumber($data.spreadDiscountConverted(), $customer.prop.selectedCcyId())"></td>
+            <!-- /ko -->
+            <td data-bind="click: $component.closeDeal">
+                <a href="javascript:void(0)" class="left" data-bind="visible: $data.hasAdditionalPL, clickBubble: false,
+					click: function () {
+						$component.Data.selectedPLPositionNumber(positionNumber);
+
+						var options = {
+							title: String.format(Dictionary.GetItem('ContractRolloverHistory','dialogsTitles',''), positionNumber),
+							width: 980,
+							minHeight: 314,
+							dialogClass: 'fx-dialog closedDeal'
+						},
+						args = {
+							posNum: positionNumber,
+							instrumentID: $data.instrumentID,
+                            dealAmount: dealAmount,
+                            orderDir: orderDir
+						};
+
+						DialogViewModel.openAsync(eAppEvents.contractRolloverDataLoaded,
+							eDialog.ContractRollover,
+							options,
+							eViewTypes.vContractRollover,
+							args);
+						}">
+
+                    <i data-bind="visible: $data.positionNumber !== $component.Data.selectedPLPositionNumber()" class="ico-wb-more-info"></i>
+                </a>
+                <span class="small-loader left" data-bind="visible: $data.positionNumber === $component.Data.selectedPLPositionNumber()"></span>
+                <span class="bold right ltr" data-bind="html: Format.addCurrencyToNumber($data.pl(), $customer.prop.selectedCcyId()), css: { greenText: $data.plSign() >= 0, redText: $data.plSign() < 0 }"></span>
+            </td>
+            <td class="button-row cursordefault">
+                <a href="javascript:void(0)" class="btn action small colored"
+                   data-bind="click: function () { DialogViewModel.open(eDialog.EditClosingLimit, { title: dialogTitleSLDealLimit(), width: 700, persistent: false, dialogClass: 'deal-slip editLimits' }, eViewTypes.vEditClosingLimit, { orderId: orderID, limitType: eLimitType.StopLoss, isStartNavigator: false }); },
+                    css:{ 'hide-on-print': cEmptyRate === $data.slRate()}, attr: { id: 'OpenEditSL_' + positionNumber }"">
+                    <!-- ko if: cEmptyRate === $data.slRate() -->
+                    <span data-bind="dictionaryBinding: 'openDeals_AddSL', resourceName: 'datagrids_opendeals'"></span>
+                    <!-- /ko -->
+                    <!-- ko if: cEmptyRate !== $data.slRate() -->
+                    <span data-bind="template: { name: 'rate-template', data: Format.tenthOfPipSplitRate($data.slRate(), $data.instrumentID).label }"></span>
+                    <!-- /ko -->
+                </a>
+            </td>
+            <td class="button-row cursordefault">
+                <a href="javascript:void(0)" class="btn action small colored"
+                   data-bind="click: function () { DialogViewModel.open(eDialog.EditClosingLimit, { title: dialogTitleTpDealLimit(), width: 700, persistent: false, dialogClass: 'deal-slip editLimits' }, eViewTypes.vEditClosingLimit, { orderId: orderID, limitType: eLimitType.TakeProfit, isStartNavigator: false }); },
+                   css:{ 'hide-on-print': cEmptyRate === $data.tpRate()}, attr: { id: 'OpenEditTP_' + positionNumber }">
+                    <!-- ko if: cEmptyRate === $data.tpRate() -->
+                    <span data-bind="dictionaryBinding: 'openDeals_AddTP', resourceName: 'datagrids_opendeals'"></span>
+                    <!-- /ko -->
+                    <!-- ko if: cEmptyRate !== $data.tpRate() -->
+                    <span data-bind="template: { name: 'rate-template', data: Format.tenthOfPipSplitRate($data.tpRate(), $data.instrumentID).label }"></span>
+                    <!-- /ko -->
+                </a>
+            </td>
+            <td class="center cursordefault hide-on-print">
+                <a href="javascript:void(0)"
+                   data-bind="visible: adj() && $data.positionNumber !== $component.Data.selectedOFHPositionNumber() && !$data.isStock(),
+						click: function () {
+							$component.Data.selectedOFHPositionNumber($data.positionNumber);
+
+							var options = {
+								title: String.format(Dictionary.GetItem('FinanceAdjustHistory', 'dialogsTitles', ' '), $data.positionNumber),
+								width: 980,
+								minHeight: 314
+							},
+							args = {
+								posNum: $data.positionNumber
+							};
+
+							if ($data.valueDate.isValueDateEmpty) {
+								args.fromDate = $data.exeTime;
+								args.instrumentId = $data.instrumentID;
+
+								DialogViewModel.openAsync(eAppEvents.accountCardRecordsDataLoaded,
+									eDialog.AccountCardRecords,
+									options,
+									eViewTypes.vAccountCardRecords,
+									args);
+							}
+							else {
+								DialogViewModel.openAsync(eAppEvents.rolledOverDataLoaded,
+									eDialog.RolledOver,
+									options,
+									eViewTypes.vRolledOver,
+									args);
+							}
+						}">
+                    <i class="ico-wb-more-info"></i>
+                </a>
+
+                <span class="small-loader" data-bind="visible: $data.positionNumber === $component.Data.selectedOFHPositionNumber()"></span>
+            </td>
+        </tr>
+    </tbody>
+    <!-- /ko -->
+</table>

@@ -1,0 +1,5631 @@
+[
+	{
+		"resetIcon": true,
+		"instrumentId": "12847",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41263",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "27461",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "12814",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "12302",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26135",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26391",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26693",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "27205",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "28229",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "29975",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "30760",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "31272",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35342",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "37167",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39440",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41519",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42031",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42256",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "44048",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45615",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45872",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47407",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47663",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47664",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "48687",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "48943",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50224",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51247",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "52271",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "52272",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53527",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53783",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53807",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "54551",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "55087",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "57391",
+		"content": "eb34",
+		"bgColor": "#ffffff",
+		"color": "#067655",
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "59183",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "61487",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "61966",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "62255",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "63023",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2607",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2863",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "3120",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7471",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "28463",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "28719",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "31535",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "32047",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "32303",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33071",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33583",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33839",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35119",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35375",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "36622",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43823",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "44591",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "60463",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "60719",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "63535",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40206",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35631",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "12335",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "11823",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "12079",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41263",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35836",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "3375",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "22286",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "25614",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "27951",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "32559",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "1839",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "3632",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "12302",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "61710",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13615",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13359",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "24623",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "1583",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "31791",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13103",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53015",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2095",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "11278",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "25102",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "25870",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26126",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "32040",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33327",
+		"content": "eaed",
+		"bgColor": "#0079bd",
+		"color": "#ffffff",
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33796",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "34830",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35856",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "37390",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "38703",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "38928",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39182",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39694",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39950",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40718",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40720",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40976",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41488",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43278",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43280",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45326",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45582",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45871",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50702",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51504",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "54575",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "54807",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "55599",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "56846",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "57615",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "61488",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43022",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6670",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7501",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "9998",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "61198",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "63279",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "64559",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "65071",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "304",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "560",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "815",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "1327",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "1584",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2096",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2608",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2864",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "3633",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "4110",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "4655",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "5167",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "5936",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6192",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6448",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6960",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "62256",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "64815",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "65327",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "1071",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "1840",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2351",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "3121",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "4353",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "3376",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "3887",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "4911",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "5423",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "5679",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6704",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7984",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "8495",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "8751",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "9007",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "8239",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7728",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7472",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "11287",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "16398",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26638",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "25616",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "25359",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "25871",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "24590",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26382",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26895",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "12591",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6414",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13857",
+		"content": "e983",
+		"bgColor": "#e41034",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "14113",
+		"content": "e984",
+		"bgColor": "#ed820e",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "14881",
+		"content": "e986",
+		"bgColor": "#f37321",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "15393",
+		"content": "e988",
+		"bgColor": "#ec1c24",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "15905",
+		"content": "e98a",
+		"bgColor": "#134c98",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "27407",
+		"content": "e991",
+		"bgColor": "#2eaafd",
+		"color": null,
+		"fontSize": null,
+		"contentFontSize": "39px"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "30479",
+		"content": "e992",
+		"bgColor": "#2e3192",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "30991",
+		"content": "e994",
+		"bgColor": "#007dbe",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49185",
+		"content": "e996",
+		"bgColor": "#0e3b7b",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "19480",
+		"content": "e98b",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "20760",
+		"content": "e98e",
+		"bgColor": "#e60030",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "21272",
+		"content": "e990",
+		"bgColor": "#e2701b",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "17683",
+		"content": "e99b",
+		"bgColor": "#023f87",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "18451",
+		"content": "e99d",
+		"bgColor": "#ec463b",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "18707",
+		"content": "e99e",
+		"bgColor": "#43695b",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "18185",
+		"content": "e99c",
+		"bgColor": "#ed572d",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "18953",
+		"content": "e99f",
+		"bgColor": "#e6192f",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "16943",
+		"content": "e999",
+		"bgColor": "#145695",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "17455",
+		"content": "e99a",
+		"bgColor": "#007dc2",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "21774",
+		"content": "e9a0",
+		"bgColor": "#fa0019",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "22031",
+		"content": "e9a1",
+		"bgColor": "#d95923",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "22543",
+		"content": "e9a2",
+		"bgColor": "#cf0a2c",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49679",
+		"content": "e9ae",
+		"bgColor": "#b1b2b3",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "22799",
+		"content": "e9a3",
+		"bgColor": "#8d8e8b",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "23054",
+		"content": "e9a4",
+		"bgColor": "#2c2e2f",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "23310",
+		"content": "e9a5",
+		"bgColor": "#0d4b9f",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "23822",
+		"content": "e9a6",
+		"bgColor": "#8197b7",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "24078",
+		"content": "e9a7",
+		"bgColor": "#005da3",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "27663",
+		"content": "e9a8",
+		"bgColor": "#2caded",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "27918",
+		"content": "e9a9",
+		"bgColor": "#c40233",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "28175",
+		"content": "e9aa",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "28686",
+		"content": "e9ab",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "29198",
+		"content": "e9ac",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "29710",
+		"content": "e998",
+		"bgColor": "#133350",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "29966",
+		"content": "e998",
+		"bgColor": "#133351",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "30222",
+		"content": "e9ad",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50190",
+		"content": "e9af",
+		"bgColor": "#199349",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50703",
+		"content": "e9b1",
+		"bgColor": "#ae0032",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51215",
+		"content": "e9b2",
+		"bgColor": "#c02026",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50446",
+		"content": "e9b0",
+		"bgColor": "#1c418f",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "36882",
+		"content": "e9b3",
+		"bgColor": "#d02149",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "37138",
+		"content": "e9b4",
+		"bgColor": "#a41b35",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "37394",
+		"content": "e9b5",
+		"bgColor": "#003c78",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "37650",
+		"content": "e9c2",
+		"bgColor": "#003c79",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "37906",
+		"content": "ea0a",
+		"bgColor": "#e32228",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "38674",
+		"content": "e9b7",
+		"bgColor": "#00a86d",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39698",
+		"content": "e9b8",
+		"bgColor": "#00499a",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39954",
+		"content": "e9b9",
+		"bgColor": "#2896d1",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40210",
+		"content": "e9ba",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40466",
+		"content": "e9bc",
+		"bgColor": "#02489d",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40722",
+		"content": "e9bb",
+		"bgColor": "#d91920",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40978",
+		"content": "e9b6",
+		"bgColor": "#df1a2f",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41234",
+		"content": "e9bd",
+		"bgColor": "#1863a6",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42514",
+		"content": "e929",
+		"bgColor": "#e71d1c",
+		"color": null,
+		"fontSize": "23px"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42770",
+		"content": "e9c1",
+		"bgColor": "#cb0202",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43026",
+		"content": "e9be",
+		"bgColor": "#c90012",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43282",
+		"content": "e9bf",
+		"bgColor": "#ea5504",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43538",
+		"content": "e9c0",
+		"bgColor": "#e5001b",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33832",
+		"content": "e9c5",
+		"bgColor": "#ea3947",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "44289",
+		"content": "e9cc",
+		"bgColor": "#007dba",
+		"color": null,
+		"fontSize": "38px"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "44545",
+		"content": "e9cd",
+		"bgColor": "#006cb6",
+		"color": null,
+		"fontSize": "37px"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "44801",
+		"content": "e9ce",
+		"bgColor": "#ffc425",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45569",
+		"content": "e9d2",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45825",
+		"content": "e9d3",
+		"bgColor": "#ba000f",
+		"color": null,
+		"fontSize": "38px"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "46081",
+		"content": "e9d4",
+		"bgColor": "#ec1c24",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "46337",
+		"content": "e9d5",
+		"bgColor": "#019de0",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "46849",
+		"content": "e9d6",
+		"bgColor": "#af1b37",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47105",
+		"content": "e9d7",
+		"bgColor": "#267e44",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47361",
+		"content": "e9d8",
+		"bgColor": "#ed1a3a",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47617",
+		"content": "e9d9",
+		"bgColor": "#d3083c",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47873",
+		"content": "e9c4",
+		"bgColor": "#185531",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "31785",
+		"content": "e9c3",
+		"bgColor": "#002d62",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35112",
+		"content": "e9c7",
+		"bgColor": "#3c68ae",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35368",
+		"content": "e9c8",
+		"bgColor": "#2c3f88",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "34600",
+		"content": "e9c6",
+		"bgColor": "#cc1a3c",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35624",
+		"content": "e9c9",
+		"bgColor": "#0066b3",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "36136",
+		"content": "e9ca",
+		"bgColor": "#9800e0",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "36392",
+		"content": "e9cb",
+		"bgColor": "#d1a93b",
+		"color": null,
+		"fontSize": "38px"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "54020",
+		"content": "e9cf",
+		"bgColor": "#0d446d",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "54276",
+		"content": "e9d0",
+		"bgColor": "#003662",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "54532",
+		"content": "e9d1",
+		"bgColor": "#5b4d46",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "54788",
+		"content": "e9da",
+		"bgColor": "#f80f08",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "55044",
+		"content": "e9db",
+		"bgColor": "#fb641e",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "55600",
+		"content": "e9dc",
+		"bgColor": "#77b900",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "48911",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53838",
+		"content": "e9e4",
+		"bgColor": "#2e398e",
+		"color": null,
+		"fontSize": "38px"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "56111",
+		"content": "e9e5",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "56367",
+		"content": "e9e6",
+		"bgColor": "#1d70b8",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "56623",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "56715",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "57392",
+		"content": "e9e7",
+		"bgColor": "#34d864",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "8269",
+		"content": "eb4b",
+		"bgColor": "#12458b",
+		"color": "#ffffff",
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "57647",
+		"content": "e9e8",
+		"bgColor": "#007ee5",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "57904",
+		"content": "e9eb",
+		"bgColor": "#2c2f71",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "58159",
+		"content": "e9ec",
+		"bgColor": "#8c1b2d",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "58415",
+		"content": "e9ed",
+		"bgColor": "#005d7e",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "58671",
+		"content": "e9ee",
+		"bgColor": "#00529b",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "58927",
+		"content": "e9ef",
+		"bgColor": "#c80011",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "59184",
+		"content": "e9f0",
+		"bgColor": "#21368c",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "59439",
+		"content": "e9f1",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "59695",
+		"content": "e9f2",
+		"bgColor": "#db4756",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "59951",
+		"content": "e9f3",
+		"bgColor": "#004990",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "60207",
+		"content": "e9f4",
+		"bgColor": "#17a0db",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "60464",
+		"content": "ea01",
+		"bgColor": "#d31145",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "60720",
+		"content": "e9f5",
+		"bgColor": "#ef3e42",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "61231",
+		"content": "e9f6",
+		"bgColor": "#e8122d",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "61489",
+		"content": "e9f7",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "61743",
+		"content": "e9f8",
+		"bgColor": "#cc0000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "62000",
+		"content": "e9f9",
+		"bgColor": "#3c93cb",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "62257",
+		"content": "e9fa",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "62767",
+		"content": "e9fb",
+		"bgColor": "#374959",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "63024",
+		"content": "e9fc",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "63280",
+		"content": "e9fd",
+		"bgColor": "#ffffff",
+		"color": "#003399",
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "63791",
+		"content": "e9ff",
+		"bgColor": "#072f54",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "64047",
+		"content": "ea00",
+		"bgColor": "#ffffff",
+		"color": "#000000",
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "60975",
+		"content": "e9ea",
+		"bgColor": "#00939a",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "63536",
+		"content": "e9fe",
+		"bgColor": "#d31145",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2097",
+		"content": "ea02",
+		"bgColor": "#008147",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2352",
+		"content": "ea03",
+		"bgColor": "#006f51",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2609",
+		"content": "ea04",
+		"bgColor": "#ec1e24",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2865",
+		"content": "ea05",
+		"bgColor": "#cd0444",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "3122",
+		"content": "ea06",
+		"bgColor": "#006455",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "3377",
+		"content": "ea07",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "3634",
+		"content": "ea08",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "4144",
+		"content": "ea09",
+		"bgColor": "#ff6600",
+		"color": null,
+		"fontSize": "21px"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7694",
+		"content": "ea1c",
+		"bgColor": "#00b451",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6421",
+		"content": "ea17",
+		"bgColor": "#b62059",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6934",
+		"content": "ea19",
+		"bgColor": "#004c8f",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "5397",
+		"content": "ea13",
+		"bgColor": "#f99d27",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6166",
+		"content": "ea16",
+		"bgColor": "#3781c2",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7445",
+		"content": "ea1b",
+		"bgColor": "#2c386e",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7189",
+		"content": "ea1a",
+		"bgColor": "#ed1c24",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6677",
+		"content": "ea18",
+		"bgColor": "#005d9b",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "5909",
+		"content": "ea15",
+		"bgColor": "#bfa161",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "5653",
+		"content": "ea14",
+		"bgColor": "#1166dd",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "5142",
+		"content": "ea12",
+		"bgColor": "#5f68c3",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7985",
+		"content": "ea1d",
+		"bgColor": "#443f54",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "8240",
+		"content": "ea1e",
+		"bgColor": "#0eb8e8",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "8496",
+		"content": "ea1f",
+		"bgColor": "#3cc8c8",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "8752",
+		"content": "ea20",
+		"bgColor": "#298f89",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "9008",
+		"content": "ea21",
+		"bgColor": "#53ae94",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "9263",
+		"content": "ea22",
+		"bgColor": "#e20021",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "9519",
+		"content": "ea27",
+		"bgColor": "#fa641d",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "9775",
+		"content": "ea23",
+		"bgColor": "#60b735",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "10031",
+		"content": "ea24",
+		"bgColor": "#006fb7",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "10287",
+		"content": "ea25",
+		"bgColor": "#689275",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "10543",
+		"content": "ea26",
+		"bgColor": "#211f33",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "12847",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "11055",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35888",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33840",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "31767",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "27159",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35376",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "38704",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "15888",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "14895",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "29463",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13105",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "17175",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "24343",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "22551",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "29976",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "17943",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "24599",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "30231",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "24855",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "11567",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "32023",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "20503",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "18199",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "24087",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "18455",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "22807",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35120",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "21015",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "23319",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "18711",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "16919",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "23063",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "25367",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "11311",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "23575",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "21271",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "19223",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "34351",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "34864",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "14127",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "14639",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "16144",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13360",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "37423",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "25880",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "21527",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "28183",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "30743",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "37679",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "19991",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "34095",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "28695",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "31256",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "31511",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33584",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "12338",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "34607",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26903",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "20247",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13871",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "36399",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "38704",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39246",
+		"content": "e800",
+		"bgColor": "#1d7eaa",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39695",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39439",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39951",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39439",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40209",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40496",
+		"content": "ea68",
+		"bgColor": "#2896d5",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40751",
+		"content": "ea69",
+		"bgColor": "#bc2744",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41008",
+		"content": "ea6a",
+		"bgColor": "#0074ac",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41775",
+		"content": "ea6b",
+		"bgColor": "#1ea754",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42032",
+		"content": "ea6c",
+		"bgColor": "#f9a31c",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42287",
+		"content": "ea6d",
+		"bgColor": "#7a5827",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42543",
+		"content": "ea6e",
+		"bgColor": "#ec1c24",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43055",
+		"content": "ea6f",
+		"bgColor": "#ec512d",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43311",
+		"content": "ea70",
+		"bgColor": "#5a9a98",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43568",
+		"content": "ea71",
+		"bgColor": "#86d8d0",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43824",
+		"content": "ea72",
+		"bgColor": "#cf272d",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "44848",
+		"content": "ea73",
+		"bgColor": "#96bf4d",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45104",
+		"content": "ea74",
+		"bgColor": "#000000",
+		"color": "#f6eb16",
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45360",
+		"content": "ea75",
+		"bgColor": "#1861a3",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "46351",
+		"content": "ea76",
+		"bgColor": "#fbe915",
+		"color": "#000000",
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47113",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47369",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47630",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47887",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "48143",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "48655",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "48913",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49167",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49423",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49680",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49935",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50191",
+		"content": "ea87",
+		"bgColor": "#ffffff",
+		"color": "#ffffff",
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50447",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50704",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50959",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51216",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51470",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51727",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51983",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "52750",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53519",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "54287",
+		"content": "eab0",
+		"bgColor": "#d00018",
+		"color": "#ffffff",
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "56879",
+		"content": "e9e5",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "57135",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "57616",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "58160",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "58416",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "59185",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "59440",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "59952",
+		"content": "e9dc",
+		"bgColor": "#77b900",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "60176",
+		"content": "e9a5",
+		"bgColor": "#0d4b9f",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "60721",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "60976",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "61200",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "58640",
+		"content": "e9aa",
+		"bgColor": "#000000",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "61458",
+		"content": "ea0b",
+		"bgColor": "#ff4a00",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "56112",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "56368",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "56624",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "57135",
+		"content": null,
+		"bgColor": null,
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13601",
+		"content": "e982",
+		"bgColor": "#f89924",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13089",
+		"content": "e981",
+		"bgColor": "#d30f28",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "14369",
+		"content": "e985",
+		"bgColor": "#b26537",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "15137",
+		"content": "e987",
+		"bgColor": "#e30016",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "15649",
+		"content": "e989",
+		"bgColor": "#f37c20",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "30734",
+		"content": "e993",
+		"bgColor": "#115fa4",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "31502",
+		"content": "e995",
+		"bgColor": "#1b4da0",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49441",
+		"content": "e997",
+		"bgColor": "#ec008c",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "19992",
+		"content": "e98c",
+		"bgColor": "#0c3775",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "20504",
+		"content": "e98d",
+		"bgColor": "#de1324",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "21016",
+		"content": "e98f",
+		"bgColor": "#7d002f",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "19736",
+		"content": "e98b",
+		"bgColor": "#e2114b",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "21528",
+		"content": "e949",
+		"bgColor": "#fcba30",
+		"color": null,
+		"fontSize": null
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "1073",
+		"content": "eab1",
+		"bgColor": "#26ab55",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "1329",
+		"content": "eab2",
+		"bgColor": "#0a7ec2",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "1586",
+		"content": "eab3",
+		"bgColor": "#006699",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2098",
+		"content": "eab4",
+		"bgColor": "#009bdf",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2353",
+		"content": "eab5",
+		"bgColor": "#ecdde0",
+		"color": "#636466"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2610",
+		"content": "eab6",
+		"bgColor": "#ff9e16",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "2839",
+		"content": "eab7",
+		"bgColor": "#363636",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "3635",
+		"content": "eab8",
+		"bgColor": "#292929",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "3889",
+		"content": "eab9",
+		"bgColor": "#00b45e",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "4145",
+		"content": "eaba",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "4400",
+		"content": "eabb",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "4656",
+		"content": "eabc",
+		"bgColor": "#6772e5",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "61711",
+		"content": "eabd",
+		"bgColor": "#004990",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "62768",
+		"content": "eabe",
+		"bgColor": "#275a87",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "62999",
+		"content": "eabf",
+		"bgColor": "#1c3da6",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "64024",
+		"content": "eac0",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "64304",
+		"content": "eac1",
+		"bgColor": "#f27224",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "64817",
+		"content": "eac2",
+		"bgColor": "#065ef0",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "792",
+		"content": "eac3",
+		"bgColor": "#b52e83",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "4626",
+		"content": "ea0b",
+		"bgColor": "#ff4a00"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "38672",
+		"content": "ea0c",
+		"bgColor": "#ff751a"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41744",
+		"content": "ea85",
+		"bgColor": "#ea3692",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "37648",
+		"content": "ea10",
+		"bgColor": "#0071bc"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "37904",
+		"content": "ea11",
+		"bgColor": "#000000"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51534",
+		"content": "e9dd",
+		"bgColor": "#289fdd"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51790",
+		"content": "e9de",
+		"bgColor": "#28378b"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "52046",
+		"content": "e9df",
+		"bgColor": "#400500"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "52558",
+		"content": "e9e0",
+		"bgColor": "#166d80"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "52814",
+		"content": "e9e1",
+		"bgColor": "#0071bc"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53326",
+		"content": "e9e2",
+		"bgColor": "#08483a"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53582",
+		"content": "e9e3",
+		"bgColor": "#105843"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "61967",
+		"content": "eac4",
+		"bgColor": "#243367",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "62513",
+		"content": "eac5",
+		"bgColor": "#601d68",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "5168",
+		"content": "eb71",
+		"bgColor": "#ee3c25",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "5680",
+		"content": "eb72",
+		"bgColor": "#2eb7eb",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6193",
+		"content": "eac8",
+		"bgColor": "#fff200",
+		"color": "#000000"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6478",
+		"content": "ead0",
+		"bgColor": "#231f20",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6734",
+		"content": "ead1",
+		"bgColor": "#1a877c",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6990",
+		"content": "ead2",
+		"bgColor": "#0e51a2",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7246",
+		"content": "ead3",
+		"bgColor": "#29974b",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7502",
+		"content": "ead4",
+		"bgColor": "#009bd7",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "10262",
+		"content": "eac9",
+		"bgColor": "#2744a0",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "10518",
+		"content": "eaca",
+		"bgColor": "#e51635",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7729",
+		"content": "eacb",
+		"bgColor": "#e8262c",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7957",
+		"content": "eacc",
+		"bgColor": "#ec1c24",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "8470",
+		"content": "eacd",
+		"bgColor": "#0069b4",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "8981",
+		"content": "eace",
+		"bgColor": "#486aae",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "9237",
+		"content": "eacf",
+		"bgColor": "#1068b2",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "10766",
+		"content": "e943",
+		"bgColor": "#007d4e",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "10829",
+		"content": "e945",
+		"bgColor": "#69c17f",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "11022",
+		"content": "e9e9",
+		"bgColor": "#004b92",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "11085",
+		"content": "ea0d",
+		"bgColor": "#ffffff",
+		"color": "#23ba59"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "11341",
+		"content": "ead5",
+		"bgColor": "#ac1325",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "22030",
+		"content": "ead6",
+		"bgColor": " #f37321",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "25615",
+		"content": "eae0",
+		"bgColor": "#0f238c",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26647",
+		"content": "eae1",
+		"bgColor": "#084832",
+		"color": "#bed73e"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26949",
+		"content": "eae2",
+		"bgColor": "#ed1c24",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "27973",
+		"content": "eae3",
+		"bgColor": "#cf0229",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "30021",
+		"content": "eae4",
+		"bgColor": "#e41937",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "30277",
+		"content": "eae5",
+		"bgColor": "#e41937",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "31255",
+		"content": "eae6",
+		"bgColor": "#ffffff",
+		"color": "#b6bbbd"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "31784",
+		"content": "eae7",
+		"bgColor": "#52b92c",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "32260",
+		"content": "eae8",
+		"bgColor": "#ed1c24",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "32516",
+		"content": "eae9",
+		"bgColor": "#7d878d",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "32772",
+		"content": "eaea",
+		"bgColor": "#1e63a9",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33028",
+		"content": "eaeb",
+		"bgColor": "#005cb9",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33284",
+		"content": "eaec",
+		"bgColor": "#637c77",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33576",
+		"content": "eaee",
+		"bgColor": "#06357a",
+		"color": "#fdb924"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "34052",
+		"content": "eaef",
+		"bgColor": "#113297",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "34071",
+		"content": "eaf0",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "34318",
+		"content": "eaf1",
+		"bgColor": "#0b5ed8",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "34574",
+		"content": "eaf2",
+		"bgColor": "#007dc5",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "35887",
+		"content": "eaf3",
+		"bgColor": "#0057a5",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "36112",
+		"content": "eaf4",
+		"bgColor": "#e25119",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "36624",
+		"content": "eaf5",
+		"bgColor": "#6400a8",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "37136",
+		"content": "eaf6",
+		"bgColor": "#1e4164",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "37392",
+		"content": "eaf7",
+		"bgColor": "#fcaf17",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "38158",
+		"content": "eaf8",
+		"bgColor": "#0073bb",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "38191",
+		"content": "eaf9",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "38447",
+		"content": "eafa",
+		"bgColor": "#016fd0",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "38448",
+		"content": "eafb",
+		"bgColor": "#a07f33",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39952",
+		"content": "eafc",
+		"bgColor": "#a81e3e",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40464",
+		"content": "eb04",
+		"bgColor": "#176c8f",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40465",
+		"content": "ea88",
+		"bgColor": "#1c8710",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41232",
+		"content": "eb06",
+		"bgColor": "#1b639b",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41742",
+		"content": "eb07",
+		"bgColor": "#0097d4",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42254",
+		"content": "ea86",
+		"bgColor": "#f8bd0c",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42512",
+		"content": "eb0f",
+		"bgColor": "#d61930",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42799",
+		"content": "eb10",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43024",
+		"content": "eb11",
+		"bgColor": "#2e95d2",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43567",
+		"content": "eb12",
+		"bgColor": "#df0b3c",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "44046",
+		"content": "eb13",
+		"bgColor": "#ffc81c",
+		"color": "#000000"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "44302",
+		"content": "eb14",
+		"bgColor": "#df068c",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "44304",
+		"content": "eb15",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45359",
+		"content": "eb16",
+		"bgColor": "#1e3b85",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "46383",
+		"content": "eb17",
+		"bgColor": "#d63536",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "46606",
+		"content": "eb18",
+		"bgColor": "#c51f1b",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "46862",
+		"content": "eb19",
+		"bgColor": "#00a651",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "48431",
+		"content": "eb1a",
+		"bgColor": "#f5601e",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49422",
+		"content": "eb1b",
+		"bgColor": "#008652",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49455",
+		"content": "eb1c",
+		"bgColor": "#cc0000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49711",
+		"content": "eb1d",
+		"bgColor": "#e9314b",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50223",
+		"content": "eb1e",
+		"bgColor": "#d10f13",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50479",
+		"content": "eb1f",
+		"bgColor": "#414141",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50735",
+		"content": "eb20",
+		"bgColor": "#004fa3",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50991",
+		"content": "eb21",
+		"bgColor": "#0177b5",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51214",
+		"content": "eb22",
+		"bgColor": "#135190",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51726",
+		"content": "eb23",
+		"bgColor": "#ed1b2e",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51982",
+		"content": "eb24",
+		"bgColor": "#1d2d6c",
+		"color": "#289cdc"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "52015",
+		"content": "eb25",
+		"bgColor": "#2c3678",
+		"color": "#fcc73d"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "52496",
+		"content": "eb26",
+		"bgColor": "#f8b51a",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "52527",
+		"content": "eb27",
+		"bgColor": "#08958f",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53006",
+		"content": "eb28",
+		"bgColor": "#0077c0",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53271",
+		"content": "eb29",
+		"bgColor": "#130c67",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53295",
+		"content": "eb2a",
+		"bgColor": "#2590d8",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53518",
+		"content": "eb2b",
+		"bgColor": "#205787",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "54064",
+		"content": "eb2c",
+		"bgColor": "#000000",
+		"color": "#75c154"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "54831",
+		"content": "eb2d",
+		"bgColor": "#007cc2",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "55566",
+		"content": "eb2e",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "55822",
+		"content": "eb2f",
+		"bgColor": "#6f7a8a",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "56334",
+		"content": "eb30",
+		"bgColor": "#0065a4",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "56590",
+		"content": "eb31",
+		"bgColor": "#0079ad",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "56847",
+		"content": "eb32",
+		"bgColor": "#092965",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "57103",
+		"content": "eb33",
+		"bgColor": "#15823b",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "57614",
+		"content": "eb35",
+		"bgColor": "#1d4592",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "57870",
+		"content": "eb36",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "58127",
+		"content": "eb37",
+		"bgColor": "#003967",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "58638",
+		"content": "eb38",
+		"bgColor": "#00447b",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "58894",
+		"content": "eb39",
+		"bgColor": "#0099d8",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "59406",
+		"content": "eb3b",
+		"bgColor": "#00446a",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "59663",
+		"content": "eb3c",
+		"bgColor": "#f58426",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "59918",
+		"content": "eb3d",
+		"bgColor": "#12478a",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "59919",
+		"content": "eb3e",
+		"bgColor": "#352314",
+		"color": "#c4d92d"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "60942",
+		"content": "eb3f",
+		"bgColor": "#024978",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6191",
+		"content": "eb40",
+		"bgColor": "#ff0000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6222",
+		"content": "eb41",
+		"bgColor": "#ff0000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "63767",
+		"content": "eb42",
+		"bgColor": "#e81d2a",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "64279",
+		"content": "eb43",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "64791",
+		"content": "eb44",
+		"bgColor": "#e6001b",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "65047",
+		"content": "eb45",
+		"bgColor": "#32a07b",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "6959",
+		"content": "eb46",
+		"bgColor": "#c6093b",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7216",
+		"content": "eb47",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7758",
+		"content": "eb48",
+		"bgColor": "#ffd200",
+		"color": "#000000"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "7983",
+		"content": "eb49",
+		"bgColor": "#006cb7",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "8013",
+		"content": "eb4a",
+		"bgColor": "#1ba21b",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "8781",
+		"content": "eb4c",
+		"bgColor": "#27356f",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "8974",
+		"content": "eb4d",
+		"bgColor": "#00664a",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "9037",
+		"content": "eb4e",
+		"bgColor": "#ed1c24",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "9495",
+		"content": "eb4f",
+		"bgColor": "#199ecf",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "9549",
+		"content": "eb50",
+		"bgColor": "#fa5d1d",
+		"color": "#2da8fc"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "9742",
+		"content": "eb51",
+		"bgColor": "#6b489d",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42510",
+		"content": "eb0e",
+		"bgColor": "#fba425",
+		"color": "#000000"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "58895",
+		"content": "eb3a",
+		"bgColor": "#0095d8",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "22542",
+		"content": "ea82",
+		"bgColor": "#4b63ae",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "22798",
+		"content": "ea83",
+		"bgColor": "#00a94f",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40208",
+		"content": "ea84",
+		"bgColor": "#6e6e6e",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "57393",
+		"content": "ea89",
+		"bgColor": "#a07f33",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "58928",
+		"content": "ea8a",
+		"bgColor": "#2590d8",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "60439",
+		"content": "ea8b",
+		"bgColor": "#ffffff",
+		"color": "#b6bbbd"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "11538",
+		"content": "ea8c",
+		"bgColor": "#173A79",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "11791",
+		"content": "ea8d",
+		"bgColor": "#234383",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "12339",
+		"content": "ea8e",
+		"bgColor": "#4A8CFF",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "12593",
+		"content": "ea8f",
+		"bgColor": "#6C3C97",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "12849",
+		"content": "ea90",
+		"bgColor": "#e31936",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13106",
+		"content": "ea91",
+		"bgColor": "#00305a",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13361",
+		"content": "ea92",
+		"bgColor": "#2857AF",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13617",
+		"content": "ea93",
+		"bgColor": "#63A844",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "13872",
+		"content": "ea94",
+		"bgColor": "#0c214d",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "14384",
+		"content": "ea97",
+		"bgColor": "#5b2f91",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "15152",
+		"content": "ea98",
+		"bgColor": "#E94D97",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "15663",
+		"content": "ea99",
+		"bgColor": "#C31230",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "15919",
+		"content": "ea9a",
+		"bgColor": "#522972",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "16175",
+		"content": "ea9b",
+		"bgColor": "#001138",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "16431",
+		"content": "ea9c",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "16687",
+		"content": "ea9d",
+		"bgColor": "#134b97",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "16944",
+		"content": "ea9e",
+		"bgColor": "#0070ac",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "17200",
+		"content": "ea9f",
+		"bgColor": "#ffffff",
+		"color": "#000000"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "17456",
+		"content": "eaa0",
+		"bgColor": "#0A5991",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "17711",
+		"content": "eaa1",
+		"bgColor": "#ffffff",
+		"color": "#000000"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "17967",
+		"content": "eaa2",
+		"bgColor": "#008cd2",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "18223",
+		"content": "eaa3",
+		"bgColor": "#0060A9",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "18735",
+		"content": "eaa5",
+		"bgColor": "#006ec7",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "19247",
+		"content": "eaa6",
+		"bgColor": "#E31B23",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "19503",
+		"content": "ead7",
+		"bgColor": "#B38634",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "19759",
+		"content": "ead8",
+		"bgColor": "#35792a",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "20015",
+		"content": "ead9",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "21295",
+		"content": "eb09",
+		"bgColor": "#36d664",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "21551",
+		"content": "eb0a",
+		"bgColor": "#F84018",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "21808",
+		"content": "eb0b",
+		"bgColor": "#F48120",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "22319",
+		"content": "eadb",
+		"bgColor": "#020267",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "22575",
+		"content": "eb0d",
+		"bgColor": "#D6222F",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "5937",
+		"content": "eb52",
+		"bgColor": "#ff0083",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "14128",
+		"content": "ea95",
+		"bgColor": "#dc1125",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "18479",
+		"content": "ea96",
+		"bgColor": "#0A83BC",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "20527",
+		"content": "eaa4",
+		"bgColor": "#005480",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "20783",
+		"content": "eada",
+		"bgColor": "#128CED",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "23599",
+		"content": "eac6",
+		"bgColor": "#2b4f4e",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "23855",
+		"content": "eac7",
+		"bgColor": "#000184",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "24111",
+		"content": "eadc",
+		"bgColor": "#ef4135",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "24367",
+		"content": "eadd",
+		"bgColor": "#005295",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "24624",
+		"content": "eade",
+		"bgColor": "#ed1d24",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "24880",
+		"content": "eadf",
+		"bgColor": "#7f187f",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "25136",
+		"content": "eafd",
+		"bgColor": "#fc0000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "25903",
+		"content": "eb08",
+		"bgColor": "#00aeef",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26159",
+		"content": "eb0c",
+		"bgColor": "#7749a3",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26671",
+		"content": "eb53",
+		"bgColor": "#0052cc",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "26927",
+		"content": "eb54",
+		"bgColor": "#0056a8",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "27183",
+		"content": "eb55",
+		"bgColor": "#0e527e",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "27695",
+		"content": "eb5b",
+		"bgColor": "#d52f2f",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "28207",
+		"content": "eb5c",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "28464",
+		"content": "eb5d",
+		"bgColor": "#ef3e42",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "28720",
+		"content": "eb5e",
+		"bgColor": "#0056a2",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "28976",
+		"content": "eb5f",
+		"bgColor": "#a6700e",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "29232",
+		"content": "eb60",
+		"bgColor": "#eb7100",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "29488",
+		"content": "eb61",
+		"bgColor": "#008acd",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "29743",
+		"content": "eb62",
+		"bgColor": "#ef413d",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "29999",
+		"content": "eb63",
+		"bgColor": "#584baf",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "30511",
+		"content": "eb64",
+		"bgColor": "#000001",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "30768",
+		"content": "eb65",
+		"bgColor": "#d11820",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "31023",
+		"content": "eb66",
+		"bgColor": "#005392",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "31279",
+		"content": "eb67",
+		"bgColor": "#009d57",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "32304",
+		"content": "eb69",
+		"bgColor": "#f66711",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "32560",
+		"content": "eb6a",
+		"bgColor": "#fedf18",
+		"color": "#000000"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "32816",
+		"content": "eb6b",
+		"bgColor": "#00c805",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33072",
+		"content": "eb6c",
+		"bgColor": "#29b5e8",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33328",
+		"content": "eb6d",
+		"bgColor": "#0081c9",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33585",
+		"content": "eb6e",
+		"bgColor": "#273240",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "33841",
+		"content": "eb6f",
+		"bgColor": "#43b02a",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "34096",
+		"content": "eb70",
+		"bgColor": "#ffac00",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "25392",
+		"content": "eafe",
+		"bgColor": "#00acd8",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "27439",
+		"content": "eaff",
+		"bgColor": "#727175",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "32048",
+		"content": "eb00",
+		"bgColor": "#d12421",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "38417",
+		"content": "eb77",
+		"bgColor": "#ff0033",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "38725",
+		"content": "eb78",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39471",
+		"content": "eb79",
+		"bgColor": "#e61a50",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39727",
+		"content": "eb7a",
+		"bgColor": "#ec1c29",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "39983",
+		"content": "eb7b",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40239",
+		"content": "eb7c",
+		"bgColor": "#2a73cc",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40497",
+		"content": "eb7d",
+		"bgColor": "#ffc629",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "40752",
+		"content": "eb7e",
+		"bgColor": "#fa7035",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41009",
+		"content": "eb7f",
+		"bgColor": "#fa4616",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41521",
+		"content": "eb80",
+		"bgColor": "#602d36",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "41776",
+		"content": "eb81",
+		"bgColor": "#107bd4",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42033",
+		"content": "eb82",
+		"bgColor": "#3973e6",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42544",
+		"content": "eb83",
+		"bgColor": "#e23744",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "42801",
+		"content": "eb84",
+		"bgColor": "#fc2779",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43056",
+		"content": "eb85",
+		"bgColor": "#fe3230",
+		"color": "#000000"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43312",
+		"content": "eb86",
+		"bgColor": "#6aba4f",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43569",
+		"content": "eb87",
+		"bgColor": "#2a2939",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "43825",
+		"content": "eb88",
+		"bgColor": "#0ea0e9",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "44080",
+		"content": "eb89",
+		"bgColor": "#ff4500",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "44849",
+		"content": "eb8a",
+		"bgColor": "#1ba638",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45105",
+		"content": "eb8b",
+		"bgColor": "#d73227",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45617",
+		"content": "eb8c",
+		"bgColor": "#00bacc",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "45873",
+		"content": "eb8d",
+		"bgColor": "#f06e30",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "46128",
+		"content": "eb8e",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "46384",
+		"content": "eb8f",
+		"bgColor": "#b92b27",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "46640",
+		"content": "eb90",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "46897",
+		"content": "eb91",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47152",
+		"content": "eb92",
+		"bgColor": "#f56d00",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47665",
+		"content": "eb93",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "47920",
+		"content": "eb94",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "48178",
+		"content": "eb95",
+		"bgColor": "#17479d",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "48434",
+		"content": "eb96",
+		"bgColor": "#ef5b34",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "48690",
+		"content": "eb97",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "48946",
+		"content": "eb98",
+		"bgColor": "#88714c",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49200",
+		"content": "eb99",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49456",
+		"content": "eb9a",
+		"bgColor": "#5952ff",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "49712",
+		"content": "eb9b",
+		"bgColor": "#3db249",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50225",
+		"content": "eb9c",
+		"bgColor": "#0080ff",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "50481",
+		"content": "eb9d",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51248",
+		"content": "eb9e",
+		"bgColor": "#ff3344",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51505",
+		"content": "eb9f",
+		"bgColor": "#cf4e2a",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51745",
+		"content": "eba0",
+		"bgColor": "#000000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "51989",
+		"content": "eba1",
+		"bgColor": "#532f90",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "52245",
+		"content": "eba2",
+		"bgColor": "#003da6",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "52501",
+		"content": "eba3",
+		"bgColor": "#ff0000",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "52757",
+		"content": "eba4",
+		"bgColor": "#1766a6",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53013",
+		"content": "eba5",
+		"bgColor": "#3c78bb",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53296",
+		"content": "eba6",
+		"bgColor": "#00bbdc",
+		"color": "#ffffff"
+	},
+	{
+		"resetIcon": true,
+		"instrumentId": "53551",
+		"content": "eba7",
+		"bgColor": "#f44238",
+		"color": "#ffffff"
+	}
+]

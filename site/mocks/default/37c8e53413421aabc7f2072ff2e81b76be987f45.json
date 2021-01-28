@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/devices/web/uilayer/viewmodels/Deals/NewDealViewModel.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define(\r\n    'deviceviewmodels/Deals/NewDealViewModel',\r\n    [\r\n        'require',\r\n        'configuration/initconfiguration',\r\n        'deviceviewmodels/Deals/Modules/NewDealModule'\r\n    ],\r\n    function NewDealDefault(require) {\r\n        var settings = require('configuration/initconfiguration').NewDealConfiguration,\r\n            Module = require('deviceviewmodels/Deals/Modules/NewDealModule');\r\n\r\n        var createViewModel = function (params) {\r\n            var viewModel = new Module.ViewModel();\r\n\r\n            var currentSettings = Object.assign(settings, params);\r\n            viewModel.init(currentSettings);\r\n\r\n            return viewModel;\r\n        };\r\n\r\n        return {\r\n            viewModel: {\r\n                createViewModel: createViewModel\r\n            }\r\n        };\r\n    }\r\n);\r\n",
+  "isBase64": false
+}

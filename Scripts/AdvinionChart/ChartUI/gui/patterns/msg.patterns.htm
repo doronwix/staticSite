@@ -1,0 +1,73 @@
+﻿<alert-container>
+           <div  class="chart-header" id="%id%" >
+               %html%
+           </div>
+           <div class="clear"></div>
+       </alert-container> 
+            
+        <alert-pattern>
+            <div %style% id="%id%" class="alert-%type% alert-container" groupid="alert-group-%group%" point="%point%" pointnode="%pointnode%" grouptotal="%grouptotal%" showdata="%showdata%" > 
+                <span>%title%</span>
+                <div style="position:relative; display: none;" class="a-top aler-message" >
+                    <div class="alert-array" style="bottom: 6px; bottom: auto;"> <div></div> 
+                </div>
+                    %alertdata%
+                </div>
+                <div class="alert-%type% alert-container-clone"  style="display: none" >
+                    <span>%title%</span>
+                </div>
+            </div> 
+        </alert-pattern>
+        
+        
+
+        <alert-group-pattern>
+            <div %style% id="%id%" class="alert-group" pointnode="%pointnode%" grouptotal="%grouptotal%">%html%</div>
+        </alert-group-pattern>
+
+        
+        <alert-news-article>
+            <div class="alert-event-news-article">
+                <img src="%img-srs%" style="%img-style%" class="alert-event-news-article-img"/>
+                <a href="%link-title%" class="alert-event-news-article-title">%title%</a>
+                <span class="alert-event-news-article-textdate">%textdate%</span>
+            </div>
+        </alert-news-article>
+        
+        
+          <alert-candlesticks-patterns>
+            <div class="alert-event-candlesticks-patterns">
+                <img src="%img-srs%" style="%img-style%" class="alert-event-candlesticks-patterns-img"/>
+                <span class="alert-event-candlesticks-patterns-title">%title%</span>
+                <span class="alert-event-candlesticks-patterns-icon icon-%type%"></span>
+                <span class="alert-event-candlesticks-patterns-textdate">%textdate%</span>
+            </div>
+        </alert-candlesticks-patterns>
+
+        
+        <alert-dividends>
+            <div class="alert-event-dividends">
+                <span class="alert-event-dividends-title">%title%</span>
+                <span class="alert-event-dividends-text">%text%</span>
+            </div>
+        </alert-dividends>
+        
+        
+        <alert-economic>
+                 <div class="alert-event-economic">
+                     <a href="%link-title%" class="alert-event-economic-title">%title%</a>
+                      <span class="alert-event-economic-date">%date%</span>
+                      <span class="alert-event-economic-icon icon-%type%"></span>
+                      <span class="alert-event-dividends-text">%text%</span>
+                 </div>
+        </alert-economic>
+        
+
+        
+
+
+        <alert-splitstock>
+                 <div class="alert-event-splitstock">
+                      <span class="alert-event-dividends-text">%text%</span>
+                 </div>
+        </alert-splitstock>

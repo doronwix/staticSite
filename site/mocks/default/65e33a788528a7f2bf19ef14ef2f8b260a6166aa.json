@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/charts_resources.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"chartline_ClosingRate\":\"Closing Rate\",\"chartline_ClosingRate_Short\":\"C/R\",\"chartline_CurrentRate\":\"Current Rate\",\"chartline_CurrentRate_Short\":\"C/R\",\"chartline_IfDoneClosingRate\":\"If Done Closing Rate\",\"chartline_IfDoneClosingRate_Short\":\"C/R\",\"chartline_IfDoneStopLoss\":\"If done Stop Loss\",\"chartline_IfDoneStopLoss_Short\":\"S/L\",\"chartline_IfDoneTakeProfit\":\"If done Take Profit\",\"chartline_IfDoneTakeProfit_Short\":\"T/P\",\"chartline_LimitLevel\":\"Limit Order Level\",\"chartline_LimitLevel_Short\":\"L/L\",\"chartline_OpenRate\":\"Deal Rate\",\"chartline_OpenRate_Short\":\"D/R\",\"chartline_PriceAlertRate\":\"Price Level\",\"chartline_StopLoss\":\"Stop Loss\",\"chartline_StopLoss_Short\":\"S/L\",\"chartline_TakeProfit\":\"Take Profit\",\"chartline_TakeProfit_Short\":\"T/P\"}",
+  "isBase64": false
+}

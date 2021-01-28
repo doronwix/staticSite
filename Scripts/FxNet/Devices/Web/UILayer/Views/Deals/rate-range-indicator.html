@@ -1,0 +1,22 @@
+<div class="rate-indicator">
+    <div class="period-label"
+        data-bind="text: Dictionary.GetItem('periodLabel' + Data.id, 'deals_DealMarketInfoTool'), 'data-automation': 'period-label-' + Data.id"></div>
+    <div class="period-scale">
+        <div class="scale-label">
+            <span data-bind="template: { name: 'rate-template', data: Format.tenthOfPipSplitRate(Data.lowValue(), Data.instrumentId).label }, 'data-automation': 'scale-label-low-' + Data.id"></span>
+        </div>
+        <div class="scale">
+            <!-- ko if:!General.isEmptyValue(Data.lowValue()) && !General.isEmptyValue(Data.currentRate()) -->
+            <div class="scale-rate rtl-scale" data-bind="style: {'left': (100 - Data.range()) + '%'}, 'data-automation': 'scale-indicator-rtl-' + Data.id"></div>
+            <div class="scale-rate" data-bind="style: {'left': Data.range() + '%'}, 'data-automation': 'scale-indicator-' + Data.id"></div>
+            <!-- /ko -->
+            <div class="scaleq"></div>
+            <div class="scaleq"></div>
+            <div class="scaleq"></div>
+            <div class="scaleq"></div>
+        </div>
+        <div class="scale-label">
+            <span data-bind="template: { name: 'rate-template', data: Format.tenthOfPipSplitRate(Data.highValue(), Data.instrumentId).label }, 'data-automation': 'scale-label-high-' + Data.id"></span>
+        </div>
+    </div>
+</div>

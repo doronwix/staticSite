@@ -1,0 +1,106 @@
+﻿<!-- ko component: {  name: 'fx-component-deal-tools', params: {
+    transArgs: $viewModelsManager.VManager.GetViewArgs(eViewTypes.vPriceAlerts) }
+} --><!-- /ko -->
+<div class="dscol tradeticket" data-bind="visible: Data.showTransaction()">
+    <div id="TransactionDropDown" class="slip-custom-header">
+        <!-- ko component: { name: 'fx-component-dynamic-title-slip' } --><!-- /ko -->
+        <!-- ko component: { name: 'fx-component-slip-toggle' } --><!-- /ko -->
+    </div>
+    <div class="ticket-content full-height">
+        <div class="trade-area">
+            <div class="trade-content styled-scroll">
+                <div class="trade-row instrument-select">
+                    <label id="lblInstrumentLabel" class="trade-label" data-bind="dictionaryBinding: 'lblInstrumentLabel', resourceName: 'limits_NewPriceAlert'"></label>
+                    <!-- ko component: { name: 'fx-component-dropdown-instrument-search', params: { selectedInstrumentId: Data.selectedInstrument,
+                            suffixId: 'newLimit', searchPostBoxTopic: 'new-limit-search-complete' } } -->
+                    <!-- /ko -->
+                </div>
+                <div class="trade-row direction-select">
+                    <div class="direction-row limitdir">
+                        <div class="rates" data-bind="clearQuoteColor: Data.bid, css: { down: Data.isDown, up: Data.isUp, disabled: Data.isStock }">
+                            <span id="lblLimitSellFirst" data-bind="text: Data.bidLabel.First">0.00</span><span
+                                id="lblLimitSellMiddle" data-bind="text: Data.bidLabel.Middle" class="middle">00</span><span
+                                id="lblLimitSellLast" data-bind="text: Data.bidLabel.Last">0</span>
+                        </div>
+                        <div id="btnSell" class="buttons gray sell" data-bind="css: { active: Data.isShowSellBox }, click: Data.sellBtnClick">
+                            <span id="lblLimitSellTitle" data-bind="dictionaryBinding: 'lblSellTitle', resourceName: 'limits_NewPriceAlert'"></span>
+                            <!-- ko ifnot: Data.isNonForex() -->
+                            <span id="lblLimitSellBaseSymbolName" data-bind="text: Data.baseSymbolName">%EUR</span>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                    <div class="direction-row limitdir">
+                        <div class="rates" data-bind="clearQuoteColor: Data.ask, css: { down: Data.isDown, up: Data.isUp }">
+                            <span id="lblLimitBuyFirst" data-bind="text: Data.askLabel.First">0.00</span><span id="lblLimitBuyMiddle" data-bind="text: Data.askLabel.Middle" class="middle">00</span><span id="lblLimitBuyLast" data-bind="text: Data.askLabel.Last">0</span>
+                        </div>
+                        <div id="btnLimitBuy" class="buttons gray buy" data-bind="css: { active: Data.isShowBuyBox }, click: Data.buyBtnClick">
+                            <span id="lblLimitBuyTitle" data-bind="dictionaryBinding: 'lblBuyTitle', resourceName: 'limits_NewPriceAlert'"></span>
+                            <!-- ko ifnot: Data.isNonForex() -->
+                            <span id="lblLimitBuyBaseSymbolName" data-bind="text: Data.baseSymbolName">%EUR</span>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+                <div class="trade-row amspinner">
+                    <label id="lblLimitAmount" class="trade-label">
+                        <span data-bind="dictionaryBinding: 'txtPriceAlertAmount', resourceName: 'limits_NewPriceAlert'"></span>
+                    </label>
+                    <div class="custom-select-wrapper">
+                        <div class="spinner-field">
+                            <div class="input-special" data-bind="css:{ focus: Data.enableLimitLevel() || Data.orderDir()!= eOrderDir.None }, openLimitSpinner: Data.openLimit, spinnerOptions: { input: '#jsLimitLevel', min1: LimitLevelField.min1, max1: LimitLevelField.max1, min2: LimitLevelField.min2, max2: LimitLevelField.max2, step: LimitLevelField.step, page: 1, numberFormat: LimitLevelField.format, culture: 'noThousandsSeparator'}">
+                                <div class="validation-holder noerr-border" data-bind="css: {error: !Data.openLimit.isValid(), focus: (General.isEmptyValue(Data.openLimit()) && Data.orderDir() != eOrderDir.None)}, validationOptions: { insertMessages: false, errorElementClass: 'error', decorateInputElement: false }">
+                                    <input type="number"
+                                        id="jsLimitLevel"
+                                        name="limitLevel"
+                                        step="any"
+                                        autocomplete="off"
+                                        maxlength="10"
+                                        data-bind="textInput: Data.openLimit, hasFocus: Data.orderDir()!= eOrderDir.None , event: { focus: function() { Data.enableLimitLevel(true); return true; }}, css: {error: !Data.openLimit.isValid()}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conversion-info">
+                        <ul class="limit-info data-close" data-bind="css: { sell: Data.isShowSellBox(), buy: Data.isShowBuyBox() || Data.orderDir() == eOrderDir.None }">
+                            <li>
+                                <span id="dlgNewLimitRateAsk" class="smaller-than" data-bind="text: Format.tenthOfPipSplitRate(Data.lowerRangeNear(), Data.selectedInstrument()).label.first"></span><span id="dlgNewLimitRateAsk1" data-bind="text: Format.tenthOfPipSplitRate(Data.lowerRangeNear(), Data.selectedInstrument()).label.last" class="smaller"></span>
+                            </li>
+                            <li>
+                                <span id="dlgNewLimitRateBid" class="bigger-than" data-bind="text: Format.tenthOfPipSplitRate(Data.higherRangeNear(), Data.selectedInstrument()).label.first"></span><span id="dlgNewLimitRateBid1" data-bind="text: Format.tenthOfPipSplitRate(Data.higherRangeNear(), Data.selectedInstrument()).label.last" class="smaller"></span>
+                            </li>
+                        </ul>
+                        <!-- ko if: Data.percentageFromMarketRate -->
+                        <ul class="limit-info data-close percentage">
+                            <li>
+                                <span data-bind="text: Data.percentageFromMarketRate"></span>&nbsp;<span data-bind="dictionaryBinding: 'txtFromMarketRate', resourceName: 'limits_NewPriceAlert'"></span>
+                            </li>
+                        </ul>
+                        <!-- /ko -->
+                    </div>
+                </div>
+                <!-- ko if: Data.priceAlertExist -->
+                <div class="trade-row">
+                    <div class="deal-infonote warning">
+                        <span id="paExists" data-bind="dictionaryBinding: 'priceAlertExist', resourceName: 'limits_NewPriceAlert'"></span>
+                    </div>
+                </div>
+            <!-- /ko -->
+
+            </div>
+            <div class="trade-action shadowtop">
+                <a id="btnLimitOrder" class="btn big deal right" href="javascript:void(0)" data-bind="disable: !Data.OrderButtonEnabled(),
+                    css: { disabled: !Data.OrderButtonEnabled(), isprocessing: Data.isProcessing() },
+                    click: debounce(function () {
+                        if(!Data.OrderButtonEnabled()) return;
+                        OrderButtonHandler();
+                        ko.postbox.publish('new-limit-submit');
+                    })">
+                    <span id="btnContent" data-bind="dictionaryBinding: 'btnSetAlert', resourceName: 'limits_NewPriceAlert', isProcessing: { switchText: true }"></span>
+                    <!-- ko if: Data.isProcessing() -->
+                        <span class="js_processing"></span>
+                    <!-- /ko -->
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+﻿<div class="questionnaire-support">
+	<header>
+		<h4 data-bind="dictionaryBinding: 'lblAnyQuestions', resourceName: 'support'"></h4>
+		<p data-bind="dictionaryBinding: 'lblExperts', resourceName: 'support'"></p>
+	</header>
+
+	<div>
+		<ul>
+            <!-- ko if: isClickChatEnabled -->
+			<li>
+				<a id="lnkClickSnapChat" data-bind="click: function(){ googleTagManager.StartChat(); ko.postbox.publish('support-interaction', 'livechat'); }">
+					<i class="ico-sh-live-chat"></i>
+					<span data-bind="dictionaryBinding:'lnkClickChat', resourceName: 'support'"></span>
+				</a>
+            </li>
+            <!-- /ko -->
+			<li>
+				<a id="lnkEmailResponse" data-bind="attr: { 'href': lnkEmailResponse}, click: function(){ko.postbox.publish('support-interaction', 'email'); return true;}">
+					<i class="ico-sh-email"></i>
+					<span data-bind="dictionaryBinding:'lblEmailResponse', resourceName: 'support'"></span>
+				</a>
+            </li>
+			<li>
+				<a data-bind="attr: { href: 'tel: ' + lblCompliancePhone}, click: function(){ko.postbox.publish('support-interaction','callus'); return true;}">
+					<i class="ico-sh-outgoing-call"></i>
+					<span data-bind="dictionaryBinding:'lblCallUs', resourceName: 'support'"></span>
+				</a>
+            </li>
+            <!-- ko if: isCallMeBackEnabled -->
+            <li>
+                <!-- ko if: enableChat -->
+                <a id="lnkCallBack" data-bind="click: function(){onCallBackClick(); ko.postbox.publish('start-callback-request-chat');}">
+                    <i class="ico-sh-incomming-call"></i>
+                    <span data-bind="dictionaryBinding:'lblCallMeBack', resourceName: 'support'"></span>
+                </a>
+                <!-- /ko -->
+                <!-- ko ifnot: enableChat -->
+                <a id="lnkCallBack" data-bind="attr: { 'href': callBackLink, 'target': '_blank'}, click: function(){ onCallBackClick(); return true;}">
+                    <i class="ico-sh-incomming-call"></i>
+                    <span data-bind="dictionaryBinding:'lblCallMeBack', resourceName: 'support'"></span>
+                </a>
+                <!-- /ko -->
+            </li>
+            <!-- /ko -->
+		</ul>
+	</div>
+</div>

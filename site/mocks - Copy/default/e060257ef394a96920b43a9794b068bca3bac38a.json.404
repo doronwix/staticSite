@@ -1,0 +1,6 @@
+{
+  "requestUrl": "/webpl3/Account/GetToken",
+  "contentType": "application/javascript",
+  "statusCode": 200,
+  "data": {}
+}

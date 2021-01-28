@@ -1,0 +1,90 @@
+@icon-font-size: 13px;
+
+.icon {
+  font-size: @icon-font-size;
+  font-family: "web-ico-font";
+  line-height: 1;
+  vertical-align: middle;
+  background-image: none !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.2s ease-in-out;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  color: #999999;
+}
+
+.tooltipWrapper {
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid #000;
+  }
+
+  .tooltipContent {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: 120px;
+    bottom: calc(@icon-font-size + 2px);
+    left: 50%;
+    margin-left: -60px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 100%; /* At the bottom of the tooltip */
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: black transparent transparent transparent;
+    }
+  }
+
+  &:hover {
+    & .tooltipContent {
+      visibility: visible;
+    }
+  }
+}
+
+.ico-ss-tooltip {
+  &::before {
+    content: "\e937";
+  }
+}
+
+.ico-ss-more-info {
+  font-size: calc(@icon-font-size - 2px);
+  &::before {
+    content: "\e935";
+  }
+}
+
+.ico-ss-link {
+  &::before {
+    content: "\e934";
+  }
+}
+
+.ico-ss-plus {
+  &::before {
+    content: "\e906";
+  }
+}
+
+.ico-ss-remove {
+  &::before {
+    content: "\e907";
+  }
+}

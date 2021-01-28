@@ -1,0 +1,22 @@
+﻿<!--ko if: visible-->
+<div class="row" data-bind="css: {valid : isValid() && validationOn(), error : !isValid() && validationOn(), focused: focused() } ">
+    <div class="agreement blue-label" data-bind="attr: {id:name + 'Label'}">
+        <div class="custom-input-wrapper">
+            <input type="checkbox" name="agree" id="agree" data-bind="checked: checkBoxValue, 
+                       event :{ blur: function(){focused(false);}, focus: function(){ focused(true);} }">
+            <span></span>
+        </div>
+        <label for="agree">
+            <span data-bind="html: text"></span>
+            <!--ko if: tooltip !== '' -->
+            <fx-tooltip params="tooltip:tooltip, id: name"></fx-tooltip>
+            <!--/ko-->
+        </label>
+    </div>
+    <!-- validation balloon -->
+    <!--ko ifnot: isValid -->
+    <fx-question-validation-balloon></fx-question-validation-balloon>
+    <!--/ko-->
+</div>
+
+<!--/ko-->

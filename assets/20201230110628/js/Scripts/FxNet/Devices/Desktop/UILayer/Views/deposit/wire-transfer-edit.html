@@ -1,0 +1,31 @@
+﻿<div>
+    <div class="withdrawal-comments">
+        <label for="comments" data-bind="text: Dictionary.GetItem('lblComment', 'DepositBackOffice')"></label>
+        <fx-wire-transfer-comments params="comment: Data.selectedComment"></fx-wire-transfer-comments>
+    </div>
+
+    <!-- ko if: Data.isApproveViewVisible() -->
+    <div class="log-opt-overlay visible">
+    </div>
+
+    <div class="log-opt-popup visible">
+        <fx-wire-transfer-newapprove params="selectedWireTransfer: Data.selectedWireTransfer(), isApproveViewVisible: Data.isApproveViewVisible, refreshWireTransfer: refreshWireTransfer"></fx-wire-transfer-newapprove>
+    </div>
+    <!-- /ko -->
+
+    <div class="control-wrapper">
+        <ul class="controls right">
+            <li>
+                <button data-bind="click: saveCommentClick, css: { loading: Data.isSaveCommentSpinnerOn() }, text: Dictionary.GetItem('btnSaveComment', 'DepositBackOffice')"></button>
+            </li>
+            <li>
+                <button data-bind="visible: Data.showCancelButton, click: cancelClick, css: { loading: Data.isCancelSpinnerOn() }, text: Dictionary.GetItem('btnCancelDeposit', 'DepositBackOffice')"></button>
+            </li>
+            <li>
+                <button data-bind="visible: Data.showApproveButton, click: approveClick, text: Dictionary.GetItem('btnApproveDeposit', 'DepositBackOffice')"></button>
+            </li>
+        </ul>
+
+        <div class="clear"></div>
+    </div>
+</div>

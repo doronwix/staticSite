@@ -1,0 +1,16 @@
+{
+  "requestUrl": "/webpl3/Deals/GetOvernightFinancing?instrumentId=12066&amount=10000",
+  "contentType": "application/json; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "Result": {
+      "LongOvernightFinancing": -0.62,
+      "ShortOvernightFinancing": 0.21,
+      "LongOvernightFinancingPercentage": -0.0062361108139157295,
+      "ShortOvernightFinancingPercentage": 0.0020694443956017494
+    },
+    "Status": 1
+  },
+  "isBase64": false
+}

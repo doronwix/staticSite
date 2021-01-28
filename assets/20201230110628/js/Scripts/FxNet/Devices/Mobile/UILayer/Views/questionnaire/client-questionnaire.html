@@ -1,0 +1,42 @@
+﻿<!--ko if: !$parent.Data.isLoading() -->
+<div class="client-questionaire">
+    <!--ko if: showWelcomePage() && !showUnsuccessful()-->
+    <fx-welcome-client-questionnaire params="closeWelcome: closeWelcome"></fx-welcome-client-questionnaire>
+    <!--/ko-->
+    <!--ko if: showThankYou-->
+    <fx-thankyou-client-questionnaire></fx-thankyou-client-questionnaire>
+	<!--/ko-->
+	<!--ko if: showUnsuccessful-->
+	<fx-unsuccessful-client-questionnaire></fx-unsuccessful-client-questionnaire>
+	<!--/ko-->
+	<!--ko if: isValidResponse  && !showWelcomePage() && !showThankYou() && !showUnsuccessful()-->
+    <section class="questionaire">
+        <div data-bind="with: pager.currentPage" class="bg-wrapper">
+            <!-- question place holder here: will be injected in runtime See: templates of question in this folder -->
+            <div class="left-side">
+
+				<fx-progress-bar-a params="navigation: $parent.navigation, pager: $parent.pager, categories: $parent.categories, questionnaireType: $parent.currentQuestionnaireType()"></fx-progress-bar-a>
+
+                <fx-progress-title params="pager: $parent.pager, questionnaireType: $parent.currentQuestionnaireType()"></fx-progress-title>
+
+                <div class="" data-bind="component : { name: componentName, params: { model: questionnaireItemsDictionary[name], questionnaireItemsDictionary: questionnaireItemsDictionary}}"></div>
+
+                <div class="right-align btn-area" data-bind="with: $parent">
+                    <!-- ko if: backBtnVisible()-->
+                    <a class="button back customButton" data-bind="click: function(){ $('.ballon-info').removeClass('visible'); back();}">
+                        <span data-bind="text: backText"></span>
+                    </a>
+                    <!-- /ko -->
+                    <a class="button next customButton" data-bind="click: function() {$('.ballon-info').removeClass('visible'); next();}">
+                        <span data-bind="text: nextText()"></span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+            </div><!--end left-side-->
+            <div class="clear"></div>
+        </div><!--end bg-wrapper-->
+    </section>
+    <div class="clear"></div>
+    <!--/ko-->
+</div>
+<!--/ko-->

@@ -1,0 +1,34 @@
+﻿<table class="full-width">
+    <tr>
+        <td class="no-padding-right">
+            <div class="note">
+                <h4>
+                    <i class="info"></i>
+                    <!-- ko text: Dictionary.GetItem('pleaseNotice', 'payments_creditcardregular') --><!-- /ko -->
+                </h4>
+                <ul>
+                    <li class="bold">
+                        <!-- ko foreach: $parent.Data.depositMessages || [] -->
+                        <p data-bind="html: $data"></p>
+                        <!-- /ko -->
+                        <!-- ko ifnot: $parent.Data.depositMessages -->
+                        <p data-bind="dictionaryBinding: 'lblAppearNotice', resourceName: 'payments_creditcardregular'"></p>
+                        <!-- /ko-->
+                    </li>
+                    <li>
+                        <p data-bind="dictionaryBinding: 'lblContactNotice', resourceName: 'payments_creditcardregular'"></p>
+                    </li>
+                    <li>
+                        <p data-bind="dictionaryBinding: 'lblAddressTitleNotice', resourceName: 'payments_creditcardregular'"></p>
+                        <p data-bind="dictionaryBinding: 'lblAddressNotice', resourceName: 'payments_creditcardregular'"></p>
+                    </li>
+                    <!-- ko if: $data.Form && $data.Form.paymentNote -->
+                    <li>
+                        <p data-bind="text: Form.paymentNote()"></p>
+                    </li>
+                    <!-- /ko -->
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>

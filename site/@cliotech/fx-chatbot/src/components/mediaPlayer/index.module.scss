@@ -1,0 +1,84 @@
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2001;
+}
+
+.mediaWindow {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2002;
+
+  &.lesson {
+    width: 100%;
+    height: 100%;
+
+    padding:
+      calc(env(safe-area-inset-top) + 30px) calc(env(safe-area-inset-right) + 30px) calc(env(safe-area-inset-bottom) + 30px) calc(env(safe-area-inset-left) + 30px);
+
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @media screen and (min-width: 1080px) {
+      max-width: 1080px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .close {
+      right: 15px;
+      top: 15px;
+    }
+  }
+
+  .close {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: absolute;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASJJREFUeNq010sOgjAQBuAy6crEpWtv4Ak8CveAKEshcg/u4HlcszJG107NkBBC6Uw7neRPeCUfFBhocXq8zsaYAXPAdJjW5Kkr5oIZMaUl9Eg7b5g9plZG75iKlp01AF3pvCo6MAc61QFoeE0mfA111QHd0z4D7kOd1QKt1Mr4Fvp/fmC2UQsPoktYA2eha3AKzkZ9cAwuQrdgCS5GXdnAPatn2BI3nn1BlANzcREaGmrOsEehEpiDs1EprFqg0JGiOhwooWIcEtA+pb3aBLTeeLWqxasoumIuGtXbQaPhx+Cg0fBjcFBCxTgooiIclFE2bukPXxPlfNXeBU5hPriwU0ZDz80XaC6TC/UN++jgEvN0Z4FpMsybJrwhw1nlT4ABALFyaynGHiadAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+  }
+
+  .lessonViewer {
+    background: #fff;
+
+    &.lesson {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      background: #fff;
+    }
+
+    img.img {
+      width: 100%;
+    }
+  }
+
+  iframe.iframe {
+    border: 1px solid black;
+    background: white;
+  }
+}

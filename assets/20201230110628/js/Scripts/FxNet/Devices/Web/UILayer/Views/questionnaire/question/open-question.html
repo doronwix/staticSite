@@ -1,0 +1,38 @@
+﻿ <!--ko if: visible-->
+<div class="row" data-bind="css: { valid: isValid() && validationOn(), error: !isValid() && validationOn(), focused: focused() }">
+    <label id="%lblEmploymentStatus" data-bind="attr: {id: name + 'Label', for: htmlname}">
+        <span data-bind="html: text">
+			%What is your employment status?
+		</span>
+        <!--ko if: tooltip !== '' -->
+        <fx-tooltip params="tooltip:tooltip, id: name"></fx-tooltip>
+        <!--/ko-->
+    </label>
+	<div class="input-holder" >
+		<input type="text"
+			data-bind="css: cssname,
+				textInput : answer,
+				attr: {
+					name: htmlname,
+					id: htmlname,
+					placeholder: placeholder
+				},
+				attrIf: {
+					autocomplete: autofillTagValue
+				},
+				event :{
+					blur: function() {
+						focused(false);
+					},
+					focus: function() {
+						focused(true);
+					}
+				}" />
+
+		<!-- validation balloon -->
+		<!--ko ifnot: isValid -->
+		<fx-question-validation-balloon></fx-question-validation-balloon>
+		<!--/ko-->
+	</div>
+</div>
+<!--/ko-->

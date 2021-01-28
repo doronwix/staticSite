@@ -1,0 +1,37 @@
+﻿
+<div class="Control PageTitle pt<%= AppGlobal.CurrentLanguageName %> no-bg">
+    <div class="title">
+        <div data-bind="if: VManager.GetActiveFormViewProperties(eViewTypes.vBalance).visible">
+            <span data-bind="dictionaryBinding: 'lblTitleAccountBalance', resourceName: 'general_controltitle'">%Account Balance</span>
+            <div class="clear"></div>
+            <div class="total-account">
+                <span data-bind="dictionaryBinding: 'lblCurrentBalance', resourceName: 'general_controltitle'">%Current Balance:</span>
+                <strong> 
+                    <span data-bind="text: $viewModelsManager.VmAccountBalance.ViewProperties.accountBalance"></span>
+                    <span data-bind="text: $customer.prop.selectedCcyName()"></span> 
+                </strong>
+            </div>
+        </div>
+        <div data-bind="if: VManager.GetActiveFormViewProperties(eViewTypes.vActivityLog).visible">
+            <span data-bind="dictionaryBinding: 'lblTitleActivityLog', resourceName: 'general_controltitle'">%Activity Log</span>
+        </div>
+        <div data-bind="if: VManager.GetActiveFormViewProperties(eViewTypes.vUploadDocuments).visible">
+            <span data-bind="dictionaryBinding: 'lblUploadDocuments', resourceName: 'general_controltitle'">%Upload Documents</span>
+        </div>
+    </div>
+
+    <!-- ko ifnot: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vOpenDeals).visible() || $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vLimits).visible() || $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vClosedDeals).visible() -->
+    <div class="deals-tabs-title-wrapper" data-bind="hidden: !($viewModelsManager.VManager.GetFormProperties().exportSupport ? $viewModelsManager.VManager.GetFormProperties().exportSupport.isExport : false)">
+        <ul>
+            <li class="report-actions-wrap">
+                <button class="report-list-action" type="button" data-bind="click: $viewModelsManager.VManager.Refresh">
+                    <i class="ico-sh-refresh"></i>
+                </button>
+                <!-- ko component: { name: 'fx-component-export-buttons' } --><!-- /ko -->
+            </li>
+        </ul>
+    </div>
+    <!-- /ko -->
+
+    <div class="clear"></div>
+</div>

@@ -1,0 +1,80 @@
+﻿<!--ko if: visible-->
+<div class="row medium-input" data-bind="css: {valid : isValid() && validationOn(), error : !isValid() && validationOn(), focused: focused() }">
+	<label data-bind="attr: {id:name + 'Label'}">
+		<span data-bind="html: text">%Date of birth</span>
+		<!--ko if: tooltip !== '' -->
+		<fx-tooltip params="tooltip:tooltip, id: name"></fx-tooltip>
+		<!--/ko-->
+	</label>
+	<ul>
+		<li>
+			<div class="custom-select-wrapper">
+				<select name="day"
+					data-bind="options: days,
+						optionsCaption: placeholderDay, 
+						optionsAfterRender: function(option, item) { ko.applyBindingsToNode(option, {disable: !item}, item); },
+						value:day, 
+						customSelect: true, 
+						customSelectOptions: { 
+							wrapNative: false, 
+							wrapNativeOnMobile: true, 
+							fakeDropInBody: false,
+							onBlur: function() {
+								focused(false);
+							},
+							onFocus: function() {
+								focused(true);
+							}
+						}">
+				</select>
+			</div>
+		</li>
+		<li>
+			<div class="custom-select-wrapper">
+				<select name="month"
+				        data-bind="options: months, 
+						optionsCaption: placeholderMonth,
+						optionsAfterRender: function(option, item) { ko.applyBindingsToNode(option, {disable: !item}, item); },
+						value:month,  
+						customSelect: true, 
+						customSelectOptions: { 
+							wrapNative: false, 
+							wrapNativeOnMobile: true, 
+							fakeDropInBody: false,
+							onBlur: function() {
+								focused(false);
+							},
+							onFocus: function() {
+								focused(true);
+							}
+						}"></select>
+			</div>
+		</li>
+		<li>
+			<div class="custom-select-wrapper">
+				<select name="year"
+				        data-bind="options: years,
+						optionsCaption: placeholderYear,
+						optionsAfterRender: function(option, item) { ko.applyBindingsToNode(option, {disable: !item}, item); },
+						value:year,
+						customSelect: true,
+						customSelectOptions: {
+							wrapNative: false,
+							wrapNativeOnMobile: true,
+							fakeDropInBody: false,
+							onBlur: function() {
+								focused(false);
+							},
+							onFocus: function() {
+								focused(true);
+							}
+						}"></select>
+			</div>
+		</li>
+	</ul>
+	<!-- validation balloon -->
+	<!--ko ifnot: isValid -->
+		<fx-question-validation-balloon></fx-question-validation-balloon>
+	<!--/ko-->
+</div>
+<!--/ko-->

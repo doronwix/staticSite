@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/api/tradingsignals/GetClientSignalsPermissions",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{ \"status\":\"1\", \"result\":\"False\", \"signalsEndDate\":\"01/01/0001 00:00:00\" }",
+  "isBase64": false
+}

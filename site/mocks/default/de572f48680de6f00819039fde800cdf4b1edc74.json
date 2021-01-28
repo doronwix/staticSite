@@ -1,0 +1,15 @@
+{
+  "requestUrl": "/webpl3/Deals/GetDealMarginDetails?instrumentId=12066",
+  "contentType": "application/json; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "Result": {
+      "MarginPercentage": 0.20000000298023224,
+      "MaxNormalMargin": 0.2,
+      "MaxOffHoursMargin": 0.2
+    },
+    "Status": 1
+  },
+  "isBase64": false
+}

@@ -1,0 +1,467 @@
+/* command used for generate: lessc "C:\Projects\Dev-FX3\iFOREX Framework\IFOREX.Clients\iFOREX.Clients.Web\Skins\Web\AllBrokers\Default\advinion-charts.less" "C:\Projects\Dev-FX3\iFOREX Framework\IFOREX.Clients\iFOREX.Clients.Web\Scripts\AdvinionChartCustomizations\ChartUI\layouts\layout99\templates\customtemplate\customtemplate.css" */
+/*Images (main sprite and image path)*/
+/*Header and menu*/
+/*==Used in Deal button*/
+/*Application links borders*/
+/*Used in left sidebar, buttons*/
+/*=========== Tabs (Quotes Table)============*/
+/* 1. main list default color*/
+/* 2. Default background */
+/*====Others====*/
+/*Uset in Quotes table, new deal, close deal*/
+/*Form elements colors*/
+/*@TODO - define and use proper colors in each broker (temporary solution to avoid .less error compilations)*/
+/*Chart styles*/
+/*Images (main sprite and image path for iforex)*/
+/*Header and menu*/
+/*Used in left sidebar, buttons*/
+/*=========== Tabs (Quotes Table)============*/
+/* 1. main list default color*/
+/* 2. Default background */
+/*Uset in Quotes table, new deal, close deal*/
+/*Tutorials*/
+/*Separators background*/
+/*Tutorials disclaimer Buttons grdients */
+/*Top items (user details, dropdown custom select)*/
+/*Links (under top user options)*/
+/*Popups colors & background*/
+.font-arial {
+  font-family: Arial, Verdana, sans-serif;
+}
+.font-verdana {
+  font-family: Verdana, Arial;
+}
+.popup-gradient {
+  background: -webkit-linear-gradient(top, #fff 0%, #eaeaea 100%);
+  background: -moz-linear-gradient(top, #fff 0%, #eaeaea 100%);
+  background: -ms-linear-gradient(top, #fff 0%, #eaeaea 100%);
+  background: -o-linear-gradient(top, #fff 0%, #eaeaea 100%);
+  background: linear-gradient(top, #fff 0%, #eaeaea 100%);
+  background-image: linear-gradient(#fff, #eaeaea);
+}
+/*Default direction*/
+/*Define margin*/
+/*Define padding*/
+/*Define float*/
+/*Define text-align*/
+/*Define right/left on position absolute*/
+/*Single margin/padding*/
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
+}
+.gray-shadow {
+  border: 1px solid #c7c7c7;
+  background: -webkit-linear-gradient(top, #fefefe 0%, #e4e4e4 100%);
+  background: -moz-linear-gradient(top, #fefefe 0%, #e4e4e4 100%);
+  background: -ms-linear-gradient(top, #fefefe 0%, #e4e4e4 100%);
+  background: -o-linear-gradient(top, #fefefe 0%, #e4e4e4 100%);
+  background: linear-gradient(top, #fefefe 0%, #e4e4e4 100%);
+  background-image: linear-gradient(#fefefe, #e4e4e4);
+  -webkit-box-shadow: 0 0 1px 2px #f9f9f9 inset;
+  -moz-box-shadow: 0 0 1px 2px #f9f9f9 inset;
+  -o-box-shadow: 0 0 1px 2px #f9f9f9 inset;
+  box-shadow: 0 0 1px 2px #f9f9f9 inset;
+}
+.ui-widget-overlay {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)" !important;
+  filter: alpha(opacity=40) !important;
+  -moz-opacity: 0.4 !important;
+  -khtml-opacity: 0.4 !important;
+  opacity: 0.4 !important;
+  background: #000 url("img/jquery-ui-theme/ui-bg_diagonals-thick_20_666666_40x40.png") 50% 50% repeat !important;
+}
+prochart .prof_chart {
+  margin: 0px;
+}
+prochart .prof_chart div {
+  text-align: left;
+}
+prochart .AdvCNVUSR {
+  direction: ltr !important;
+}
+prochart .layout1 ul.toolbar-adv > li,
+prochart .layout1 ul.toolbar-adv.dir-rtl > li {
+  float: right;
+}
+prochart .layout1 .chart-menu {
+  background-color: #04b9f2 !important;
+}
+prochart .layout1 .chart-menu li a {
+  color: #222 !important;
+  font-weight: bold !important;
+}
+prochart .layout1 .chart-menu a.action-open-group {
+  color: #fff !important;
+}
+prochart .layout1 .chart-menu > ul > li {
+  color: #fff !important;
+  line-height: 20px !important;
+}
+prochart .layout1 .chart-menu > ul > li > .mn-item-group {
+  background-color: #fff !important;
+  border: 1px #04b9f2 solid !important;
+  -webkit-box-shadow: 2px 3px 3px 0 #aaa !important;
+  -moz-box-shadow: 2px 3px 3px 0 #aaa !important;
+  -o-box-shadow: 2px 3px 3px 0 #aaa !important;
+  box-shadow: 2px 3px 3px 0 #aaa !important;
+}
+prochart .layout1 .chart-menu > ul > li > a:hover {
+  background-color: #fff !important;
+  color: #222 !important;
+}
+prochart .layout1 .chart-menu > ul > li > a.menu-selected {
+  background-color: #fff !important;
+  color: #222 !important;
+}
+prochart .layout1 .chart-menu > ul > li > .mn-item-group > ul > li:hover {
+  background-color: #63ddf2 !important;
+  color: #222;
+  font-weight: bold;
+}
+prochart .layout1 .chart-menu > ul > li:hover > uk > li:hover {
+  background-color: #63ddf2 !important;
+  color: #222 !important;
+}
+prochart .layout1 .chart-header .chart-header-search .chart-header-search-output ul.search-output-list li {
+  height: auto !important;
+}
+prochart .layout1 .chart-header .chart-header-search .chart-header-search-output ul.search-output-list li button.star-button {
+  display: none !important;
+}
+prochart .layout1 .chart-header .chart-header-search .chart-header-search-output ul.search-output-list li a {
+  width: 420px !important;
+}
+prochart .layout1 .chart-header .chart-header-search .chart-header-search-output ul.search-output-list li a span {
+  display: inline-block !important;
+  padding-right: 0px !important;
+}
+prochart .layout1 .chart-header .chart-header-search .chart-header-search-output ul.search-output-list li a span:first-child {
+  width: 28%;
+  float: left;
+}
+prochart .layout1 .chart-header .chart-header-search .chart-header-search-output ul.search-output-list li a span:nth-child(2) {
+  width: 72%;
+  float: right;
+}
+prochart .layout1 .chart-header .chart-header-search .search-properties-tabs-labels {
+  background-color: #293b4b !important;
+}
+prochart .layout1 .chart-header .chart-header-search .search-properties-tabs-labels a {
+  color: #fff !important;
+}
+prochart .layout1 .chart-header .chart-header-search .search-properties-tabs-labels a.active {
+  color: #000 !important;
+}
+prochart .layout1 .chart-menu > ul #chart-type .favorites-style {
+  min-width: 200px !important;
+}
+prochart .layout1 .chart-menu .a-bottom .mn-array {
+  top: -20px;
+  border-color: transparent transparent #04b9f2 !important;
+}
+prochart .layout1 .chart-menu .mn-array > div {
+  border-color: transparent transparent #fff;
+}
+prochart .layout1 rect.ADVUserAboveBidLine,
+prochart .layout1 rect.ADVUserBelowBidLine {
+  fill: #65ddf5;
+}
+prochart .layout1 .chart-header .search-symbolics-subpoint,
+prochart .layout1 .chart-header prochart .layout1 .chart-header #search-symbolics-subpoint {
+  border-left: 7px solid #04b9f2 !important;
+}
+prochart .layout1 .chart-header .symbol-title,
+prochart .layout1 .chart-header prochart .layout1 .chart-header #symbol {
+  color: #2a3b4d !important;
+}
+prochart .layout1 .chart-header .header-timeframe,
+prochart .layout1 .chart-header prochart .layout1 .chart-header #timeframe {
+  color: #6a7b8d !important;
+}
+prochart .layout1 .chart-header .header-lastupdate {
+  color: #2a3b4d !important;
+}
+prochart .layout1 .chart-header #search-symbolics,
+prochart .layout1 .chart-header #search-symbolics-subpoint {
+  cursor: pointer !important;
+}
+prochart .layout1 button {
+  background-color: #fff;
+}
+prochart .layout1 button.button-selected {
+  background-color: #7ADDFC;
+}
+prochart .layout1 .zoom-date-range {
+  width: 257px !important;
+  height: 18px !important;
+  top: -6px !important;
+  right: 6px !important;
+  left: auto !important;
+  text-align: right;
+}
+prochart .layout1 .zoom-date-range span {
+  font-size: 8px;
+}
+prochart .layout1 .zoom-date-range .date-start,
+prochart .layout1 .zoom-date-range .date-end {
+  color: #111 !important;
+}
+prochart .layout1 .chart-pane-legend-price .legend-price .legend-buttons a.legend-button-properties {
+  display: none;
+}
+prochart .layout1.htmlchart {
+  background: transparent;
+}
+prochart .layout1 ul.toolbar-adv {
+  background: transparent;
+  float: right;
+}
+prochart .layout1 ul.toolbar-adv.loc-horizontal {
+  width: 100%;
+  padding: 8px 0;
+  display: inline-block;
+}
+prochart .layout1 ul.toolbar-adv li.tlb-space {
+  display: none;
+}
+prochart .layout1 ul.toolbar-adv li li {
+  border: none;
+  margin-right: 0;
+}
+prochart .layout1 ul.toolbar-adv li li button {
+  margin: 0px;
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  height: 30px;
+  width: 32px;
+}
+prochart .layout1 ul.toolbar-adv li li button:hover {
+  background-color: #B1EEFF;
+}
+prochart .layout1 ul.toolbar-adv li li button.button-selected {
+  background-color: #7ADDFC;
+}
+prochart .layout1 ul.toolbar-adv > li span.toolbar-adv-space {
+  background-color: #eee !important;
+}
+prochart .layout1 ul.toolbar-adv .tlb-item-group .tlb-button-groups {
+  border: 1px solid #C7C7C7;
+}
+prochart .layout1 ul.toolbar-adv .tlb-item-group .tlb-button-groups.a-tooltip li {
+  margin: 0;
+}
+prochart .layout1 ul.toolbar-adv .tlb-item-group .tlb-button-groups.a-tooltip.dropdown-three-columns {
+  width: 98px !important;
+}
+prochart .layout1 ul.toolbar-adv .tlb-item-group .tlb-button-groups.a-tooltip.dropdown-three-columns li:nth-child(3n+2) {
+  border-right: 1px solid #C7C7C7;
+  border-left: 1px solid #C7C7C7;
+}
+prochart .layout1 ul.toolbar-adv .tlb-item-group .tlb-button-groups.a-tooltip.dropdown-timeframes {
+  width: 65px !important;
+}
+prochart .layout1 ul.toolbar-adv .tlb-item-group .tlb-button-groups.a-tooltip.dropdown-timeframes ul {
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+prochart .layout1 ul.toolbar-adv .tlb-item-group .tlb-button-groups.a-tooltip.dropdown-timeframes ul li {
+  border-right: 1px solid #C7C7C7;
+}
+prochart .layout1 ul.toolbar-adv .a-bottom > .tlb-array {
+  border-color: transparent transparent #C7C7C7;
+}
+prochart .layout1 ul.toolbar-adv .a-bottom > .tlb-array > div {
+  border-color: transparent transparent #fff;
+}
+prochart .layout1 .chart-pane-price {
+  background: #fff;
+}
+prochart .layout1 .chart-price-axis {
+  background: #f8f8f8;
+  border: none;
+}
+prochart .layout1 .chart-date-axis {
+  background: #fff;
+  border-top: 2px solid #000;
+}
+prochart .layout1 .chart-pane-main {
+  border-right: 2px solid #000;
+  box-sizing: border-box;
+  left: 0px !important;
+  right: auto !important;
+}
+prochart .layout1 .chart-price-zoom {
+  left: 0px !important;
+  right: 0px !Important;
+  margin: 0 auto;
+}
+prochart .layout1 .chart-price-zoom .zoom-buttons button {
+  border: none;
+}
+prochart .layout1 .chart-price-zoom .zoom-buttons button:hover {
+  border: none;
+}
+prochart .ui-rangeSlider-label.ui-rangeSlider-leftLabel,
+prochart .ui-rangeSlider-label.ui-rangeSlider-rightLabel {
+  display: none !important;
+}
+prochart .chart-pane-price.chartpane.AdvPanel {
+  border: 0;
+}
+.chart-ui-dialog .ui-dialog-title {
+  color: #fff;
+  margin: 0 30px !important;
+  height: 52px !important;
+}
+.chart-ui-dialog.ui-front {
+  z-index: 10005 !important;
+}
+.chart-ui-dialog.ui-dialog {
+  padding: 0px !important;
+  border: 1px solid #C7C7C7;
+  -webkit-box-shadow: 0px 0px 7px 0px #333 !important;
+  -moz-box-shadow: 0px 0px 7px 0px #333 !important;
+  -o-box-shadow: 0px 0px 7px 0px #333 !important;
+  box-shadow: 0px 0px 7px 0px #333 !important;
+  height: auto !important;
+}
+.chart-ui-dialog.ui-dialog .ui-dialog-titlebar {
+  background-color: #2A3B4D;
+  padding: 0px !important;
+}
+.chart-ui-dialog.ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 52px;
+  margin: 0 0 0 10px !important;
+}
+.chart-ui-dialog.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+  top: 1.2em !Important;
+  margin: -3px 0 0 0 !important;
+  background: url("../../AllBrokers/Default/img/icons.png") -159px -48px no-repeat !important;
+  right: 0.3em !important;
+}
+.chart-ui-dialog.ui-dialog .adv-dialog-content .main-properties table.property-page td select.dialog-select.select-middle {
+  width: 180px;
+}
+.chart-ui-dialog.ui-dialog .adv-dialog-content .main-properties table.property-page td select.dialog-select.select-long {
+  width: 420px;
+}
+.chart-ui-dialog.ui-dialog .adv-dialog-content .main-properties table.property-page td .dialog-text-input.datespinner-input {
+  width: 150px;
+}
+.chart-ui-dialog.ui-dialog .adv-dialog-content .main-properties table.property-page td select.dialog-select.lineselect {
+  width: 130px;
+}
+.chart-ui-dialog #button-add-compare .ui-button-text {
+  text-indent: 0 !important;
+}
+.chart-ui-dialog #button-add-indicator .ui-button-text {
+  text-indent: 0 !important;
+}
+.chart-ui-dialog #button-add-indicator-to .ui-button-text {
+  text-indent: 0 !important;
+}
+span.legend-price-description.legend-description {
+  display: none;
+}
+div.chart-pane-legend.chart-pane-legend-price {
+  top: -20px !important;
+  background-color: transparent;
+  font-size: 11px;
+  right: auto !important;
+  left: 10px !important;
+}
+div.layout-row.noselect {
+  background-color: #fff;
+}
+div.CoreCont {
+  background-color: #fff;
+}
+.chartpage-fullscreen div.chart-pane-legend.chart-pane-legend-price,
+#transatcion-switch-page div.chart-pane-legend.chart-pane-legend-price {
+  top: -18px !important;
+}
+body.chartpage-fullscreen .advinion-chart.chart-pane-legend.chart-pane-legend-price {
+  top: -40px;
+  width: 70% !important;
+}
+.dealChartContainer .expand-button {
+  display: none;
+}
+.loader-background {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+}
+.loader-background.transparent {
+  background: transparent;
+}
+.loader-background .loader {
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 50%;
+  margin: -50px auto 0 auto;
+  height: 70px;
+  width: 70px;
+}
+.loader-background.tile-loader {
+  min-height: 600px;
+  z-index: -100;
+  border: 1px solid #e5e5e5;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+.loader-background.tile-loader.visible {
+  z-index: 101;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}
+/* from C:\Projects\Dev-FX3\iFOREX Framework\iFOREX.Clients\iFOREX.Clients.Web\Scripts\AdvinionChartCustomizations\ChartUI\layouts\layout99\templates\customtemplate\customtemplate.css */
+prochart .layout1.htmlchart .zoom-date-range .date-end,
+prochart .layout1.htmlchart .zoom-date-range .date-start {
+  color: #000000;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 2px;
+  text-align: right;
+}
+prochart .layout1.htmlchart .icon-button span,
+prochart .layout1.htmlchart .icon-item span {
+  background-image: url(custom-gui.png) !important;
+}
+.chart-ui-dialog.htmlchart button.eye-orange,
+.chart-ui-dialog.htmlchart button.favorite {
+  background-image: url(custom-gui.png) !important;
+}
+.chart-ui-dialog.htmlchart .main-sprite-image {
+  background-image: url(custom-gui.png) !important;
+}

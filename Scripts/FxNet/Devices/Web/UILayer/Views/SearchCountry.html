@@ -1,0 +1,56 @@
+﻿<template id="search-country-item">
+    <li data-bind="attr: {
+            'id': 'search-country-item-' + id,
+        },
+        css: {
+            selected: id === $parent.Data.selectedCountry().id && id != -1
+        },
+        click: $parent.SetCountry">
+        <i class="list-flag" data-bind="css: '_cntr_' + id"></i>
+        <span class="text-holder" data-bind="html: text, css: { disabled: id == -1 }"></span>
+    </li>
+</template>
+
+<div class="search-country-select-container">
+    <div class="search-question relative">
+        <div class="select-wrapper">
+            <!-- ko if: Data.selectedCountry -->
+            <div id="countrySearchTrigger" class="country-select-trigger" data-bind="click: onFocus">
+                <i class="selected-item list-flag" data-bind="css: '_cntr_' + Data.selectedCountry().id"></i>
+                <div class="trigger"></div>
+                <span data-bind="text: Data.selectedCountry().text" id="selected-country-text"></span>
+            </div>
+            <div class="autocompleteWrapper autocomplete-wrapper">
+                <input class="search"
+                       data-bind="attr: {
+                                            id: 'country-search-autocomplete',
+                                            placeholder: Dictionary.GetItem('lblSearch','deals_CloseDeal')
+                                        },
+                                        hasFocus: searchFocus,
+                                        autocomplete: {
+                                            elementType: 'select',
+                                            autocompleteWrapperClass: 'autocomplete-wrapper',
+                                            source: Data.countries,
+                                            selected: Data.selectedCountry,
+                                            minLength: 1,
+                                            appendTo: '.country-search-select',
+                                            contentMaxHeight: 360,
+                                            triggerFrom: '#countrySearchTrigger',
+                                            predefinedOptionsListClass: 'customized',
+                                            noResultText: Dictionary.GetItem('no_results_country'),
+                                            hasCategories: false,
+                                            itemImageClassProperty: 'id',
+                                            itemImageClassPrefix: '_cntr_',
+                                            renderInstruments: false,
+                                            searchPostBoxTopic: 'country-search-complete',
+                                            matchFromBeginning: true
+                                        }" />
+
+                <div class="styled-select country-search-select" data-bind="jScrollPane: { postBoxTopic: 'country-search-complete' }">
+                    <ul class="customized" data-bind="template: { name: 'search-country-item', foreach: Data.countries }"></ul>
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>

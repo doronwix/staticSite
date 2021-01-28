@@ -1,0 +1,15 @@
+﻿<div data-bind="foreach: questions">
+	<!--ko if: visible-->
+	<div class="row-wrapper"
+		data-bind="component: {
+			name: componentName,
+			params: {
+				model: $data,
+				questionnaireItemsDictionary: $parent.questionnaireItemsDictionary
+			}
+		}, 
+		css: css">
+	</div>
+	<!--/ko -->
+</div>
+<div class="clear"></div>

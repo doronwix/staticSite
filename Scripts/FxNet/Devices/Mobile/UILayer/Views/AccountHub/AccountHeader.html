@@ -1,0 +1,27 @@
+﻿<ul class="user-details">
+    <li class="account" id="account">
+        <span href="javascript:void(0)" class="iconPerson" data-bind="css: Data.userStatusName"></span>
+        <!-- ko if: permissionsModule.CheckActionAllowed('accountNumber') -->
+        <div class="personInfo">
+            <span class="userName" data-bind="visible: Data.userName, text: Data.userName"></span>
+
+            <span class="accountNumberText" data-bind="visible: !Data.userName, dictionaryBinding: 'accountNumber', resourceName:'account_hub'"></span>
+    
+            <span class="accountNumber" data-bind="text: Customer.prop.accountNumber, css: Data.userName ? 'accountNumber' : 'accountNumberBig'"></span>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: Data.onClose === 'back' -->
+        <span id="close-button" class="close-button" data-bind="click: $viewModelsManager.VManager.History.GoBack"></span>
+        <!-- /ko -->
+        <!-- ko if: !Data.onClose -->
+        <span id="close-button" class="close-button" data-bind="toggleMobileMenu"></span>
+        <!-- /ko -->
+    </li>
+    <!--ko if: !$customer.prop.isDemo -->
+    <li>
+        <a href="javascript:void(0)" class="cta" data-bind="click: generalStatusClick, toggleMobileMenu, css: Data.generalStatusColor">
+            <span data-bind="dictionaryBinding: 'statusTxt', resourceName:'account_hub'"></span><span class="status" data-bind="dictionaryBinding: Data.generalStatusName(), resourceName:'account_hub'"></span><span class="viewDetails" data-bind="dictionaryBinding: 'viewDetails', resourceName:'account_hub'"></span>
+        </a>
+    </li>
+    <!-- /ko -->
+</ul>

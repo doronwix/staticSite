@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/HelpCenter/help-center-action.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<li id=\"helpCenterAction\" class=\"helpc-action\" data-bind=\"\r\n\tclick: toggleHelpCenter,\r\n\tcss: {\r\n\t\t'notify': Data.showNotification(),\r\n\t\t'activeMenu': Data.activeMenu() }\">\r\n</li>",
+  "isBase64": false
+}

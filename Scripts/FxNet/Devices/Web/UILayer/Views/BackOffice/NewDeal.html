@@ -1,0 +1,679 @@
+<template id="pip-tooltip-template">
+    <i id="txtPipTooltip"
+       class="ico-wb-help"
+       data-bind="attr: { title: Dictionary.GetItem('txtPipTooltip', 'deals_NewDeal') },
+                  balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } }"></i>
+</template>
+
+<div class="section-wrapper new-deal"
+     style="display: none;"
+     data-bind="visible: Data.ViewModelReady,
+				click: function (vm, e) { ko.postbox.publish('deal-slip-interaction', { element: e.target.id, orderDir: Data.orderDir() }); return true; }">
+
+    <div class="deal-content spinner-content">
+        <div class="row-wrapper not-last">
+            <div class="col-1 left">
+                <div class="headings">
+                    <p>
+                        <span id="lblInstrumentLabel" data-bind="html: Dictionary.GetItem('lblInstrumentLabel', 'deals_NewDeal')"></span>
+                    </p>
+                </div>
+
+                <fx-component-dropdown-instrument-search params="{
+						selectedInstrumentId: Data.selectedInstrument,
+						suffixId: 'newDeal',
+						searchPostBoxTopic: 'new-deal-search-complete'
+					}">
+                </fx-component-dropdown-instrument-search>
+            </div>
+
+            <div class="col-1 second relative left">
+                <div class="headings">
+                    <p>
+                        <span id="lblDealAmount" data-bind="text: Data.dealAmountLabel"></span>
+                        <i id="txtAmountTooltip"
+                           class="ico-wb-help"
+                           data-bind="attr: { title: Dictionary.GetItem('txtAmountTooltip', 'deals_NewDeal') },
+									balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } }">
+                        </i>
+                    </p>
+                </div>
+                <div class="custom-select-wrapper">
+                    <fx-component-amount-spinner params="id: 'dlgNewDealSlipCmbAmount',
+										name: 'dealSize',
+										value: Data.selectedDealAmount,
+										options: Data.dealMinMaxAmounts,
+										forceNonFractionalValue: Data.isStock">
+                    </fx-component-amount-spinner>
+                </div>
+            </div>
+
+            <div class="col-2 no-border right">
+                <ul class="action-buttons right">
+                    <li>
+                        <div id="btnSell"
+                             class="transaction-button sell"
+                             data-bind="css: { active: Data.isShowSellBox, disabled: Data.isStock },
+                                       click: function () { if (!Data.isStock()) Data.sellBtnClick(); },
+                                       ratesClasses: {
+                                             rateObservable: Data.activeQuoteState,
+                                             up: ['up', 'up-reanimate'],
+                                             down: ['down', 'down-reanimate'],
+                                             notChanged: 'not-changed',
+                                             showInput: Data.showLastRate,
+                                             disabled: Data.isStock()
+                                       }">
+                            <span class="action" id="lblSellTitle" data-bind="text: Dictionary.GetItem('lblSellTitle', 'deals_NewDeal') + ' ' + Data.baseSymbolName()">
+                            </span>
+                            <!-- ko if: !Data.showLastRate() || (Data.showLastRate() && Data.isStock()) -->
+                            <span class="data-wrapper" data-bind="clearQuoteColor: Data.bid">
+                                <span id="lblSellFirst" data-bind="text: Data.bidLabel.First">0.00</span><!--
+                                --><span id="lblSellMiddle" data-bind="text: Data.bidLabel.Middle" class="middle">00</span><!--
+                                --><span id="lblSellLast" data-bind="text: Data.bidLabel.Last">0</span>
+                            </span>
+                            <!-- /ko -->
+                            <!-- ko if: Data.showLastRate() && !Data.isStock() -->
+                            <div class="dealer-amount">
+                                <input class="dealer-input" type="tel" maxlength="10" autocomplete="off" data-bind="textInput: Data.sellAmount, css: { 'invalid' : Data.sellAmount() <= 0 }, hasFocus: Data.orderDir() === eOrderDir.Sell" />
+                            </div>
+                            <!-- /ko -->
+                        </div>
+                    </li>
+                    <li>
+                        <div id="btnBuy"
+                             class="transaction-button buy"
+                             data-bind="css: { active: Data.isShowBuyBox },
+                                       click: Data.buyBtnClick,
+                                       ratesClasses: {
+                                             rateObservable: Data.activeQuoteState,
+                                             up: ['up', 'up-reanimate'],
+                                             down: ['down', 'down-reanimate'],
+                                             notChanged: 'not-changed',
+                                             showInput: Data.showLastRate
+                                       }">
+                            <span class="action" id="lblBuyTitle" data-bind="text: Dictionary.GetItem('lblBuyTitle', 'deals_NewDeal') + ' ' + Data.baseSymbolName()">
+                            </span>
+                            <!-- ko if: !Data.showLastRate() -->
+                            <span class="data-wrapper" data-bind="clearQuoteColor: Data.ask">
+                                <span id="lblBuyFirst" data-bind="text: Data.askLabel.First">0.00</span><!--
+                                --><span id="lblBuyMiddle" data-bind="text: Data.askLabel.Middle" class="middle">00</span><!--
+                                --><span id="lblBuyLast" data-bind="text: Data.askLabel.Last">0</span>
+                            </span>
+                            <!-- /ko -->
+                            <!-- ko if: Data.showLastRate() -->
+                            <div class="dealer-amount">
+                                <input class="dealer-input" type="tel" maxlength="10" autocomplete="off" data-bind="textInput: Data.buyAmount, css: { 'invalid' : Data.buyAmount() <= 0 }, hasFocus: Data.orderDir() === eOrderDir.Buy" />
+                            </div>
+                            <!-- /ko -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row-wrapper messages not-last">
+            <div class="message-col"></div>
+            <div class="message-col require-margin" data-bind="css: {'double': !Data.isStock()}"></div>
+            <div class="message-col extra-info" data-bind="visible: Data.isStock">
+                <span class="stock-info" data-bind="text: Dictionary.GetItem('lblShortSelling')"></span>
+            </div>
+        </div>
+
+        <div class="row-wrapper" data-bind="visible: !(General.isNullOrUndefined(Data.spreadDiscount()) || Data.spreadDiscount() <= 0)">
+            <ul class="spread">
+                <li data-bind="css: { full: General.isNullOrUndefined(Data.spreadDiscount()) }"></li>
+                <li>
+                    <!-- ko ifnot: General.isNullOrUndefined(Data.spreadDiscount()) || Data.spreadDiscount() <= 0  -->
+                    <div class="tooltip-handler" data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom cashback-tooltip', position: { my: 'center bottom', at: 'center top-10' } }, attr: { title: Dictionary.GetItem('txtSpreadDiscountTooltip', 'deals_NewDeal') }, formattedText: [ Data.spreadDiscount() ], encodeHTML: true, useAttr : 'title'">
+                    </div>
+                    <div class="discount">
+                        <span data-bind="text: Data.spreadDiscount() +'%'"></span>
+                        <span data-bind="html: Dictionary.GetItem('txtSpreadDiscount', 'deals_NewDeal')"></span>
+                    </div>
+                    <!-- /ko -->
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+
+        <div class="row-wrapper custom-dealer-wrapper">
+            <div class="wrapper right">
+                <table class="market-rate-toggle singleLined">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="custom-input-wrapper">
+                                    <input data-bind="checked:  Data.showLastRate, value: true" type="radio" name="last-rate" id="last-rate" />
+                                    <span></span>
+                                </div>
+                                <label for="last-rate" data-bind="html: Dictionary.GetItem('lblLastRate', 'deals_NewDeal')"></label>
+                            </td>
+                            <td>
+                                <div class="custom-input-wrapper">
+                                    <input data-bind="checked: Data.showLastRate, value: false" type="radio" name="market-rate" id="market-rate" />
+                                    <span></span>
+                                </div>
+                                <label for="market-rate" data-bind="html: Dictionary.GetItem('lblMarketRate', 'deals_NewDeal')">Market Rate</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!--end half-container-->
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+        <div class="deal-content shadowed hashed no-data" id="setLimits">
+            <div class="row-wrapper">
+
+                <div class="col-2 right no-border" data-bind="fadeVisible: Data.showLimitsSummary">
+                    <table class="profit-data right" data-bind="with: SetLimitsInfo">
+                        <tbody>
+                            <tr>
+                                <!-- ko if: $parent.Data.showSLSummary -->
+                                <td data-bind="css: { pink: !stopLossRate.isValid() }">
+                                    <div class="down">
+                                        <span class="down" id="lblSLTitle" data-bind="html: Dictionary.GetItem('lblSLTitle', 'deals_NewDeal')"></span>
+                                        <strong>
+                                            <!-- ko if: stopLossRate.isValid -->
+                                            <span data-bind="text: SLRateLabel.First">0.0000</span><span data-bind="text: SLRateLabel.Last" class="smaller">0</span>
+                                            <!-- /ko -->
+                                            <!-- ko ifnot: stopLossRate.isValid -->
+                                            <span data-bind="html: Dictionary.GetItem('lblRateValidation', 'deals_NewDeal')"></span>
+                                            <!-- /ko -->
+                                        </strong>
+                                    </div>
+                                </td>
+                                <!-- /ko -->
+                                <!-- ko if: $parent.Data.showTPSummary -->
+                                <td data-bind="css: { pink: !takeProfitRate.isValid() }">
+                                    <div class="up">
+                                        <span class="up" id="lblTPTitle" data-bind="html: Dictionary.GetItem('lblTPTitle', 'deals_NewDeal')"></span>
+                                        <strong>
+                                            <!-- ko if: takeProfitRate.isValid -->
+                                            <span data-bind="text: TPRateLabel.First">0.0000</span><span data-bind="text: TPRateLabel.Last" class="smaller">0</span>
+                                            <!-- /ko -->
+                                            <!-- ko ifnot: takeProfitRate.isValid -->
+                                            <span data-bind="html: Dictionary.GetItem('lblRateValidation', 'deals_NewDeal')"></span>
+                                            <!-- /ko -->
+                                        </strong>
+                                    </div>
+                                </td>
+                                <!-- /ko -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="clear"></div>
+
+                <form action="javascript:void(0)" class="stop-loss" data-bind="with: SetLimitsInfo">
+                    <div class="half-container">
+                        <div class="wrapper left stop-loss-data">
+                            <div class="custom-input-wrapper">
+                                <input type="checkbox" id="addStopLoss" data-bind="checked: $parent.Data.enableSLLimit" />
+                                <span></span>
+                                <i class="icon-limits"></i>
+                                <label class="cursor-pointer" for="addStopLoss">
+                                    <span id="lblAddSLTitle" data-bind="html: Dictionary.GetItem('lblAddSLTitle', 'deals_NewDeal')"></span>
+                                </label>
+                            </div>
+                            <i id="txtStopLossTooltip"
+                               class="ico-wb-help"
+                               data-bind="attr: { title: Dictionary.GetItem('txtStopLossTooltip', 'deals_NewDeal') },
+                                       balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } }"></i>
+
+                            <!-- ko if: $parent.Data.isSlRateActiveTab() -->
+                            <table id="tblSlRateActiveTab" class="stop-loss-data" data-bind="css: { focus: $parent.Data.enableSLLimit }">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <!--ko if: $parent.Data.orderDir() != eOrderDir.Sell -->
+                                            <label id="lblSellRate1Title" for="jsAddLoss" data-bind="html: Dictionary.GetItem('lblSellRateTitle', 'deals_NewDeal')"></label>
+                                            <!-- /ko -->
+                                            <!--ko if: $parent.Data.orderDir() == eOrderDir.Sell -->
+                                            <label id="lblBuyRate1Title" for="jsAddLoss" data-bind="html: Dictionary.GetItem('lblBuyRateTitle', 'deals_NewDeal')"></label>
+                                            <!-- /ko -->
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td rowspan="3">
+                                            <ul>
+                                                <li>
+                                                    <span data-bind="html: Dictionary.GetItem('lblPercentageTitle', 'deals_NewDeal')"></span>
+                                                    <div class="stop-loss-value">
+                                                        <span data-bind="text: Format.toPercent(stopLossPercent(), true)"></span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span data-bind="html: Dictionary.GetItem('lblAmount', 'deals_NewDeal')"></span>
+                                                    <div class="stop-loss-value">
+                                                        <span data-bind="html: Format.toSign($parent.Data.customerSymbolId()).sign, visible: $parent.Data.displaySlAmountCcySymbol()"></span>
+                                                        <!--
+                                                        -->
+                                                        <span data-bind="toHumanReadableNumericFormat: $parent.FieldWrappers.Data.stopLossInCustomerCcy()"></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-special" data-bind="css: { focus: $parent.Data.enableSLLimit }, closingLimitSpinner: stopLossRate, spinnerOptions: { input: '#jsAddLoss', min: $parent.SLField.min, max: $parent.SLField.max, step: $parent.SLField.step, page: $parent.SLField.step, numberFormat: $parent.SLField.format, startSpinFrom: $parent.SLField.startSpinFrom, culture: 'noThousandsSeparator'}">
+                                                <div class="validation-holder" data-bind="validationOptions: { insertMessages: true, errorElementClass: 'error', decorateInputElement: true, messageTemplate: 'fx-template-deal-validation-tooltip' }">
+                                                    <input type="tel"
+                                                           value=""
+                                                           id="jsAddLoss"
+                                                           name="stopLoss"
+                                                           step="any"
+                                                           autocomplete="off"
+                                                           maxlength="10"
+                                                           data-bind="textInput: stopLossRate, hasFocus: $parent.Data.focusOnSlRate, event: { focus: function() { $parent.Data.enableSLLimit(true); return true; } }" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-center">
+                                            <button type="button" id="btnSLRate" data-bind="css: { disabled: !$parent.Data.enableSLLimit() }, click: function () { SetSlActiveTab(eSetLimitsTabs.Percent); $parent.Data.enableSLLimit(true); }" class="btn-square switch">
+                                                <i class="ico-wb-swap-arrows"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="info-value">
+                                            <span>
+                                                <!--ko if: $parent.Data.orderDir() != eOrderDir.Sell -->
+                                                <span id="lblAboveSlRate" data-bind="html: Dictionary.GetItem('lblBelowTitle', 'deals_NewDeal')"></span>
+                                                <!--/ko-->
+                                                <!--ko if: $parent.Data.orderDir() == eOrderDir.Sell -->
+                                                <span id="lblBelowSlRate" data-bind="html: Dictionary.GetItem('lblAboveTitle', 'deals_NewDeal')"></span>
+                                                <!--/ko-->
+                                                <span id="lblSlLimitFirst" data-bind="text: SLLimitLabel.First">0.0000</span><span id="lblSlLimitLast" data-bind="text: SLLimitLabel.Last" class="smaller">0</span>
+                                            </span>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--/ko-->
+                            <!-- ko if: $parent.Data.isSlAmountActiveTab() -->
+                            <table id="tblSlAmountActiveTab" class="stop-loss-data" data-bind="css: { focus: $parent.Data.enableSLLimit }">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label id="lblAmount1Title" for="jsAddLossAmount">
+                                                <span data-bind="html: Dictionary.GetItem('lblAmountTitle', 'deals_NewDeal')"></span>
+                                                <span data-bind="html: Format.toSign($parent.Data.customerSymbolId()).sign"></span>
+                                                <!--
+                                                -->
+                                                <span>:</span>
+                                            </label>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td rowspan="3">
+                                            <ul>
+                                                <li>
+                                                    <span data-bind="html: Dictionary.GetItem('lblRateTitle', 'deals_NewDeal')"></span>
+                                                    <span data-bind="text: stopLossRate()" class="stop-loss-value"></span>
+                                                </li>
+                                                <li>
+                                                    <span data-bind="html: Dictionary.GetItem('lblPercentageTitle', 'deals_NewDeal')"></span>
+                                                    <div class="stop-loss-value">
+                                                        <span data-bind="text: Format.toPercent(stopLossPercent(), true)"></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="spinner-field">
+                                                <div class="input-special" data-bind="css: { focus: $parent.Data.enableSLLimit }, amountSpinner: $parent.FieldWrappers.Data.stopLossInCustomerCcy, spinnerOptions: { input: '#jsAddLossAmount', min: SLLimitLabel.BaseCcyMinAmount, max: SLLimitLabel.BaseCcyMaxAmount, step: 1, page: 1, numberFormat: 'n0', startSpinFrom: ko.observable(eStartSpinFrom.Above) }">
+                                                    <div class="validation-holder"
+                                                         data-bind="validationOptions: { insertMessages: true, errorElementClass: 'error', decorateInputElement: true, messageTemplate: 'fx-template-deal-validation-tooltip' }">
+                                                        <input type="tel"
+                                                               value=""
+                                                               id="jsAddLossAmount"
+                                                               autocomplete="off"
+                                                               maxlength="16"
+                                                               class="spinnerAmountInput"
+                                                               data-bind="textInput: $parent.FieldWrappers.Data.stopLossInCustomerCcy, hasFocus: $parent.Data.focusOnSlAmount, event: { focus: function() { $parent.Data.enableSLLimit(true); return true; } }" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-center">
+                                            <button type="button" id="btnSLAmount" data-bind="css: { disabled: !$parent.Data.enableSLLimit() }, click: function () { SetSlActiveTab(eSetLimitsTabs.Rate); $parent.Data.enableSLLimit(true); }" class="btn-square switch">
+                                                <i class="ico-wb-swap-arrows"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="info-value valign-middle">
+                                            <span data-bind="ifnot: SLLimitLabel.BaseCcyAboveAmount.isEmpty">
+                                                <span id="lblSlAboveAmount" data-bind="html: Dictionary.GetItem('lblAboveTitle', 'deals_NewDeal')"></span>
+                                                <span id="lblSlAmountLimit" data-bind="numberWithCurrencySymbol: { currencyId: $parent.Data.customerSymbolId(), value: SLLimitLabel.BaseCcyAboveAmount() }" class="stop-loss-value"></span>
+                                            </span>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--/ko-->
+                            <!-- ko if: $parent.Data.isSlPercentActiveTab() -->
+                            <table id="tblSlPercentActiveTab" class="stop-loss-data" data-bind="css: { focus: $parent.Data.enableSLLimit }">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label id="lblPercent1Title" for="jsAddLossPercent" data-bind="html: Dictionary.GetItem('lblPercentageTitle', 'deals_NewDeal')"></label>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td rowspan="3">
+                                            <ul>
+                                                <li>
+                                                    <span data-bind="html: Dictionary.GetItem('lblAmount', 'deals_NewDeal')"></span>
+                                                    <div class="stop-loss-value">
+                                                        <span data-bind="html: Format.toSign($parent.Data.customerSymbolId()).sign, visible: $parent.Data.displaySlAmountCcySymbol()"></span><!--
+                                                        --><span data-bind="toHumanReadableNumericFormat: $parent.FieldWrappers.Data.stopLossInCustomerCcy()"></span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span data-bind="html: Dictionary.GetItem('lblRateTitle', 'deals_NewDeal')"></span>
+                                                    <span data-bind="text: stopLossRate()" class="stop-loss-value"></span>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-special" data-bind="css: { focus: $parent.Data.enableSLLimit }, closingLimitSpinner: stopLossPercent, spinnerOptions: { input: '#jsAddLossPercent', min: SLLimitLabel.MinPercent, max: SLLimitLabel.MaxPercent, step: 0.01, page: 0.01, numberFormat: 'n2', startSpinFrom: ko.observable(eStartSpinFrom.Above), culture: 'noThousandsSeparator'}">
+                                                <div class="validation-holder" data-bind="validationOptions: { insertMessages: true, errorElementClass: 'error', decorateInputElement: true, messageTemplate: 'fx-template-deal-validation-tooltip' }">
+                                                    <input type="tel"
+                                                           value=""
+                                                           id="jsAddLossPercent"
+                                                           name="stopLossPercent"
+                                                           step="any"
+                                                           autocomplete="off"
+                                                           maxlength="10"
+                                                           data-bind="textInput: stopLossPercent, hasFocus: $parent.Data.focusOnSlPercent, event: { focus: function() { $parent.Data.enableSLLimit(true); return true; } }" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-center">
+                                            <button type="button" id="btnSLPercent" data-bind="css: { disabled: !$parent.Data.enableSLLimit() }, click: function () { SetSlActiveTab(eSetLimitsTabs.Amount); $parent.Data.enableSLLimit(true); }" class="btn-square switch">
+                                                <i class="ico-wb-swap-arrows"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="info-value valign-middle">
+                                            <span data-bind="ifnot: SLLimitLabel.AbovePercent.isEmpty">
+                                                <span data-bind="html: Dictionary.GetItem('lblAboveTitle', 'deals_NewDeal')"></span>
+                                                <span data-bind="text: SLLimitLabel.AbovePercent" class="stop-loss-value"></span>
+                                            </span>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--/ko-->
+                        </div><!--end wrapper left-->
+                    </div>
+
+                    <div class="half-container no-border">
+                        <div class="wrapper right take-profit-data">
+                            <div class="custom-input-wrapper checkbox">
+                                <input type="checkbox" id="addTakeProfit" data-bind="checked: $parent.Data.enableTPLimit" />
+                                <span></span>
+                                <i class="icon-limits"></i>
+                                <label class="cursor-pointer" for="addTakeProfit">
+                                    <span id="lblAddTPTitle" data-bind="html: Dictionary.GetItem('lblAddTPTitle', 'deals_NewDeal')"></span>
+                                </label>
+                            </div>
+                            <i id="txtTakeProfitTooltip"
+                               class="ico-wb-help"
+                               data-bind="attr: { title: Dictionary.GetItem('txtTakeProfitTooltip', 'deals_NewDeal') },
+                                       balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } }"></i>
+
+                            <!-- ko if: $parent.Data.isTpRateActiveTab() -->
+                            <table id="tblTpRateActiveTab" class="stop-loss-data" data-bind="css: { focus: $parent.Data.enableTPLimit }">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <!--ko if: $parent.Data.orderDir() != eOrderDir.Sell -->
+                                            <label id="lblSellRate2Title" for="jsTakePofit" data-bind="html: Dictionary.GetItem('lblSellRateTitle', 'deals_NewDeal')"></label>
+                                            <!-- /ko -->
+                                            <!--ko if: $parent.Data.orderDir() == eOrderDir.Sell -->
+                                            <label id="lblBuyRate2Title" for="jsTakePofit" data-bind="html: Dictionary.GetItem('lblBuyRateTitle', 'deals_NewDeal')"></label>
+                                            <!-- /ko -->
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td rowspan="3">
+                                            <ul>
+                                                <li>
+                                                    <span data-bind="html: Dictionary.GetItem('lblPercentageTitle', 'deals_NewDeal')"></span>
+                                                    <div class="stop-loss-value">
+                                                        <span data-bind="text: Format.toPercent(takeProfitPercent(), true)"></span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span data-bind="html: Dictionary.GetItem('lblAmount', 'deals_NewDeal')"></span>
+                                                    <div class="stop-loss-value">
+                                                        <span data-bind="html: Format.toSign($parent.Data.customerSymbolId()).sign, visible: $parent.Data.displayTpAmountCcySymbol()"></span>
+                                                        <!--
+                                                        -->
+                                                        <span data-bind="toHumanReadableNumericFormat: $parent.FieldWrappers.Data.takeProfitInCustomerCcy()"></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-special"
+                                                 data-bind="css:{ focus: $parent.Data.enableTPLimit },
+                                                        closingLimitSpinner: takeProfitRate,
+                                                        spinnerOptions: {
+                                                            input: '#jsTakePofit',
+                                                            min: $parent.TPField.min,
+                                                            max: $parent.TPField.max,
+                                                            step: $parent.TPField.step,
+                                                            page: 1,
+                                                            numberFormat: $parent.TPField.format,
+                                                            startSpinFrom: $parent.TPField.startSpinFrom,
+                                                            culture: 'noThousandsSeparator'
+                                                        }">
+                                                <div class="validation-holder"
+                                                     data-bind="validationOptions: {
+                                                               insertMessages: true,
+                                                               errorElementClass: 'error',
+                                                               decorateInputElement: true,
+                                                               messageTemplate: 'fx-template-deal-validation-tooltip'
+                                                            }">
+                                                    <input type="tel"
+                                                           value=""
+                                                           id="jsTakePofit"
+                                                           name="takeProfit"
+                                                           step="any"
+                                                           autocomplete="off"
+                                                           maxlength="10"
+                                                           data-bind="textInput: takeProfitRate, hasFocus: $parent.Data.focusOnTpRate, event: { focus: function() { $parent.Data.enableTPLimit(true); return true; } }" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-center">
+                                            <button type="button" id="btnTPRate" data-bind="css: { disabled: !$parent.Data.enableTPLimit() }, click: function () { SetTpActiveTab(eSetLimitsTabs.Percent); $parent.Data.enableTPLimit(true); }" class="btn-square switch">
+                                                <i class="ico-wb-swap-arrows"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="info-value">
+                                            <span>
+                                                <!--ko if: $parent.Data.orderDir() != eOrderDir.Sell -->
+                                                <span id="lblAboveTpRate" data-bind="html: Dictionary.GetItem('lblAboveTitle', 'deals_NewDeal')"></span>
+                                                <!--/ko-->
+                                                <!--ko if: $parent.Data.orderDir() == eOrderDir.Sell -->
+                                                <span id="lblBelowTpRate" data-bind="html: Dictionary.GetItem('lblBelowTitle', 'deals_NewDeal')"></span>
+                                                <!--/ko-->
+                                                <span id="lblTpLimitFirst" data-bind="text: TPLimitLabel.First">0.0000</span><span id="lblTpLimitLast" data-bind="text: TPLimitLabel.Last" class="smaller">0</span>
+                                            </span>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--/ko-->
+                            <!-- ko if: $parent.Data.isTpAmountActiveTab() -->
+                            <table id="tblTpAmountActiveTab" class="stop-loss-data" data-bind="css: { focus: $parent.Data.enableTPLimit }">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label id="lblAmount2Title" for="jsTakePofitAmount">
+                                                <span data-bind="html: Dictionary.GetItem('lblAmountTitle', 'deals_NewDeal')"></span>
+                                                <span data-bind="html: Format.toSign($parent.Data.customerSymbolId()).sign"></span>
+                                                <!--
+                                                -->
+                                                <span>:</span>
+                                            </label>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td rowspan="3">
+                                            <ul>
+                                                <li>
+                                                    <span data-bind="html: Dictionary.GetItem('lblRateTitle', 'deals_NewDeal')"></span>
+                                                    <span data-bind="text: takeProfitRate()" class="stop-loss-value"></span>
+                                                </li>
+                                                <li>
+                                                    <span data-bind="html: Dictionary.GetItem('lblPercentageTitle', 'deals_NewDeal')"></span>
+                                                    <div class="stop-loss-value">
+                                                        <span data-bind="text: Format.toPercent(takeProfitPercent(), true)"></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-special" data-bind="css: { focus: $parent.Data.enableTPLimit }, amountSpinner: $parent.FieldWrappers.Data.takeProfitInCustomerCcy, spinnerOptions: { input: '#jsTakePofitAmount', min: TPLimitLabel.BaseCcyMinAmount, max: TPLimitLabel.BaseCcyMaxAmount, step: 1, page: 1, numberFormat: 'n0', startSpinFrom: ko.observable(eStartSpinFrom.Above) }">
+                                                <div class="validation-holder" data-bind="validationOptions: { insertMessages: true, errorElementClass: 'error', decorateInputElement: true, messageTemplate: 'fx-template-deal-validation-tooltip' }">
+                                                    <input type="tel"
+                                                           value=""
+                                                           id="jsTakePofitAmount"
+                                                           name="takeProfitAmount"
+                                                           autocomplete="off"
+                                                           maxlength="10"
+                                                           data-bind="textInput: $parent.FieldWrappers.Data.takeProfitInCustomerCcy, hasFocus: $parent.Data.focusOnTpAmount, event: { focus: function() { $parent.Data.enableTPLimit(true); return true; } }" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-center">
+                                            <button type="button" id="btnTPAmount" data-bind="css: { disabled: !$parent.Data.enableTPLimit() }, click: function () { SetTpActiveTab(eSetLimitsTabs.Rate); $parent.Data.enableTPLimit(true); }" class="btn-square switch">
+                                                <i class="ico-wb-swap-arrows"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="info-value valign-middle">
+                                            <span data-bind="ifnot: TPLimitLabel.BaseCcyAboveAmount.isEmpty">
+                                                <span id="lblTpAboveAmount" data-bind="html: Dictionary.GetItem('lblAboveTitle', 'deals_NewDeal')"></span>
+                                                <span id="lblTpAmountLimit" data-bind="numberWithCurrencySymbol: { currencyId: $parent.Data.customerSymbolId(), value: TPLimitLabel.BaseCcyAboveAmount() }"></span>
+                                            </span>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--/ko-->
+                            <!-- ko if: $parent.Data.isTpPercentActiveTab() -->
+                            <table id="tblTpPercentActiveTab" class="stop-loss-data" data-bind="css: { focus: $parent.Data.enableTPLimit }">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label id="lblPercent2Title" for="jsTakePofitPercent" data-bind="html: Dictionary.GetItem('lblPercentageTitle', 'deals_NewDeal')"></label>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td rowspan="3">
+                                            <ul>
+                                                <li>
+                                                    <span data-bind="html: Dictionary.GetItem('lblAmount', 'deals_NewDeal')"></span>
+                                                    <div class="stop-loss-value">
+                                                        <span data-bind="html: Format.toSign($parent.Data.customerSymbolId()).sign, visible: $parent.Data.displayTpAmountCcySymbol()"></span><!--
+                                                        --><span data-bind="toHumanReadableNumericFormat: $parent.FieldWrappers.Data.takeProfitInCustomerCcy()"></span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span data-bind="html: Dictionary.GetItem('lblRateTitle', 'deals_NewDeal')"></span>
+                                                    <span data-bind="text: takeProfitRate()" class="stop-loss-value"></span>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-special" data-bind="css:{ focus: $parent.Data.enableTPLimit }, closingLimitSpinner: takeProfitPercent, spinnerOptions: { input: '#jsTakePofitPercent', min: TPLimitLabel.MinPercent, max:  TPLimitLabel.MaxPercent, step: 0.01, page: 1, numberFormat: 'n2', startSpinFrom: ko.observable(eStartSpinFrom.Above), culture: 'noThousandsSeparator'}">
+                                                <div class="validation-holder" data-bind="validationOptions: { insertMessages: true, errorElementClass: 'error', decorateInputElement: true, messageTemplate: 'fx-template-deal-validation-tooltip' }">
+                                                    <input type="tel"
+                                                           value=""
+                                                           id="jsTakePofitPercent"
+                                                           name="takeProfitPercent"
+                                                           step="any"
+                                                           autocomplete="off"
+                                                           maxlength="10"
+                                                           data-bind="textInput: takeProfitPercent, hasFocus: $parent.Data.focusOnTpPercent, event: { focus: function() { $parent.Data.enableTPLimit(true); return true; } }" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-center">
+                                            <button type="button" id="btnTPPercent" data-bind="css: { disabled: !$parent.Data.enableTPLimit() }, click: function () { SetTpActiveTab(eSetLimitsTabs.Amount); $parent.Data.enableTPLimit(true); }" class="btn-square switch">
+                                                <i class="ico-wb-swap-arrows"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="info-value valign-middle">
+                                            <span data-bind="ifnot: TPLimitLabel.AbovePercent.isEmpty">
+                                                <span data-bind="html: Dictionary.GetItem('lblAboveTitle', 'deals_NewDeal')"></span>
+                                                <span data-bind="text: TPLimitLabel.AbovePercent()"></span>
+                                            </span>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--/ko-->
+                        </div><!--end wrapper right-->
+                    </div>
+
+                    <div class="clear"></div>
+                </form>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+        <div class="deal-content info-actions">
+            <div class="row-wrapper">
+                <!-- ko if: Data.showShareCorporateActionDealInfo -->
+                <div class="deal-note">
+                    <p id="txtDealInfoShare" data-bind="html: Dictionary.GetItem('txtDealInfoShare', 'deals_NewDeal'), formattedText: [ Format.toDateTime(Data.corporateActionDate()) ]"></p>
+                </div>
+                <!-- /ko -->
+                <!-- ko if: Data.showShareDividendDealInfo -->
+                <div class="deal-note">
+                    <p id="txtDealInfoShareDividend" data-bind="html: Dictionary.GetItem('txtDealInfoShareDividend', 'deals_NewDeal'), formattedText: [ Format.toDateTime(Data.sharesDividendDate()) ]"></p>
+                </div>
+                <!-- /ko -->
+                <a id="btnDeal" class="btn big deal right disabled" href="javascript:void(0)"
+                   data-bind="css: { disabled: !Data.DealButtonEnabled(), isprocessing: Data.isProcessing() },
+						  click: function () { DealButtonHandler(); ko.postbox.publish('deal-slip-submit', { instrument: Data.ccyPair(), dealSize: Data.selectedDealAmount(), orderDir: Data.orderDir(), enableSLLimit: Data.enableSLLimit(),
+					enableTPLimit: Data.enableTPLimit() }); }">
+
+                    <span id="btnContent" data-bind="html: Dictionary.GetItem('btnDeal', 'deals_NewDeal'), isProcessing: { switchText: true }">
+                    </span>
+                    <!-- ko if: Data.isProcessing()-->
+                    <span class="js_processing"></span>
+                    <!-- /ko-->
+                </a>
+                <div class="clear"></div>
+            </div>
+        </div>

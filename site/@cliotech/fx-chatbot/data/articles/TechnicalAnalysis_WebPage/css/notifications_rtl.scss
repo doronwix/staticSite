@@ -1,0 +1,160 @@
+.PopupWrapper {
+  margin: 0px auto;
+  padding: 40px 20px 20px 20px;
+  max-width: 645px;
+  height: auto;
+  min-height: auto;
+  filter: inherit;
+  font-family: Verdana, Arial;
+  background-color: #ffffff;
+  direction: rtl;
+  text-align: right;
+}
+
+.PopupWrapper .content {
+  width: 100%;
+  margin: 0px auto;
+  text-align: right;
+}
+
+.PopupWrapper .content .depHeader {
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAocAAAAHCAIAAAD1WXBEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA25pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ4IDc5LjE2NDAzNiwgMjAxOS8wOC8xMy0wMTowNjo1NyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozMDE4OTA3QkMyNzBFMDExQTA1OUYzMEMzMDAwNUM0OCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0RkU1OEI1ODUzMUQxMUVBODc4M0VFQ0RCOUE0NDA3NyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RkU1OEI1NzUzMUQxMUVBODc4M0VFQ0RCOUE0NDA3NyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpmNjQ1MzQyMi1hZmVmLWMzNDAtODAzNC02M2FkNWUxMDBmM2EiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MzAxODkwN0JDMjcwRTAxMUEwNTlGMzBDMzAwMDVDNDgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5FUHV7AAABrUlEQVR42uya246DMAxEC4T+/wdzWYsRo6kd0KrabV/mPETGcQKVKh2cdti27dFj3/c3Mr8vu8kbY4wx32UYhjcKkORUqqlLaqZBjUmQvNwPugXMcyoJXhfqhmkTPpMlbYwx5rvehYmGA1xqmUq3K+AYx3GMEQsRs6BuVR+p7SdqSjWuQvUy5lTsta5r3UHr0y2q7y1mY4wxH+59tTmslr3yMY2r9p2mCbGOXbqPEQ/Q1Kwq0e1A87hEkJR8U8My7lzvlV4L/O0xxhjzMRnXVpjiTBklBIxgPJkOmMElYxarrbU1xztBiwaXKqVQA+R1ipn1QItZzxrGqUwljd6aCreVjTHGfFLMj9eD5RsHw6MqXdJai/w8zxHH2A4igxEg5pJ6vs27N+g2+ThYloXJ9URn6d2I0ywC1KiqOVVVzebbXyBjjDH/Z+Wug9XQ2gHrJZQMueo4n4R6Y3w+n4wDCBs9Z8TwMX/ArafZ7aqLh8y1udYPQNVrZWiVZXhc7MZ8JB/n8Xh6AdG1xhhjzJ+LOVmw+9cteCodNXOsaAfMWM+o+UuzKu/qkDyCHwEGALS5gAHpLsx5AAAAAElFTkSuQmCC");
+  background-position: bottom;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 0px solid black;
+}
+
+.PopupWrapper .content .depHeader_wrap {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  padding-left: 6%;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+}
+
+.PopupWrapper .content .depHeader p.MainTitle {
+  color: #2a3b4d;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.2em;
+  margin: 0px 0 30px;
+  padding-left: 4%;
+  padding-right: 7px;
+  align-self: center;
+  -webkit-align-self: center;
+}
+
+.PopupWrapper .content .depHeader .ImgHeader {
+  max-width: 259px;
+  display: inline;
+  text-align: left;
+  padding-left: 1%;
+  vertical-align: bottom;
+}
+
+.PopupWrapper .content .dep {
+  width: 100%;
+  background-color: #ffffff;
+  display: inline-block;
+  /* text-align: left; */
+}
+
+.PopupWrapper .content .dep p.FirstTitle {
+  font-size: 22px;
+  line-height: 27px;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 2px;
+}
+
+.PopupWrapper .content .dep p.SecondaryTitle {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+.PopupWrapper .content .dep p.SecondaryTitle span {
+  background-color: #00305a;
+  padding: 5px 10px;
+}
+
+.PopupWrapper .content .dep p {
+  font-size: 17px;
+  line-height: 1.2em;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.PopupWrapper .content .dep p.text2 {
+  padding-top: 14px;
+  padding-bottom: 35px;
+}
+
+.PopupWrapper .content .dep .img {
+  max-width: 100%;
+  display: block;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.PopupWrapper .content .dep .img1 {
+  max-width: 100%;
+  display: block;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.PopupWrapper .content .dep .IconSection {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.PopupWrapper .content .dep .IconSection .icon {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.PopupWrapper .content .dep .IconSection p.IconTitle {
+  padding-right: 15px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1.2em;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 680px) {
+  .PopupWrapper .content .depHeader .ImgHeader {
+    display: none;
+  }
+  .PopupWrapper .content .depHeader .ImgHeader {
+    display: none;
+  }
+  .PopupWrapper .content .depHeader {
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-image: none;
+    background-position: bottom;
+    margin: 0;
+  }
+  .PopupWrapper .content .depHeader p#MainTitle br {
+    display: none;
+  }
+  .PopupWrapper .content .depHeader p#MainTitle {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}

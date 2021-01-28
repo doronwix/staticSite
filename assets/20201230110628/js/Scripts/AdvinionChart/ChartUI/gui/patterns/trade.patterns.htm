@@ -1,0 +1,146 @@
+﻿<trade_form> 
+  <div class="adv-dialog-content" id="dlg-trade">
+        
+      <div class ="common-trade-details">
+          <table class="common-property-page" cellpadding="0" cellspacing="2">
+              <tbody id="tbody-parameters">
+                  <tr>
+                      <td data-localize="dialogs.trade.lb-order" >Order</td>
+                      <td><span id="order-type" data-localize="dialogs.trade.trade-buy" >buy</span></td>
+                      <td data-localize="dialogs.trade.lb-symbol" >Symbol</td>
+                      <td><span id="order-symbol" >EUR/USD</span></td>
+                      <td data-localize="dialogs.trade.lb-status">Status</td>
+                      <td><span id="order-status" data-localize="dialogs.trade.status-new" >new</span></td>
+                  </tr>
+                  <tr>
+                      <td data-localize="dialogs.trade.lb-orderid">Order ID</td>
+                      <td colspan="5" ><span id="order-id" ></span></td>
+                       
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+      <div class="properties-tabs">
+          <a class ="properties-tabs-label active" data-localize="dialogs.trade.tab-parameters"  href="javascript:void(0);">Parameters</a>
+          <!--    <a class ="properties-tabs-label" data-localize="dialogs.trade.tab-style"  href="javascript:void(0);">Style</a>-->
+          <!--  <a class ="properties-tabs-label" href="javascript:void(0);">Levels</a>-->
+        
+      </div>
+      <div class="main-properties" style ="display:block ">
+           
+        
+          <table class="property-page" cellpadding="0" cellspacing="2">
+              <tbody id="tbody-tradevalues">
+                  <tr>
+                      <td data-localize="dialogs.trade.lb-value">Value:</td>
+                      <td colspan ="3"><input id="in-tradevalue" class="param-input onlynumeric"/></td>
+                  </tr>
+                  <tr>
+                      <td data-localize="dialogs.trade.lb-stoploss">Stop Loss</td>
+                      <td><input id="in-stoploss" class="param-input onlynumeric"/></td>
+                      <td data-localize="dialogs.trade.lb-takeprofit">Take Profit</td>
+                      <td><input id="in-tekeprofit" class="param-input onlynumeric"/></td>
+                  </tr>
+                  <tr >
+                      <td data-localize="dialogs.trade.lb-description">Description</td>
+                      <td colspan ="3"><input id="input-text"  autocomplete="off" autofocus="" class="class-input-level dialog-text-input text-input-long " maxlength="50" max="50"  type="text" /></td>
+                  </tr>
+              </tbody>
+          </table>
+         
+        
+      </div>
+      <div class="main-properties" style ="display:none ">
+          <table class="property-page" cellpadding="0" cellspacing="2">
+              <tbody>
+                  <tr>
+                      <td><input id="control-labels" class="visibility-switch" type="checkbox" checked="checked"/>
+                      </td>
+                      <td colspan ="3" data-localize="dialogs.draw.lb-labels">Labels</td>
+                   
+                  </tr>
+                  <tr>
+                      <td><input id="label-background" class="visibility-switch" type="checkbox" checked="checked"/>
+                      </td>
+                      <td data-localize="dialogs.draw.lb-background">Background</td>
+                      <td><input id="background-labelcolor" type="color"  /></td>
+                      <td><div id="label-bk-coloropacity" class="slider-coloropaciry ">
+                              <div class="gradient" ></div>
+                          </div>
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td colspan ="4">
+                          <table class="property-page" cellpadding="0" cellspacing="2">
+                              <tbody>
+                                  <tr>
+                                      <td>
+                                          <input id="color-font" type="color"  /> 
+                                      </td>
+                                      <td>
+                                          <select id="dialog-fontname-select" class ="dialog-select">
+                                              <option value="Verdana">Verdana</option>
+                                              <option value="Courier New">Courier New</option>
+                                              <option value="Times New Roman">Times New Roman</option>
+                                              <option value="Arial">Arial</option>
+                                          </select>
+                                      </td>
+                                      <td>
+                                          <select id="dialog-fontsize-select" class ="dialog-select">
+                                              <option value="6">6</option>  
+                                              <option value="7">7</option>  
+                                              <option value="8">8</option>  
+                                              <option value="9">9</option>
+                                              <option value="10">10</option>
+                                              <option value="11">11</option>
+                                              <option value="12">12</option>
+                                              <option value="13">13</option>
+                                              <option value="14">14</option>
+                                              <option value="15">15</option>
+                                              <option value="16">16</option>
+                                              <option value="17">17</option>
+                                              <option value="18">18</option>
+                                              <option value="20">20</option>
+                                              <option value="24">24</option>
+                                              <option value="28">28</option>
+                                              <option value="36">36</option>
+                                              <option value="40">40</option>
+                                          </select>
+                                      </td>
+                                      <td>
+                                          <span class ="property-page-button active" id ="button_fontbold">
+                                              <span class="button-font-bold custom-gui"></span>
+                                          </span>
+                                      </td>
+                                      <td>
+                                          <span class ="property-page-button " id ="button_fontitalic">
+                                              <span class="button-font-italic custom-gui"></span>
+                                          </span>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </td>
+
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+      <div class ="main-properties" style ="display:none ">
+          <div id ="indicatorsgroup-volumes">
+            
+          </div>
+      </div>
+    
+      <div class ="main-properties" style ="display:none ">
+          <div id ="indicatorsgroup-bwilliams">
+            
+          </div>
+      </div>
+
+  </div>
+</trade_form>
+ 

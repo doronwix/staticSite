@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/devices/web/uilayer/viewmodels/MarketInfoToolViewModel.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define(\r\n    'deviceviewmodels/MarketInfoToolViewModel',\r\n    [\r\n        'require',\r\n        'handlers/general',\r\n        'viewmodels/Deals/BaseMarketInfoToolViewModel'\r\n    ],\r\n    function (require) {\r\n        var general = require('handlers/general'),\r\n            BaseMarketInfoToolViewModel = require('viewmodels/Deals/BaseMarketInfoToolViewModel');\r\n\r\n        var MarketInfoToolViewModel = general.extendClass(BaseMarketInfoToolViewModel, function (_newDealData) {\r\n            var parent = this.parent;\r\n\r\n            return {\r\n                init: parent.init,\r\n                dispose: parent.dispose,\r\n                NewDealData: parent.NewDealData,\r\n                ViewSentimentsButtonHandler: parent.ViewSentimentsButtonHandler\r\n            };\r\n        });\r\n\r\n        var createViewModel = function (params) {\r\n            var viewModel = new MarketInfoToolViewModel(params);\r\n\r\n            viewModel.init();\r\n\r\n            return viewModel;\r\n        };\r\n\r\n        return {\r\n            viewModel: {\r\n                createViewModel: createViewModel\r\n            }\r\n        };\r\n    }\r\n);",
+  "isBase64": false
+}

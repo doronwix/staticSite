@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/uilayer/modules/LanguageSettings.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define(\r\n    'modules/LanguageSettings', ['handlers/Cookie',],\r\n\r\n    function (CookieHandler) { \r\n\r\n        var setNewLanguage = function (langId, languageName, noReload) {\r\n            CookieHandler.CreateCookie(\"LID\", langId, (new Date()).AddMonths(6));\r\n            CookieHandler.CreateCookie(\"Language\", languageName, (new Date()).AddMonths(6));      \r\n            if (noReload)\r\n                return;\r\n            window.location.reload(true);\r\n        };\r\n\r\n        return setNewLanguage;\r\n    }\r\n);\r\n",
+  "isBase64": false
+}

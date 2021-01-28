@@ -1,0 +1,60 @@
+﻿<div id="quotes-customized-header">
+	<span data-bind="dictionaryBinding: 'Edit_Favorites', resourceName: 'EditFavoriteInstruments'" class="edit-favorites-title"></span>
+</div>
+
+<div id="quotesCustomizedPage">
+	<fx-component-favorites-instrument-search params="{ instrumentSelectedHandler: FavoriteInstrumentSelected }">
+	</fx-component-favorites-instrument-search>
+
+	<div id="quotes-customized-wrapper" class="ui-tabs-wrapper" data-bind="visible: Data.isFavoriteListVisible">
+		<div class="customized active">
+			<!--Favorites-->
+			<div id="quotes_cust_main">
+				<div class="thelist results-wrapper">
+					<ul id="sortable-cust"
+						class="ui-sortable list-container"
+						data-bind="sortable: {
+								options: {
+									containment: (mobile.device.android) ? false : 'parent',
+									handle: '.icon-drag-up-down',
+									axis: 'y',
+									scrollSensitivity: 30,
+									opacity: 0.9,
+									revert: 200,
+									tolerance: 'pointer',
+									update: UpdateFavoriteInstrumentsUIOrder
+								},
+								data: FavoritesCollection
+							} ">
+						<li>
+							<div data-bind="event: { mousedown: function () { ko.postbox.publish('favorite-instruments-reorder-drag', id); } }" class="icon-drag-up-down"></div>
+
+							<div class="instr-wrapper">
+								<!-- ko template: {
+									name: 'fx-template-instrument-icon',
+									data: { instrumentId: id, baseSymbolId: baseSymbolId, otherSymbolId: otherSymbolId }
+								} -->
+								<!-- /ko -->
+							</div>
+							<div class="text-wrapper">
+								<strong data-bind="instrumentShortName: id"></strong>
+								<span class="text-holder category-name" data-bind="html: $data.presetLabel"></span>
+							</div>
+							<span class="icon-star-full favorite" data-bind="removeOnClick: { parent: 'li', callback: function () { $parent.RemoveInstrument(id); } }"><span></span></span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- ko if: FavoritesCollection().length === 0 -->
+				<div class="no-favorites">
+					<center>
+						<span class="icon-star-full no-favorites"></span>
+						<p data-bind="dictionaryBinding: 'No_Favorites', resourceName: 'EditFavoriteInstruments'" class="no-favorites-info"></p>
+						<p data-bind="dictionaryBinding: 'Favorites_Suggestion', resourceName: 'EditFavoriteInstruments'" class="favorites-suggestion"></p>
+					</center>
+				</div>
+				<!-- /ko -->
+			</div>
+		</div>
+	</div>
+</div>

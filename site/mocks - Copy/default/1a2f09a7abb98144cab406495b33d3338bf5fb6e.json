@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/navigation-wizard.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<div data-bind=\"attr: {'class': 'wizard-nav-container wrap-step-' + Data.step()}\">\r\n\t<!-- ko if: Data.renderedComponent -->\r\n\t<!-- ko component: { name: Data.renderedComponent(), params: { setStepActions: UpdateStepActions } } --><!-- /ko -->\r\n\r\n\t<div class=\"steps-wrapper\">\r\n\t\t<div class=\"center-area\">\r\n\t\t\t<div class=\"step-action\" data-bind=\"visible: previousStep.visible()\">\r\n\t\t\t\t<button id=\"wizard-back\" class=\"action-button btn-back btn action colored\" data-bind=\"click: prev,\r\n\t\t\tvisible: previousStep.visible, enable: previousStep.valid\">\r\n\t\t\t\t\t<span data-bind=\"dictionaryBinding: previousStep.label, resourceName: 'navigationWizard'\"></span>\r\n\t\t\t\t</button>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"step-action\" data-bind=\"visible: nextStep.visible()\">\r\n\t\t\t\t<button id=\"wizard-next\" class=\"action-button btn-continue btn\" data-bind=\"click: next, css: { disabled: !nextStep.valid() },\r\n\t\t\tvisible: nextStep.visible, enable: nextStep.valid,\r\n\t\t\tdictionaryBinding: nextStep.label, resourceName: 'navigationWizard'\"></button>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<!-- /ko -->\r\n</div>\r\n\r\n",
+  "isBase64": false
+}

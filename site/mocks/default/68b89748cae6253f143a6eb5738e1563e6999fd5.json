@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/api/clientstate/Register/2257c6b2-bfdf-40d3-9587-a5d72f7045ee?instruments=[35631,35634,7985,8240,9519,10031,11790,11801,11823,12046,12057,12079,12303,35598,35608,35633,56623,12335]",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "POST",
+  "statusCode": 200,
+  "data": "1",
+  "isBase64": false
+}

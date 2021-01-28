@@ -1,0 +1,54 @@
+﻿//UI Main
+$logoimg:"logo.png";
+$spriteimg:"img-sprite.png";
+$template:"customtemplate";
+$customimage:"custom-gui.png"; 
+$layout:"layout1"; 
+
+//Prochart
+// DATE RANGE
+prochart{
+ .#{$layout}.#{$template}
+	 {
+		 //Date range
+		  .zoom-date-range{
+			   .date-end,
+			   .date-start
+			   {
+				color: #000000;
+				font-size: 9px;
+				font-weight: bold;
+				padding: 2px;
+				text-align: right;
+			   }
+			}
+	}
+}
+
+// Change image sprite
+prochart{
+ .#{$layout}.#{$template}
+ {
+   .icon-button, .icon-item {
+     span{ 
+	   background-image:url(#{$customimage}) !important;
+	 }
+   }
+ 
+ }
+}
+
+//Dialogs Change image sprite
+.chart-ui-dialog.#{$template}{
+  button.eye-orange,
+  button.favorite { 
+   background-image:url(#{$customimage}) !important;
+  }
+  .main-sprite-image{
+	  background-image: url(#{$customimage}) !important; 
+  }
+}
+
+
+
+

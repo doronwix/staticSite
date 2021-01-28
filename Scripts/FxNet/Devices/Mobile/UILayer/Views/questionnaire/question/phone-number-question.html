@@ -1,0 +1,76 @@
+﻿<template id="phone-number-question-item">
+    <li data-bind="css: { selected: $parent.countryId() === id && id != null }, scrollToItem: $parent.countryId() === id, click: function() { $parent.selected({ id: id }); }">
+        <!-- ko if: imageCode.length > 0 -->
+        <i class="list-flag" data-bind="css: imageCode"></i>
+        <!-- /ko -->
+        <span class="text-holder" data-bind="text: value, css:{ disabled: id == null }"></span>
+    </li>
+</template>
+
+<!--ko if: visible-->
+<div class="row select-phone" data-bind="css: {valid : answer.isValid() && validationOn(), error : !answer.isValid() && validationOn(), focused: focused() }">
+	<div data-bind="if: visible" class="select-question">
+		<label data-bind="attr: { id : name + 'Label' }">
+			<span data-bind="html: text"></span>
+			<!--ko if: tooltip !== '' -->
+			<fx-tooltip params="tooltip: tooltip, id: name"></fx-tooltip>
+			<!--/ko-->
+		</label>
+
+		<div class="flag-dropdown relative">
+			<i class="selected-item" data-bind="css: selectedClass()"></i>
+			<input type="text" readonly="" data-bind="css: { 'not-selected' : selectedText() === placeholder }, value: countryCodeAnswer, click: function() { displaySearch(true); searchFocus(true); }"/>
+		</div>
+		<!--ko if: displaySearch() -->
+		<div class="questionSearch">
+			<div id="header">
+				<div class="logo-wrapper" data-bind="css: { 'demo': $statesManager.States.IsDemo() }">
+					<div class="icon-mid"></div>
+				</div>
+				<div class="back-button" data-bind="click: function() { displaySearch(false); }">
+				</div>
+			</div>
+			<div data-bind="attr: { class: 'autocompleteWrapper autocompleteWrapper-' + name }">
+				<div class="search-wrapper">
+					<div class="clear-input">
+						<input class="search" type="text" data-bind="attr: { id: 'question-autocomplete' + name, name: name },
+                           hasFocus: searchFocus,
+                           autocomplete: {
+                                elementType: 'input.mobile',
+                                source: optionalAnswers,
+                                selected: selected,
+                                appendTo: '.results-wrapper',
+                                minLength: 1,
+                                autocompleteWrapperClass: 'autocompleteWrapper-' + name,
+                                hasCategories: false,
+                                itemImageClassProperty: 'imageCode',
+                                renderInstruments: false,
+                                matchFromBeginning: false
+                            },
+                            virtualKeyboardBehavior"/>
+
+						<button class="clear-button closeButton" data-bind="attr: { id: 'clearButton' + name }, cssIfValue: { valueElementId: 'question-autocomplete' + name, className: 'clear-button' }"></button>
+					</div>
+				</div>
+
+				<div class="results-wrapper">
+					<div class="styled-select answer-search-select">
+						<ul class="customized" data-bind="template: { name: 'phone-number-question-item', foreach: optionalAnswers }"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ko-->
+	</div>
+
+	<input type="text" class="country-name" data-bind="value: phoneNumberAnswer, event: {
+                            blur: onBlur,
+							focus: onFocus
+				   }" />
+
+	<!--ko if: !answer.isValid() && validationOn() -->
+    <fx-question-validation-balloon></fx-question-validation-balloon>
+	<!--/ko-->
+	<div class="clear"></div>
+</div>
+<!--/ko-->

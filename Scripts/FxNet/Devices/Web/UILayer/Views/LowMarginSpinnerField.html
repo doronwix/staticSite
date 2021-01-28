@@ -1,0 +1,12 @@
+﻿<div class="spinner-field">
+    <div class="input-special" data-bind="lowMarginSpinner: value, spinnerOptions: { input: '.spinnerAmountInput', min: min, max: max, step: step, page: step, numberFormat: 'n2', startSpinFrom: ko.observable(eStartSpinFrom.Above), enabled : enabled }">
+        <div class="validation-holder"
+             data-bind="validationOptions: { insertMessages: true, errorElementClass: 'error', decorateInputElement: true, messageTemplate: 'fx-template-deal-validation-tooltip' }">
+            <input type="tel"
+                   autocomplete="off"
+                   maxlength="16"
+                   class="spinnerAmountInput"
+                   data-bind="textInput: value, attr: { id: id, name: name }, css: { disabled : !enabled()}" />
+        </div>
+    </div>
+</div>

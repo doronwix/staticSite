@@ -1,0 +1,45 @@
+﻿<h3 class="title">Withdrawal requests</h3>
+<div class="holder withdrawal-requests">
+    <table class="data-holder striped">
+        <tr class="blue">
+            <th>Id</th>
+            <th>Status</th>
+            <th>Request date</th>
+            <th>Amount</th>
+            <th>Currency</th>
+            <th>Details</th>
+            <th>Comment</th>
+            <th>Parent withdrawal ID</th>
+            <th>Original amount</th>
+        </tr>
+        <!-- ko foreach: withdrawals-->
+        <tr data-bind="css : {'selectedWithdrawal' : $parent.selectedWithdrawalId() === withdrawalId},
+			click : function(){$parent.selectedWithdrawalId(withdrawalId);}">
+            <td data-bind="text:withdrawalId">N/A</td>
+            <td data-bind="text:status">N/A</td>
+            <td data-bind="text:requestDate">N/A</td>
+            <td data-bind="text:Format.toNumberWithThousandsSeparator(amount, -1, '')">N/A</td>
+            <td data-bind="text:currency">N/A</td>
+            <td data-bind="text:details">N/A</td>
+            <td data-bind="text:comment">N/A</td>
+            <td data-bind="text:parentWithdrawalId">N/A</td>
+            <td data-bind="text:originalAmount">N/A</td>
+        </tr>
+        <!-- /ko -->
+    </table>
+</div>
+<div class="separator"></div>
+<div class="half left">
+    <fx-withdrawal-details params="selectedWithdrawal:selectedWithdrawal"></fx-withdrawal-details>
+    <div class="clear"></div>
+</div>
+<div class="half right">
+    <fx-withdrawal-method params="selectedWithdrawal:selectedWithdrawal,
+                          refreshWithdrawals: refreshWithdrawals"></fx-withdrawal-method>
+</div>
+<div class="clear"></div>
+<div class="separator"></div>
+<fx-withdrawal-lines params="withdrawalId: $parent.withdrawalId,
+                     selectedWithdrawal: selectedWithdrawal,
+                     refreshWithdrawals: refreshWithdrawals,
+                     refreshWithdrawal: refreshWithdrawal"></fx-withdrawal-lines>

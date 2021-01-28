@@ -1,0 +1,734 @@
+[
+  {
+    "k": "@@chatbot_max_msg_1_0@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/Welcome.png"
+  },
+  {
+    "k": "@@chatbot_max_msg_1_2@@",
+    "s": "Hi, I'm Max."
+  },
+  {
+    "k": "@@chatbot_max_msg_1_4@@",
+    "s": "You have an interest in taking advantage of the market and trading. I'm here to help you get the most out of your experience and your investments."
+  },
+  {
+    "k": "@@chatbot_max_msg_1_6@@",
+    "s": "One question..."
+  },
+  {
+    "k": "@@chatbot_max_msg_1_8@@",
+    "s": "Do you have experience trading CFD products? (I just want to make sure they give you the right stuff. You know, educational materials, 1-on-1 training, welcome bonus, etc.)"
+  },
+  {
+    "k": "@@chatbot_max_msg_1_10_0_text@@",
+    "s": "I have no trading experience"
+  },
+  {
+    "k": "@@chatbot_max_msg_1_10_0_postback@@",
+    "s": "I have no trading experience"
+  },
+  {
+    "k": "@@chatbot_max_msg_1_10_1_text@@",
+    "s": "I have trading experience"
+  },
+  {
+    "k": "@@chatbot_max_msg_1_10_1_postback@@",
+    "s": "I have trading experience"
+  },
+  {
+    "k": "@@chatbot_max_msg_2_1@@",
+    "s": "Right, first thing you should know: you need to understand what you're doing. The best way to become a successful trader, is by making informed market decisions. That way, you get to enjoy taking advantage of market opportunities on your own terms."
+  },
+  {
+    "k": "@@chatbot_max_msg_2_3@@",
+    "s": "Before you start trading, you need a few things..."
+  },
+  {
+    "k": "@@chatbot_max_msg_3_0_0_text@@",
+    "s": "Tell me more"
+  },
+  {
+    "k": "@@chatbot_max_msg_3_0_0_postback@@",
+    "s": "Tell me more"
+  },
+  {
+    "k": "@@chatbot_max_msg_10_0@@",
+    "s": "Access to iFOREX's <b>educational materials</b> to build your knowledge"
+  },
+  {
+    "k": "@@chatbot_max_msg_10_2@@",
+    "s": "<b>Free 1-on-1 training </b>for a personal touch or to ask questions"
+  },
+  {
+    "k": "@@chatbot_max_msg_10_4@@",
+    "s": "<b>A risk-free demo account</b> that you can start practicing on."
+  },
+  {
+    "k": "@@chatbot_max_msg_10_6@@",
+    "s": "Keep in mind you also get Up to <b> 50% trading bonus on your first deposit</b>  to be used in any real trade you open, so take that into consideration."
+  },
+  {
+    "k": "@@chatbot_max_msg_10_8@@",
+    "s": "You get all of this with your deposit package.<br> Wait, that comes later, you still have a few more things to learn in order to trade with confidence."
+  },
+  {
+    "k": "@@chatbot_max_msg_10_10_0_text@@",
+    "s": "I'm ready to learn more"
+  },
+  {
+    "k": "@@chatbot_max_msg_10_10_0_postback@@",
+    "s": "I'm ready to learn more"
+  },
+  {
+    "k": "@@chatbot_max_msg_10_10_1_text@@",
+    "s": "I'm ready to deposit and trade now"
+  },
+  {
+    "k": "@@chatbot_max_msg_10_10_1_postback@@",
+    "s": "I'm ready to deposit and trade now"
+  },
+  {
+    "k": "@@chatbot_max_msg_11_0@@",
+    "s": "Great, here we go..."
+  },
+  {
+    "k": "@@chatbot_max_msg_12_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/mtaxxmlr2p?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_max_msg_12_0_description@@",
+    "s": "What is CFD Trading"
+  },
+  {
+    "k": "@@chatbot_max_msg_12_0_title@@",
+    "s": "Lesson 1/3"
+  },
+  {
+    "k": "@@chatbot_max_msg_12_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/CFD.png"
+  },
+  {
+    "k": "@@chatbot_max_msg_13_0@@",
+    "s": "Did you find the \"What is CFD trading\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_max_msg_14_1@@",
+    "s": "I hope you find the next lesson more helpful"
+  },
+  {
+    "k": "@@chatbot_max_msg_15_1@@",
+    "s": "Great, let's continue to the next lesson"
+  },
+  {
+    "k": "@@chatbot_max_msg_16_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_16_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_20_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/c1lb31jj9t?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_max_msg_20_0_description@@",
+    "s": "What is Leverage Trading"
+  },
+  {
+    "k": "@@chatbot_max_msg_20_0_title@@",
+    "s": "Lesson 2/3"
+  },
+  {
+    "k": "@@chatbot_max_msg_20_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/Leverage.png"
+  },
+  {
+    "k": "@@chatbot_max_msg_21_0@@",
+    "s": "Did you find the \"What is leverage trading\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_max_msg_22_1@@",
+    "s": "I hope you find the next lesson more helpful"
+  },
+  {
+    "k": "@@chatbot_max_msg_23_1@@",
+    "s": "Great, let's continue to the next lesson"
+  },
+  {
+    "k": "@@chatbot_max_msg_24_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_24_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_27_0_subtitle@@",
+    "s": "Find a quick"
+  },
+  {
+    "k": "@@chatbot_max_msg_27_0_description@@",
+    "s": "Trading Example"
+  },
+  {
+    "k": "@@chatbot_max_msg_27_0_title@@",
+    "s": "Lesson 3/3"
+  },
+  {
+    "k": "@@chatbot_max_msg_27_0_url@@",
+    "s": "//www.iforex.com/EMERP/Landing/masterLP/img/banners/CFDTradingExample_br1_mas.jpg"
+  },
+  {
+    "k": "@@chatbot_max_msg_27_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TxtLesson.png"
+  },
+  {
+    "k": "@@chatbot_max_msg_28_0@@",
+    "s": "Did you find the \"Trading example\" lesson helpful?"
+  },
+  {
+    "k": "@@chatbot_max_msg_29_1@@",
+    "s": "Thanks for your feedback"
+  },
+  {
+    "k": "@@chatbot_max_msg_30_1@@",
+    "s": "Great, thanks for the feedback"
+  },
+  {
+    "k": "@@chatbot_max_msg_31_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_31_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_33_0@@",
+    "s": "Let's make sure you're keeping up. Here are a few questions for you."
+  },
+  {
+    "k": "@@chatbot_max_msg_34_0_text@@",
+    "s": "What is CFD trading?"
+  },
+  {
+    "k": "@@chatbot_max_msg_34_0_0@@",
+    "s": "A way to benefit from the price movements of real financial products without owning them"
+  },
+  {
+    "k": "@@chatbot_max_msg_34_0_1@@",
+    "s": "Purchasing real financial products from the stock market"
+  },
+  {
+    "k": "@@chatbot_max_msg_35_0_text@@",
+    "s": "Which leverage would lead to larger potential profits?"
+  },
+  {
+    "k": "@@chatbot_max_msg_35_0_0@@",
+    "s": "1:400"
+  },
+  {
+    "k": "@@chatbot_max_msg_35_0_1@@",
+    "s": "1:30"
+  },
+  {
+    "k": "@@chatbot_max_msg_35_0__text_wrong@@",
+    "s": "<b>1/2</b> Not bad, let's move on"
+  },
+  {
+    "k": "@@chatbot_max_msg_35_0__text__correct@@",
+    "s": "<b>2/2</b> You've been paying attention!"
+  },
+  {
+    "k": "@@chatbot_max_msg_36_0_text@@",
+    "s": "Which leverage would lead to larger potential profits?"
+  },
+  {
+    "k": "@@chatbot_max_msg_36_0_0@@",
+    "s": "1:400"
+  },
+  {
+    "k": "@@chatbot_max_msg_36_0_1@@",
+    "s": "1:30"
+  },
+  {
+    "k": "@@chatbot_max_msg_36_0__text_wrong@@",
+    "s": "<b>0/2</b> ok... let's move forward "
+  },
+  {
+    "k": "@@chatbot_max_msg_36_0__text__correct@@",
+    "s": "<b>1/2</b> Not bad, let's move on"
+  },
+  {
+    "k": "@@chatbot_max_msg_37_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_37_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_38_0@@",
+    "s": "Right, let's move on.<br />We've explained the basics of trading. You're almost ready to explore the market for opportunities. But first, here are some platform tools that could help you make informed decisions when trading..."
+  },
+  {
+    "k": "@@chatbot_max_msg_38_2_0_text@@",
+    "s": "I'm interested,<br />show me the tools"
+  },
+  {
+    "k": "@@chatbot_max_msg_38_2_0_postback@@",
+    "s": "I'm interested,<br/> show me the tools"
+  },
+  {
+    "k": "@@chatbot_max_msg_38_2_1_text@@",
+    "s": "I'm ready to deposit<br />and trade now"
+  },
+  {
+    "k": "@@chatbot_max_msg_38_2_1_postback@@",
+    "s": "I'm ready to deposit<br/> and trade now"
+  },
+  {
+    "k": "@@chatbot_max_msg_39_1@@",
+    "s": "Good, the more information you have, the more you can take advantage of financial opportunities."
+  },
+  {
+    "k": "@@chatbot_max_msg_40_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/g89feye8bf?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_max_msg_40_0_description@@",
+    "s": "What are Trade Signals"
+  },
+  {
+    "k": "@@chatbot_max_msg_40_0_title@@",
+    "s": "Lesson 1/3"
+  },
+  {
+    "k": "@@chatbot_max_msg_40_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TradingSignals.png"
+  },
+  {
+    "k": "@@chatbot_max_msg_41_0@@",
+    "s": "Did you find the \"What are signals\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_max_msg_42_1@@",
+    "s": "I hope you find the next lesson more helpful"
+  },
+  {
+    "k": "@@chatbot_max_msg_43_1@@",
+    "s": "Great, let's continue to the next lesson"
+  },
+  {
+    "k": "@@chatbot_max_msg_44_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_44_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_50_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/dvcw0o1xm9?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_max_msg_50_0_description@@",
+    "s": "What is market Sentiment"
+  },
+  {
+    "k": "@@chatbot_max_msg_50_0_title@@",
+    "s": "Lesson 2/3"
+  },
+  {
+    "k": "@@chatbot_max_msg_50_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/Sentiment.png"
+  },
+  {
+    "k": "@@chatbot_max_msg_51_0@@",
+    "s": "Did you find the \"What is market sentiment\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_max_msg_52_1@@",
+    "s": "Great, let's continue to the next lesson"
+  },
+  {
+    "k": "@@chatbot_max_msg_53_1@@",
+    "s": "I hope you find the next lesson more helpful"
+  },
+  {
+    "k": "@@chatbot_max_msg_54_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_54_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_60_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/cr4lphjpui?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_max_msg_60_0_description@@",
+    "s": "What are Trading Factors"
+  },
+  {
+    "k": "@@chatbot_max_msg_60_0_title@@",
+    "s": "Lesson 3/3"
+  },
+  {
+    "k": "@@chatbot_max_msg_60_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/factors.png"
+  },
+  {
+    "k": "@@chatbot_max_msg_61_0@@",
+    "s": "Did you find the \"What are trading factors\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_max_msg_62_1@@",
+    "s": "Thanks for your feedback"
+  },
+  {
+    "k": "@@chatbot_max_msg_63_1@@",
+    "s": "Great, Thanks for your feedback"
+  },
+  {
+    "k": "@@chatbot_max_msg_64_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_64_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_84_0@@",
+    "s": "Let's make sure you're keeping up. Here are a few questions for you."
+  },
+  {
+    "k": "@@chatbot_max_msg_85_0_text@@",
+    "s": "Extreme weather events (e.g.: hurricane, drought) can be expected to affect the price of…?"
+  },
+  {
+    "k": "@@chatbot_max_msg_85_0_0@@",
+    "s": "Agricultural commodities such as coffee, sugar and cocoa "
+  },
+  {
+    "k": "@@chatbot_max_msg_85_0_1@@",
+    "s": "”Safe haven” commodities such as gold"
+  },
+  {
+    "k": "@@chatbot_max_msg_86_0_text@@",
+    "s": "What is trading sentiment?"
+  },
+  {
+    "k": "@@chatbot_max_msg_86_0_0@@",
+    "s": "A tool that shows whether the majority of traders expected an instrument to rise or fall "
+  },
+  {
+    "k": "@@chatbot_max_msg_86_0_1@@",
+    "s": "A tool that shows how analysts predict an instrument to perform"
+  },
+  {
+    "k": "@@chatbot_max_msg_86_0__text_wrong@@",
+    "s": "<b>1/2 </b>Not bad... Remember, you gain access to all our educational materials after your deposit"
+  },
+  {
+    "k": "@@chatbot_max_msg_86_0__text__correct@@",
+    "s": "<b>2/2</b> Well done, a world of investment opportunities awaits you "
+  },
+  {
+    "k": "@@chatbot_max_msg_87_0_text@@",
+    "s": "What is trading sentiment?"
+  },
+  {
+    "k": "@@chatbot_max_msg_87_0_0@@",
+    "s": "A tool that shows whether the majority of traders expected an instrument to rise or fall "
+  },
+  {
+    "k": "@@chatbot_max_msg_87_0_1@@",
+    "s": "A tool that shows how analysts predict an instrument to perform "
+  },
+  {
+    "k": "@@chatbot_max_msg_87_0__text_wrong@@",
+    "s": "<b>0/2</b> mm... Remember, you gain access to all our educational materials after your deposit"
+  },
+  {
+    "k": "@@chatbot_max_msg_87_0__text__correct@@",
+    "s": "<b>1/2</b> Not bad... Remember, you gain access to all our educational materials after your deposit"
+  },
+  {
+    "k": "@@chatbot_max_msg_88_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_88_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_89_1@@",
+    "s": "So, we have laid the foundation for your understanding. You now have the basics to build on, once you collect your deposit package, which includes<br> <b>free educational materials,<br> 1-on-1 training and a risk free demo account PLUS a trading bonus of up to 50% </b> on your first deposit."
+  },
+  {
+    "k": "@@chatbot_max_msg_91_0@@",
+    "s": "The choice is yours... after you receive the package you can start trading whenever you like, or - if you change your mind -<b> you can always withdraw your deposit, no questions asked, no charges, 100% risk-free</b>. Take this rare opportunity to capitalize on your investment."
+  },
+  {
+    "k": "@@chatbot_max_msg_92_0_0_text@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_max_msg_92_0_0_postback@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_max_msg_92_0_1_text@@",
+    "s": "Not 100% ready? Take a platform walkthrough tour"
+  },
+  {
+    "k": "@@chatbot_max_msg_92_0_1_postback@@",
+    "s": "Not 100% ready? Take a platform walkthrough tour"
+  },
+  {
+    "k": "@@chatbot_max_msg_93_0_0_text@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_max_msg_93_0_0_postback@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_max_msg_94_0@@",
+    "s": "Congratulations, you can now access the full deposit package including access to educational materials, risk free demo account and 1-on-1 training. For further details, please feel free to contact us."
+  },
+  {
+    "k": "@@chatbot_max_msg_100_1@@",
+    "s": "You need to feel confident with your broker, so let’s start with our credentials: we're a licensed broker with over 22 years of market."
+  },
+  {
+    "k": "@@chatbot_max_msg_100_3@@",
+    "s": "We're worldwide, operating in multiple international markets, speaking over 20 languages to tens of thousands of traders who choose to invest with us."
+  },
+  {
+    "k": "@@chatbot_max_msg_100_5@@",
+    "s": "Quite simply, we have a reputation for being among the leaders in the world of online financial trading."
+  },
+  {
+    "k": "@@chatbot_max_msg_100_7@@",
+    "s": "Now, let's talk business. This is what we have to offer:"
+  },
+  {
+    "k": "@@chatbot_max_msg_100_9@@",
+    "s": "up to <b> 50% trading bonus</b> on your 1st deposit"
+  },
+  {
+    "k": "@@chatbot_max_msg_100_11@@",
+    "s": "Up to<b> 100% cashback</b> from your 2nd deposit onwards"
+  },
+  {
+    "k": "@@chatbot_max_msg_101_0_0_text@@",
+    "s": "I'm interested. Show me more"
+  },
+  {
+    "k": "@@chatbot_max_msg_101_0_0_postback@@",
+    "s": "I'm interested. Show me more"
+  },
+  {
+    "k": "@@chatbot_max_msg_102_1@@",
+    "s": "Up to <b> 400:1 leverage </b> and competitive spreads."
+  },
+  {
+    "k": "@@chatbot_max_msg_102_3@@",
+    "s": "<b>Dedicated account manager </b> that speaks your language."
+  },
+  {
+    "k": "@@chatbot_max_msg_102_5@@",
+    "s": "Earn <b>3% interest </b> on your net balance."
+  },
+  {
+    "k": "@@chatbot_max_msg_102_7@@",
+    "s": "Rapid withdrawal system"
+  },
+  {
+    "k": "@@chatbot_max_msg_102_9@@",
+    "s": "This is just the start, because with our deposit package, we also give you <b> trading signals, a $5,000 demo account to practice on, educational materials for advanced training </b> and much, much more."
+  },
+  {
+    "k": "@@chatbot_max_msg_103_0_0_text@@",
+    "s": "Tell me a bit about the trading tools (5 mins)"
+  },
+  {
+    "k": "@@chatbot_max_msg_103_0_0_postback@@",
+    "s": "Tell me a bit about the trading tools (5 mins)"
+  },
+  {
+    "k": "@@chatbot_max_msg_103_0_1_text@@",
+    "s": "Give me the full tour (10 mins)"
+  },
+  {
+    "k": "@@chatbot_max_msg_103_0_1_postback@@",
+    "s": "Give me the full tour"
+  },
+  {
+    "k": "@@chatbot_max_msg_103_0_2_text@@",
+    "s": "I'm ready to deposit and trade now"
+  },
+  {
+    "k": "@@chatbot_max_msg_103_0_2_postback@@",
+    "s": "I'm ready to deposit and trade now"
+  },
+  {
+    "k": "@@chatbot_max_msg_104_1@@",
+    "s": "Good, the more information you have, the more you can take advantage of financial opportunities."
+  },
+  {
+    "k": "@@chatbot_max_msg_104_3@@",
+    "s": "We built our platform for traders and let our experience guide us towards providing the tools and features they want.  Our purpose? To maximize your investment potential with our easy-to-use platform, as well as helping you make better-informed decisions and getting the most out of your trading strategies."
+  },
+  {
+    "k": "@@chatbot_max_msg_104_5@@",
+    "s": "Let's get straight to it… ."
+  },
+  {
+    "k": "@@chatbot_max_msg_104_7@@",
+    "s": "Our platform offer includes tools such as:"
+  },
+  {
+    "k": "@@chatbot_max_msg_110_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/g89feye8bf?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_max_msg_110_0_description@@",
+    "s": "What are Trade Signals"
+  },
+  {
+    "k": "@@chatbot_max_msg_110_0_title@@",
+    "s": "Lesson 1/3"
+  },
+  {
+    "k": "@@chatbot_max_msg_110_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TradingSignals.png"
+  },
+  {
+    "k": "@@chatbot_max_msg_111_0@@",
+    "s": "Did you find the \"What are signals\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_max_msg_112_1@@",
+    "s": "I hope you find the next lesson more helpful"
+  },
+  {
+    "k": "@@chatbot_max_msg_113_1@@",
+    "s": "Great, let's continue to the next lesson"
+  },
+  {
+    "k": "@@chatbot_max_msg_114_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_114_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_120_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/yassecsbp6?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_max_msg_120_0_description@@",
+    "s": "Market Indicators"
+  },
+  {
+    "k": "@@chatbot_max_msg_120_0_title@@",
+    "s": "Lesson 2/3"
+  },
+  {
+    "k": "@@chatbot_max_msg_120_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/Indicators.png"
+  },
+  {
+    "k": "@@chatbot_max_msg_121_0@@",
+    "s": "Did you find the \"Market Indicators\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_max_msg_122_1@@",
+    "s": "Great, let's continue to the next lesson"
+  },
+  {
+    "k": "@@chatbot_max_msg_123_1@@",
+    "s": "I hope you find the next lesson more helpful"
+  },
+  {
+    "k": "@@chatbot_max_msg_124_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_124_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_130_0_description@@",
+    "s": "Basic Technical Analysis"
+  },
+  {
+    "k": "@@chatbot_max_msg_130_0_title@@",
+    "s": "Lesson 3/3"
+  },
+  {
+    "k": "@@chatbot_max_msg_130_0_url@@",
+    "s": "//www.iforex.com/EMERP/Landing/masterLP/img/banners/TechnicalAnalysis_br1_mas.png"
+  },
+  {
+    "k": "@@chatbot_max_msg_130_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TxtLesson.png"
+  },
+  {
+    "k": "@@chatbot_max_msg_131_0@@",
+    "s": "Did you find the \"basic technical analysis\" lesson helpful?"
+  },
+  {
+    "k": "@@chatbot_max_msg_132_1@@",
+    "s": "Great, Thanks for your feedback"
+  },
+  {
+    "k": "@@chatbot_max_msg_133_1@@",
+    "s": "Thanks for your feedback"
+  },
+  {
+    "k": "@@chatbot_max_msg_134_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_134_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_max_msg_140_1@@",
+    "s": "Like what you see? <br> Get our deposit package  now and enjoy using the full range of dynamic tools and features available in our platform to capitalize on the markets."
+  },
+  {
+    "k": "@@chatbot_max_msg_141_1@@",
+    "s": "Always remember, if you change your mind, you can withdraw your deposit anytime, no questions asked, no charges, 100% risk-free."
+  },
+  {
+    "k": "@@chatbot_max_msg_142_0_0_text@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_max_msg_142_0_0_postback@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_max_msg_142_0_1_text@@",
+    "s": "Not 100% ready? Take a platform walkthrough tour"
+  },
+  {
+    "k": "@@chatbot_max_msg_142_0_1_postback@@",
+    "s": "Not 100% ready? Take a platform walkthrough tour"
+  },
+  {
+    "k": "@@chatbot_max_msg_143_0_0_text@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_max_msg_143_0_0_postback@@",
+    "s": "Deposit and collect package"
+  }
+]

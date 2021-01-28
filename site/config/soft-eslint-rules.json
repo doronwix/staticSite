@@ -1,0 +1,10 @@
+{
+    "extends": "./fxnet-eslint-rules.json",
+    "rules": {
+        "no-unneeded-ternary": 1,
+        "consistent-return": 1,
+        "no-nested-ternary": 1,
+        "guard-for-in": 1,
+        "no-loop-func": 1
+    }
+}

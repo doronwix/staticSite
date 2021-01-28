@@ -1,0 +1,34 @@
+﻿<div class="preset-dropdown center-items head" data-bind="css: Data.key, 'data-automation': 'dropdown-presets'">
+	<dl class="dropdown" data-bind="attr: { count: Data.category.Presets.length },
+					visible: Data.category.Presets.length > 1,
+					css: { 'focus': Data.isVisible() }">
+		<dt data-bind="click: ToggleVisibility, event: { blur: Hide }" tabindex="-1">
+			<a class="active">
+				<span data-bind="html: Data.selectedPreset ? Data.selectedPreset.Label : '<<select an item>>'"></span>
+			</a>
+		</dt>
+		<dd>
+			<div class="column-container" data-bind="css: { 'hidden' : !Data.isVisible() }">
+				<!-- ko foreach: { data: Data.category.GetGroupedPresetsByColumns(), as: 'column' } -->
+				<ul class="slave-list" data-bind="foreach: { data: $data, as: 'preset' }, css: 'column' + $index()">
+					<li class="subcategory">
+						<span data-bind="text: Dictionary.GetItem(preset.subCategory.label,'PresetsCategories')"></span>
+					</li>
+					<li class="presets-list" data-bind="foreach: { data: preset.presets, as: 'groupedPreset' }">
+						<a data-bind="css: { active: groupedPreset.isSelected },
+									event: { mousedown: $component.SelectPreset }">
+							<span data-bind="text: groupedPreset.Label"></span>
+						</a>
+					</li>
+				</ul>
+				<!-- /ko -->
+			</div>
+		</dd>
+	</dl>
+	<i class="ico-sh-tooltip customTooltipPurpose hover-white"
+	   data-bind="visible: Data.category.Presets.length > 1,
+				balloon: { tooltipClass: 'tooltip summary-tooltip customTooltip content-box box-wider',
+				position: { my: 'center bottom', at: 'center top-9' } },
+				attr: { title: Dictionary.GetItem('SubPresets_Tooltip') }">
+	</i>
+</div>

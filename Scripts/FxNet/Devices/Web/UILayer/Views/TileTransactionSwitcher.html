@@ -1,0 +1,23 @@
+﻿<div class="transaction-section-wrapper">
+	<!-- ko if: Data.isReady -->
+	<div id="TransactionDropDown">
+		<fx-custom-dropdown params="value: Data.selectedTransactionTab, options: Data.transactionsList, optionText: 'transactionLabel'" data-bind="'data-automation': 'transaction-dropdown'"></fx-custom-dropdown>
+	</div>
+	<!-- /ko -->
+
+	<!-- ko if: Data.isNewDealVisible -->
+	<div class="transaction-new-deal deal-container">
+		<!-- ko component: { name: 'fx-component-new-deal-slip', params: { chartStationPage: true } } --><!-- /ko -->
+		<div class="clear"></div>
+	</div>
+	<!-- /ko -->
+
+	<!-- ko if: Data.isNewLimitVisible -->
+	<div class="transaction-new-limit deal-container">
+		<!-- ko component: { name: 'fx-component-new-limit', params: { chartStationPage: true } } --><!-- /ko -->
+		<div class="clear"></div>
+	</div>
+	<!-- /ko -->
+
+	<div class="clear"></div>
+</div>

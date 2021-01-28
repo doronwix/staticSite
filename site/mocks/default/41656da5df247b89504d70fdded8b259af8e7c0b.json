@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/general_pagetitle.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"lblPageTitleAdvinionChart\":\"Chart Station\",\"lblPageTitleChangePassword\":\"Change Password\",\"lblPageTitleDeposit\":\"Payment methods\",\"lblPageTitleEducationalTutorials\":\"Video Lessons\",\"lblPageTitleFinancialDetails\":\"Client Questionnaire\",\"lblPageTitleNotificationsSettings\":\"Notification Settings\",\"lblPageTitlePendingWithdrawal\":\"Pending Withdrawals\",\"lblPageTitlePersonalDetails\":\"Personal Details\",\"lblPageTitlePriceAlerts\":\"Price Alerts\",\"lblPageTitleTradingSignals\":\"Trading Signals\",\"lblPageTitleTutorials\":\" Forex Tutorial  \",\"lblPageTitleUploadDocuments\":\"Upload Documents\",\"lblPageTitleViewAndPrintWithdrawal\":\"View and Print Withdrawal\",\"lblPageTitleWithdrwal\":\"Withdrawal\",\"lblPageWithdrawalThankYou\":\"Withdrawal\"}",
+  "isBase64": false
+}

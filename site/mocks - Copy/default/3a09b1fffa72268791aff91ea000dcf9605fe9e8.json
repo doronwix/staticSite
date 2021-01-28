@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/devices/web/uilayer/viewmodels/DropdownInstrumentSearchViewModel.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define(\r\n    'deviceviewmodels/DropdownInstrumentSearchViewModel',\r\n    [\r\n        'require',\r\n        'knockout',\r\n        'handlers/general',\r\n        'viewmodels/BaseInstrumentSearchViewModel'\r\n    ],\r\n    function (require) {\r\n        var ko = require('knockout'),\r\n            general = require('handlers/general'),\r\n            instrumentSearchViewModel = require('viewmodels/BaseInstrumentSearchViewModel');\r\n\r\n\r\n        var ClosedDealsInstrumentSearchViewModel = general.extendClass(instrumentSearchViewModel, function ClosedDealsInstrumentSearchViewModelClass() {\r\n            var self = this,\r\n                parent = this.parent; // inherited from KoComponentViewModel\r\n\r\n            self.searchFocus = ko.observable(true);\r\n\r\n            self.onFocus = function () {\r\n                self.searchFocus(true);\r\n            };\r\n\r\n            function init(settings) {\r\n                parent.init.call(self, settings);\r\n            }\r\n\r\n            return {\r\n                init: init\r\n            };\r\n        });\r\n\r\n        var createViewModel = function (params) {\r\n            var viewModel = new ClosedDealsInstrumentSearchViewModel();\r\n            viewModel.init(params);\r\n\r\n            return viewModel;\r\n        };\r\n\r\n        return {\r\n            viewModel: {\r\n                createViewModel: createViewModel\r\n            }\r\n        };\r\n    }\r\n);",
+  "isBase64": false
+}

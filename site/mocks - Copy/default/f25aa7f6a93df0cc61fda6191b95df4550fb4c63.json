@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/LogicLayer/Deposit/CreditCard/CreditCardTypesManager.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "define(\r\n    'deposit/CreditCard/CreditCardTypesManager',\r\n    [],\r\n    function () {\r\n        var ccTypesImages = {};\r\n\r\n        function init() {\r\n            ccTypesImages[eDepositCreditCardType.AmericanExpress] = [\"american_express.svg\"];\r\n            ccTypesImages[eDepositCreditCardType.Diners] = [\"diners.svg\"];\r\n            ccTypesImages[eDepositCreditCardType.Discover] = [\"discover.svg\"];\r\n            ccTypesImages[eDepositCreditCardType.Jcb] = [\"jcb.svg\"];\r\n            ccTypesImages[eDepositCreditCardType.Mastercard] = [\"mastercard.svg\"];\r\n            ccTypesImages[eDepositCreditCardType.Maestro] = [\"maestro.svg\"];\r\n            ccTypesImages[eDepositCreditCardType.Switch] = [\"switch.svg\"];\r\n            ccTypesImages[eDepositCreditCardType.Visa] = [\"visa.svg\", \"delta.svg\"];\r\n            ccTypesImages[eDepositCreditCardType.CUP] = [\"cup-card.svg\"];\r\n        }\r\n\r\n        init();\r\n\r\n        return {\r\n            Images: ccTypesImages\r\n        };\r\n    }\r\n);",
+  "isBase64": false
+}

@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/HelpCenterTradingGuide.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"LocalWireTransferGuide\":\"Local Wire Transfer\",\"SecureTradingGuide\":\"Secure Trading \",\"TheA-ZofForexTrading\":\"The A-Z of Forex Trading\",\"Title\":\"Personal Guide\",\"TradingGuide\":\"Trading Guide \",\"wireTransferGuideLink\":\"https://content.webapi-services.net/webapi/v1/fxnet/links?lang=English&brand=iforex&broker=1&page=wire-transfer\"}",
+  "isBase64": false
+}

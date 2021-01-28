@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/devices/web/uilayer/viewmodels/Deals/DealToolsViewModel.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define(\r\n    'deviceviewmodels/Deals/DealToolsViewModel',\r\n    [\r\n        'require',\r\n        'deviceviewmodels/Deals/Modules/DealToolsModule'\r\n    ],\r\n    function(require) {\r\n        var Module = require('deviceviewmodels/Deals/Modules/DealToolsModule');\r\n\r\n        var createViewModel = function (params) {\r\n            var viewModel = new Module.ViewModel();\r\n\r\n            viewModel.init(params);\r\n\r\n            return viewModel;\r\n        };\r\n\r\n        return {\r\n            viewModel: {\r\n                createViewModel: createViewModel\r\n            }\r\n        };\r\n    }\r\n);",
+  "isBase64": false
+}

@@ -1,0 +1,27 @@
+﻿<div id="DepositContainer">
+    <p class="payment-type-details" data-bind="html: Dictionary.GetItem('lblPaymentIntro', 'payments_ewallet')"></p>
+
+    <fx-concrete-payment-subtitle></fx-concrete-payment-subtitle>
+
+
+    <table class="singleLined">
+        <!-- ko with: $parentContext.$parent.Form.paymentsConfigSettings.find(function(c){ return c.Id === $parent.Id; }) -->
+            <!-- ko foreach: $data.Templates -->
+                <!-- ko template: { name: $data } -->
+                <!-- /ko -->
+            <!-- /ko -->
+        <!-- /ko -->
+    </table>
+
+    <div class="fixed-button-wrapper lastPayment" data-bind="visible: Info.isContinueButtonVisible()">
+        <button id="deposit3" class="withdrawal-deposit-button last-payment-deposit"
+                data-bind="hideFooter: { isPaymentButtonVisible: Info.isPaymentButtonVisible },
+                            html: Dictionary.GetItem('btnContinue'),
+                            click: function(){ Deposit(); }">
+        </button>
+    </div>
+
+    <!-- ko if: Form.showQuestionnaireAlert -->
+    <fx-component-questionnaire-alert params="showQuestionnaireAlert: Form.showQuestionnaireAlert"></fx-component-questionnaire-alert>
+    <!-- /ko -->
+</div>

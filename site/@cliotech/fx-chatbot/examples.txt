@@ -1,0 +1,225 @@
+    let blocks = [
+      {
+        id: 1000,
+        messages: [
+          {
+            type: 'text',
+            text: 'how are you today?'
+          },
+          {
+            type: 'choices',
+            choices: [
+              {
+                id: 1000,
+                type: 'button',
+                text: 'Good',
+                postback: 'I am good, thank you.',
+                goto: 2
+              },
+              {
+                id: 1001,
+                type: 'buton',
+                text: 'Bad',
+                postback: 'Feeling bad',
+                goto: 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 2,
+        messages: [
+          {
+            type: 'text',
+            text: 'Good to hear'
+          }
+        ]
+      },
+      {
+        id: 3,
+        messages: [
+          {
+            type: 'text',
+            text: ':('
+          }
+        ]
+      },
+      {
+        id: 21,
+        messages: [
+          {
+            type: 'text',
+            text: `please watch the following video:`
+            // for: 0.5
+          },
+          {
+            type: 'video',
+            thumbnail:
+              'https://d33v4339jhl8k0.cloudfront.net/docs/assets/591c8a010428634b4a33375c/images/5ab4866b2c7d3a56d8873f4c/file-MrylO8jADD.png',
+            url:
+              '//fast.wistia.net/embed/iframe/ajurozfifd?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true',
+            grace: 5,
+            goto: 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        messages: [
+          {
+            type: 'text',
+            text: `first message`
+            // for: 0.5
+          },
+          {
+            type: 'typing'
+            // for: 0.5
+          },
+          {
+            type: 'text',
+            text: `second message`
+            // for: 0.5
+          },
+          {
+            type: 'typing'
+            // for: 0.5
+          },
+          {
+            type: 'goto',
+            blockId: 5
+          }
+        ]
+      },
+      {
+        id: 10,
+        messages: [
+          {
+            type: 'text',
+            text: `One question...<br />Do you have experience trading speculative, CFD products?<br />(I just want to make sure they give you the right stuff. You know, educational materials, 1-on-1 training, etc.)`
+          },
+          {
+            type: 'goto',
+            blockId: 2
+          }
+        ]
+      },
+      {
+        id: 5,
+        messages: [
+          {
+            type: 'quiz',
+            text: 'how much is 2 + 2?',
+            choices: [
+              {
+                id: 1,
+                type: 'button',
+                text: '4',
+                correct: true
+              },
+              {
+                id: 2,
+                type: 'button',
+                text: '5',
+                correct: false
+              },
+              {
+                id: 3,
+                type: 'button',
+                text: '6',
+                correct: false
+              }
+            ],
+            response: {
+              correct: {
+                type: 'text',
+                text: 'That is correct!',
+                goto: 2
+              },
+              wrong: {
+                type: 'text',
+                text: 'That is wrong',
+                goto: 21
+              }
+            }
+          }
+        ]
+      },
+      {
+        id: 2,
+        messages: [
+          {
+            type: 'choices',
+            choices: [
+              {
+                id: 1,
+                type: 'button',
+                text: 'I have no trading experience',
+                postback: 'I have no trading experience',
+                goto: 3
+              },
+              {
+                id: 2,
+                type: 'button',
+                text: 'I have trading experience',
+                postback: 'I have trading experience',
+                goto: 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 3,
+        messages: [
+          {
+            type: 'typing',
+            for: 1
+          },
+          {
+            type: 'text',
+            text: `You do not have trading experience`
+          }
+        ]
+      },
+      {
+        id: 4,
+        messages: [
+          {
+            type: 'text',
+            text: `You have trading experience`
+          }
+        ]
+      }
+    ]
+
+
+      {
+        id: 1,
+        messages: [
+          {
+            type: 'text',
+            text: `please watch the following video:`
+            // for: 0.5
+          },
+          {
+            type: 'video',
+            thumbnail:
+              'https://d33v4339jhl8k0.cloudfront.net/docs/assets/591c8a010428634b4a33375c/images/5ab4866b2c7d3a56d8873f4c/file-MrylO8jADD.png',
+            url:
+              '//fast.wistia.net/embed/iframe/ajurozfifd?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true',
+            grace: 5,
+            goto: 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        messages: [
+          {
+            type: 'text',
+            text: `message after video`
+            // for: 0.5
+          }
+        ]
+      }

@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/Status.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"\":\"Approved\",\"S_Approved\":\"Approved\",\"S_AwaitingDocuments\":\"Required\",\"S_AwaitingSignature\":\"Awaiting Signature\",\"S_AwaitingSignature_HighAmount\":\"Awaiting Signature\",\"S_Incomplete\":\"Incomplete \",\"S_Processing\":\"Documents Received \"}",
+  "isBase64": false
+}

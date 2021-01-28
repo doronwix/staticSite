@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/deals/transaction-switchwrap.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<!-- ko component: { name: 'fx-component-transaction-switcher' } --><!-- /ko -->\r\n<!-- ko component: { name: 'fx-component-deal-tools',  params: {\r\n    transArgs: $viewModelsManager.VManager.GetViewArgs(eViewTypes.vTransactionSwitcher) }\r\n} --><!-- /ko -->\r\n<fx-component-activation-slip></fx-component-activation-slip>\r\n<div class=\"clear\"></div>",
+  "isBase64": false
+}

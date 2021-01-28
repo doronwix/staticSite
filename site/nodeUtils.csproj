@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B8BBAA0-52BA-4DBB-ADFB-7628E02CB0D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nodeUtils</RootNamespace>
+    <AssemblyName>nodeUtils</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>nodeUtils.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>nodeUtils.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include=".npmrc" />
+    <None Include="config\bundles-config.json" />
+    <None Include="config\framework-eslint-rules.json" />
+    <None Include="config\fxnet-eslint-rules.json" />
+    <None Include="config\qunit-eslint-rules.json" />
+    <None Include="config\soft-eslint-rules.json" />
+    <None Include="generators\generator-fxnet-unitest\package-lock.json" />
+    <None Include="generators\generator-fxnet-unitest\package.json" />
+    <None Include="instrumentsUtils\instrumentsData.json" />
+    <None Include="instrumentsUtils\lettersData.json" />
+    <None Include="instrumentsUtils\resetIcon.less" />
+    <None Include="nodeUtils.ruleset" />
+    <None Include="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Scripts\FxNet\Common\Utils\Version\version.js">
+      <Link>version\version.js</Link>
+    </Content>
+    <Content Include="..\Scripts\FxNet\Common\Utils\Version\version.txt">
+      <Link>version\version.txt</Link>
+    </Content>
+    <Content Include="config\browserSync.js" />
+    <Content Include="config\bundles.js" />
+    <Content Include="config\concurrent.js" />
+    <Content Include="config\maxFileSize.js" />
+    <Content Include="config\jsinspect.js" />
+    <Content Include="config\less\helper.js" />
+    <Content Include="config\less\resource.js" />
+    <Content Include="config\less\taskresource.js" />
+    <Content Include="config\shell.js" />
+    <Content Include="generators\generator-fxnet-unitest\app\index.js" />
+    <Content Include="generators\generator-fxnet-unitest\app\templates\test.html" />
+    <Content Include="generators\generator-fxnet-unitest\app\templates\test.js" />
+    <Content Include="r\app.build.desktop.js" />
+    <Content Include="r\app.build.mobile.js" />
+    <Content Include="r\app.build.web.js" />
+    <Content Include="r\logger.js" />
+    <Content Include="r\require.config.js" />
+    <Content Include="config\clean.js" />
+    <Content Include="config\concat.js" />
+    <Content Include="config\less.js" />
+    <Content Include="config\copy.js" />
+    <Content Include="config\lint.js" />
+    <Content Include="config\open.js" />
+    <Content Include="config\qunit.js" />
+    <Content Include="config\replace.js" />
+    <Content Include="config\sync.js" />
+    <Content Include="config\uglify.js" />
+    <Content Include="config\rawjs.js" />
+    <Content Include="config\watch.js" />
+    <Content Include="Gruntfile.js" />
+    <Content Include="tasks\buildIconsCss.js" />
+    <Content Include="tasks\buildLettersCss.js" />
+    <Content Include="tasks\bundles.js" />
+    <Content Include="tasks\generate-fonts.js" />
+    <Content Include="utils\utils.js" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

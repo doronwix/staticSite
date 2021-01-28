@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/AccountHub/AccountHubCountdown.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<!-- ko if: $data.Data.daysCounter >= 0 -->\r\n<div id=\"flowMap_DaysCounter\" class=\"daysCounter\">\r\n    <p id=\"flowMap_DaysCounterMsg\"\r\n       data-bind=\"html: String.format(Dictionary.GetItem($data.Data.remainingDaysUpdateMsg, 'account_hub'), $data.Data.daysCounter), click: $data.Data.stepClick, css: $data.Data.requireUpdateCssClass\">\r\n    </p>\r\n    <!-- ko if: $data.Data.isProgressBarVisible -->\r\n    <div class=\"progress\" data-bind=\"css: $data.Data.requireUpdateCssClass\">\r\n        <div id=\"flowMap_DaysCounterBar\" class=\"bar\"\r\n             data-bind=\"css: $data.Data.requireUpdateCssClass, style: { width: (($data.Data.daysCounter * 100) / $data.Data.maxDaysCounter + '%') }\">\r\n        </div>\r\n    </div>\r\n    <!-- /ko -->\r\n</div>\r\n<!-- /ko -->",
+  "isBase64": false
+}

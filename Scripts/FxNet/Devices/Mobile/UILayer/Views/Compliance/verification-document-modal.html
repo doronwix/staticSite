@@ -1,0 +1,9 @@
+﻿<div id="verification-document-modal" class="bg-gray verification-document-modal">
+    <div class="bg-gray" data-bind="if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vDocumentVerificationModal).visible">
+        <fx-popup-header params="title: ' '"></fx-popup-header>
+
+        <div class="container">
+            <iframe id="shuftipro-iframe" allow="camera" data-bind="iframeElement: Data.iframeElement, attr:{src: Data.iframeUrl } " frameborder="0" scrolling="no" width="100%"></iframe>
+        </div>
+    </div>
+</div>

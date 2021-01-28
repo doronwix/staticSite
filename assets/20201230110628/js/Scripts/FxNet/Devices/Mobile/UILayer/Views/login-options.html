@@ -1,0 +1,11 @@
+﻿<div class="section">
+	<h2 class="section-header" data-bind="dictionaryBinding: 'loginOptionsTitle', resourceName:'loginOptions'">%Color Theme</h2>
+	<p data-bind="dictionaryBinding: 'loginOptionsDetails', resourceName: 'loginOptions'"></p>
+	<div class="theme-grid">
+		<div class="opt-label" data-bind="dictionaryBinding: 'fingerprint', resourceName: 'loginOptions'"></div>
+		<div class="opt-check">
+			<input type="checkbox" value="true" id="idFP" name="nameFP" data-bind="checked: Data.isFingerprintOn"/>
+			<label for="idFP"></label>
+		</div>
+	</div>
+</div>

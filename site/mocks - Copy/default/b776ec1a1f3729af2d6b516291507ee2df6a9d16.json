@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/controls_ctlsignalservice.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"hlAccountManagerEmail\":\"Click here\",\"LitAvailable\":\"This service is available to you until \",\"LitSend\":\" to send an extension request to your account manager.\",\"LnkSend\":\"Click here\"}",
+  "isBase64": false
+}

@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/AccountSummaryNotActive.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<div class=\"accountSummaryNotActive\" data-bind=\"visible: isVisible\">\r\n    <div class=\"wallet\">\r\n        <a href=\"javascript:void(0)\"><span class=\"ico-wb ico-wb-wallet-summary\"></span></a>\r\n    </div>\r\n    <div class=\"notActiveText\">\r\n        <span class=\"notActiveTextInner\" data-bind=\"dictionaryBinding: 'txtAccountNotactivated', resourceName: 'summaryview_accountsummary'\"></span>     \r\n    </div>\r\n    <div class=\"CTAButton\">\r\n        <a id=\"btnAccountSummaryCTA\" class=\"btn action\" data-bind=\"click: Data.ctaClick\">\r\n            <p data-bind=\"dictionaryBinding: ctaText, resourceName: 'account_hub'\"></p>\r\n        </a>\r\n    </div>\r\n</div>\r\n",
+  "isBase64": false
+}

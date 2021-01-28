@@ -1,0 +1,97 @@
+﻿<div id="concretePaymentsWrapper" data-bind="resetPaymentDiv: shouldResetPaymentsFormPosition, scrollHere: !Info.isLoading()">
+	<div class="concrete-payment-container">
+		<!-- ko if: Info.isLoading() -->
+		<div class="loader-background">
+			<div class="loader"></div>
+		</div>
+		<!-- /ko -->
+
+		<fieldset class="depositFormConcrete" data-bind="tabs:true">
+			<div class="deposit-tiles">
+				<div class="deposit-tabs-control">
+					<div class="predeposit">
+						<div class="left">
+							<p data-bind="dictionaryBinding: 'lblSelectTextDeposit', resourceName: 'payments_concreteView'">%Please select your preferred method of payment</p>
+						</div>
+
+						<div class="choose-payment right">
+							<p data-bind="dictionaryBinding: 'lblSelectedCountryDeposit', resourceName: 'payments_concreteView'">%Payment methods for:</p>
+							<!-- ko if: Info.countries().length-->
+							<fx-component-search-country params="{ countries: Info.countries, country: Form.selectedCountry }"
+														 class="payments-search-country" data-automation="payment-country-select">
+							</fx-component-search-country>
+							<!-- /ko -->
+						</div>
+						<div class="clear"></div>
+					</div>
+
+					<div class="tabs">
+						<ul class="tab-menu left" data-bind="foreach: Info.categories">
+							<li data-bind="hoverOnClick, click: $parent.changeSelectedCategory, attr: { 'class': 'menuTab' }, css: $parent.getCategoryClass($data), 'data-automation': 'payment-category-' + $data">
+								<a>
+									<span data-bind="text: Dictionary.GetItem('ePaymentCategory_' + $data,'payments_concreteView')"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tiles" id="concretePayments" data-bind="foreach: Info.payments">
+						<!-- ko if: $parent.getPaymentVisibility($data) -->
+						<div class="tile-card card-wrap"
+							data-bind="attr: {
+									id: $parent.getPaymentId($data)
+								},
+								css: {
+									open: $parent.isSelectedPayment($data)
+								},
+								click: $parent.goToPaymentView">
+							<div class="row-container">
+								<!-- ko if: !$data.isExistingCC -->
+								<div class="logo-wrapper">
+									<div data-bind="attr: { 'class': 'deposit-row deposit-ico' }, css: $parent.getPaymentClass($data)"><i></i></div>
+								</div>
+
+								<div class="payment-details">
+									<p data-bind="nonRtlText: $parent.getConcretePaymentName($data)"></p>
+								</div>
+
+								<!-- ko if: $data.isGeneric -->
+								<div class="allowed-payments" data-bind="foreach: $parent.Info.allowedCreditCards">
+									<img data-bind="attr: { src: $data }"/>
+								</div>
+								<!-- /ko -->
+								<!-- /ko -->
+
+								<!-- ko if: $data.isExistingCC -->
+								<div class="logo-wrapper">
+									<div data-bind="attr: { 'class': 'deposit-row deposit-ico' }, css: $parent.getPaymentClass($data)"></div>
+								</div>
+
+								<div class="payment-details existing-cc">
+									<p data-bind="text: $data.cardHolder">%Name</p>
+									<p class="card-data">
+										<span data-bind="text: $parent.getLastFourCharsOfConcretePaymentName($data)">%XXXX</span>
+										<span data-bind="text: $data.expirationDate">%01/99</span>
+									</p>
+									<p>
+										<span class="payment-subtitle" data-bind="formattedText: [Format.toDateTimeUTC($data.lastUsed)], contentKey: 'lastUsedDateFormat', resourceName: 'payments_concreteView'">%Last used:</span>
+									</p>
+								</div>
+								<!-- /ko -->
+
+								<div class="row-button-container">
+									<a class="btn action" data-bind="dictionaryBinding: 'btnSelectAndContinue', resourceName: 'payments_concreteView'">%Select & continue</a>
+								</div>
+							</div>
+
+							<!-- ko if: $data.isExistingCC -->
+							<a class="action remove-cc-action" data-bind="click: $parent.removeConcretePayment, clickBubble: false, dictionaryBinding: 'hlRemoveCreditCard', resourceName: 'payments_concreteView'">%Remove Credit Card</a>
+							<!-- /ko -->
+						</div>
+						<!-- /ko -->
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+﻿<section class="ecpage-wrap">
+	<header class="ecpage-header" id="pageHeader" data-bind="hidden: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vEconomicCalendarFilter).visible">
+		<h1 data-bind="dictionaryBinding: 'lblEconomicCalendar', resourceName: 'customerTools_EconomicCalendar'"></h1>
+	</header>
+	<!-- ko component: { name: 'fx-economic-calendar-filter' } --><!-- /ko -->
+	<section class="ecpage-section-wrap" data-bind="scrollInfinite: true ,
+		scrollOptions: { loadFunc: Handlers.scrolled, offset: 100 },
+		swipeTabs: { toLeft: Handlers.swipeLeft, toRight: Handlers.swipeRight },
+		hidden: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vEconomicCalendarFilter).visible">
+		<p class="no-events" data-bind="visible: Data.isShowEventsUnavailable, dictionaryBinding: 'lblNoRelevantEvents', resourceName: 'customerTools_EconomicCalendar'"></p>
+		<!-- ko if: Data.isShowEvents -->
+		<section class="events-list" data-bind="foreach: Data.pagedEvents">
+			<!-- ko component: { name: 'fx-economic-calendar-event', params: { showDateHeader: $parent.ShowDayHeader($index()), eventData: $data } } --><!-- /ko -->
+		</section>
+		<!-- /ko -->
+	</section>
+	<div class="fixed-circle-button filter" data-bind="click: function() { $viewModelsManager.VManager.SwitchViewVisible(eForms.EconomicCalendarFilter); return false; },
+		hidden: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vEconomicCalendarFilter).visible"></div>
+</section>

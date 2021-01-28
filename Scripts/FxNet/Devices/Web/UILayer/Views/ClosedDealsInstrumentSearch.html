@@ -1,0 +1,50 @@
+﻿<div class="validation-holder">
+	<div class="select-wrapper">
+		<div class="select-like" data-bind="attr: { id: 'dlgCmbCCYTrigger' + Data.suffixId }, click: onFocus">
+			<div class="trigger"></div>
+			<span data-bind="instrumentName: Data.selectedInstrumentId()"></span>
+		</div>
+	</div>
+ 
+	<div class="autocompleteWrapper closed-deals-autocomplete-wrapper">
+		<input class="search"
+				data-bind="attr: { 
+							id: 'quotes-autocomplete' + Data.suffixId,
+							placeholder: Dictionary.GetItem('lblSearch','deals_CloseDeal')
+						},
+						hasFocus: searchFocus,
+						autocomplete: {
+							elementType: 'select',
+							autocompleteWrapperClass: 'closed-deals-autocomplete-wrapper',
+							source: Data.list,
+							selected: Data.selected,
+							minLength: Data.searchMinLength(),
+							appendTo: '.closed-deals-select',
+							contentMaxHeight: 180,
+							triggerFrom: '#dlgCmbCCYTrigger' + Data.suffixId,
+							predefinedOptionsListClass: 'customized',
+							noResultText: Dictionary.GetItem('no_results'),
+							searchPostBoxTopic: Data.searchPostBoxTopic,
+							selectPostBoxTopic: 'filterInstrCloseDeal',
+							hasCategories: true,
+							renderInstruments: true
+						}" />
+
+		<div class="styled-select closed-deals-select" data-bind="jScrollPane: { postBoxTopic: Data.searchPostBoxTopic }">
+			<ul class="customized">
+				<li tabindex="-1" data-bind="css: { selected: Data.selectedInstrumentId() === Number.MAX_SAFE_INTEGER },
+											click: function () { Data.selected({ id: Number.MAX_SAFE_INTEGER });}">
+					<div class="text-holder instrument-name" data-bind="dictionaryBinding: 'All_Instruments', resourceName:'deals_CloseDeal'">%All</div>
+				</li>
+
+				<li class="header autocomplete-group" data-bind="dictionaryBinding: Data.favouritePreset() > 0 ? 'Customized' : 'MostPopular', resourceName:'deals_CloseDeal'">%Customized</li>
+
+				<!-- ko foreach: { data: Data.instrumentsList() } -->
+				<li data-bind="template: {name: 'fx-template-search-instrument-description', data: $data},
+								css: { selected: $parent.Data.selectedInstrumentId() === id },
+								click: function() { ko.postbox.publish('filterInstrCloseDeal', id); $parent.Data.selected({ id: id }); }"></li>
+				<!-- /ko -->
+			</ul>
+		</div>
+	</div>
+</div>

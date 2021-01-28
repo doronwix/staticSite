@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/deals/deal-charttool.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<div class=\"chart-tools-tab\">\r\n    <div class=\"instrumentNameLabel\" data-bind=\"instrumentName: NewDealData.selectedInstrument,\r\n         'data-automation': 'instrument-name'\"></div>\r\n    <div id=\"dealChartContainer\" data-bind=\"\r\n         visibility: Data.isChartReady(),\r\n         triggerEventOnWindowResize: { eventName: 'chart-container-resized' },\r\n         dealSlipToggle: { isFullScreen: Data.isFullScreen, trakingEventName: 'deal-slip-chart-interaction' },\r\n         css: { 'tc-signals-disabled': $data.Data.tcChartSignals().disabled,\r\n            'tc-signals-enabled': !$data.Data.tcChartSignals().disabled,\r\n            'tc-signals-active': $data.Data.tcChartSignals().active \r\n         }\"></div>\r\n    <div data-bind=\"visible: !Data.isChartReady() || Data.isLoadingData()\">\r\n        <div class=\"simple-loader\"></div>\r\n    </div>\r\n</div>",
+  "isBase64": false
+}

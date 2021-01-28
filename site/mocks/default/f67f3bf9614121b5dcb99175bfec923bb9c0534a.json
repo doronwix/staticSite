@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/FxNet/LogicLayer/Withdrawals/LastWithdrawalRequest.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define(\r\n    'FxNet/LogicLayer/Withdrawals/LastWithdrawalRequest',\r\n    [\r\n        'handlers/general'\r\n    ],\r\n    function (general) {\r\n        var lastValue = null;\r\n\r\n        function storeValue(newValue) {\r\n            lastValue = newValue;\r\n\r\n            return lastValue;\r\n        }\r\n\r\n        function readValue() {\r\n            return lastValue;\r\n        }\r\n\r\n        function hasValue() {\r\n            return !general.isEmptyType(lastValue);\r\n        }\r\n\r\n        function clearValue() {\r\n            lastValue = null;\r\n        }\r\n\r\n        return {\r\n            storeValue: storeValue,\r\n            readValue: readValue,\r\n            hasValue: hasValue,\r\n            clearValue: clearValue\r\n        };\r\n    }\r\n);\r\n",
+  "isBase64": false
+}

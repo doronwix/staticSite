@@ -1,0 +1,217 @@
+<div ondragstart="return false;" id="TraderHeader" class="main-header">
+	<div class="main-header-container">
+		<div id="mainlogo" class="logo" data-bind="click: GoToMainPage">
+			<a href="javascript:void(0)"></a>
+			<!--ko if: IsDemo()-->
+			<span class="demo" data-bind="'data-automation':'demologo'"></span>
+			<!--/ko-->
+		</div>
+		<!--logo-->
+
+		<!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vEnableTrading).visible() && enableTradingComponentRegistered() -->
+		<fx-component-enable-trading></fx-component-enable-trading>
+		<!-- /ko -->
+
+		<div id="Options">
+			<div class="welcome" data-bind="css: { demo: IsDemo()}">
+				<!-- ko component: { name: 'fx-component-account-header' } --><!-- /ko -->
+			</div>
+		</div>
+		<!--End #Options-->
+		<div class="clear"></div>
+	</div>
+
+	<div class="subheader">
+		<div class="main-container">
+			<!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vMenu).visible() -->
+			<div id="MainMenu">
+				<!-- ko if: customerProperties.isOnlyForexCustomer -->
+				<ul>
+					<!-- ko with: tradingMenu -->
+					<li
+						id="lienu8"
+						class="Trading first"
+						data-bind=" event: { 'click mouseenter': show, 'mouseleave touchleave': hide }, css: { Active: isActive }"
+					>
+						<a
+							id="liTrading1"
+							class=""
+							tabindex="0"
+							data-bind="dictionaryBinding: 'liTrading1', resourceName: 'menus_mainmenu', click: tradingClick, css: { 'Active': activeCss }"
+						></a>
+					</li>
+					<!-- /ko -->
+
+					<!-- ko with: toolsMenu -->
+					<li
+						id="lienu12"
+						class="Tools"
+						data-bind="event: { 'click mouseenter': show, 'mouseleave touchleave': hide }, css: { Active: isActive }"
+					>
+						<a
+							id="liTools2"
+							class="Tools"
+							tabindex="0"
+							data-bind="dictionaryBinding: 'liTools2', resourceName: 'menus_mainmenu', css: { Active: activeCss }"
+						></a>
+						<ul class="lvl2">
+							<!-- ko if: !Browser.isInternetExplorer() || Browser.isIEVersionGreaterThen(8) -->
+							<li id="liChart2">
+								<a
+									id="liAdvinionChart2"
+									tabindex="0"
+									data-bind="dictionaryBinding: 'liAdvinionChart2', resourceName: 'menus_mainmenu', click: chartClick, css: { Active: $parent.simpleVisible(eViewTypes.vAdvinionChart) }"
+								></a>
+							</li>
+							<!-- /ko -->
+							<li id="li13" class="TradingSignals">
+								<a
+									id="liTradingSignals2"
+									class="TradingSignals"
+									tabindex="0"
+									data-bind="dictionaryBinding: 'liTradingSignals2', resourceName: 'menus_mainmenu', click: tradingSignalsClick, css: { Active: $parent.simpleVisible(eViewTypes.vTradingSignals) }"
+								></a>
+							</li>
+							<li id="li5" class="PriceAlert">
+								<a
+									id="liPriceAlert"
+									class="TradingSignals"
+									tabindex="0"
+									data-bind="dictionaryBinding: 'liPriceAlert', resourceName: 'menus_mainmenu', click: priceAlertMenuClick, css: { Active: $parent.simpleVisible(eViewTypes.vPriceAlerts) }"
+								></a>
+							</li>
+						</ul>
+					</li>
+					<!-- /ko -->
+
+					<!-- ko with: educationMenu -->
+					<li
+						id="lienu21"
+						class="Education"
+						data-bind="event: { 'click mouseenter': show, 'mouseleave touchleave': hide }, css: { Active: isActive }"
+					>
+						<a
+							id="liEducation2"
+							class="Education"
+							tabindex="0"
+							data-bind="dictionaryBinding: 'liEducation2', resourceName: 'menus_mainmenu', click: $parent.EducationMenuClick, css: { Active: educationVisible }"
+						></a>
+						<ul class="lvl2" data-bind="visible: allVisible()">
+							<!-- ko if: eduSubVisible() -->
+							<li id="li14" class="ForexTutorial">
+								<a
+									id="liForexTutorial2"
+									class="ForexTutorial"
+									tabindex="0"
+									data-bind="dictionaryBinding: 'liForexTutorial2', resourceName: 'menus_mainmenu', click: tutorialsClick, css: { Active: $parent.simpleVisible(eViewTypes.vTutorials) }"
+								></a>
+							</li>
+							<!-- /ko -->
+							<!-- ko if: tutorialsVisible() -->
+							<li id="li11" class="ForexTutorial1">
+								<a
+									id="liEducationalForexTutorial2"
+									class="ForexTutorial1"
+									tabindex="0"
+									data-bind="dictionaryBinding: 'liEducationalForexTutorial2', resourceName: 'menus_mainmenu', click: educationTutorialsClick, css: { Active: $parent.simpleVisible(eViewTypes.vEducationalTutorials) }"
+								></a>
+							</li>
+							<!-- /ko -->
+						</ul>
+					</li>
+					<!-- /ko -->
+
+					<!-- ko with: reportsMenu -->
+					<li
+						id="li2"
+						class="Reports"
+						data-bind="event: { 'click mouseenter': show, 'mouseleave touchleave': hide }, css: { Active: isActive }"
+					>
+						<a
+							id="liReports1"
+							class="MyAccount"
+							tabindex="0"
+							data-bind="dictionaryBinding: 'liReports1', resourceName: 'menus_mainmenu', css: { Active: reportsVisible }"
+						></a>
+						<ul class="lvl2">
+							<li id="li3" class="AccountStatment">
+								<a
+									id="liAccountStatment2"
+									tabindex="0"
+									class="AccountStatment"
+									data-bind="dictionaryBinding: 'liAccountStatment2', resourceName: 'menus_mainmenu', click: accountStatementClick, css: { Active: $parent.simpleVisible(eViewTypes.vBalance) }"
+								></a>
+							</li>
+							<li id="li4" class="ActivityLog">
+								<a
+									id="liActivityLog2"
+									tabindex="0"
+									class="ActivityLog"
+									data-bind="dictionaryBinding: 'liActivityLog2', resourceName: 'menus_mainmenu', click: activityLogClick, css: { Active: $parent.simpleVisible(eViewTypes.vActivityLog) }"
+								></a>
+							</li>
+							<!-- ko if: $parent.customerProperties.hasTransactionsReport-->
+							<li id="li9" class="TransactionsReport">
+								<a
+									id="liTransactionsReport2"
+									class="TransactionsReport"
+									tabindex="0"
+									data-bind="dictionaryBinding: 'liTransactionsReport2', resourceName: 'menus_mainmenu', click: transactionsClick, css: { Active: $parent.simpleVisible(eViewTypes.vTransactionsReport) }"
+								></a>
+							</li>
+							<!-- /ko -->
+						</ul>
+					</li>
+					<!-- /ko -->
+
+					<!-- ko with: fundsMenu -->
+					<!-- ko ifnot: $parent.customerProperties.isDemo -->
+					<li
+						id="lienu13"
+						class="Deposits last"
+						data-bind="event: { 'click mouseenter': show, 'mouseleave touchleave': hide }, css: { Active: isActive }"
+					>
+						<a
+							id="liFunds1"
+							class="Funds"
+							tabindex="0"
+							data-bind="dictionaryBinding: 'liFunds1', resourceName: 'menus_mainmenu', css: { Active: fundsVisible }"
+						></a>
+						<ul class="lvl2">
+							<li id="li1" class="Deposits">
+								<a
+									id="liDepositFunds2"
+									tabindex="0"
+									class="Deposits"
+									data-bind="dictionaryBinding: 'liDepositFunds2', resourceName: 'menus_mainmenu', click: depositsClick, css: { Active: $parent.simpleVisible(eViewTypes.vPaymentTypes) }"
+								></a>
+							</li>
+							<li id="li17" class="Withdrawals">
+								<a
+									id="liWithdrawFunds2"
+									tabindex="0"
+									class="Withdrawals"
+									data-bind="dictionaryBinding: 'liWithdrawFunds2', resourceName: 'menus_mainmenu', click: withdrawalsClick, css: { Active: $parent.simpleVisible(eViewTypes.vWithdrawal) }"
+								></a>
+							</li>
+							<!-- ko if: $parent.pendingWithdrawals() !== 0 -->
+							<li id="li18" class="PendingWithdrawals">
+								<a
+									id="liPendingWithdrawals"
+									tabindex="0"
+									class="PendingWithdrawals"
+									data-bind="dictionaryBinding: 'liPendingWithdrawals', resourceName: 'menus_mainmenu', click: pendingWithdrawalsClick, css: { Active: $parent.simpleVisible(eViewTypes.vPendingWithdrawal) }"
+								></a>
+							</li>
+							<!-- /ko -->
+						</ul>
+					</li>
+					<!-- /ko -->
+					<!-- /ko -->
+				</ul>
+				<!-- /ko -->
+			</div>
+			<!-- /ko -->
+		</div>
+	</div>
+</div>

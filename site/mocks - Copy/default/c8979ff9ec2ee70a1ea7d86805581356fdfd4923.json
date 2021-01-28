@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/api/withdrawal/GetWithdrawalInfo/47?SecurityToken=1409145685",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{ \"AllowedWithdrawalInfo\": {\"AccountNumber\":\"2000015630\",\"AllowedWithdrawalAmount\":\"47735\",\"Symbols\":[{\"SymbolID\":47,\"SymbolName\":\"USD\"}],\"TaxAmount\":\"0\"},\"WithdrawalTiles\": [{\"Name\":\"\",\"WithdrawalId\":\"\",\"IBAN\":\"\",\"CCId\":\"\",\"CardTypeId\":\"\",\"Last4\":\"\",\"ImageClass\":\"\",\"CurrencyIds\":[{\"Value\":\"47\"}],\"IsApproved\":0,\"CCExpiry\":\"\",\"CardHolder\":\"\",\"TextContentKey\":\"\"}] }",
+  "isBase64": false
+}

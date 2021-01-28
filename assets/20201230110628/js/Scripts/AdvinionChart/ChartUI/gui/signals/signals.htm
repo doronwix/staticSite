@@ -1,0 +1,63 @@
+﻿<html>
+    <head></head>
+<body>
+<div>
+<div class="adv-dialog-content" id="dlg-signals" >
+    <div class ="dialog-signals-browser">
+        <ul id="main-signal-browser">
+     
+        </ul>
+    </div>
+    <div class ="dialog-signals">
+        <div id="dialog-main-page" >
+ 
+            <!--<div class = "main-page" style ="display:none">Main page1</div> -->
+            <!-- <div class = "main-page" style ="display:none">Main page3</div> -->
+        </div>
+    </div>
+        
+    <!-- template zone- -->
+    <div id ="template-mainpage" style ="display:none ">
+        <div class = "main-page" style ="display:none" id ="signal-%id%-page">
+            <div class ="dialog-main-page-title" >
+                <ul>
+                    <li  class="title_level active" ><a href="javascript:void(0);" data-localize="dialogs.signals.path">%name%</a></li>
+                    <li  class="title_level" style="display:none"><span>\</span><a href="javascript:void(0);"></a></li>
+                    <li  class="title_level" style="display:none"><span>\</span><a href="javascript:void(0);"></a></li>
+                </ul>
+                <div class ="clear"></div> 
+            </div>
+            <div class ="dialog_level" style="display:block; ">
+                   
+                  
+                <div class ="signal-provider-logo %id%-logo"><span>%desc%</span></div>
+
+                <div class="signal-provider-desc"></div>
+                <div class ="main-properties">
+                    <ul class="favorite-signals-list" >
+                           
+                    </ul>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div id="template-mainpage-listitem" style ="display:none ">
+        <ul class="favorite-signals-list" >
+            <li id="signal-%id%-%itemid%" n="%name%" d="%caption%"  idx="signal-%id%-%itemid%" prv="%id%" mod="%itemid%"  class="li-signal"> 
+                <button class="favorite star-signal star-button %starsignal%" type="button"  ></button> 
+                <a href="javascript:void(0)" class="opensignal" idx="signal-%id%-%itemid%" title="%caption%" > 
+                    <span>%name%</span> 
+                    <i>%caption%</i>
+                </a> 
+            </li>  
+        </ul>  
+    </div>
+    <!-- End template zone- -->
+    <div class ="clear"></div>
+</div>
+ </div>
+</body>
+</html>
+ 
+
+ 

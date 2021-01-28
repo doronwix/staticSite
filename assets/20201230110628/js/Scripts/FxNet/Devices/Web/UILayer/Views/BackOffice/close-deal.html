@@ -1,0 +1,92 @@
+﻿<span id="CloseDealPosNum">
+    <fx-custom-dropdown params="value: Data.SelectedPosition, options: OpenDeals, optionText: 'positionNumber', dropdownclass: 'close-deal'"></fx-custom-dropdown>
+</span>
+
+<div class="section-wrapper" data-bind="if: Data.HasPosition()">
+    <div class="deal-content">
+        <div class="row-wrapper">
+
+            <div class="col-1 left">
+                <div class="headings">
+                    <p>
+                        <span id="lblInstrumentLabel" data-bind="dictionaryBinding: 'lblInstrumentLabel', resourceName: 'deals_closedeal'"></span>
+                    </p>
+                </div>
+                <div>
+                    <span data-bind="html: Data.SelectedPosition().Instrument.ccyPairLong" class="instrument-name"></span>
+                </div>
+            </div>
+
+            <div class="col-1 second left">
+                <div class="headings">
+                    <p>
+                        <span id="lblDealAmount" data-bind="text: Data.SelectedPosition().Instrument.dealAmountLbl"></span>
+                    </p>
+                </div>
+                <div>
+                    <span data-bind="text: Format.formatDealAmount(Data.SelectedPosition().dealAmount)" class="instrument-name"></span>
+                </div>
+            </div>
+
+            <div class="col-2 no-border right">
+                <div id="btnSell" class="buttons gray">
+                    <span class="offer">
+                        <span id="txtDealRate" data-bind="dictionaryBinding: 'txtDealRate', resourceName: 'deals_closedeal'"></span>
+                    </span>
+                    <div class="rates addPadding">
+                        <span id="lblRateFirst" data-bind="text: Data.SelectedPosition().dealRateLabel.First">0.00</span><!--
+                        --><span id="lblRateMiddle" data-bind="text: Data.SelectedPosition().dealRateLabel.Middle">00</span><!--
+                        --><span id="lblRateLast" data-bind="text: Data.SelectedPosition().dealRateLabel.Last">0</span>
+                    </div>
+                </div>
+                <div id="btnBuy" class="buttons gray">
+                    <span class="offer">
+                        <span id="txtClosingRate" data-bind="dictionaryBinding: 'txtClosingRate', resourceName: 'deals_closedeal'"></span>
+                    </span>
+                    <!-- ko if: !Data.extendedTradingEnabled() -->
+                    <div class="rates addPadding extendedRate" data-bind="click: function () { EnableExtendedTrading(true); }, css: { redText: Data.SelectedPosition().isDown, greenText: Data.SelectedPosition().isUp }, setFocusToId: 'customExtendedRate'">
+                        <span id="lblSpotRateFirst" data-bind="text: Data.SelectedPosition().spotRateLabel().First">0.00</span><!--
+                        --><span id="lblSpotRateMiddle" data-bind="text: Data.SelectedPosition().spotRateLabel().Middle">00</span><!--
+                        --><span id="lblSpotRateLast" data-bind="text: Data.SelectedPosition().spotRateLabel().Last">0</span>
+                    </div>
+                    <!-- /ko -->
+                    <!-- ko if: Data.extendedTradingEnabled() -->
+                    <div class="extendedRate enabled">
+                        <input id="customExtendedRate" class="ui-spinner-input" type="tel" maxlength="10" autocomplete="off" data-bind="css: { 'invalid' : Data.extendedTradingRate() <= 0 }, textInput: Data.extendedTradingRate" />
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="deal-content info-actions">
+        <div class="row-wrapper">
+            <ul class="profit-info">
+                <!-- ko if: !Data.extendedTradingEnabled() -->
+                    <li data-bind="visible: !Data.SelectedPosition().isProfit(), dictionaryBinding: 'txtCurrentLoss', resourceName: 'deals_closedeal'" class="font-normal"></li>
+                    <li data-bind="visible: Data.SelectedPosition().isProfit(), dictionaryBinding: 'txtCurrentProfit', resourceName: 'deals_closedeal'" class="font-normal"></li>
+                    <li data-bind="text: Data.SelectedPosition().pl(), css: { redText: !Data.SelectedPosition().isProfit(), greenText: Data.SelectedPosition().isProfit() }" class="pl-value"></li>
+                    <li data-bind="text: Data.selectedCcyName(), css: { redText: !Data.SelectedPosition().isProfit(), greenText: Data.SelectedPosition().isProfit() }"></li>
+                <!-- /ko -->
+                <!-- ko if: Data.extendedTradingEnabled() -->
+                    <li data-bind="visible: Data.extendedTradingPL() >= 0, dictionaryBinding: 'txtCurrentProfit', resourceName: 'deals_closedeal'" class="font-normal"></li>
+                    <li data-bind="visible: Data.extendedTradingPL() < 0, dictionaryBinding: 'txtCurrentLoss', resourceName: 'deals_closedeal'" class="font-normal"></li>
+                    <li data-bind="text: Data.extendedTradingPL(), css: { redText: Data.extendedTradingPL() < 0, greenText: Data.extendedTradingPL() > 0 }" class="pl-value"></li>
+                    <li data-bind="text: Data.selectedCcyName(), css: { redText: Data.extendedTradingPL() < 0, greenText: Data.extendedTradingPL() > 0 }"></li>
+                <!-- /ko -->
+            </ul>
+            <ul class="right buttons-holder">
+                <li>
+                    <a id="btnUpdate" class="btn big deal right" href="javascript:void(0)" data-bind="css: { disabled: !Data.CloseDealReady(), isprocessing: Data.isProcessing() }, click: function () { CloseDeal(); }">
+                        <span id="btnContent" data-bind="isProcessing: { switchText: true },  dictionaryBinding: 'btnClostDeal', resourceName: 'deals_closedeal'"></span>
+                        <!-- ko if: Data.isProcessing()-->
+                        <span class="js_processing"></span>
+                        <!-- /ko -->
+                    </a>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

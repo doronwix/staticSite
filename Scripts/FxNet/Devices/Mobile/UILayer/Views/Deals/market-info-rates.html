@@ -1,0 +1,32 @@
+﻿<div class="market-info-rates">
+    <div class="info-rates-tabs">
+        <div class="tabs-header">
+            <!-- ko foreach: { data: Object.keys(Data.tabsPeriods), as: 'tab' } -->
+            <div class="tabh" data-bind="css: { 'active': $parent.Data.selectedTab() == tab }, click: function () { $parent.ChangeTab(tab); }">
+                <span class="tabh-text" data-bind="text: Dictionary.GetItem('tabTitle' + tab, 'deals_DealMarketInfoTool'), 'data-automation': 'tabh-' + tab"></span>
+            </div>
+            <!-- /ko -->
+        </div>
+        <div class="tabs-content">
+            <!-- ko if: !Data.isLoading() -->
+            <!-- ko foreach: { data: Data.selectedPeriods, as: 'id' } -->
+            <!-- ko component: {
+                name: 'fx-component-rate-range-indicator',
+                params: {
+                    id: id,
+                    instrumentId: $parent.Data.selectedInstrument(),
+                    periodData: $parent.Data.periodData(),
+                    currentRate: $parent.Data.currentRate,
+                }
+            } -->
+            <!-- /ko -->
+            <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko if: Data.isLoading() -->
+            <div class="loader-background">
+                <div class="loader"></div>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>

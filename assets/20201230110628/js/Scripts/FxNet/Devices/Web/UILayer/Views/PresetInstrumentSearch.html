@@ -1,0 +1,24 @@
+﻿<div class="autocomplete-container">
+	<!-- ko if: Data.list().length > 0 -->
+	<input type="text"
+		data-bind="autocomplete: {
+				elementType: 'input',
+				source: Data.list,
+				selected: Data.selected,
+				appendTo: '.autocomplete-container .autocomplete-search-wrapper',
+				elementToFocusOnChange: '.instrument-row-',
+				autocompleteWrapperClass: 'autocomplete-search-wrapper',
+				searchPostBoxTopic: 'autocomplete-search-complete',
+				noResultText: Dictionary.GetItem('no_results'),
+				contentMaxHeight: 250,
+				minLength: Browser.isInternetExplorer(true) ? 3 : Data.searchMinLength(),
+				hasCategories: true,
+				renderInstruments: true,
+			},
+			attr: {
+				placeholder: Dictionary.GetItem('SearchLabel','dialogsTitles',' ')
+			}">
+
+	<div class="autocomplete-search-wrapper preset-search-wrapper" data-bind="jScrollPane: { postBoxTopic: 'autocomplete-search-complete' }"></div>
+	<!-- /ko -->
+</div>

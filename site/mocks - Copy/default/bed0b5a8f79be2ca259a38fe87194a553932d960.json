@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/Tooltip.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"T_Credit_card_copy\":\"Copy of the credit card used for payment. Please send both sides of the card and conceal the first 12 digits on the front side and the CVV on the back.<br><br>\\r\\nShould a name not appear on the credit card, please ensure you leave the first 6 digits on the front side visible.\",\"T_DepositConfirmation\":\"We require your signature in order to confirm the deposits you have made. Click on the email icon and an updated list of deposits will be sent to your email address.\",\"T_Proof_of_ID\":\"Personal identification certificate, passport, driving license or any other government issued document evidencing your name, date and place of birth, citizenship, and bearing your photograph and signature (Front and Back).\",\"T_Proof_of_Residence\":\"Proof of current residence (i.e. utility bill, bank statement, etc). PO Boxes are not acceptable and the document cannot be more than 6 months old.\",\"T_TIN\":\"An identifying number used for tax purposes in your country of residence, often referred to as TIN (Taxpayer Identification Number).\",\"T_Withdrawal_Pending_Request\":\"A copy of the withdrawal request was sent to your email as an attachment. Please print the attachment, sign and upload it here. \\r\\nShould you prefer, you can also go to the Withdrawal page, where you can print the withdrawal request and then continue to upload documents.\",\"T_Withdrawal_Pending_Request_Mobile\":\"A copy of the withdrawal request was sent to your email as an attachment. Please print the attachment, sign and upload it here.  \"}",
+  "isBase64": false
+}

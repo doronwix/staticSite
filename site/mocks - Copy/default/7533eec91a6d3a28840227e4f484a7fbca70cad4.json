@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/PresetInstrumentSearch.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<div class=\"autocomplete-container\">\r\n\t<!-- ko if: Data.list().length > 0 -->\r\n\t<input type=\"text\"\r\n\t\tdata-bind=\"autocomplete: {\r\n\t\t\t\telementType: 'input',\r\n\t\t\t\tsource: Data.list,\r\n\t\t\t\tselected: Data.selected,\r\n\t\t\t\tappendTo: '.autocomplete-container .autocomplete-search-wrapper',\r\n\t\t\t\telementToFocusOnChange: '.instrument-row-',\r\n\t\t\t\tautocompleteWrapperClass: 'autocomplete-search-wrapper',\r\n\t\t\t\tsearchPostBoxTopic: 'autocomplete-search-complete',\r\n\t\t\t\tnoResultText: Dictionary.GetItem('no_results'),\r\n\t\t\t\tcontentMaxHeight: 250,\r\n\t\t\t\tminLength: Browser.isInternetExplorer(true) ? 3 : Data.searchMinLength(),\r\n\t\t\t\thasCategories: true,\r\n\t\t\t\trenderInstruments: true,\r\n\t\t\t},\r\n\t\t\tattr: {\r\n\t\t\t\tplaceholder: Dictionary.GetItem('SearchLabel','dialogsTitles',' ')\r\n\t\t\t}\">\r\n\r\n\t<div class=\"autocomplete-search-wrapper preset-search-wrapper\" data-bind=\"jScrollPane: { postBoxTopic: 'autocomplete-search-complete' }\"></div>\r\n\t<!-- /ko -->\r\n</div>",
+  "isBase64": false
+}

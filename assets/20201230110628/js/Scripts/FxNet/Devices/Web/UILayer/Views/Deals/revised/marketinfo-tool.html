@@ -1,0 +1,103 @@
+﻿<div class="top-container">
+	<div class="trsent-section">
+		<h4 class="section-header" data-bind="text: Dictionary.GetItem('lblTradingSentiment', 'deals_DealMarketInfoTool')"></h4>
+		<div class="trsent-disclaimer" data-bind="visible: Data.displayTradingSentimentsFirstView()">
+			<p data-bind="text: Dictionary.GetItem('txtTradingSentimentPreliminary', 'deals_DealMarketInfoTool')"></p>
+			<button class="disclaimer-action" data-bind="text: Dictionary.GetItem('disclaimerAgree', 'deals_DealMarketInfoTool'),
+				click: function () { Data.displayTradingSentimentsFirstView(false); ViewSentimentsButtonHandler(); ko.postbox.publish('view-sentiments', { instrument: NewDealData.selectedInstrument()}); },
+				'data-automation': 'btn-view-sentiment'"></button>
+		</div>
+		<div class="trsent-content" data-bind="visible: !Data.displayTradingSentimentsFirstView(), css: { 'available': Data.displayTradingSentiments() }">
+			<p data-bind="text: Dictionary.GetItem('txtTradingSentimentNotAvailable', 'deals_DealMarketInfoTool'), visible: !Data.displayTradingSentiments()"></p>
+			<div class="labels" data-bind="visible: Data.displayTradingSentiments()">
+				<div id="lblFallPercent" class="trade-direction" data-bind="text: Data.fallValue() + '% ' + Dictionary.GetItem('orderDirection0')"></div>
+				<div id="lblRisePercent" class="trade-direction" data-bind="text: Data.riseValue() + '% ' + Dictionary.GetItem('orderDirection1')"></div>
+			</div>
+			<div class="trsent-graph" data-bind="css: {'active': Data.displayTradingSentiments()}">
+				<div class="buy-graph" data-bind="style: { width: Data.riseValue()+'%' }"></div>
+			</div>
+			<div class="trsent-info" data-bind="text: String.format(Dictionary.GetItem(Data.fallValue() > 50 ? 'lblFallDetails' : 'lblRiseDetails', 'deals_DealMarketInfoTool'), Data.fallValue() > 50 ? Data.fallValue() : Data.riseValue()), visible: Data.displayTradingSentiments()"></div>
+		</div>
+	</div>
+</div>
+<div class="bottom-container">
+	<div class="halftab">
+		<table class="market-info">
+			<tr>
+				<td data-bind="dictionaryBinding: 'lblLastUpdateMarketInfo', resourceName: 'deals_DealMarketInfoTool'"></td>
+				<td>
+					<span id="lblTradeTime" data-bind="text: NewDealData.tradeTime"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span data-bind="dictionaryBinding: 'lblCloseMarketInfo', resourceName: 'deals_DealMarketInfoTool'"></span>
+					<i id="txtCloseMarketInfoTooltip" class="ico-sh-tooltip"
+						data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } },  attr: { title: String.format(Dictionary.GetItem('txtCloseMarketInfoTooltip', 'deals_DealMarketInfoTool'), Data.overnightFinancingTimeGMT()) }"></i>
+				</td>
+				<td>
+					<span id="lblClose" data-bind="template: { name: 'rate-template', data: Format.tenthOfPipSplitRate(NewDealData.close(), NewDealData.selectedInstrument()).label }"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span data-bind="dictionaryBinding: 'lblOpenMarketInfo', resourceName: 'deals_DealMarketInfoTool'"></span>
+
+					<i id="txtOpenMarketInfoTooltip" class="ico-sh-tooltip"
+						data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } },  attr: { title: String.format(Dictionary.GetItem('txtOpenMarketInfoTooltip', 'deals_DealMarketInfoTool'), Data.overnightFinancingTimeGMT()) }"></i>
+				</td>
+				<td>
+					<span id="lblOpen" data-bind="template: { name: 'rate-template', data: Format.tenthOfPipSplitRate(NewDealData.open(), NewDealData.selectedInstrument()).label }"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span data-bind="dictionaryBinding: 'lblChangePercentMarketInfo', resourceName: 'deals_DealMarketInfoTool'"></span>
+
+					<i id="txtChangeMarketInfoTooltip" class="ico-sh-tooltip"
+						data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } }, attr: { title: Dictionary.GetItem('txtChangePercentMarketInfo', 'deals_DealMarketInfoTool') }"></i>
+				</td>
+				<td>
+					<span id="lblChangePercent" data-bind="text: NewDealData.change"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span data-bind="dictionaryBinding: 'lblChangeMarketInfo', resourceName: 'deals_DealMarketInfoTool'"></span>
+
+					<i id="txtChangeInPipsMarketInfoTooltip" class="ico-sh-tooltip"
+						data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } }, attr: { title: Dictionary.GetItem('txtChangeMarketInfo', 'deals_DealMarketInfoTool') }"></i>
+				</td>
+				<td>
+					<span id="lblChange" data-bind="text: Data.change"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span data-bind="dictionaryBinding: 'lblTodayHighMarketInfo', resourceName: 'deals_DealMarketInfoTool'"></span>
+
+					<i id="txtTodayHighMarketInfoTooltip" class="ico-sh-tooltip"
+						data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } },  attr: { title: String.format(Dictionary.GetItem('txtTodayHighMarketInfoTooltip', 'deals_DealMarketInfoTool'), Data.overnightFinancingTimeGMT()) }"></i>
+				</td>
+				<td>
+					<span id="lblHighBid" data-bind="template: { name: 'rate-template', data: Format.tenthOfPipSplitRate(NewDealData.highBid(), NewDealData.selectedInstrument()).label }"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span data-bind="dictionaryBinding: 'lblTodayLowMarketInfo', resourceName: 'deals_DealMarketInfoTool'"></span>
+
+					<i id="txtTodayLowMarketInfoTooltip" class="ico-sh-tooltip"
+						data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } },  attr: { title: String.format(Dictionary.GetItem('txtTodayLowMarketInfoTooltip', 'deals_DealMarketInfoTool'), Data.overnightFinancingTimeGMT()) }"></i>
+				</td>
+				<td>
+					<span id="lblLowAsk" data-bind="template: { name: 'rate-template', data: Format.tenthOfPipSplitRate(NewDealData.lowAsk(), NewDealData.selectedInstrument()).label }"></span>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="halftab">
+		<!-- ko component: { name: 'fx-component-market-info-rates', params: {} } --><!-- /ko -->
+	</div>
+</div>

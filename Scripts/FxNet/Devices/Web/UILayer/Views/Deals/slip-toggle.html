@@ -1,0 +1,10 @@
+<div class="sliptoggle" data-bind="dealSlipCenter: { flag: Data.showTools, elementClass: 'ui-dialog', chartStationPage: options.chartStationPage, recenterWithDelay: options.recenterWithDelay }">
+    <div class="slipbut-wrap" data-bind="visible: options.chartStationPage || Data.chartFullScreen()">
+        <button class="but-toggle transaction" data-bind="click: ToggleTransaction, css: { 'expand': !Data.showTransaction() },
+                attr: { 'title': Dictionary.GetItem(Data.showTransaction() ? 'collapseTransaction' : 'expandTransaction', 'dialogsTitles')}"></button>
+    </div>
+    <div class="slipbut-wrap" data-bind="visible: !options.chartStationPage && !Data.chartFullScreen()">
+        <button class="but-toggle tools" data-bind="click: function() { ToggleTools(); }, css: { 'expand': !Data.showTools() },
+                attr: { 'title': Dictionary.GetItem(Data.showTools() ? 'collapseTools' : 'expandTools',  'dialogsTitles')}"></button>
+    </div>
+</div>

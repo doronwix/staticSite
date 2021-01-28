@@ -1,0 +1,8 @@
+﻿<!--ko if: visible-->
+<p class="q_title" data-bind="text: text"></p>
+<form action="javascript:void(0)">
+    <div data-bind="attr: {id : id }, ttTriggerFadeOut: {targetsSelector: 'i.close'}, foreach: questions">
+        <div data-bind="component : { name: componentName, params: {model: $parent.questionnaireItemsDictionary[name], questionnaireItemsDictionary: $parent.questionnaireItemsDictionary}}"></div>
+    </div>
+</form>
+    <!--/ko-->

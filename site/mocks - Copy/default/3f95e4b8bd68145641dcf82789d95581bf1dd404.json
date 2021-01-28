@@ -1,0 +1,33 @@
+{
+  "requestUrl": "/webpl3/Compliance/GetUploadDocumentsData",
+  "contentType": "application/json; charset=utf-8",
+  "method": "POST",
+  "statusCode": 200,
+  "data": {
+    "Data": [
+      {
+        "Category": "C_OtherDocuments",
+        "Tooltip": "",
+        "DocumentTypeID": 8,
+        "DocumentStatus": 2,
+        "DocumentStatusText": "S_AwaitingDocuments"
+      },
+      {
+        "Category": "C_ProofofID",
+        "Tooltip": "T_Proof_of_ID",
+        "DocumentTypeID": 1,
+        "DocumentStatus": 1,
+        "DocumentStatusText": "S_Approved"
+      },
+      {
+        "Category": "C_ProofofResidence",
+        "Tooltip": "T_Proof_of_Residence",
+        "DocumentTypeID": 2,
+        "DocumentStatus": 1,
+        "DocumentStatusText": "S_Approved"
+      }
+    ],
+    "NotApprovedCreditCards": []
+  },
+  "isBase64": false
+}

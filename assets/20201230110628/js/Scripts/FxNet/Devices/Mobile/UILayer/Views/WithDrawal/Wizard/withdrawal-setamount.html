@@ -1,0 +1,42 @@
+<div class="withdrawal-wrapper">
+	<!-- ko if: Data.isLoading -->
+	<div class="loader-background">
+		<div class="loader"></div>
+	</div>
+	<!-- /ko -->
+	<h1 class="page-title" data-bind="text: Dictionary.GetItem('title_withdrawFunds', 'views_vMobileWithdrawal')"></h1>
+	<!-- ko if: !WithdrawalInfo.canWithdrawal() -->
+	<p id="notAllowed" data-bind="html: Dictionary.GetItem(Data.notAllowedMsg(), 'views_vMobileWithdrawal')"></p>
+	<!-- /ko -->
+	<!-- ko if: WithdrawalInfo.canWithdrawal -->
+	<div class="withdrawal-info">
+		<div class="info-row" id="allowed">
+			<div class="info-section">
+				<p data-bind="html: Dictionary.GetItem('allowed', 'views_vMobileWithdrawal')"></p>
+			</div>
+			<div class="info-section">
+				<div class="max-amount">
+					<span data-bind="text: Format.numberAddThousandSeparator(WithdrawalInfo.MaxWithdrawalAmount())"></span>
+					&rlm;(<span data-bind="text: WithdrawalInfo.defaultCcy"></span>)
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="data-fields top-separator">
+		<div class="field-row halfsize" data-bind="with: Data.withdrawalForm">
+			<label for="amounttodeposit" id="amountLabel" data-bind="html: Dictionary.GetItem('amount', 'views_vMobileWithdrawal')"></label>
+			<input class="text-field" type="text" id="amounttodeposit" data-bind="validationOptions: { decorateInputElement: true, messageTemplate: 'customMessageTemplate' },
+					   textInput: Amount,
+					   css: {'has-error': Amount.isDirty() && !Amount.isValid()}" />
+		</div>
+		<div class="field-row halfsize currency-row">
+			<select id="selectedCcy" class="select-field" data-bind="options: Data.depositCurrencies, optionsText: 'SymbolName', optionsValue: 'SymbolID', value: Data.withdrawalForm.SymbolId, focus: data.withdrawalForm.enableValidation(false)"></select>
+		</div>
+		<div class="field-row">
+			<label for="commentOptional" id="commentLabel" data-bind="html: Dictionary.GetItem('lblAmountComments', 'views_vMobileWithdrawal')"></label>
+			<textarea id="commentOptional" class="textarea-field" data-bind="textInput: Data.withdrawalForm.Details"></textarea>
+		</div>
+	</div>
+	<iframe class="uploadIframe" data-bind="iframeElement: Data.uploadVm.Form.iframeElement, attr: { src: Data.uploadVm.Form.iframeSrc}"></iframe>
+	<!-- /ko -->
+</div>

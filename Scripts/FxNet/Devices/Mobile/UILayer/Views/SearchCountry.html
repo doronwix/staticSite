@@ -1,0 +1,66 @@
+﻿<template id="search-country-item">
+    <li data-bind="attr: { 'id': 'search-country-item-' + id },
+         css: { selected: id === $parent.Data.selectedCountry().id && id != -1 }, 
+         click: $parent.SetCountry">
+        <i class="list-flag" data-bind="css: '_cntr_' + id"></i>
+
+        <span class="text-holder" data-bind="text: text, css:{ disabled: id == -1 }"></span>
+    </li>
+</template>
+
+<div class="row search-country-select-container">
+    <div class="select-question">
+        <div class="flag-dropdown relative">
+            <i class="selected-item list-flag" data-bind="css: '_cntr_' + Data.selectedCountry().id"></i>
+
+            <input type="text" data-bind="value: Data.selectedCountry().text, 
+                   click: function() { Data.displaySearch(true); }"
+                   id="selected-country-text" class="selected-country-text"/>
+        </div>
+        <!--ko if: Data.displaySearch() -->
+        <div class="questionSearch">
+            <div id="header">
+                <div class="logo-wrapper" data-bind="css: { 'demo': $statesManager.States.IsDemo() }">
+                    <div class="icon-mid"></div>
+                </div>
+
+                <div class="back-button" data-bind="click: OnClickBackButton" id="back-button-search-countries"></div>
+            </div>
+
+            <div data-bind="attr: { class: 'autocompleteWrapper autocompleteWrapper-search-countries' }">
+                <div class="search-wrapper">
+                    <div class="clear-input">
+                        <input class="search" type="text" id="country-search-autocomplete"
+                               data-bind="hasFocus: Data.searchFocus,
+                                autocomplete: {
+                                    elementType: 'input.mobile',
+                                    source: Data.countries,
+                                    selected: Data.selectedCountry,
+                                    appendTo: '.results-wrapper',
+                                    autocompleteWrapperClass: 'autocompleteWrapper-search-countries',
+                                    minLength: 1,
+                                    hasCategories: false,
+                                    itemImageClassProperty: 'id',
+                                    itemImageClassPrefix: '_cntr_',
+                                    renderInstruments: false,
+                                    matchFromBeginning: true
+                                },
+                            virtualKeyboardBehavior"/>
+
+                        <button class="clear-button closeButton"
+                                data-bind="attr: { id: 'clearButton' }, 
+                                cssIfValue: { valueElementId: 'country-search-autocomplete', className: 'clear-button' }">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="results-wrapper">
+                    <div class="styled-select answer-search-select">
+                        <ul class="customized" data-bind="template: { name: 'search-country-item', foreach: Data.countries }"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /ko -->
+    </div>
+</div>

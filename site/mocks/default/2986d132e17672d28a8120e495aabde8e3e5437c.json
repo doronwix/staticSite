@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/UploadDocumentsStatusPopUpMessages.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"doc_load_success\":\"Your document was uploaded successfully.\",\"doc_shuld_be_provided\":\"We also require your {0} document.\",\"docname_CreditCardCopy\":\"Credit Card Copy\",\"docname_DepositConfirmation\":\"Deposit Confirmation\",\"docname_load_success\":\"Your {0} document was uploaded successfully.\",\"docname_ProofOfID\":\"Proof of ID\",\"docname_ProofOfResidence\":\"Proof of Residence\",\"docname_TaxCard\":\"Taxpayer Identification Number (TIN)\",\"docname_WithdrawalPendingRequest\":\"Withdrawal Pending Request\",\"notify_when_doc_reviewed\":\" \",\"popup_title\":\"Please Note\"}",
+  "isBase64": false
+}

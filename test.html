@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="/webpl3/assets/20201230110628/skins/web/broker6/english/splash-screen.light.css">
+<div
+	id="cssloadOverlay"
+	style="
+		background-color: #fff;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 2000;
+	"
+></div>
+<script src="http://traderlocal.iforex.com:9005/assets/20201230110628/js/scripts/preloader-web.js"></script>
+</head>
+<body data-bind="css: 'page-' + $viewModelsManager.VManager.ActiveFormName()">
+		<div class="mainWrapper">
+			<!-- ko if: Browser.isInternetExplorer() && !Browser.isIEVersionGreaterThen(8) -->
+			<div data-bind="loadHtml: { url: 'Customer/BrowserUpdateBanner' }"></div>
+			<!-- /ko -->
+
+			<div id="popup_overlay" class="popup_overlay"></div>
+
+			<div id="popupContainer" class="popupContainer">
+				<div class="popupContainer_content"></div>
+			</div>
+
+			<!-- ko ifnot: FxNet.IsLoaded && FxNet.IsVisible && FxNet.IsCacheLoaded -->
+			<div id="splash_page">
+				<div class="logo-container">
+					<div class="logo-center">
+						<div class="logo"></div>
+					</div>
+				</div>
+				<div class="main-menu-bg-wide">&nbsp;</div>
+				<div class="splash-text">
+					<p>
+						<span id="lblSplashWait" class="wait"></span>
+					</p>
+					<div class="splash-sub-text">
+						<span id="lblSplashText" class="request"></span>
+					</div>
+					<div class="splash-loader"><div class="loader"></div></div>
+				</div>
+			</div>
+			<!-- /ko -->
+			<!-- ko if: FxNet.IsLoaded -->
+			<div
+				data-bind="template: { name: 'mainTemplate', afterRender: FxNet.UiAfterRender }, visible: FxNet.IsVisible && FxNet.IsCacheLoaded"
+				style="display: none"
+			></div>
+
+			<div
+				id="CsmOutOfDateOverlay"
+				class="alert-overlay"
+				data-bind="visible: FxNet.CsmOutOfDate"
+				style="display: none"
+			>
+				<div class="js_processing2"></div>
+			</div>
+			<!-- /ko -->
+
+			<script id="mainTemplate" type="text/html"></script>
+		</div>
+	</body>
+</html>

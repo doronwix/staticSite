@@ -1,0 +1,46 @@
+﻿
+<div class="validation-holder">
+	<div class="select-wrapper">
+		<div class="select-like" data-bind="attr: {id: 'dlgCmbCCYTrigger'  + Data.suffixId}, click: onFocus">
+			<div class="trigger"></div>
+			<span class="selected-instrument" data-bind="instrumentName: Data.selectedInstrumentId"></span>
+			<input type="hidden" data-bind="value: Data.selectedInstrumentId"/>
+		</div>
+	</div>
+
+	<div class="autocompleteWrapper deal-autocomplete-wrapper">
+		<input class="search"
+				data-bind="attr: { 
+							id: 'quotes-autocomplete' + Data.suffixId,
+							placeholder: Dictionary.GetItem('lblSearch','deals_CloseDeal')
+						},
+						hasFocus: searchFocus,
+						autocomplete: {
+							elementType: 'select',
+							autocompleteWrapperClass: 'deal-autocomplete-wrapper',
+							source: Data.list,
+							selected: Data.selected,
+							minLength: Data.searchMinLength(),
+							appendTo: '.deal-search-select',
+							contentMaxHeight: 180,
+							triggerFrom: '#dlgCmbCCYTrigger' + Data.suffixId,
+							predefinedOptionsListClass: 'customized',
+							noResultText: Dictionary.GetItem('no_results'),
+							searchPostBoxTopic: Data.searchPostBoxTopic,
+							hasCategories: true,
+							renderInstruments: true,
+						}" />
+
+		<div class="styled-select deal-search-select" data-bind="jScrollPane: { postBoxTopic: Data.searchPostBoxTopic, reinitialiseDelay: 0 }">
+			<ul class="customized">
+				<li class="header autocomplete-group" data-bind="dictionaryBinding: Data.favouritePreset() > 0 ? 'Customized' : 'MostPopular', resourceName:'deals_CloseDeal'">%Customized</li>
+
+				<!-- ko foreach: { data: Data.instrumentsList() } -->
+				<li data-bind="template: {name: 'fx-template-search-instrument-description', data: $data},
+									css: { selected: $parent.Data.selectedInstrumentId() === id },
+									click: function() { $parent.Data.selected({ id: id }); }"></li>
+				<!-- /ko -->
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,123 @@
+.diagram {
+  position: fixed;
+  left: 200px;
+  right: 0px;
+  z-index: 1;
+  top: 0px;
+  bottom: 50px;
+  background: white;
+  overflow: auto;
+
+  .diagram_container {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+}
+.blocks {
+  position: fixed;
+  left: 0px;
+  width: 200px;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 1;
+  top: 0px;
+  bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: SANS-SERIF;
+
+  .block {
+    height: 40px;
+    min-height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    margin: 5px 0px;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 14px;
+
+    &.selected {
+      background: rgba(255, 255, 255, 0.8);
+      color: black;
+    }
+
+    .id {
+      font-size: 10px;
+      font-weight: 100;
+      &.only {
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.options {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  top: -10px;
+
+  li {
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    background-color: #bbbbbb;
+    border-radius: 5px;
+    margin: 5px 0px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 10px;
+    text-transform: uppercase;
+    transition: top 0.3s, left 0.3s, opacity 0.2s, width 0.2s;
+    top: 5px;
+    left: 40px;
+    opacity: 0;
+    width: 0px;
+    overflow: hidden;
+  }
+
+  &.open {
+    li {
+      opacity: 1;
+      width: 100px;
+      &:nth-child(1) {
+        top: 0px;
+        left: 60px;
+      }
+      &:nth-child(2) {
+        top: 50px;
+        left: 60px;
+      }
+      &:nth-child(3) {
+        top: 100px;
+        left: 60px;
+      }
+      &:nth-child(4) {
+        top: 150px;
+        left: 60px;
+      }
+    }
+  }
+}

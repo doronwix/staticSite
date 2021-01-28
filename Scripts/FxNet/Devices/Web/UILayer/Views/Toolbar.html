@@ -1,0 +1,18 @@
+﻿<div>
+    <div id="tradingButtons" data-bind="css: { openDealsViewDesign: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vOpenDeals).visible() }">
+        <div class="divButtons">
+            <a id="spnNewDeal" class="btn action colored" data-bind="setDialogPos: { dialogPosition: $viewModelsManager.VmDialog.dialogPosition, parentIsCollapsed: $viewModelsManager.VmAccountMarket.IsCollapsed, parentTopElement: eRefDomElementsIds.newDealRefParentTopElement, topOffset: -3, parentLeftElement: '#QuotesTable .ask-column', leftOffset: 3, RTLoffset: 10 },
+    css : { disabled: ToolbarInfo.disableNewTransaction }, click: function () { NewDealHandler(); }">
+                <p data-bind="dictionaryBinding: 'btnNewDeal', resourceName: 'Toolbar'">%New Deal</p>
+            </a>
+            <a id="spnNewLimit" class="btn action colored" data-bind="css: { disabled: ToolbarInfo.disableNewTransaction }, click: function () { ko.postbox.publish('new-limit-click'); NewLimitHandler(); }">
+                <p data-bind="dictionaryBinding: 'btnNewLimit', resourceName: 'Toolbar'">%New Limit</p>
+            </a>
+            <a id="spnCloseDeal" class="btn action colored" data-bind="click: CloseDealHandler, css: { disabled: ToolbarInfo.disableCloseDeal }, visible: ToolbarInfo.showCloseDeal">
+                <p data-bind="dictionaryBinding: 'btnCloseDeal', resourceName: 'Toolbar'">%Close Deal</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</div>

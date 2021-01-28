@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/uilayer/modules/LoadFromPouchDB.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿/**\r\n * \r\n * Use it as dependency for other require modules to load a document by document id from local index db using pouchDB.\r\n * \r\n * \r\n * Example: \r\n * define('MyAwesomeViewModel', ['LoadFromPouchDB!chart'], function() { \r\n *     \r\n * });\r\n * \r\n */\r\ndefine(\r\n    'modules/LoadFromPouchDB',\r\n    [\r\n        'require',\r\n        'generalmanagers/ErrorManager',\r\n        'dataaccess/dalPouchDB'\r\n    ],\r\n    function (require) {\r\n        var errorManager = require('generalmanagers/ErrorManager'),\r\n            dalPouchDB = require('dataaccess/dalPouchDB');\r\n\r\n        return {\r\n            load: function (docId, localRequire, onloadCallback) {\r\n                dalPouchDB.Get(docId)\r\n                    .then(function (data) {\r\n                        if (null !== onloadCallback)\r\n                            onloadCallback(data);\r\n                    })\r\n                    .catch(function (error) {\r\n                        if (error && !(error.name === 'not_found')) {\r\n                            errorManager.onError(\"dalPouchDB/get\", JSON.stringify(error), eErrorSeverity.low);\r\n                        }\r\n\r\n                        if (null !== onloadCallback)\r\n                            onloadCallback(null);\r\n                    }).done();\r\n\r\n            }\r\n        };\r\n    }\r\n);",
+  "isBase64": false
+}

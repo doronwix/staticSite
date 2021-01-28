@@ -1,0 +1,1 @@
+(window.webpackJsonpassets_js_fx_chatbot_main=window.webpackJsonpassets_js_fx_chatbot_main||[]).push([[0],{352:function(t,e,s){"use strict";s.r(e);var a=s(0),n=s.n(a);e.default=function(t){return n.a.createElement("article",null,n.a.createElement("img",{src:t.src,style:{width:"100%"}}))}}}]);

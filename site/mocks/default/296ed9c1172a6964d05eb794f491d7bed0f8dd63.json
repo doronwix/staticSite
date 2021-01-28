@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/controls_ctlsignals.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"ddlSignalTutorials_Href0\":\"\",\"ddlSignalTutorials_Href1\":\"Signals/The Alerts.swf\",\"ddlSignalTutorials_Href2\":\"Signals/Settings.swf\",\"ddlSignalTutorials_Href3\":\"Signals/TheReportChartStrategy.swf\",\"ddlSignalTutorials_Href4\":\"Signals/The Technical Analysis Section - Search Tools.swf\",\"ddlSignalTutorials_Href5\":\"Signals/The Technical Analysis Section - Overview.swf\",\"ddlSignalTutorials_Href6\":\"Signals/The Japanese Candlesticks.swf\",\"ddlSignalTutorials_Href7\":\"Signals/The Research Platform Overview.swf\",\"ddlSignalTutorials0\":\"Trading Signals Video Tutorials\",\"ddlSignalTutorials1\":\"The Alerts\",\"ddlSignalTutorials2\":\"Settings\",\"ddlSignalTutorials3\":\"Search Tools\",\"ddlSignalTutorials4\":\"Overview\",\"ddlSignalTutorials5\":\"The Japanese Candlesticks\",\"ddlSignalTutorials6\":\"The Research Platform Overview\",\"litPagingRes\":\"Results found: {0} on {1} days\"}",
+  "isBase64": false
+}

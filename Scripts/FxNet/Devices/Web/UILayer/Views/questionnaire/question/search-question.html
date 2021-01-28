@@ -1,0 +1,85 @@
+﻿<template id="search-question-item">
+    <li data-bind="css: { selected: $parent.answer() === id && id != -1}, click: function() { $parent.selected({ id: id }); }">
+        <!-- ko if: imageCode.length > 0 -->
+        <i class="list-flag" data-bind="css: imageCode"></i>
+        <!-- /ko -->
+        <span class="text-holder" data-bind="text: value, css:{ disabled: id == -1 }"></span>
+    </li>
+</template>
+
+<!-- ko if: visible -->
+<div class="row" data-bind="css: { valid: answer.isValid() && validationOn(), error: !answer.isValid() && validationOn(), focused: focused() }">
+    <div data-bind="if: visible" class="search-question relative">
+        <label data-bind="attr: { id: name + 'Label', for: name }">
+            <span data-bind="html: text"></span>
+            <!-- ko if: tooltip !== '' -->
+            <fx-tooltip params="tooltip: tooltip, id: name"></fx-tooltip>
+            <!-- /ko -->
+        </label>
+
+        <div class="custom-select-wrapper choose-item">
+            <div class="trigger"></div>
+            <i class="selected-item" data-bind="css: selectedClass()"></i>
+            <select data-bind="options: optionalAnswers.slice(1),
+                    optionsText: 'text',
+                    optionsValue: 'id',
+                    value: answer,
+                    css: { 'not-selected' : selectedText() == '' },
+                    optionsCaption: placeholder,
+                    attr: {
+                        id: name,
+                        name: name
+                    },
+                    event: {
+                        focus: onFocus
+                    },
+                    click: function() { 
+                        searchFocus(true);
+                    },
+                    disableEnterKey: true">
+            </select>
+        </div>
+
+        <div data-bind="attr: { class: 'autocompleteWrapper autocomplete-wrapper-' + name }">
+            
+            <input class="search"
+                   data-bind="attr: {
+                            id: 'question-autocomplete-' + name,
+                            placeholder: Dictionary.GetItem('lblSearch','deals_CloseDeal')
+                        },
+                        hasFocus: searchFocus,
+                        event: {
+                            blur: onBlur
+                        },
+                        autocomplete: {
+                            elementType: 'select',
+                            relativeFieldId: name,
+                            autocompleteWrapperClass: 'autocomplete-wrapper-' + name,
+                            source: optionalAnswers.slice(1),
+                            selected: selected,
+                            minLength: 1,
+                            appendTo: '.autocomplete-wrapper-' + name + ' .answer-search-select',
+                            contentMaxHeight: 385,
+                            triggerFrom: '#' + name,
+                            predefinedOptionsListClass: 'customized',
+                            noResultText: Dictionary.GetItem('no_results_nationality'),
+                            searchPostBoxTopic: 'answer-search-complete',
+                            hasCategories: false,
+                            itemImageClassProperty: 'imageCode',
+                            renderInstruments: false,
+                            matchFromBeginning: true
+                        }" 
+                   autofocus="" />
+
+            <div class="styled-select answer-search-select" data-bind="jScrollPane: { postBoxTopic: 'answer-search-complete' }">
+                <ul class="customized" data-bind="template: { name: 'search-question-item', foreach: optionalAnswers }">
+                </ul>
+            </div>
+        </div>
+
+        <!-- ko ifnot: answer.isValid -->
+        <fx-question-validation-balloon></fx-question-validation-balloon>
+        <!-- /ko -->
+    </div>
+</div>
+<!-- /ko -->

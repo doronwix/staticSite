@@ -1,0 +1,762 @@
+[
+  {
+    "k": "@@chatbot_lexi_msg_1_0@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/Lexiv2_image.jpg"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_1_2@@",
+    "s": "Hello, my name's Lexi."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_1_4@@",
+    "s": "Together, we'll navigate your path through our trading platform and connect you to financial opportunities."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_1_6@@",
+    "s": "Let's start with a question:"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_1_8@@",
+    "s": "Do you have experience trading CFD products?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_1_10_0_text@@",
+    "s": "I have no trading experience"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_1_10_0_postback@@",
+    "s": "I have no trading experience"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_1_10_1_text@@",
+    "s": "I have trading experience"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_1_10_1_postback@@",
+    "s": "I have trading experience"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_2_1@@",
+    "s": "Well, you're in luck! Our platform connects people to global financial opportunities. However, many  traders don't know how to get started."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_2_3@@",
+    "s": "So, we used our 20+ years of experience  to set up a 'tour' for traders just like you."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_2_5@@",
+    "s": "We're about to start your personal trading “tour”, where we will learn about the advantages - and the risks - of CFD trading. "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_2_7@@",
+    "s": "To assist you on your way, we will give you...  "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_2_9@@",
+    "s": "<b>Free 1-on-1 training </b>for a personal touch or to ask questions "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_3_0_0_text@@",
+    "s": "I'm interested. Show me more "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_3_0_0_postback@@",
+    "s": "I'm interested. Show me more? "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_10_0@@",
+    "s": "Access to <b>educational tutorials</b> and a <b>demo account</b> for risk-free practice."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_10_2@@",
+    "s": "Keep in mind you also get up to <b> 50% trading bonus on your deposit</b>."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_10_4@@",
+    "s": "You get all of this with your deposit package. Wait, that comes later, we still have a few more things to show you…"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_10_6_0_text@@",
+    "s": "Give me the full tour (10 mins)"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_10_6_0_postback@@",
+    "s": "Give me the full tour (10 mins)"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_10_6_1_text@@",
+    "s": "Tell me about your trading tools (5 mins)"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_10_6_1_postback@@",
+    "s": "Tell me about your trading tools (5 mins)"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_10_6_2_text@@",
+    "s": "I'm ready to deposit and trade now"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_10_6_2_postback@@",
+    "s": "I'm ready to deposit and trade now"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_11_0@@",
+    "s": "Great, here we go..."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_12_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/mtaxxmlr2p?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_12_0_description@@",
+    "s": "What is CFD Trading"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_12_0_title@@",
+    "s": "Lesson 1/3"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_12_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/CFD.png"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_13_0@@",
+    "s": "Did you find the \"What is CFD trading\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_14_1@@",
+    "s": "I hope you find the next lesson more helpful"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_15_1@@",
+    "s": "Great, let's continue to the next lesson"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_16_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_16_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_20_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/c1lb31jj9t?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_20_0_description@@",
+    "s": "What is Leverage Trading"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_20_0_title@@",
+    "s": "Lesson 2/3"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_20_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/Leverage.png"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_21_0@@",
+    "s": "Did you find the \"What is leverage trading\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_22_1@@",
+    "s": "I hope you find the next lesson more helpful"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_23_1@@",
+    "s": "Great, let's continue to the next lesson"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_24_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_24_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_27_0_subtitle@@",
+    "s": "Find a quick"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_27_0_description@@",
+    "s": "Trading Example"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_27_0_title@@",
+    "s": "Lesson 3/3"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_27_0_url@@",
+    "s": "//www.iforex.com/EMERP/Landing/masterLP/img/banners/CFDTradingExample_br1_mas.jpg"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_27_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TxtLesson.png"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_28_0@@",
+    "s": "Did you find the \"Trading example\" lesson helpful?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_29_1@@",
+    "s": "Thanks for your feedback"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_30_1@@",
+    "s": "Great, thanks for the feedback"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_31_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_31_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_33_0@@",
+    "s": "Let's make sure you're keeping up. Here are a few questions for you."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_34_0_text@@",
+    "s": "What is CFD trading?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_34_0_0@@",
+    "s": "A way to benefit from the price movements of real financial products without owning them"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_34_0_1@@",
+    "s": "Purchasing real financial products from the stock market"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_35_0_text@@",
+    "s": "Which leverage would lead to larger potential profits?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_35_0_0@@",
+    "s": "1:400"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_35_0_1@@",
+    "s": "1:30"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_35_0__text_wrong@@",
+    "s": "<b>1/2</b> Not bad for a start"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_35_0__text__correct@@",
+    "s": "<b>2/2</b> Well done, you've been paying attention."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_36_0_text@@",
+    "s": "Which leverage would lead to larger potential profits?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_36_0_0@@",
+    "s": "1:400"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_36_0_1@@",
+    "s": "1:30"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_36_0__text_wrong@@",
+    "s": "<b>0/2</b> Learning new stuff is difficult, but don't worry, we'll get there "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_36_0__text__correct@@",
+    "s": "<b>1/2</b> Not bad for a start"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_37_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_37_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_38_0@@",
+    "s": "We've discussed some of the basics of trading together and we're almost ready to explore the market for opportunities. Are you feeling excited?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_38_2@@",
+    "s": " You should be! But first, we should look at some tools that could help you make trading decisions…"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_38_3_0_text@@",
+    "s": "I'm interested,<br />show me the tools"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_38_3_0_postback@@",
+    "s": "I'm interested,<br/> show me the tools"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_38_3_1_text@@",
+    "s": "I'm ready to deposit<br />and trade now"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_38_3_1_postback@@",
+    "s": "I'm ready to deposit<br/> and trade now"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_39_1@@",
+    "s": "Good, the more you know about our trading tools and how to use them, the better it will be for you to take advantage of financial opportunities."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_40_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/g89feye8bf?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_40_0_description@@",
+    "s": "What are Trade Signals"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_40_0_title@@",
+    "s": "Lesson 1/3"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_40_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TradingSignals.png"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_41_0@@",
+    "s": "Did you find the \"What are signals\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_42_1@@",
+    "s": "I hope you find the next lesson more helpful"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_43_1@@",
+    "s": "Great, let's continue to the next lesson"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_44_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_44_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_50_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/dvcw0o1xm9?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_50_0_description@@",
+    "s": "What is Market Sentiment"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_50_0_title@@",
+    "s": "Lesson 2/3"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_50_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/Sentiment.png"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_51_0@@",
+    "s": "Did you find the \"What is market sentiment\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_52_1@@",
+    "s": "Great, let's continue to the next lesson"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_53_1@@",
+    "s": "I hope you find the next lesson more helpful"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_54_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_54_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_60_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/cr4lphjpui?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_60_0_description@@",
+    "s": "What are Trading Factors"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_60_0_title@@",
+    "s": "Lesson 3/3"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_60_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/factors.png"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_61_0@@",
+    "s": "Did you find the \"What are trading factors\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_62_1@@",
+    "s": "Thanks for your feedback"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_63_1@@",
+    "s": "Great, Thanks for your feedback"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_64_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_64_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_84_0@@",
+    "s": "Let's make sure you're keeping up. Here are a few questions for you."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_85_0_text@@",
+    "s": "Extreme weather events (e.g.: hurricane, drought) can be expected to affect the price of…?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_85_0_0@@",
+    "s": "Agricultural commodities such as coffee, sugar and cocoa "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_85_0_1@@",
+    "s": "”Safe haven” commodities such as gold"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_86_0_text@@",
+    "s": "What is trading sentiment?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_86_0_0@@",
+    "s": "A tool that shows whether the majority of traders expected an instrument to rise or fall "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_86_0_1@@",
+    "s": "A tool that shows how analysts predict an instrument to perform"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_86_0__text_wrong@@",
+    "s": "<b>1/2 </b>Not bad, with experience you'll improve."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_86_0__text__correct@@",
+    "s": "<b>2/2</b> Well done, a world of investment opportunities awaits you "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_87_0_text@@",
+    "s": "What is trading sentiment?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_87_0_0@@",
+    "s": "A tool that shows whether the majority of traders expected an instrument to rise or fall "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_87_0_1@@",
+    "s": "A tool that shows how analysts predict an instrument to perform "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_87_0__text_wrong@@",
+    "s": "<b>0/2</b> Learning new stuff is difficult, but don't worry, we'll get there"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_87_0__text__correct@@",
+    "s": "<b>1/2</b> Not bad, with experience you'll improve."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_88_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_88_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_89_1@@",
+    "s": "We started this conversation with a sentence... \"determine your value\"..."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_89_3@@",
+    "s": "Well, I can't wait to see the value you gain from trading. You have the basics to get started and I will be here whenever you need me."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_89_5@@",
+    "s": "Right now, you should go collect your deposit package (includes <B>1-on-1 training</B>, free <B>educational materials</B>, a risk-free <B>demo account</B> PLUS up to <B>50% trading bonus</B> on your deposit). You can start practising on your demo account or trade with real money as soon as you deposit."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_91_0@@",
+    "s": "Remember, you can always withdraw your deposit, no charges, no questions asked, 100% risk-free. Don't miss this rare opportunity to capitalise on your investment. "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_92_0_0_text@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_92_0_0_postback@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_92_0_1_text@@",
+    "s": "Not 100% ready? Take a platform walkthrough tour"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_92_0_1_postback@@",
+    "s": "Not 100% ready? Take a platform walkthrough tour"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_93_0_0_text@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_93_0_0_postback@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_94_0@@",
+    "s": "Congratulations, you can now access the full deposit package including access to educational materials, risk free demo account and 1-on-1 training. For further details, please feel free to contact us."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_100_1@@",
+    "s": "Great, we're experienced ourselves, with over 22 years as part of the iFOREX Group, operating in multiple international markets as a licensed broker, so hopefully, we're both looking for the same thing… great opportunities! "
+  },
+  {
+    "k": "@@chatbot_lexi_msg_100_3@@",
+    "s": "Our proprietary platform is optimized to suit experienced traders, with a variety of unique product features and tools that set us apart from the rest."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_100_5@@",
+    "s": "Let's get started, shall we?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_100_7@@",
+    "s": "Our opening offer to you is a <b>trading bonus of up to 50% on your 1st deposit."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_100_9@@",
+    "s": "Wait, that's not all… we also want to give you cash back, let's say <b>up to 100% Cashback from your 2nd deposit onwards"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_101_0_0_text@@",
+    "s": "I'm interested. Show me more"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_101_0_0_postback@@",
+    "s": "I'm interested. Show me more"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_102_1@@",
+    "s": "We also provide:"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_102_3@@",
+    "s": "<b>Up to 400:1 leverage</b> and competitive spreads"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_102_5@@",
+    "s": "<b>Dedicated account manager </b> that speaks your language."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_102_7@@",
+    "s": "Earn <b>3% interest </b> on your net balance."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_102_9@@",
+    "s": "Rapid withdrawal system"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_102_11@@",
+    "s": "Sound good?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_102_13@@",
+    "s": "That's just the start, because with our deposit package, we also give you trading signals, a $5,000 demo account to practice on, educational materials for advanced training and much, much more."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_103_0_0_text@@",
+    "s": "Tell me a bit about the trading tools (5 mins)"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_103_0_0_postback@@",
+    "s": "Tell me a bit about the trading tools (5 mins)"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_103_0_1_text@@",
+    "s": "Give me the full tour (10 mins)"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_103_0_1_postback@@",
+    "s": "Give me the full tour"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_103_0_2_text@@",
+    "s": "I'm ready to deposit and trade now"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_103_0_2_postback@@",
+    "s": "I'm ready to deposit and trade now"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_104_1@@",
+    "s": "Sure, the more familiar you are with our tools, the more likely you are to enjoy your trading experience with us :-)"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_104_3@@",
+    "s": "The purpose of our tools is to maximize your investment potential with our easy-to-use platform, as well as helping you make better-informed decisions while getting the most out of your trading strategies."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_104_5@@",
+    "s": "Let's get straight to it…"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_104_7@@",
+    "s": "Our platform offer includes tools such as:"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_110_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/g89feye8bf?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_110_0_description@@",
+    "s": "What are Trade Signals"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_110_0_title@@",
+    "s": "Lesson 1/3"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_110_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TradingSignals.png"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_111_0@@",
+    "s": "Did you find the \"What are signals\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_112_1@@",
+    "s": "I hope you find the next lesson more helpful"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_113_1@@",
+    "s": "Great, let's continue to the next lesson"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_114_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_114_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_120_0_url@@",
+    "s": "//fast.wistia.net/embed/iframe/yassecsbp6?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_120_0_description@@",
+    "s": "Market Indicators"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_120_0_title@@",
+    "s": "Lesson 2/3"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_120_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/Indicators.png"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_121_0@@",
+    "s": "Did you find the \"Market Indicators\" video helpful?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_122_1@@",
+    "s": "Great, let's continue to the next lesson"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_123_1@@",
+    "s": "I hope you find the next lesson more helpful"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_124_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_124_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_130_0_description@@",
+    "s": "Basic Technical Analysis"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_130_0_title@@",
+    "s": "Lesson 3/3"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_130_0_url@@",
+    "s": "//www.iforex.com/EMERP/Landing/masterLP/img/banners/TechnicalAnalysis_br1_mas.png"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_130_0_thumbnail@@",
+    "s": "https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TxtLesson.png"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_131_0@@",
+    "s": "Did you find the \"basic technical analysis\" lesson helpful?"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_132_1@@",
+    "s": "Great, Thanks for your feedback"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_133_1@@",
+    "s": "Thanks for your feedback"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_134_0_0_text@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_134_0_0_postback@@",
+    "s": "Continue"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_140_1@@",
+    "s": "Like what you see? <br> Get our deposit package  now and enjoy using the full range of dynamic tools and features available in our platform to capitalize on the markets."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_141_1@@",
+    "s": "Always remember, if you change your mind, you can withdraw your deposit anytime, no questions asked, no charges, 100% risk-free."
+  },
+  {
+    "k": "@@chatbot_lexi_msg_142_0_0_text@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_142_0_0_postback@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_142_0_1_text@@",
+    "s": "Not 100% ready? Take a platform walkthrough tour"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_142_0_1_postback@@",
+    "s": "Not 100% ready? Take a platform walkthrough tour"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_143_0_0_text@@",
+    "s": "Deposit and collect package"
+  },
+  {
+    "k": "@@chatbot_lexi_msg_143_0_0_postback@@",
+    "s": "Deposit and collect package"
+  }
+]

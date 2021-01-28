@@ -1,0 +1,74 @@
+﻿<div class="wire-transfer">
+    <div class="header-wrapper">
+        <span class="bold" data-bind="dictionaryBinding: 'lblTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+    </div>
+
+    <div class="mobile-wire">
+        <div class="wired intro-details">
+            <span data-bind="dictionaryBinding: 'lblIntro', resourceName: 'payments_regularWireTransferDeposit'"></span>
+        </div>
+        <div class="wired">
+            <div> 
+                <p class="bold lblInstructions" data-bind="dictionaryBinding: 'lblInstructions', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                <p data-bind="dictionaryBinding: 'lblLogin', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                <p data-bind="dictionaryBinding: 'lblChoiceBeneficiaryDetails', resourceName: 'payments_regularWireTransferDeposit'"></p>
+            </div>
+            <div class="bank-details">
+                <ul>
+                    <li class="detail">
+                        <span class="bold" data-bind="dictionaryBinding: 'lblBeneficiaryTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                        <span id="lblBeneficiary" data-bind="nonRtlText: Form.beneficiary" class="selectable"></span>
+                    </li>
+                    <li class="detail">
+                        <span class="bold" data-bind="dictionaryBinding: 'lblBankNameTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                        <span id="lblBankName" data-bind="nonRtlText: Form.bank" class="selectable"></span>
+                    </li>
+                    <li class="detail" data-bind="visible: Form.bankCity">
+                        <span class="bold" data-bind="dictionaryBinding: 'lblCityTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                        <span id="lblCity" data-bind="nonRtlText: Form.bankCity" class="selectable"></span>
+                    </li>
+                    <li class="detail" data-bind="visible: Form.bankCountry">
+                        <span class="bold" data-bind="dictionaryBinding: 'lblCountryDescriptionTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                        <span id="lblCountryDescription" data-bind="nonRtlText: Form.bankCountry" class="selectable"></span>
+                    </li>
+                    <li class="detail" data-bind="visible: Form.specialID">
+                        <span class="bold" data-bind="dictionaryBinding: 'lblSpecialIDTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                        <span id="lblSpecialID" data-bind="text: Form.specialID" class="selectable ltr"></span>
+                    </li>
+                    <li class="detail" data-bind="visible: Form.bankAccNumber">
+                        <span class="bold" data-bind="dictionaryBinding: 'lblBankAccountNumber', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                        <span id="lblBankAccountNumber" data-bind="text: Form.bankAccNumber" class="selectable ltr"></span>
+                    </li>
+                    <li class="detail" data-bind="visible: Form.iban">
+                        <span class="bold" data-bind="dictionaryBinding: 'lblIban', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                        <fx-tooltip params="tooltip: Form.tooltip, id: 0"></fx-tooltip>
+                        <span id="lblIBAN" data-bind="text: Form.iban" class="selectable ltr"></span>
+                    </li>
+                    <li class="detail" data-bind="visible: Form.swift">
+                        <span class="bold" data-bind="dictionaryBinding: 'lblSwiftTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                        <span id="lblSwift" data-bind="text: Form.swift" class="selectable ltr"></span>
+                    </li>
+                    <li class="detail" data-bind="visible: Form.paymentRef">
+                        <span class="bold" data-bind="dictionaryBinding: 'lblPaymentReferenceTitle', resourceName: 'payments_regularWireTransferDeposit'"></span>
+                        <span id="lblPaymentReference" data-bind="text: Form.paymentRef" class="selectable ltr"></span>
+                    </li>
+                </ul>
+            </div>
+            <div>  
+
+                <!-- ko if: !Dictionary.ValueIsEmpty('lblAdditional', 'payments_regularWireTransferDeposit') -->
+                <p class="lblObservation" data-bind="dictionaryBinding: 'lblAdditional', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                <!-- /ko -->
+                <p data-bind="html: String.format( Dictionary.GetItem('lblTransferToBeneficiary', 'payments_regularWireTransferDeposit'), Form.depCurrency(), Form.amount())"></p>
+                <p class="lblObservation" data-bind="dictionaryBinding: 'lblTransferObservation', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                <p data-bind="dictionaryBinding: 'lblScreenShot', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                <!-- ko if: !Dictionary.ValueIsEmpty('lblWaitTime', 'payments_regularWireTransferDeposit') -->
+                <p data-bind="dictionaryBinding: 'lblWaitTime', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                <!-- /ko -->
+                <!--ko if: Form.shouldShowCddNotice-->
+                <p data-bind="dictionaryBinding: 'lblPersonalDetails', resourceName: 'payments_regularWireTransferDeposit'"></p>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</div>

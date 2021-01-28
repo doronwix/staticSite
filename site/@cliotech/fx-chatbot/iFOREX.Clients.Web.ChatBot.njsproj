@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{c3cca31d-a677-46eb-9c2c-66963c4ea091}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>
+    </StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">16.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include=".npmrc" />
+    <Content Include="build\promiseExecSpawn.js" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\arb\SimpleTradingExample.html.js" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\css\notifications.css" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\css\notifications.scss" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\css\notifications_rtl.scss" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\eng\index_SimpleTradingExample.html" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\eng\SimpleTradingExample.html.js" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\eng\Web\notifications.css" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\eng\Web\notifications.scss" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\images\CFDTradingExample_bg.png" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\images\CFDTradingExample_img.png" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\images\CFDTradingExample_img2.png" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\images\CFDTradingExample_img2_arb.jpg" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\images\CFDTradingExample_img2_spa.png" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\images\CFDTradingExample_img3.png" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\images\CFDTradingExample_img3_arb.jpg" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\images\CFDTradingExample_img3_spa.png" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\spa\index_SimpleTradingExample_spa.html" />
+    <Content Include="data\articles\SimpleTradingExample_WebPage\spa\SimpleTradingExample.html.js" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\arb\index_TechnicalAnalysis_arb.html" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\arb\TechnicalAnalysis.html.js" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\css\notifications.scss" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\css\notifications_rtl.scss" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\eng\index_TechnicalAnalysis.html" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\eng\TechnicalAnalysis.html.js" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\eng\Web\notifications.css" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\eng\Web\notifications.scss" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_br1_eng.png" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_icon1.jpg" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_icon1_1.png" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_icon2.jpg" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_icon3.jpg" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_icon4.jpg" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_icon5.jpg" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_img.png" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_img1.jpg" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_img2.jpg" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_img2_arb.png" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_img2_spa.jpg" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_img3.jpg" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_img4.jpg" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_img5.jpg" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_img5_arb.png" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\images\TechnicalAnalysis_img5_spa.jpg" />
+    <Content Include="data\articles\TechnicalAnalysis_WebPage\spa\TechnicalAnalysis.html.js" />
+    <Content Include="data\feedback\feedback.json.js" />
+    <Content Include="data\feedback\feedback_icon.png" />
+    <Content Include="data\feedback\paper_plane.png" />
+    <Content Include="data\feedback\templates\template.feedback.js.json" />
+    <Content Include="data\PersonalGuide\lexi_2_ar.js" />
+    <Content Include="data\PersonalGuide\lexi_2_en.js" />
+    <Content Include="data\PersonalGuide\lexi_2_sp.js" />
+    <Content Include="data\PersonalGuide\maxsa_1_en.js" />
+    <Content Include="data\PersonalGuide\max_6_ar.js" />
+    <Content Include="data\PersonalGuide\max_6_en.js" />
+    <Content Include="data\PersonalGuide\max_6_sp.js" />
+    <Content Include="data\PersonalGuide\templates\template.lexi_2.js.json" />
+    <Content Include="data\PersonalGuide\templates\template.maxsa_1.js.json" />
+    <Content Include="data\PersonalGuide\templates\template.max_6.js.json" />
+    <Content Include="docs\api_usage.md" />
+    <Content Include="examples.txt" />
+    <Content Include="notes.txt" />
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="runFullBuild.js" />
+    <Content Include="src\components\container\index.module.scss" />
+    <Content Include="src\components\editor\index.module.scss" />
+    <Content Include="src\components\mediaPlayer\index.module.scss" />
+    <Content Include="src\components\Message\Choice.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\Message\FeedbackChoice.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\Message\index.module.scss" />
+    <Content Include="src\components\Message\Lesson.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\Message\QuizChoice.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="tools\config2keymapping.js" />
+    <Content Include="tools\insert_content.js" />
+    <Content Include="webpack\webpack.config.dev.js" />
+    <Content Include="webpack\webpack.config.prod.js" />
+    <Content Include="ChatBot.js" />
+    <Content Include="public\index.html" />
+    <Content Include="public\test.html" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\manifest.json" />
+    <Content Include="src\App.css" />
+    <Content Include="src\api.js" />
+    <Content Include="src\App.js" />
+    <Content Include="src\index.js" />
+    <Content Include="src\lib\logger.js" />
+    <Content Include="src\lib\reducers.js" />
+    <Content Include="src\components\container\header.js" />
+    <Content Include="src\components\container\index.js" />
+    <Content Include="src\components\editor\block.js" />
+    <Content Include="src\components\editor\blocks.js" />
+    <Content Include="src\components\editor\diagram.js" />
+    <Content Include="src\components\helpers\index.js" />
+    <Content Include="src\components\mediaPlayer\index.js" />
+    <Content Include="src\components\mediaPlayer\lessonView.js" />
+    <Content Include="src\components\mediaPlayer\videoView.js" />
+    <Content Include="src\components\Message\FreeTextInput.js" />
+    <Content Include="src\components\Message\index.js" />
+    <Content Include="src\components\Message\Text.js" />
+    <Content Include="src\components\mediaPlayer\htmlView\GenericArticle.js" />
+    <Content Include="src\components\mediaPlayer\htmlView\index.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="build\" />
+    <Folder Include="data\" />
+    <Folder Include="data\articles\" />
+    <Folder Include="data\articles\SimpleTradingExample_WebPage\" />
+    <Folder Include="data\articles\SimpleTradingExample_WebPage\arb\" />
+    <Folder Include="data\articles\SimpleTradingExample_WebPage\css\" />
+    <Folder Include="data\articles\SimpleTradingExample_WebPage\eng\" />
+    <Folder Include="data\articles\SimpleTradingExample_WebPage\eng\Web\" />
+    <Folder Include="data\articles\SimpleTradingExample_WebPage\images\" />
+    <Folder Include="data\articles\SimpleTradingExample_WebPage\spa\" />
+    <Folder Include="data\articles\TechnicalAnalysis_WebPage\" />
+    <Folder Include="data\articles\TechnicalAnalysis_WebPage\arb\" />
+    <Folder Include="data\articles\TechnicalAnalysis_WebPage\css\" />
+    <Folder Include="data\articles\TechnicalAnalysis_WebPage\eng\" />
+    <Folder Include="data\articles\TechnicalAnalysis_WebPage\eng\Web\" />
+    <Folder Include="data\articles\TechnicalAnalysis_WebPage\images\" />
+    <Folder Include="data\articles\TechnicalAnalysis_WebPage\spa\" />
+    <Folder Include="data\feedback\" />
+    <Folder Include="data\feedback\templates\" />
+    <Folder Include="data\PersonalGuide\" />
+    <Folder Include="data\PersonalGuide\templates\" />
+    <Folder Include="docs\" />
+    <Folder Include="examples\" />
+    <Folder Include="examples\chatbot-viewer\" />
+    <Folder Include="tools\" />
+    <Folder Include="webpack\" />
+    <Folder Include="public" />
+    <Folder Include="src" />
+    <Folder Include="src\components" />
+    <Folder Include="src\components\container" />
+    <Folder Include="src\components\editor" />
+    <Folder Include="src\components\helpers" />
+    <Folder Include="src\components\mediaPlayer" />
+    <Folder Include="src\components\mediaPlayer\htmlView" />
+    <Folder Include="src\components\Message" />
+    <Folder Include="src\lib" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

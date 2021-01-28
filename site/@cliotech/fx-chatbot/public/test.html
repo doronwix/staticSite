@@ -1,0 +1,1245 @@
+<html>
+  <head>
+    <script src="emily.min.js"></script>
+    <script>
+      window.onload = function() {
+        window.emilyComponent = emily.default(
+          [
+            {
+              id: 1,
+              name: 'welcome message',
+              messages: [
+                {
+                  type: 'choices',
+                  choices: [
+                    {
+                      id: 1,
+                      type: 'button',
+                      text: 'I have no trading experience',
+                      postback: 'I have no trading experience',
+                      goto: 10
+                    },
+                    {
+                      id: 2,
+                      type: 'button',
+                      text: 'I have trading experience',
+                      postback: 'I have trading experience',
+                      goto: 100
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 10,
+              name: 'no trading experience',
+              messages: [
+                'You get all of this with your deposit package. Wait, that comes later, you still have a few more things to learn in order to trade with confidence.',
+                ['...', 3],
+                {
+                  type: 'choices',
+                  choices: [
+                    {
+                      id: 1,
+                      type: 'button',
+                      text: "I'm ready to learn more",
+                      postback: "I'm ready to learn more",
+                      goto: 11
+                    },
+                    {
+                      id: 2,
+                      type: 'button',
+                      text: "I'm ready to deposit and trade now",
+                      postback: "I'm ready to deposit and trade now",
+                      goto: 40
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 11,
+              name: 'ready to learn more',
+              messages: [
+                ['Great, here we go...', 1],
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 12
+                }
+              ]
+            },
+            {
+              id: 12,
+              name: 'lesson 1/3',
+              messages: [
+                {
+                  title: 'Lesson 1/3',
+                  description: 'What is CFD trading',
+                  type: 'video',
+                  thumbnail:
+                    'https://www.iforex.com/EMERP/Landing/masterLP/img/banners/CFD.png',
+                  url:
+                    '//fast.wistia.net/embed/iframe/ajurozfifd?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false',
+                  grace: 8,
+                  goto: 13
+                }
+              ]
+            },
+            {
+              id: 13,
+              name: 'lesson 1/3 feedback',
+              messages: [
+                'Did you find this video helpful?',
+                {
+                  type: 'feedback',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'positive',
+                      goto: 15
+                    },
+                    {
+                      id: 1001,
+                      type: 'negative',
+                      goto: 14
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 14,
+              name: 'lesson 1/3 negative',
+              messages: [
+                ['...', 0.5],
+                'I hope you find the next lesson more helpful',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 16
+                }
+              ]
+            },
+            {
+              id: 15,
+              name: 'lesson 1/3 positive',
+              messages: [
+                ['...', 0.5],
+                "Great, let's continue to the next lesson",
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 16
+                }
+              ]
+            },
+            {
+              id: 16,
+              name: 'lesson 2/3',
+              messages: [
+                {
+                  title: 'Lesson 2/3',
+                  description: 'What is leverage trading',
+                  type: 'video',
+                  thumbnail:
+                    'https://www.iforex.com/EMERP/Landing/masterLP/img/banners/Leverage.png',
+                  url:
+                    '//fast.wistia.net/embed/iframe/ajurozfifd?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false',
+                  grace: 8,
+                  goto: 17
+                }
+              ]
+            },
+            {
+              id: 17,
+              name: 'lesson 2/3 feedback',
+              messages: [
+                'Did you find this video helpful?',
+                {
+                  type: 'feedback',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'positive',
+                      goto: 19
+                    },
+                    {
+                      id: 1001,
+                      type: 'negative',
+                      goto: 18
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 18,
+              name: 'lesson 2/3 negative',
+              messages: [
+                ['...', 0.5],
+                'I hope you find the next lesson more helpful',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 20
+                }
+              ]
+            },
+            {
+              id: 19,
+              name: 'lesson 2/3 positive',
+              messages: [
+                '...',
+                "Great, let's continue to the next lesson",
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 20
+                }
+              ]
+            },
+            {
+              id: 20,
+              name: 'lesson 3/3',
+              messages: [
+                {
+                  title: 'Lesson 3/3',
+                  description: 'Trading example',
+                  type: 'video',
+                  thumbnail:
+                    'https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TxtLesson.png',
+                  url:
+                    '//fast.wistia.net/embed/iframe/ajurozfifd?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false',
+                  grace: 5,
+                  goto: 21
+                }
+              ]
+            },
+            {
+              id: 21,
+              name: 'lesson 3/3 feedback',
+              messages: [
+                'Did you find this video helpful?',
+                {
+                  type: 'feedback',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'positive',
+                      goto: 23
+                    },
+                    {
+                      id: 1001,
+                      type: 'negative',
+                      goto: 22
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 22,
+              name: 'lesson 3/3 negative',
+              messages: [
+                '...',
+                'Thanks for your feedback',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 24
+                }
+              ]
+            },
+            {
+              id: 23,
+              name: 'lesson 3/3 positive',
+              messages: [
+                '...',
+                'Great, thanks for the feedback',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 24
+                }
+              ]
+            },
+            {
+              id: 24,
+              name: 'quiz start message',
+              messages: [
+                "Let's make sure you're keeping up. Here are a few questions for you.",
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 25
+                }
+              ]
+            },
+            {
+              id: 25,
+              name: 'quiz - what is CFD',
+              messages: [
+                {
+                  type: 'quiz',
+                  text: 'What is CFD trading?',
+                  choices: [
+                    {
+                      id: 1,
+                      type: 'button',
+                      text:
+                        'A way you could benefit from the price movements of real financial products without actually owning them',
+                      correct: true
+                    },
+                    {
+                      id: 2,
+                      type: 'button',
+                      text:
+                        'Purchasing real financial products from the stock market',
+                      correct: false
+                    }
+                  ],
+                  response: {
+                    correct: {
+                      goto: 26
+                    },
+                    wrong: {
+                      goto: 27
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              id: 26,
+              name: 'Quiz - leverage (correct)',
+              messages: [
+                {
+                  type: 'quiz',
+                  text:
+                    'Which leverage would lead to larger potential profits?',
+                  choices: [
+                    {
+                      id: 1,
+                      type: 'button',
+                      text: '1:400',
+                      correct: true
+                    },
+                    {
+                      id: 2,
+                      type: 'button',
+                      text: '1:30',
+                      correct: false
+                    }
+                  ],
+                  response: {
+                    correct: {
+                      type: 'text',
+                      text: "<b>2/2</b> You've been paying attention!",
+                      goto: 30
+                    },
+                    wrong: {
+                      type: 'text',
+                      text: "<b>1/2</b> Not bad, Not bad, let's move on",
+                      goto: 30
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              id: 27,
+              name: 'quiz - leverage (wrong)',
+              messages: [
+                {
+                  type: 'quiz',
+                  text:
+                    'Which leverage would lead to larger potential profits?',
+                  choices: [
+                    {
+                      id: 1,
+                      type: 'button',
+                      text: '1:400',
+                      correct: true
+                    },
+                    {
+                      id: 2,
+                      type: 'button',
+                      text: '1:30',
+                      correct: false
+                    }
+                  ],
+                  response: {
+                    correct: {
+                      type: 'text',
+                      text: "<b>1/2</b> Not bad, let's move on",
+                      goto: 30
+                    },
+                    wrong: {
+                      type: 'text',
+                      text: "<b>0/2</b> ok... let's move forward ",
+                      goto: 30
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              id: 30,
+              name: 'continue',
+              messages: [
+                {
+                  type: 'choices',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'button',
+                      text: 'Continue',
+                      postback: 'Continue',
+                      goto: 31
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 31,
+              name: 'show the tools?',
+              messages: [
+                [
+                  "Right, let's move on.<br />We've explained the basics of trading. You're almost ready to explore the market for opportunities. But first, here are some platform tools that could help you make informed decisions when trading...",
+                  3
+                ],
+                ['...', 2],
+                {
+                  type: 'choices',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'button',
+                      text: "I'm interested,<br />show me the tools",
+                      postback: "I'm interested, show me the tools",
+                      goto: 32
+                    },
+                    {
+                      id: 1000,
+                      type: 'button',
+                      text: "I'm ready to deposit<br />and trade now",
+                      postback: "I'm ready to deposit and trade now",
+                      goto: 100
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 32,
+              name: 'interested in tools',
+              messages: [
+                '...',
+                [
+                  'Good, the more information you have, the more you can take advantage of financial opportunities.',
+                  1
+                ],
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 33
+                }
+              ]
+            },
+            {
+              id: 33,
+              name: 'lesson 1/3',
+              messages: [
+                {
+                  title: 'Lesson 1/3',
+                  description: 'What is signals',
+                  type: 'video',
+                  thumbnail:
+                    'https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TradingSignals.png',
+                  url:
+                    '//fast.wistia.net/embed/iframe/x3j6p5uvse?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false',
+                  grace: 5,
+                  goto: 34
+                }
+              ]
+            },
+            {
+              id: 34,
+              name: 'lesson 1/3 feedback',
+              messages: [
+                'Did you find this video helpful?',
+                {
+                  type: 'feedback',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'positive',
+                      goto: 36
+                    },
+                    {
+                      id: 1001,
+                      type: 'negative',
+                      goto: 35
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 35,
+              name: 'lesson 1/3 negative',
+              messages: [
+                '...',
+                'I hope you find the next lesson more helpful',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 37
+                }
+              ]
+            },
+            {
+              id: 36,
+              name: 'lesson 1/3 positive',
+              messages: [
+                '...',
+                "Great, let's continue to the next lesson",
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 37
+                }
+              ]
+            },
+            {
+              id: 37,
+              name: 'lesson 2/3',
+              messages: [
+                {
+                  title: 'Lesson 2/3',
+                  description: 'What is trading sentiment',
+                  type: 'video',
+                  thumbnail:
+                    'https://www.iforex.com/EMERP/Landing/masterLP/img/banners/Sentiment.png',
+                  url:
+                    '//fast.wistia.net/embed/iframe/ajurozfifd?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false',
+                  grace: 10,
+                  goto: 38
+                }
+              ]
+            },
+            {
+              id: 38,
+              name: 'lesson 2/3 feedback',
+              messages: [
+                'Did you find this video helpful?',
+                {
+                  type: 'feedback',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'positive',
+                      goto: 39
+                    },
+                    {
+                      id: 1001,
+                      type: 'negative',
+                      goto: 40
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 39,
+              name: 'lesson 2/3 positive',
+              messages: [
+                '...',
+                "Great, let's continue to the next lesson",
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 41
+                }
+              ]
+            },
+            {
+              id: 40,
+              name: 'lesson 2/3 negative',
+              messages: [
+                '...',
+                'I hope you find the next lesson more helpful',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 41
+                }
+              ]
+            },
+            {
+              id: 41,
+              name: 'lesson 3/3',
+              messages: [
+                {
+                  title: 'Lesson 3/3',
+                  description: 'What are trading factors',
+                  type: 'video',
+                  thumbnail:
+                    'https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TxtLesson.png',
+                  url:
+                    '//fast.wistia.net/embed/iframe/ajurozfifd?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false',
+                  grace: 5,
+                  goto: 42
+                }
+              ]
+            },
+            {
+              id: 42,
+              name: 'lesson 3/3 feedback',
+              messages: [
+                'Did you find this video helpful?',
+                {
+                  type: 'feedback',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'positive',
+                      goto: 44
+                    },
+                    {
+                      id: 1001,
+                      type: 'negative',
+                      goto: 43
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 43,
+              name: 'lesson 3/3 negative',
+              messages: [
+                '...',
+                'Thanks for your feedback',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 45
+                }
+              ]
+            },
+            {
+              id: 44,
+              name: 'lesson 3/3 positive',
+              messages: [
+                '...',
+                'Great, Thanks for your feedback',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 45
+                }
+              ]
+            },
+            {
+              id: 45,
+              name: 'quiz start message',
+              messages: [
+                "Let's make sure you're keeping up. Here are a few questions for you.",
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 46
+                }
+              ]
+            },
+            {
+              id: 46,
+              name: 'quiz - weather events',
+              messages: [
+                {
+                  type: 'quiz',
+                  text:
+                    'Extreme weather events (e.g.: hurricane, drought) can be expected to affect the price of…?',
+                  choices: [
+                    {
+                      id: 1,
+                      type: 'button',
+                      text:
+                        'Agricultural commodities such as coffee, sugar and cocoa ',
+                      correct: true
+                    },
+                    {
+                      id: 2,
+                      type: 'button',
+                      text: 'Safe haven” commodities such as gold',
+                      correct: false
+                    }
+                  ],
+                  response: {
+                    correct: {
+                      goto: 47
+                    },
+                    wrong: {
+                      goto: 48
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              id: 47,
+              name: 'Quiz - sentiments (correct)',
+              messages: [
+                {
+                  type: 'quiz',
+                  text: 'What is trading sentiment?',
+                  choices: [
+                    {
+                      id: 1,
+                      type: 'button',
+                      text:
+                        'A tool that shows whether the majority of traders expected an instrument to rise or fall ',
+                      correct: true
+                    },
+                    {
+                      id: 2,
+                      type: 'button',
+                      text:
+                        'A tool that shows how analysts predict an instrument to perform',
+                      correct: false
+                    }
+                  ],
+                  response: {
+                    correct: {
+                      goto: 49
+                    },
+                    wrong: {
+                      goto: 49
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              id: 48,
+              name: 'Quiz - sentiments (wrong)',
+              messages: [
+                {
+                  type: 'quiz',
+                  text: 'What is trading sentiment?',
+                  choices: [
+                    {
+                      id: 1,
+                      type: 'button',
+                      text:
+                        'A tool that shows whether the majority of traders expected an instrument to rise or fall ',
+                      correct: true
+                    },
+                    {
+                      id: 2,
+                      type: 'button',
+                      text:
+                        'A tool that shows how analysts predict an instrument to perform ',
+                      correct: false
+                    }
+                  ],
+                  response: {
+                    correct: {
+                      type: 'text',
+                      text:
+                        '<b>1/2</b> Not bad... Remember, you gain access to all our educational materials after your deposit',
+                      goto: 49
+                    },
+                    wrong: {
+                      type: 'text',
+                      text:
+                        '<b>0/2</b> mm... Remember, you gain access to all our educational materials after your deposit',
+                      goto: 49
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              id: 49,
+              name: 'continue',
+              messages: [
+                {
+                  type: 'choices',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'button',
+                      text: 'Continue',
+                      postback: 'Continue',
+                      goto: 50
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 50,
+              messages: [
+                ['...', 3],
+                [
+                  'So, we have laid the foundation for your understanding. You now have the basics to build on, once you collect your deposit package, which includes <b>free educational materials, 1-on-1 training. and a risk free demo account PLUS an extra 50% bonus</b> on your deposit. investment.',
+                  4
+                ],
+                ['...', 3],
+                {
+                  type: 'goto',
+                  blockId: 51
+                }
+              ]
+            },
+            {
+              id: 51,
+              messages: [
+                [
+                  'The choice is yours, after you receive the package, you can start trading whenever you like or - if you change your mind - you can always withdraw your deposit, no questions asked, no charges, <b>100% risk-free</b>. Take this rare opportunity to capitalize on your.',
+                  3
+                ],
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 52
+                }
+              ]
+            },
+            {
+              id: 52,
+              name: 'ready to deposit?',
+              messages: [
+                {
+                  type: 'choices',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'button',
+                      text: 'Deposit and collect package',
+                      postback: 'Deposit and collect package',
+                      goto: 1000
+                    },
+                    {
+                      id: 1001,
+                      type: 'buton',
+                      text: 'Not 100% ready? Take a platform walkthrough tour',
+                      postback:
+                        'Not 100% ready? Take a platform walkthrough tour',
+                      goto: 1001
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 53,
+              messages: [
+                [
+                  'Congratulations, you can now access the full deposit package including access to educational materials, risk free demo account and 1-on-1 training. For further details, please feel free to contact us.',
+                  1
+                ],
+                {}
+              ]
+            },
+            {
+              id: 100,
+              messages: [
+                ['...', 2],
+                [
+                  "You need to feel confident with your broker, so let’s start with our credentials: we're a licensed broker with over 22 years of market.",
+                  3
+                ],
+                ['...', 2],
+                [
+                  "We're worldwide, operating in multiple international markets, speaking over 20 languages to tens of thousands of traders who choose to invest with us.",
+                  3
+                ],
+                '...',
+                [
+                  'Quite simply, we have a reputation for being among the leaders in the world of online financial trading.',
+                  2
+                ],
+                ['...'],
+                ["Now, let's talk business. This is what we have to offer:"],
+                '...',
+                ['<b> 50% trading bonus</b> on your 1s t deposit'],
+                '...',
+                ['Up to<b> 100% cashback</b> from your 2nd deposit onwards', 1],
+                {
+                  type: 'goto',
+                  blockId: 101
+                }
+              ]
+            },
+            {
+              id: 101,
+              messages: [
+                {
+                  type: 'choices',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'button',
+                      text: "I'm interesting show me more",
+                      postback: "I'm interesting show me more",
+                      goto: 102
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 102,
+              messages: [
+                ['...', 1],
+                ['Up to <b> 400:1 leverage </b> and competitive spreads.', 1],
+                ['...', 1],
+                [
+                  '<b>Dedicated account manager </b> that speaks your language.',
+                  2
+                ],
+                '...',
+                ['Earn <b>3% interest </b> on your net balance.', 1.5],
+                '...',
+                ['Rapid withdrawal system'],
+                '...',
+                [
+                  'This is just the start, because with our deposit package, we also give you <b> trading signals, a $5,000 demo account to practice on, educational materials for advanced training </b> and much, much more.',
+                  4
+                ],
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 103
+                }
+              ]
+            },
+            {
+              id: 103,
+              messages: [
+                {
+                  type: 'choices',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'button',
+                      text: "I'm ready to learn more",
+                      postback: "I'm ready to learn more",
+                      goto: 104
+                    },
+                    {
+                      id: 1001,
+                      type: 'buton',
+                      text: "I'm ready to deposit and trade now",
+                      postback: "I'm ready to deposit and trade now",
+                      goto: 1000
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 104,
+              messages: [
+                ['...', 2],
+                [
+                  'Good, the more information you have, the more you can take advantage of financial opportunities.',
+                  2
+                ],
+                ['...', 2],
+                [
+                  'We built our platform for traders and let our experience guide us towards providing the tools and features they want.  Our purpose? To maximize your investment potential with our easy-to-use platform, as well as helping you make better-informed decisions and getting the most out of your trading strategies..',
+                  7
+                ],
+                ['...', 2],
+                ["Let's get straight to it… ."],
+                ['...', 1],
+                ['Our platform offer includes tools such as:'],
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 105
+                }
+              ]
+            },
+            {
+              id: 105,
+              messages: [
+                {
+                  title: 'Lesson 1/3',
+                  description: 'What is signals',
+                  type: 'video',
+                  thumbnail:
+                    'https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TradingSignals.png',
+                  url:
+                    '//fast.wistia.net/embed/iframe/x3j6p5uvse?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false',
+                  grace: 5,
+                  goto: 106
+                }
+              ]
+            },
+            {
+              id: 106,
+              messages: [
+                'Did you find this video helpful?',
+                {
+                  type: 'feedback',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'positive',
+                      goto: 108
+                    },
+                    {
+                      id: 1001,
+                      type: 'negative',
+                      goto: 107
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 107,
+              messages: [
+                '...',
+                'I hope you find the next lesson more helpful',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 109
+                }
+              ]
+            },
+            {
+              id: 108,
+              messages: [
+                '...',
+                "Great, let's continue to the next lesson",
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 109
+                }
+              ]
+            },
+            {
+              id: 109,
+              messages: [
+                {
+                  title: 'Lesson 2/3',
+                  description: 'Trending indicators',
+                  type: 'video',
+                  thumbnail:
+                    'https://www.iforex.com/EMERP/Landing/masterLP/img/banners/Indicators.png',
+                  url:
+                    '//fast.wistia.net/embed/iframe/x3j6p5uvse?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false',
+                  grace: 5,
+                  goto: 110
+                }
+              ]
+            },
+            {
+              id: 110,
+              messages: [
+                'Did you find this video helpful?',
+                {
+                  type: 'feedback',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'positive',
+                      goto: 111
+                    },
+                    {
+                      id: 1001,
+                      type: 'negative',
+                      goto: 112
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 111,
+              messages: [
+                '...',
+                "Great, let's continue to the next lesson",
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 113
+                }
+              ]
+            },
+            {
+              id: 112,
+              messages: [
+                '...',
+                'I hope you find the next lesson more helpful',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 113
+                }
+              ]
+            },
+            {
+              id: 113,
+              messages: [
+                {
+                  title: 'Lesson 3/3',
+                  description: 'basic technical analysis',
+                  type: 'video',
+                  thumbnail:
+                    'https://www.iforex.com/EMERP/Landing/masterLP/img/banners/TxtLesson.png',
+                  url:
+                    '//fast.wistia.net/embed/iframe/x3j6p5uvse?autoPlay=true&controlsVisibleOnLoad=false&version=v1&videoHeight=360&videoWidth=640&volumeControl=true&fullscreenButton=true&settingsControl=false',
+                  grace: 5,
+                  goto: 114
+                }
+              ]
+            },
+            {
+              id: 114,
+              messages: [
+                'Did you find this video helpful?',
+                {
+                  type: 'feedback',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'positive',
+                      goto: 115
+                    },
+                    {
+                      id: 1001,
+                      type: 'negative',
+                      goto: 116
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              id: 115,
+              messages: [
+                '...',
+                'Great, Thanks for your feedback',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 117
+                }
+              ]
+            },
+            {
+              id: 116,
+              messages: [
+                '...',
+                'Thanks for your feedback',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 117
+                }
+              ]
+            },
+            {
+              id: 117,
+              messages: [
+                '...',
+                'Like what you see? <br> Get our deposit package  now <br> and enjoy using the full range of dynamic tools and features available in our platform to capitalize on the markets.',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 118
+                }
+              ]
+            },
+            {
+              id: 118,
+              messages: [
+                '...',
+                'Always remember, if you change your mind, you can withdraw your deposit anytime, no questions asked, no charges, 100% risk-free.',
+                '...',
+                {
+                  type: 'goto',
+                  blockId: 119
+                }
+              ]
+            },
+            {
+              id: 119,
+              messages: [
+                {
+                  type: 'choices',
+                  choices: [
+                    {
+                      id: 1000,
+                      type: 'button',
+                      text: 'Deposit and collect package',
+                      postback: 'Deposit and collect package',
+                      goto: 1000
+                    },
+                    {
+                      id: 1001,
+                      type: 'buton',
+                      text: 'Not 100% ready? Take a platform walkthrough tour',
+                      postback:
+                        'Not 100% ready? Take a platform walkthrough tour',
+                      goto: 1001
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          {
+            onLoad: () => {
+              window.emilyComponent.changeStatus('show')
+            },
+            onError: e => {
+              console.error('got an error from emily:', e)
+            },
+            onClose: () => {
+              document.querySelector('#emilyContainer').classList.add('closed')
+            },
+            onTrack: data => {
+              console.log('should track:', data)
+            },
+            onCallback: data => {
+              console.log('should call', data)
+            },
+            defaultStatus: 'hide',
+            history: true
+          },
+          document.querySelector('#emilyContainer')
+        )
+      }
+    </script>
+    <style>
+      #emilyContainer {
+        position: fixed;
+        right: 0px;
+        width: 300px;
+        top: 0px;
+        bottom: 0px;
+        transition: all 200ms ease-in;
+        border-left: 1px solid #ccc;
+      }
+      #emilyContainer.closed {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="emilyContainer"></div>
+  </body>
+</html>

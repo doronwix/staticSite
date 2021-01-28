@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/api/accountingactions/GetAccountSymbols",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "[47,745]",
+  "isBase64": false
+}

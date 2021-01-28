@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/api/clientstate/KeepAlive",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"result\": [1,0], \"securityToken\":1409145685, \"userLoggedIn\":false, \"isSessionGap\":false }",
+  "isBase64": false
+}

@@ -1,0 +1,25 @@
+﻿<div class="withdrawal-wrapper">
+	<h1 class="page-title" data-bind="text: Dictionary.GetItem('title_withdrawFunds', 'withdrawal_withdrawalrequest')"></h1>
+	<!-- ko component: { name: 'fx-component-amount-requested'} --><!-- /ko -->
+	<p class="padbot" data-bind="dictionaryBinding: 'txt_refundInfo', resourceName: 'withdrawal_withdrawalrequest'"></p>
+	<div class="wrap-content top-separator">
+		<div class="center-area">
+			<div class="method-select">
+				<p class="select-info" data-bind="dictionaryBinding: 'lbl_chooseMethod', resourceName: 'withdrawal_withdrawalrequest'"></p>
+				<div class="method-opts">
+					<!-- ko foreach: Data.methods -->
+					<div data-bind="click: function () { $parent.Data.selectedMethod(eWithdrawalMethods[$data]); }, attr: { class: 'opt opt-' + $data }, css: {'selected': $parent.Data.selectedMethod() === eWithdrawalMethods[$data] }">
+						<!-- ko text: Dictionary.GetItem('lblMethod' + ($data ? $data.toLowerCase() : ''), 'withdrawal_withdrawalrequest')  --><!-- /ko -->
+					</div>
+					<!-- /ko -->
+				</div>
+			</div>
+			<div class="bank-fee-wrap" data-bind="css: { 'hide': Data.selectedMethod() !== eWithdrawalMethods.bank }">
+				<p class="bankfee">
+					<span class="warn-icon"></span>
+					<span data-bind="dictionaryBinding: 'msg_bankfeeInfo', resourceName: 'withdrawal_withdrawalrequest'"></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

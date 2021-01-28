@@ -1,0 +1,23 @@
+﻿<div class="signals trading-signals-access-details">
+    <div class="container">
+        <div class="row-wrapper">
+            <i class="ico-sh-signals"></i>
+        </div>
+        <div data-bind="visible: Data.isRequestNotSubmitted">
+            <div class="row-wrapper">
+                <span data-bind="dictionaryBinding: 'lblSignalsNotAllowed', resourceName: 'accessRequest'"></span>
+            </div>
+            <div class="row-wrapper btn-area">
+                <a class="button center" data-bind="click: OnClickSubmitRequest">
+                    <span id="btnContent" data-bind="dictionaryBinding: 'btnRequestVIPSignals', resourceName: 'accessRequest'"></span>
+                </a>
+            </div>
+        </div>
+        <div data-bind="visible: Data.isRequestSubmitted" class="trading-signals-access-requestsubmitted">
+            <h3 data-bind="dictionaryBinding: 'lblRequestSubmittedTitle', resourceName: 'accessRequest'"></h3>
+            <div class="row-wrapper">
+                <span data-bind="dictionaryBinding: 'lblSignalsRequestSubmitted', resourceName: 'accessRequest'"></span>
+            </div>
+        </div>
+    </div>
+</div>

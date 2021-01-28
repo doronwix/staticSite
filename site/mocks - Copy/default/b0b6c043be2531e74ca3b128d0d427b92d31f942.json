@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/dataaccesslayer/dalClaims.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define('dataaccess/dalClaims',\r\n    [\r\n        'require',\r\n        'generalmanagers/ErrorManager'\r\n    ],\r\n    function TDALClaims(require) {\r\n        var ErrorManager = require('generalmanagers/ErrorManager');\r\n\r\n        function getClaim(actionType, recordType, accountNumber) {\r\n            var ajaxer = TAjaxer(),\r\n                callerInfo = 'Claims/GetUploadClaim';\r\n\r\n            return ajaxer.promises\r\n                .jsonPost(\r\n                    'TDALClaims/GetUploadClaim',\r\n                    callerInfo,\r\n                    JSON.stringify({ actionType: actionType, recordType: recordType, account: accountNumber }))\r\n                .fail(onError.bind(null, callerInfo));\r\n        }\r\n\r\n        function onError(callerInfo, error) {\r\n            ErrorManager.onError(callerInfo, error.message, eErrorSeverity.medium);\r\n        }\r\n\r\n        function postGetCCClaim(actionType, recordTypes, accountNumber) {\r\n            var ajaxer = TAjaxer();\r\n\r\n            return ajaxer.promises.jsonPost(\r\n                'TDALClaims/GetCCClaims',\r\n                'Claims/GetCCClaims',\r\n                JSON.stringify({ actionType: actionType, recordTypes: recordTypes, account: accountNumber })\r\n            );\r\n        }\r\n\r\n        return {\r\n            getClaim: getClaim,\r\n            postGetCCClaim: postGetCCClaim\r\n        };\r\n    }\r\n);",
+  "isBase64": false
+}

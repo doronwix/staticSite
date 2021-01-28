@@ -1,0 +1,11 @@
+﻿<i class="customTooltipPurpose ico-wb-help" 
+   data-bind="balloon: { 
+                          tooltipClass: 'tooltip tooltipBottom summary-tooltip customTooltip white-tooltip',
+                          position: { my: 'center bottom', at: 'center top-9'},
+                          closeEvent: isContainsLink ? 'click' : 'hoverOff' 
+                       }, 
+              attr: { title: tooltip }, 
+              visible: tooltip,
+              clickBubble: false,
+              click: function(){ return false; }">
+</i>

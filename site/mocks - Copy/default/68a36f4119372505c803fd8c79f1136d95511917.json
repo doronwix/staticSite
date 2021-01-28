@@ -1,0 +1,15 @@
+{
+  "requestUrl": "/webpl3/customer/GetCustomer",
+  "contentType": "application/json; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "signAgreementDate": "",
+    "minDepositGroup": 2,
+    "folderType": "Normal",
+    "folderTypeId": 2,
+    "folder": 67,
+    "allowFXnet": 1
+  },
+  "isBase64": false
+}

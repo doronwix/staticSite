@@ -1,0 +1,364 @@
+﻿<ta_add_form>
+    <div class="adv-dialog-content" id="dlg-community">
+    <div class="properties-tabs">
+        <a class ="properties-tabs-label active" href="javascript:void(0);">Image</a>
+        <a class ="properties-tabs-label" href="javascript:void(0);">Community share</a> 
+    </div>
+    <div id="defauls-css" style ="display: none" ></div>
+
+    <div class="main-properties "  id="price-props"    style ="display:block ">
+        <table class="property-page" cellpadding="0" cellspacing="2">
+            <tbody id="tbody-charttype-select">
+                <tr>
+                    <td> </td>
+                    <td>
+                        <img id="snap-shot-image"  src ="" width ="500px" alt =""/> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+ 
+    </div>
+    
+  
+ 
+  <!--   -- ------------------------------->
+    <div class="main-properties" style ="display:none ">
+         <table class="property-page" cellpadding="0" cellspacing="2">
+             <tbody>
+                  <tr><td></td></tr>
+             </tbody>
+          </table>
+    </div>
+ 
+
+ </div>
+</ta_add_form>
+<ta_compares_form>
+    <div class="adv-dialog-content" id="dlg-compares" >
+    <div class ="dialog-compares-browser">
+        <ul id="main-compare-browser">
+            <li id="li-browser-favorites-majors" data-localize="dialogs.ta.list-favorites-majors" class=" %majors-browser-favorites-visble%  %majors-favorites-selected% ">Majors</li>
+            <li id="li-browser-favorites" data-localize="dialogs.ta.list-favorites-compares" class=" %compares-browser-favorites-visble% %compares-favorites-selected%">Compares</li>
+            <li id="li-browser-compares" data-localize="dialogs.ta.list-search" class=" %search-selected% ">Search</li>
+        </ul>
+    </div>
+    <div class ="dialog-compares">
+        <div id="dialog-main-page" >
+            <div class = "main-page" style ="display:%majors-favorites-visble%" id ="favorite-magors-page">
+                <div class ="dialog-main-page-title" >
+                    <ul>
+                        <li  class="title_level active"><a href="javascript:void(0);" data-localize="dialogs.ta.majors-path">Majors</a></li>
+                        <li  class="title_level" style="display:none"><span>\</span><a href="javascript:void(0);"></a></li>
+                        <li  class="title_level" style="display:none"><span>\</span><a href="javascript:void(0);"></a></li>
+                    </ul>
+                    <div class ="clear"></div> 
+                </div>
+                <div class ="dialog_level" style="display:block; ">
+                    <div class ="main-properties">
+                        <ul class="favorite-majors-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class = "main-page" style ="display:%compares-favorites-visble%" id ="favorite-compares-page">
+                <div class ="dialog-main-page-title" >
+                    <ul>
+                        <li  class="title_level active"><a href="javascript:void(0);" data-localize="dialogs.ta.compares-path">Compares</a></li>
+                        <li  class="title_level" style="display:none"><span>\</span><a href="javascript:void(0);"></a></li>
+                        <li  class="title_level" style="display:none"><span>\</span><a href="javascript:void(0);"></a></li>
+                    </ul>
+                    <div class ="clear"></div> 
+                </div>
+                <div class ="dialog_level" style="display:block; ">
+                    <div class ="main-properties">
+                        <ul class="favorite-compares-list"></ul>
+                    </div>
+                </div>
+            </div> 
+            <div class = "main-page" id ="compares-page" style ="display:%search-visble%">
+                <div class ="dialog-main-page-title" >
+                    <ul>
+                        <li  class="title_level active"><a href="javascript:void(0);" data-localize="dialogs.ta.search-path">Search</a></li>
+                        <li  class="title_level" style="display:none"><span>\</span><a href="javascript:void(0);"></a></li>
+                        <li  class="title_level" style="display:none"><span>\</span><a href="javascript:void(0);"></a></li>
+                    </ul>
+                    <div class ="clear"></div> 
+                </div>
+                <div  class="dialog_level"  style="display:block ">
+                    <div class="main-properties" style ="display:block ">
+                        <div>
+                            <table class="property-page" cellpadding="0" cellspacing="2">
+                                <tbody id="tbody-search-symbols">
+                                    <tr>
+                                        <td>
+                                            <span data-localize="dialogs.ta.search">Search:</span> 
+                                        </td>
+                                        <td style="position: relative">
+                                            <input id="search-symbols-text" autocomplete="off" autofocus="" class="class-input-level dialog-text-input text-input-long " maxlength="50" max="50"  />
+                                            <div class="chart-search-preload"></div> 
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div id ="comparesgroup-symbols">
+                            <div class="dynamic-tabs" style="display: none">
+                                <a class ="dynamic-tabs-label active" href="javascript:void(0);" data-localize="dialogs.ta.tab-majors">Majors</a>
+                                <a class ="dynamic-tabs-label" href="javascript:void(0);" data-localize="dialogs.ta.tab-compare">Compares</a>
+                            </div>
+                            <div class="comparesgroup-symbols-list">
+                                <ul class="compares-list"></ul> 
+                            </div>
+                               
+                        </div>
+        
+                    </div>
+              
+                </div>
+                <div id="dialog-compare-page" style="display:none " class="dialog_level" >
+                    <div id ="compare-inner"></div>
+                    <div id ="compare-buttons">
+                        <button id="button-add-compare" data-localize="dialogs.common.button-add" >Add</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class = "main-page" style ="display:none">Main page1</div> 
+            <div class = "main-page" style ="display:none">Main page3</div> 
+        </div>
+    </div>
+    <div class ="clear"></div>
+</div>
+</ta_compares_form>
+<ta_details_form>
+    <div class="adv-dialog-content" id="dlg-details">
+        <div id="defauls-css" style="display: none">
+        </div>
+        <div class="main-properties " id="price-props" style="display: block">
+            <table class="property-page" cellpadding="0" cellspacing="2">
+                <tbody id="tbody-charttype-select">
+                    <tr>
+                        <td  data-localize="dialogs.props.charttype">Chart type</td>
+                        <td>
+                            <select class="linedesign-type dialog-select select-middle">
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!----- columns ----->
+            <div id="charttype-block-columns" class="charttype-block">
+                <table class="property-page" cellpadding="0" cellspacing="2">
+                    <tbody>
+                        <tr>
+                            <td>
+                            </td>
+                            <td data-localize="dialogs.props.columns">
+                                Column
+                            </td>
+                            <td>
+                                <input id="color-columns-column" type="color" class="class-color-widget spectrum-color class-price-color" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="control-columns-border" class="visibility-switch" type="checkbox" checked="checked" />
+                            </td>
+                            <td data-localize="dialogs.props.border">
+                                Border
+                            </td>
+                            <td>
+                                <input id="color-columns-border" type="color" class="class-color-widget spectrum-color  class-price-color" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>  
+                            <td data-localize="dialogs.props.candlesfont">Font</td>  
+                            <td><input id="colorfont-columns-border" type="color" class ="class-color-widget spectrum-color class-price-color"/></td>   
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+            <!-----histogram ----->
+            <div id="charttype-block-histogram" class="charttype-block" style="display: none">
+                <table class="property-page" cellpadding="0" cellspacing="2">
+                    <tbody>
+                        <tr>
+                            <td data-localize="dialogs.props.candles">
+                                Line
+                            </td>
+                            <td>
+                                <input id="color-histogram-border" type="color" class="class-color-widget spectrum-color  class-price-color" />
+                            </td>
+                            <td>
+                                <div id="borderwidth-histogram-line" class="class-slider-5 slider-border slider-horizontal">
+                                    <div class="gradient">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td data-localize="dialogs.props.histogramfont">Font</td>  
+                            <td><input id="colorfont-histogram" type="color" class ="class-color-widget spectrum-color class-price-color"/></td>   
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+            <!-----dots ----->
+            <div id="charttype-block-dots" class="charttype-block" style="display: none">
+                <table class="property-page" cellpadding="0" cellspacing="2">
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td data-localize="dialogs.props.dot">Dot</td>
+                            <td>
+                                <input id="color-dots-candles" type="color" class="class-color-widget spectrum-color  class-price-color" />
+                            </td>
+                            <td>
+                                <div id="color-opacity-dots-candles" class="slider-coloropaciry " style="display:none" >
+                                    <div class="gradient" ></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                             <td></td>
+                            <td data-localize="dialogs.props.dotsfont">Font</td>  
+                            <td><input id="colorfont-dots" type="color" class ="class-color-widget spectrum-color class-price-color"/></td>   
+                            <td></td>   
+ 
+                        </tr> 
+
+                        <tr style="display:none">
+                            <td><input id="control-dots-border" class="visibility-switch" type="checkbox" checked="checked" /></td>
+                            <td data-localize="dialogs.props.border">Border</td>
+                            <td><input id="color-dots-border" type="color" class ="class-color-widget spectrum-color  class-price-color" /></td>
+                            <td>
+                                <div id="borderwidth-dots-line"  class="class-slider-5 slider-border slider-horizontal" > 
+                                    <div class="gradient" ></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="display:none">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div id="color-opacity-dots-border" class="slider-coloropaciry ">
+                                    <div class="gradient" ></div>
+                                </div>
+                            </td>
+                        </tr>  
+                    </tbody>
+                </table>
+            </div>
+            <!----- Line ----->
+            <div id="charttype-block-line" class="charttype-block" style="display: none">
+                <table class="property-page" cellpadding="0" cellspacing="2">
+                    <tbody>
+                        <tr>
+                            <td data-localize="dialogs.props.line">Line</td>  
+                            <td><input id="color-line-line" type="color" class ="class-color-widget spectrum-color  class-price-color"/></td>   
+                            <td><div id="borderwidth-line-line"  class="class-slider-5 slider-border slider-horizontal"> 
+                                    <div class="gradient" ></div>
+                                </div>
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td data-localize="dialogs.props.linefont">Font</td>
+                            <td><input id="colorfont-line" type="color" class ="class-color-widget spectrum-color  class-price-color"/></td>
+                            <td></td>
+                        </tr>
+                        <tr style="display:none">
+                            <td ></td>
+                            <td></td>
+                            <td>
+                                <div id="color-opacity-line" class="slider-coloropaciry ">
+                                    <div class="gradient" ></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!----- Area ----->
+            <div id="charttype-block-area" class="charttype-block" style="display: none">
+                <table class="property-page" cellpadding="0" cellspacing="2">
+                    <tbody>
+                        <tr>
+                            <td data-localize="dialogs.props.line">
+                                Line
+                            </td>
+                            <td>
+                                <input id="color-area-line" type="color" class="class-color-widget spectrum-color  class-price-color" />
+                            </td>
+                            <!--  <td></td> -->
+                            <td>
+                                <div id="borderwidth-area-line" class="class-slider-5 slider-border slider-horizontal">
+                                    <div class="gradient">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-localize="dialogs.props.fill">Fill</td>
+                            <td>
+                                <input id="color-area-up" type="color" class="class-color-widget spectrum-color  class-price-color" />
+                            </td>
+                            <!-- <td><input id="color-area-down" type="color" class ="class-color-widget spectrum-color  class-price-color" /></td> -->
+                            <td>
+                                <div id="color-opacity-area" class="slider-coloropaciry ">
+                                    <div class="gradient">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-localize="dialogs.props.linefont">Font</td>  
+                            <td><input id="colorfont-are-line" type="color" class ="class-color-widget spectrum-color  class-price-color"/></td>   
+                            <td></td>     
+                        </tr>
+                    </tbody>
+                </table> 
+            </div>
+        </div>
+    </div>
+</ta_details_form>
+
+<find-symbol-pattern>
+    <li id="%id%" n="%name%" d="%caption%" idx="%idx%" class="li-compare">
+        <button class="%icon-source% favorite star-majors star-button %starmajor% fl-l" type="button" style="display:%showMajors%"  ></button>
+        <button class="%icon-source% favorite star-compare star-button %starcompare% fl-l" style="display:%showCompare%" type="button"  ></button>
+        <a href="javascript:void(0)" class="%type-class% fl-l" idx="%id%" title="%caption%" >
+            <span>%name% &nbsp;&nbsp;&nbsp; %caption%</span>
+        </a>
+        <button class="%icon-source% favorite %icon-prefix%property-favorite a-property-favorite star-compare fl-r" type="button" style="display:%showCompare%"></button>
+        <button class="%icon-source% favorite %icon-prefix%add-favorite a-add-favorite star-compare fl-r" type="button" style="display:%showCompare%"></button>
+        <button class="%icon-source% favorite change-symbol-favorite %icon-prefix%refresh-icon-16 a-change-symbol star-majors fl-r" style="display:%showMajors%" type="button"></button>
+    </li>
+</find-symbol-pattern>
+
+<majors-favorites-pattern>
+    <li idx="%id%"  n="%name%" d="%caption%"  class="li-major">
+        <button class="%icon-source% favorite star-button %icon-prefix%startenabled-icon fl-l" type="button"  ></button>
+        <a href="javascript:void(0)" class="openmajor" idx="%id%" title="" >
+            <span>%name% &nbsp;&nbsp;&nbsp;%caption%</span>
+        </a>
+        <button class="favorite %icon-prefix%property-favorite a-property-favorite mr-l-4 fl-r" style="display:none" type="button"></button>
+        <button class="favorite %icon-prefix%refresh-icon-16 a-change-symbol mr-l-4 fl-r"  type="button"></button>
+    </li>
+</majors-favorites-pattern>
+
+<compare-favorites-pattern>
+    <li idx="%id%"  n="%name%" d="%caption%"  class="li-compare">
+        <button class="%icon-source% favorite star-button %icon-prefix%startenabled-icon  fl-l" type="button"  ></button>
+        <a href="javascript:void(0)" class="opencompare" idx="%id%" title="" >
+        <span>%name% &nbsp;&nbsp;&nbsp;%caption%</span>
+        </a>
+        <button class="favorite %icon-source%  %icon-prefix%property-favorite a-property-favorite mr-l-4 fl-r" type="button"></button>
+        <button class="favorite %icon-source%  %icon-prefix%add-favorite a-add-favorite mr-l-4 fl-r" type="button"></button>
+    </li>
+</compare-favorites-pattern>
+
+
+

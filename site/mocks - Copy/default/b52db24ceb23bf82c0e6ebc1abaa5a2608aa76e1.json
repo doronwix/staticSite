@@ -1,0 +1,10 @@
+{
+  "requestUrl": "/webpl3/Payments/Deposit/GetUserActions",
+  "contentType": "application/x-javascript; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "actions": []
+  },
+  "isBase64": false
+}

@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/payments_concreteView.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"btnSelectAndContinue\":\"Continue\",\"eConcretePaymentData_Entropay\":\"Please click <a class=\\\"noSize\\\" href=\\\"https://secure2.entropay.com/consumer/u/refer?referrerID=iforex\\\" target=\\\"_blank\\\">here</a> to deposit via Entropay.\",\"ePaymentCategory_0\":\"Recommended\",\"ePaymentCategory_1\":\"Credit/Debit Card\",\"ePaymentCategory_2\":\"E-Wallets\",\"ePaymentCategory_3\":\"Bank/Wire Transfer \",\"ePaymentCategory_4\":\"Prepaid Card\",\"existingBank\":\"Saved bank\",\"existingCC\":\"Saved card\",\"existingCC_unapproved\":\"The selected card needs to be approved.<br/>To process this withdrawal, please provide us with a copy of both sides of the selected card.<br/>Please ensure you conceal the first 12 numbers on the front of the card as well as the CVV number on the back of the card.<br/>Alternatively, please choose a card that has already been approved.\",\"hlChangePaymentMethod\":\"Change payment method\",\"hlRemoveCreditCard\":\"Remove card\",\"lastUsedDateFormat\":\"Last used: {0} GMT\",\"lblSelectedCountry\":\"Payment methods for\",\"lblSelectedCountryAbTesting\":\"Payment methods for\",\"lblSelectedCountryDeposit\":\"Payment methods for\",\"lblSelectText\":\"Please select your preferred method of payment\",\"lblSelectTextAbTesting\":\"Select your payment method\",\"lblSelectTextDeposit\":\"Select your payment method\",\"newBank\":\"Add bank\"}",
+  "isBase64": false
+}

@@ -1,0 +1,175 @@
+﻿<html>
+<head>
+    <title>props</title>
+</head>
+    <body>
+        <div> 
+        <div class="adv-dialog-content" id="dlg-details">
+            <div id="defauls-css" style="display: none">
+            </div>
+            <div class="main-properties " id="price-props" style="display: block">
+                <table class="property-page" cellpadding="0" cellspacing="2">
+                    <tbody id="tbody-charttype-select">
+                        <tr>
+                            <td  data-localize="dialogs.props.charttype">Chart type</td>
+                            <td>
+                                <select class="linedesign-type dialog-select select-middle">
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!----- columns ----->
+                <div id="charttype-block-columns" class="charttype-block">
+                    <table class="property-page" cellpadding="0" cellspacing="2">
+                        <tbody>
+                            <tr>
+                                <td>
+                                </td>
+                                <td data-localize="dialogs.props.columns">
+                                    Column
+                                </td>
+                                <td>
+                                    <input id="color-columns-column" type="color" class="class-color-widget spectrum-color class-price-color" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input id="control-columns-border" class="visibility-switch" type="checkbox" checked="checked" />
+                                </td>
+                                <td data-localize="dialogs.props.border">
+                                    Border
+                                </td>
+                                <td>
+                                    <input id="color-columns-border" type="color" class="class-color-widget spectrum-color  class-price-color" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-----histogram ----->
+                <div id="charttype-block-histogram" class="charttype-block" style="display: none">
+                    <table class="property-page" cellpadding="0" cellspacing="2">
+                        <tbody>
+                            <tr>
+                                <td data-localize="dialogs.props.candles">
+                                    Line
+                                </td>
+                                <td>
+                                    <input id="color-histogram-border" type="color" class="class-color-widget spectrum-color  class-price-color" />
+                                </td>
+                                <td>
+                                    <div id="borderwidth-histogram-line" class="class-slider-5 slider-border slider-horizontal">
+                                        <div class="gradient">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-----dots ----->
+                <div id="charttype-block-dots" class="charttype-block" style="display: none">
+                    <table class="property-page" cellpadding="0" cellspacing="2">
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td data-localize="dialogs.props.candles">Dot</td>
+                                <td>
+                                    <input id="color-dots-candles" type="color" class="class-color-widget spectrum-color  class-price-color" />
+                                </td>
+                                <td>
+                                    <div id="color-opacity-dots-candles" class="slider-coloropaciry " style="display:none" >
+                                        <div class="gradient" ></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="display:none">
+                                <td><input id="control-dots-border" class="visibility-switch" type="checkbox" checked="checked" /></td>
+                                <td data-localize="dialogs.props.border">Border</td>
+                                <td><input id="color-dots-border" type="color" class ="class-color-widget spectrum-color  class-price-color" /></td>
+                                <td>
+                                    <div id="borderwidth-dots-line"  class="class-slider-5 slider-border slider-horizontal" > 
+                                        <div class="gradient" ></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="display:none">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <div id="color-opacity-dots-border" class="slider-coloropaciry ">
+                                        <div class="gradient" ></div>
+                                    </div>
+                                </td>
+                            </tr>  
+                        </tbody>
+                    </table>
+                </div>
+                <!----- Line ----->
+                <div id="charttype-block-line" class="charttype-block" style="display: none">
+                    <table class="property-page" cellpadding="0" cellspacing="2">
+                        <tbody>
+                            <tr>
+                                <td data-localize="dialogs.props.line">Line</td>  
+                                <td><input id="color-line-line" type="color" class ="class-color-widget spectrum-color  class-price-color"/></td>   
+                                <td><div id="borderwidth-line-line"  class="class-slider-5 slider-border slider-horizontal"> 
+                                        <div class="gradient" ></div>
+                                    </div>
+                                </td>
+                            </tr> 
+                            <tr style="display:none">
+                                <td ></td>
+                                <td></td>
+                                <td>
+                                    <div id="color-opacity-line" class="slider-coloropaciry ">
+                                        <div class="gradient" ></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!----- Area ----->
+                <div id="charttype-block-area" class="charttype-block" style="display: none">
+                    <table class="property-page" cellpadding="0" cellspacing="2">
+                        <tbody>
+                            <tr>
+                                <td data-localize="dialogs.props.line">
+                                    Line
+                                </td>
+                                <td>
+                                    <input id="color-area-line" type="color" class="class-color-widget spectrum-color  class-price-color" />
+                                </td>
+                                <!--  <td></td> -->
+                                <td>
+                                    <div id="borderwidth-area-line" class="class-slider-5 slider-border slider-horizontal">
+                                        <div class="gradient">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-localize="dialogs.props.fill">
+                                    Fill
+                                </td>
+                                <td>
+                                    <input id="color-area-up" type="color" class="class-color-widget spectrum-color  class-price-color" />
+                                </td>
+                                <!-- <td><input id="color-area-down" type="color" class ="class-color-widget spectrum-color  class-price-color" /></td> -->
+                                <td>
+                                    <div id="color-opacity-area" class="slider-coloropaciry ">
+                                        <div class="gradient">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

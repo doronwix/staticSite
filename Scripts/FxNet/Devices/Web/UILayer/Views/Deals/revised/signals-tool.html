@@ -1,0 +1,108 @@
+﻿<!-- ko if: permissionsModule.CheckActionAllowed('signals') -->
+<!-- ko if: Data.isShowAgreement() -->
+<div class="disclaimer-content unavailable">
+    <div class="disclaimer-rules" data-bind="jScrollPane: { postBoxTopic: 'signalsPostBoxTopic' }">
+        <h3 data-bind="dictionaryBinding: 'lblDisclaimerHeader', resourceName: 'deals_DealSignalsTool'"></h3>
+        <span data-bind="dictionaryBinding: 'lblDisclaimerText', resourceName: 'deals_DealSignalsTool'">
+        </span>
+    </div>
+    <div class="separator"></div>
+    <a class="disclaimer-agree-button btn action right" 
+       data-bind="click: Handlers.clickDisclaimerAgree, dictionaryBinding: 'hlDisclaimerAgree', resourceName: 'deals_DealSignalsTool'" href="javascript:void(0);"></a>
+    <div class="clear"></div>
+</div>
+<!-- /ko -->
+<!-- ko if: Data.fetchingData() -->
+<div class="tools-spinner"></div>
+<!-- /ko -->
+<!-- ko if: Data.isShowSignal() -->
+
+<div data-bind="with: Data.currentSignal()">
+    <div class="row-wrapper no-padding">
+        <div class="signals-title" data-bind="dictionaryBinding: 'lblTradingCentralsTrendEstimation', resourceName: 'deals_DealSignalsTool'">
+        </div>
+        <div class="signals-date" data-bind="text:signalDate"></div>
+        <div class="chart-row chart-table trading-signals">
+            <ul>
+                <li>
+                    <p>
+                        <span data-bind="dictionaryBinding: 'lblShortTerm', resourceName: 'deals_DealSignalsTool'"></span>
+                        <i class="ask ico-sh-tooltip" data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } },
+                         attr: { title: Dictionary.GetItem('lblShortTermTooltip', 'deals_DealSignalsTool')}">
+                        </i>
+                    </p>
+                    <p>
+                        <span data-bind="styleFromSignalSign: shortTermLevel, dictionaryBinding: shortTermText, resourceName: 'deals_DealSignalsTool';"></span>
+                        <i class="icn" data-bind="imageFromSignalSign: shortTermLevel, visible: shortTermLevel != '0'"> </i>
+                    </p>
+                </li>
+                <li>
+                    <p> 
+                        <span  data-bind="dictionaryBinding: 'lblMediumTerm', resourceName: 'deals_DealSignalsTool'"></span>
+                        <i class="ask ico-sh-tooltip"  data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } },
+                         attr: { title: Dictionary.GetItem('lblMediumTermTooltip', 'deals_DealSignalsTool')}">
+                        </i>
+                    </p>
+                    <p>
+                        <span data-bind="styleFromSignalSign: mediumTermLevel, dictionaryBinding: mediumTermText, resourceName: 'deals_DealSignalsTool';"></span>
+                        <i class="icn" data-bind="imageFromSignalSign: mediumTermLevel"></i>
+                    </p>
+                </li>
+                <li>
+                    <p> 
+                        <span data-bind="dictionaryBinding: 'lblLongTerm', resourceName: 'deals_DealSignalsTool'"></span>
+                        <i class="ask ico-sh-tooltip" data-bind="balloon: { tooltipClass: 'tooltip tooltipBottom', position: { my: 'center bottom-18', at: 'center center' } }, 
+                        attr: { title: Dictionary.GetItem('lblLongTermTooltip', 'deals_DealSignalsTool')}">
+                        </i>
+                    </p>
+                    <p>
+                        <span data-bind="styleFromSignalSign: longTermLevel, dictionaryBinding: longTermText, resourceName: 'deals_DealSignalsTool';"></span>
+                        <i class="icn" data-bind="imageFromSignalSign: longTermLevel"></i>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="signals-title-info">
+            <span data-bind="text: signalTitle"></span>
+        </div>
+        <div class="chart-summary">
+            <span data-bind="nonRtlText: summary"></span>
+        </div>
+        <div class="chart-row">
+            <img class="chartImg" data-bind="attr: { src: imagePath }" />
+        </div>
+        <div class="chart-row">
+            <a id="hlSignalsToolDisclaimer" class="disclaimer right" style="margin-top: 0" data-bind="click: $parent.Handlers.disclaimerClick, dictionaryBinding: 'hlSignalsToolDisclaimer', resourceName: 'deals_DealSignalsTool'" href="javascript:void(0);"></a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- /ko -->
+<!-- ko if: Data.isShowSignalUnavailable -->
+<div class="disclaimer-content unavailable">
+    <div class="trading-disabled">
+        <h2>
+            <i class="ico-sh-warning"></i>
+            <p data-bind="dictionaryBinding: 'lblTradingSignalsUnavailable', resourceName: 'deals_DealSignalsTool'"></p>
+        </h2>
+    </div>
+</div>
+<!-- /ko -->
+<!-- ko if: Data.signalsAreDissallowed() -->
+<fx-component-access-request-signals-details params="requestAccessType: eRequestAccessType.Signals"></fx-component-access-request-signals-details>
+<!-- /ko -->
+<!-- /ko -->
+<!-- ko ifnot: permissionsModule.CheckActionAllowed('signals') -->
+<div class="disclaimer-content disallowed">
+    <div class="trading-disallowed">
+        <h2>
+            <i class="disallowed"></i>
+            <p class="signalsSeamless">
+                <span data-bind="text: Dictionary.GetItem('SeamlessRegister')"></span>&nbsp;<a href="javascript:void(0)" data-bind="click: permissionsModule.RegisterLeadType, text: Dictionary.GetItem('RegisterForFree')" class="SignalRetention"></a>
+            </p>
+
+        </h2>
+    </div>
+</div>
+<!-- /ko -->

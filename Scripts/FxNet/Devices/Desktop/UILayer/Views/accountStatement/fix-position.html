@@ -1,0 +1,51 @@
+﻿<!-- ko ifnot: Data.isFormVisible() -->
+<div class="half left">
+    <h3 class="title" data-bind="text: Dictionary.GetItem('txtDoneAlert', 'AccountStatementBackOffice')"></h3>
+    <div class="doneText" data-bind="html: Data.doneText"></div>
+</div>
+<!-- /ko -->
+<!-- ko if: Data.isFormVisible() -->
+<div class="half left account-statement">
+    <h3 class="title" data-bind="text: Dictionary.GetItem('lblFixPosition', 'AccountStatementBackOffice')"></h3>
+    <div class="holder forced-deposit">
+        <table class="data-holder fix-position-table loading" data-bind="css: { loading: Data.isSaveSpinnerOn }">
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem('lblAccountNumber', 'AccountStatementBackOffice')"></span>
+                </td>
+                <td>
+                    <input id="input-account-number" type="text" disabled data-bind="value: Data.accountNumber" />
+                </td>
+            </tr>
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem('lblPosition', 'AccountStatementBackOffice')"></span>
+                </td>
+                <td>
+                    <input id="input-position" type="text" disabled data-bind="value: Data.position" />
+                </td>
+            </tr>
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem('lblAction', 'AccountStatementBackOffice')"></span>
+                </td>
+                <td>
+                    <div>
+                        <input id="radio-restore-position" type="radio" name="radio-action" value="0" data-bind="checked: Data.mode" />
+                        <label for="radio-restore-position" data-bind="text: Dictionary.GetItem('lblRestorePosition', 'AccountStatementBackOffice')"></label>
+                    </div>
+                    <div>
+                        <input id="radio-delete-position" type="radio" name="radio-action" value="1" data-bind="checked: Data.mode" />
+                        <label for="radio-delete-position" data-bind="text: Dictionary.GetItem('lblDeletePosition', 'AccountStatementBackOffice')"></label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="short right" data-bind="click: onClickSave, text: Dictionary.GetItem('btnSave', 'AccountStatementBackOffice')"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- /ko -->

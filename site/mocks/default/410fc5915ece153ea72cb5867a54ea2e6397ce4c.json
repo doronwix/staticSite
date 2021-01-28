@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/uilayer/viewmodels/statichtml/deals/schedule-group.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<!-- ko if: Data.scheduleGroup() -->\r\n<ul class=\"time-end\">\r\n    <!-- ko if: Data.scheduleGroup().SchedulerFormattedString_GMT !== '' -->\r\n    <li>\r\n        <span data-bind=\"html: Dictionary.GetItem('lblTradingHours', 'schedulegrouphtml')\"></span>\r\n        <span class=\"black\" data-bind=\"html: Data.scheduleGroup().SchedulerFormattedString_GMT\">Sun Fri 23:00 - 21:00</span>\r\n    </li>\r\n    <!-- /ko-->\r\n    <!-- ko if: Data.hasOneTradingHour -->\r\n    <li>\r\n        <span data-bind=\"html: Dictionary.GetItem('lblDailyBreakTime', 'schedulegrouphtml')\"></span>\r\n        <span class=\"black\" data-bind=\"html: Data.scheduleGroup().TradingBreak1_GMT\">23:00 - 21:00</span>\r\n    </li>\r\n    <!-- /ko-->\r\n    <!-- ko if:  Data.hasMultipleTradingHours -->\r\n    <li>\r\n        <span data-bind=\"html: Dictionary.GetItem('lbl1stDailyBreakTime', 'schedulegrouphtml')\"></span>\r\n        <span class=\"black\" data-bind=\"html: Data.scheduleGroup().TradingBreak1_GMT\">23:00 - 21:00</span>\r\n    </li>\r\n    <li>\r\n        <span data-bind=\"html: Dictionary.GetItem('lbl2ndDailyBreakTime', 'schedulegrouphtml')\"></span>\r\n        <span class=\"black\" data-bind=\"html: Data.scheduleGroup().TradingBreak2_GMT\">23:00 - 21:00</span>\r\n    </li>\r\n    <!-- /ko-->\r\n</ul>\r\n<!-- /ko -->",
+  "isBase64": false
+}

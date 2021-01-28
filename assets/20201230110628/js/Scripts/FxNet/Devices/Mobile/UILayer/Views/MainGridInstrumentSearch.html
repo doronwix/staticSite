@@ -1,0 +1,50 @@
+﻿<div class="autocompleteWrapper">
+	<div class="search-wrapper">
+		<div class="clear-input">
+			<input
+				class="search"
+				id="quotes-autocomplete"
+				type="text"
+				data-bind="autocomplete: {
+						elementType: 'input.mobile',
+						source: Data.list,
+						selected: Data.selected,
+						appendTo: '.results-wrapper',
+						autocompleteWrapperClass: 'autocompleteWrapper',
+						noResultText: Dictionary.GetItem('no_results'),
+						showIcons: true,
+						hasCategories: true,
+						renderInstruments: true,
+						minLength: Data.searchMinLength()
+					},
+					attr: {
+						placeholder: Dictionary.GetItem('lblSearch','views_vMobileQuotes')
+					},
+					virtualKeyboardBehavior"/>
+
+			<a href="#" class="clear-button closeButton" data-bind="cssIfValue: { valueElementId: 'quotes-autocomplete', className: 'clear-button' }"></a>
+		</div>
+	</div>
+
+	<div class="results-wrapper">
+		<ul class="customized">
+			<li class="autocomplete-group" data-bind="dictionaryBinding: Data.favouritePreset() ? 'PresetCustomized' : 'PresetMostPopular', resourceName:'PresetsCategories'">%Customized</li>
+
+			<!-- ko foreach: { data: Data.instrumentsList() } -->
+			<li data-bind="click: function () { $parent.Data.selected({ id: id, presetId: presetId }); }">
+				<div class="instr-wrapper">
+					<!-- ko template: {
+						name: 'fx-template-instrument-icon',
+						data: { instrumentId: id, baseSymbolId: baseSymbol, otherSymbolId: otherSymbol }
+					} -->
+					<!-- /ko -->
+				</div>
+				<div class="text-wrapper">
+					<span class="inst-name" data-bind="instrumentName: id"></span>
+					<span class="category-name" data-bind="html: presetLabel"></span>
+				</div>
+			</li>
+			<!-- /ko -->
+		</ul>
+	</div>
+</div>

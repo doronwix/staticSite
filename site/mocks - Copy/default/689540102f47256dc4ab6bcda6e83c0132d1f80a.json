@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/skins/Shared/svg/check_light.svg",
+  "contentType": "image/svg+xml",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoICBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6IiAvPgogICAgPHBhdGggZmlsbD0iI2FhZTA4MiIgZD0iTTkgMTYuMTdMNC44MyAxMmwtMS40MiAxLjQxTDkgMTkgMjEgN2wtMS40MS0xLjQxeiIvPgo8L3N2Zz4K",
+  "isBase64": true
+}

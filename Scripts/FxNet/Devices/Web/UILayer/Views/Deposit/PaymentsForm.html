@@ -1,0 +1,86 @@
+﻿<div id="paymentTypesContainerABTesting" class="paymentFormContainer full-width">
+	<div class="payment-form-wrapper">
+
+		<div class="tile-card" data-bind="css: { generic: Form.isGeneric }">
+			<div class="row-container">
+				<div class="col-left">
+					<!-- ko if: !Form.isExistingCC() -->
+					<div class="logo-wrapper">
+						<div data-bind="attr: { 'class': 'deposit-row deposit-ico' }, css: Form.imageClass"><i></i></div>
+					</div>
+
+					<div class="payment-details">
+						<p data-bind="text: Form.name">%Name</p>
+					</div>
+					<!-- /ko -->
+					<!-- ko if: Form.isExistingCC() -->
+					<div class="logo-wrapper">
+						<div data-bind="attr: { 'class': 'deposit-row deposit-ico' }, css: Form.imageClass"><i></i></div>
+					</div>
+
+					<div class="payment-details">
+						<p data-bind="text: Form.cardHolder">%Name</p>
+
+						<div class="card-details">
+							<p class="card-data">
+								<span data-bind="text: Form.lastChars">%XXXX</span>
+								<span data-bind="text: Form.expirationDate">%01/99</span>
+							</p>
+
+							<p>
+								<span class="payment-subtitle" data-bind="formattedText: [Format.toDateTimeUTC(Form.lastUsed())], contentKey: 'lastUsedDateFormat', resourceName: 'payments_concreteView'">%Last used:</span>
+							</p>
+						</div>
+					</div>
+					<!-- /ko -->
+
+					<div class="row-button-container">
+						<a class="btn action colored" data-bind="click: function() { window.history.back(); }">
+							<span data-bind="dictionaryBinding: 'hlChangePaymentMethod', resourceName: 'payments_concreteView'">%Change payment method</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- ko if: Form.isGeneric -->
+					<div class="col-right">
+						<div class="allowed-payments" data-bind="foreach: Form.allowedCreditCards">
+							<img data-bind="attr: { src: $data }"/>
+						</div>
+					</div>
+					<div class="clear"></div>
+				<!-- /ko -->
+			</div>
+		</div>
+
+		<!-- ko foreach: Form.paymentsConfigSettings -->
+			<!-- ko ifnot: $data.SkipComponentGeneration -->
+				<!-- ko ifnot: $data.SubViews -->
+					<!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes[$data.ViewType]).visible -->
+					<div class="DepositLoader form-note" data-bind='component: { name: String.format("fx-payment-{0}", $data.Name.toLowerCase()), params: { depositingType: $data.Id } }'>
+					</div>
+					<!-- /ko -->
+				<!-- /ko -->
+
+				<!-- ko if: $data.SubViews -->
+					<!--ko foreach: $data.SubViews-->
+						<!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes[$data.ViewType]).visible -->
+						<div class="DepositLoader form-note" data-bind='component: { name: String.format("fx-payment-{0}-{1}", $data.Name.toLowerCase(), $data.ViewId), params: { inatecSubtype: $data.ViewId } }'>
+						</div>
+						<!-- /ko -->
+					<!-- /ko -->
+				<!-- /ko -->
+			<!-- /ko -->
+		<!-- /ko -->
+
+		<fx-component-spinner-box></fx-component-spinner-box>
+
+        <div id="simpleComodoSSL" class="deposit-comodo-img">
+            <fx-deposit-notice></fx-deposit-notice>
+
+            <!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vGenericCreditCard).visible() -->
+                <div class="deposit-pci-img generic"></div>
+                <div id="DigiCertClickID_6VaWSBzf" class="security-logo" data-bind="securityLogo: {}"></div>
+            <!-- /ko -->
+        </div>
+	</div>
+</div>

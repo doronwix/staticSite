@@ -1,0 +1,388 @@
+
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
+}
+.chart-ui-dialog .icon-button-caption span,
+.chart-ui-dialog .no-icon-button span,
+.chart-ui-dialog .icon-button span,
+prochart .icon-button-caption span,
+prochart .no-icon-button span,
+prochart .icon-button span {
+  background-image: url('../../../../../../../skins/mobile/AllBrokers/Default/img/advinion.png') !important;
+}
+prochart .clear {
+  width: 100%;
+}
+prochart .layout-innner-container .layout-main {
+  top: 39px !important;
+}
+prochart .layout-innner-container .layout-row,
+prochart .layout-innner-container .layout-top {
+  height: 34px !important;
+}
+prochart .layout-innner-container .layout-top > div {
+  height: 34px !Important;
+}
+prochart .layout1 .chartpane {
+  top: 4px;
+}
+prochart .layout1 .chart-price-axis {
+  border-left: none;
+  z-index: 1;
+}
+prochart .layout1 .chart-date-axis {
+  background-color: transparent !important;
+  z-index: 2;
+}
+prochart .layout1 .chartpane {
+  border-bottom: none !important;
+}
+prochart .layout1 .chart-pane-legend {
+  left: 46px !important;
+  top: 0 !important;
+  background: transparent;
+}
+prochart .layout1 .chart-pane-legend-price .legend-description {
+  display: none !important;
+}
+prochart .layout1 .chart-pane-legend-price .legend-buttons {
+  display: none !important;
+}
+prochart .layout1 .chart-pane-legend-price .legend-price-container {
+  width: 160px;
+}
+prochart .layout1 .chart-pane-main {
+  border: 1px solid #c7c7c7;
+}
+prochart .layout1 .chart-price-zoom .zoom-buttons button {
+  border: none;
+}
+prochart .layout1 .chart-price-zoom .zoom-buttons button:hover {
+  border: none;
+}
+prochart .layout1 li {
+  margin: 0;
+  padding: 0;
+}
+prochart .layout1 button {
+  background: #fff !important;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  height: 34px !important;
+  width: 34px !important;
+}
+prochart .layout1 button.button-selected {
+  border: 1px solid #26BAF0;
+}
+prochart .layout1 button span {
+  vertical-align: middle;
+  position: static;
+  margin: 0 auto;
+  padding: 0px;
+  width: 26px;
+  display: inline-block;
+  text-align: center;
+}
+prochart .layout1 .sub-point {
+  bottom: 1px !important;
+  right: 1px !important;
+}
+prochart .layout1 ul li .mobile-button-group {
+  background-color: #fff;
+  border: 1px solid #D5D5D5;
+}
+prochart .layout1 ul.toolbar-adv {
+  background-color: #FFF;
+}
+prochart .layout1 ul.toolbar-adv .a-bottom > .tlb-array {
+  left: 13px !important;
+  border-width: 5px !important;
+  top: -10px !important;
+}
+prochart .layout1 ul.toolbar-adv .a-bottom > .tlb-array div {
+  display: none;
+  border-width: 6px !important;
+  top: -10px;
+  border-color: transparent transparent #000 !important;
+  left: -8px;
+}
+prochart .layout1 ul.toolbar-adv .tlb-item-group .tlb-button-groups {
+  top: 43px !important;
+  -webkit-box-shadow: 2px 2px 5px 0px #a3a3a3 !important;
+  -moz-box-shadow: 2px 2px 5px 0px #a3a3a3 !important;
+  -o-box-shadow: 2px 2px 5px 0px #a3a3a3 !important;
+  box-shadow: 2px 2px 5px 0px #a3a3a3 !important;
+  right: auto !important;
+}
+prochart .layout1 ul.toolbar-adv .tlb-item-group .tlb-button-groups.a-tooltip li {
+  background: #FFF;
+}
+prochart .layout1 ul.toolbar-adv .tlb-item-group .tlb-button-groups.a-tooltip.dropdown-timeframes ul {
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+prochart .layout1 ul.toolbar-adv .tlb-item-group .tlb-button-groups.a-tooltip.dropdown-timeframes ul li {
+  border-right: 1px solid #c7c7c7;
+}
+prochart .layout1 ul.toolbar-adv.loc-horizontal {
+  height: 35px !important;
+  box-sizing: border-box;
+}
+prochart .layout1 ul.toolbar-adv > li {
+  height: 34px !important;
+  margin-right: 14px !important;
+}
+.chart-ui-dialog .chart-indicator,
+prochart .chart-indicator,
+.chart-ui-dialog .comparison,
+prochart .comparison,
+.chart-ui-dialog .fullscren,
+prochart .fullscren,
+.chart-ui-dialog .exit-fullscreen,
+prochart .exit-fullscreen,
+.chart-ui-dialog .screnshot,
+prochart .screnshot,
+.chart-ui-dialog .settings,
+prochart .settings {
+  background-image: url('../../../../../../../skins/mobile/AllBrokers/Default/img/advinion.png') !important;
+}
+.chart-ui-dialog .chart-indicator,
+prochart .chart-indicator {
+  background-position: -18px -4856px;
+}
+.chart-ui-dialog .comparison,
+prochart .comparison {
+  background-position: -18px -4885px;
+}
+.chart-ui-dialog .fullscreen,
+prochart .fullscreen {
+  background-position: -19px -4927px;
+}
+.chart-ui-dialog .exit-fullscreen,
+prochart .exit-fullscreen {
+  background-position: -20px -4967px;
+}
+.chart-ui-dialog .screenshot,
+prochart .screenshot {
+  background-position: -20px -5005px;
+}
+.chart-ui-dialog .settings,
+prochart .settings {
+  background-position: -20px -5038px;
+}
+.orientation-tip {
+  position: absolute !important;
+  background: url("../../../../../../../skins/mobile/AllBrokers/Default/img/main_sprite.png?v=1") left top no-repeat;
+  background-position: -48px -32px;
+  text-decoration: none;
+  display: block;
+  z-index: 149;
+  top: 60px;
+  left: 12px;
+  height: 30px;
+  width: 30px;
+}
+@media screen and (orientation: portrait) {
+  #dealChartMobileContainer {
+    height: -moz-calc(-45%);
+    height: -webkit-calc(-45%);
+    height: calc(-15%);
+    height: 55vh;
+    padding: 0;
+  }
+  prochart .layout1 ul.toolbar-adv.loc-horizontal[tid="toolbarmainexpanded"] {
+    display: none !important;
+  }
+  prochart .layout1 ul.toolbar-adv.loc-horizontal[tid="toolbarmain"] .tlb-item {
+    display: block !important;
+  }
+  prochart .layout1 ul.toolbar-adv.loc-horizontal[tid="toolbarmain"] .tlb-more {
+    display: none !important;
+  }
+}
+#chart-tab-content {
+  margin-bottom: 60px;
+  margin-top: 0;
+  position: relative;
+}
+@media screen and (orientation: landscape) {
+  #chart-tab-content {
+    background: none;
+  }
+  #dealChartMobileContainer {
+    padding: 0;
+  }
+  prochart .layout1 ul.toolbar-adv.loc-horizontal[tid="toolbarmain"] {
+    display: none !important;
+  }
+  prochart .layout1 ul.toolbar-adv.loc-horizontal[tid="toolbarmainexpanded"] .tlb-item {
+    display: block !important;
+  }
+  prochart .layout1 ul.toolbar-adv.loc-horizontal[tid="toolbarmainexpanded"] .tlb-more {
+    display: none !important;
+  }
+}
+#toogleViewButton {
+  position: absolute;
+  z-index: 149;
+  top: 0px;
+  right: 0px;
+  height: 28px;
+  width: 28px;
+}
+#toogleViewButton.expand-button,
+#toogleViewButton.collapse-button {
+  border: 1px solid #D5D5D5;
+  background: url("../../../../../../../skins/mobile/AllBrokers/Default/img/main_sprite.png") no-repeat #FFFFFF;
+  height: 32px;
+  width: 31px;
+}
+#toogleViewButton.expand-button {
+  background-position: 5px -250px;
+}
+#toogleViewButton.collapse-button {
+  background-position: 5px -277px;
+}
+#dealChartMobileContainer {
+  z-index: 2;
+  margin: 0  14px;
+  position: relative;
+}
+#dealChartMobileContainer #chartContainer {
+  height: 100%;
+  width: 100%;
+}
+#dealChartMobileContainer.fullscreen {
+  padding: 0 !important;
+  margin: 0 !important;
+  position: fixed !important;
+  top: 0px;
+  z-index: 999;
+  height: 99.5vh;
+  width: 100vw;
+}
+#dealChartMobileContainer.fullscreen #chartContainer {
+  width: 100%;
+  border: none;
+  background: #fff;
+  padding: 3px 0 0 4px;
+  box-sizing: border-box;
+}
+#dealChartMobileContainer.fullscreen .layout-top {
+  margin: 5px;
+  position: relative;
+}
+#dealChartMobileContainer.fullscreen #toogleViewButton {
+  top: 8px;
+  right: 9px;
+}
+#dealChartMobileContainer.fullscreen prochart .layout1 .chart-pane-legend-price .legend-description {
+  padding-top: 2px;
+  display: block !important;
+}
+.info-list #dealChartMobileContainer div:first-child {
+  padding: 0px;
+}
+.info-list #dealChartMobileContainer .sub-point {
+  height: auto;
+}
+.info-list #dealChartMobileContainer li.tlb-item {
+  padding: 0px;
+  clear: none;
+}
+.info-list #dealChartMobileContainer div.tlb-button-groups {
+  height: auto;
+}
+div.legend-price-container {
+  display: none !important;
+}
+.loader {
+  border: 16px solid #dddddd;
+  border-radius: 50%;
+  border-top: 16px solid #01a0d3;
+  -webkit-animation: spin 0.7s linear infinite;
+  animation: spin 0.7s linear infinite;
+}
+.loader .btn-big {
+  border: 5px solid #dddddd;
+  border-radius: 50%;
+  border-top: 5px solid #01a0d3;
+  -webkit-animation: spin 0.7s linear infinite;
+  animation: spin 0.7s linear infinite;
+}
+.loader-background {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+}
+.loader-background.transparent {
+  background: transparent;
+}
+.loader-background .loader {
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 50%;
+  margin: -50px auto 0 auto;
+  height: 70px;
+  width: 70px;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+prochart .prof_chart {
+  margin: 0px;
+}
+prochart .layout1.mobi2 button {
+  width: 46px;
+  height: 45px;
+}
+prochart .layout1.mobi2 ul.toolbar-adv {
+  height: 48px;
+}
+prochart .layout1.mobi2 ul.toolbar-adv li {
+  height: 46px;
+}
+prochart .layout1.mobi2 ul.toolbar-adv li span.toolbar-adv-space {
+  background-color: #9CCDFC;
+}
+prochart .layout1.mobi2 ul.toolbar-adv .sub-point {
+  border-right-color: #222222;
+  border-right-width: 9px;
+  border-top-width: 9px;
+}
+prochart .layout1.mobi2 ul.toolbar-adv .li {
+  height: 48px;
+}
+prochart .layout1.mobi2 ul.toolbar-adv .icon-button-caption span,
+prochart .layout1.mobi2 ul.toolbar-adv .no-icon-button span,
+prochart .layout1.mobi2 ul.toolbar-adv .icon-button span {
+  top: 10px;
+  left: 10px;
+}

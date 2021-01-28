@@ -1,0 +1,55 @@
+.header {
+    height: 50px;
+    border-bottom: 1px solid #dddddd;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 20px 30px;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+    background: #ffffff;
+
+    .name {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .slogan {
+        font-size: 14px;
+    }
+    .close {
+        position: absolute;
+        top: 15px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASJJREFUeNq010sOgjAQBuAy6crEpWtv4Ak8CveAKEshcg/u4HlcszJG107NkBBC6Uw7neRPeCUfFBhocXq8zsaYAXPAdJjW5Kkr5oIZMaUl9Eg7b5g9plZG75iKlp01AF3pvCo6MAc61QFoeE0mfA111QHd0z4D7kOd1QKt1Mr4Fvp/fmC2UQsPoktYA2eha3AKzkZ9cAwuQrdgCS5GXdnAPatn2BI3nn1BlANzcREaGmrOsEehEpiDs1EprFqg0JGiOhwooWIcEtA+pb3aBLTeeLWqxasoumIuGtXbQaPhx+Cg0fBjcFBCxTgooiIclFE2bukPXxPlfNXeBU5hPriwU0ZDz80XaC6TC/UN++jgEvN0Z4FpMsybJrwhw1nlT4ABALFyaynGHiadAAAAAElFTkSuQmCC');
+        background-repeat: no-repeat;
+        background-size: 15px;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+
+        &.rtl {
+            left: 7px;
+        }
+
+        &.ltr {
+            right: 7px;
+        }
+    }
+}
+
+.container {
+    margin-top: 141px;
+    font-size: 14px;
+    font-family: Verdana, Arial;
+    font-weight: normal;
+    line-height: 18px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    overflow: auto;
+    background: #ffffff;
+
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+}

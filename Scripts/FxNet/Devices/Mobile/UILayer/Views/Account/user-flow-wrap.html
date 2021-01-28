@@ -1,0 +1,7 @@
+﻿<!-- ko component: { name: UserFlowComponent } --><!-- /ko -->
+<template id="fx-template-flow-line">
+    <svg id="flowMap_FundYourAccount_Line" class="line" data-bind="visible: !$data.hide, css: {'start-step-line': $data.startLine, 'end-step-line': $data.endLine }, attr: {'id': $data.id}"><line x1="0" y1="0" x2="0" y2="100" data-bind="css: { greenColor: $data.isComplete }" /></svg>
+</template>
+<template id="fx-template-arrow-current">
+    <div class="arrow ico-wb-arr-point-right hiddenElement" data-bind="attr: {'id': $data.id}, css:{ hiddenElement: $data.hide }"></div>
+</template>

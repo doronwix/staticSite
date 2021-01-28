@@ -1,0 +1,62 @@
+﻿<!-- ko ifnot: Data.isFormVisible() -->
+<div class="half left">
+    <h3 class="title" data-bind="text: Dictionary.GetItem('txtDoneAlert', 'AccountStatementBackOffice')"></h3>
+</div>
+<!-- /ko -->
+<!-- ko if: Data.isFormVisible() -->
+<div class="half left account-statement">
+    <h3 class="title" data-bind="text: Dictionary.GetItem('lblAmendDeposit', 'AccountStatementBackOffice')"></h3>
+    <div class="holder forced-deposit">
+        <table class="data-holder general-table loading" data-bind="css: { loading: Data.isSaveSpinnerOn }">
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem('lblAccountNumber', 'AccountStatementBackOffice')"></span>
+                </td>
+                <td>
+                    <input id="input-account-number" type="text" disabled data-bind="value: Data.accountNumber" />
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem('lblDepositId', 'AccountStatementBackOffice')"></span>
+                </td>
+                <td>
+                    <input id="input-deposit-id" type="text" disabled data-bind="value: Data.depositId" />
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem('lblAction', 'AccountStatementBackOffice')"></span>
+                </td>
+                <td colspan="2">
+                    <select id="select-action-type" data-bind="options: Data.actionTypes, optionsText: 'typeName', value: Data.selectedActionType"></select>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem(Data.amountLabel(), 'AccountStatementBackOffice')"></span>
+                </td>
+                <td>
+                    <input id="input-amount" type="text" data-bind="value: Data.amount, numericField: { negative: false }" />
+                </td>
+                <td>
+                    <span data-bind="text: Data.depositCcy()"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue">
+                    <span data-bind="text: Dictionary.GetItem('lblComment', 'AccountStatementBackOffice')"></span>
+                </td>
+                <td>
+                    <textarea type="text" data-bind="value: Data.comment"></textarea>
+                </td>
+                <td>
+                    <button class="short left" data-bind="click: onClickSave, text: Dictionary.GetItem('btnSubmit', 'AccountStatementBackOffice')"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- /ko -->

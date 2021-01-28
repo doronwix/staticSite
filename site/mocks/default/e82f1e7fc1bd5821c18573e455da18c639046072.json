@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/content/content-faq-question.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<div class=\"accordion-section\" data-bind=\"accordion, attr:{'for': id }, openEventName: $parent.openEventName\">\r\n\t<h5 class=\"faq-accordion-header\"><span data-bind=\"text: question\">%Question</span></h5>\r\n\t<div data-bind=\"attr:{id : id }\" class=\"accordion-section-content\">\r\n\t\t<p data-bind=\"html: answer\">%Answer</p>\r\n\t</div>\r\n</div>",
+  "isBase64": false
+}

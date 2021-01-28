@@ -1,0 +1,9 @@
+﻿<!--ko if: Data.isLoading() -->
+<div class="loader-background">
+    <div class="loader"></div>
+</div>
+<!--/ko-->
+
+<!-- ko if: Data.viewType() === eViewTypes.vClientQuestionnaire -->
+<fx-client-questionnaire params="isLoading: Data.isLoading"></fx-client-questionnaire>
+<!--/ko-->

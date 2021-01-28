@@ -1,0 +1,16 @@
+﻿<div class="ticket-tabs">
+    <!-- ko foreach: Data.transactionsList -->
+    <div class="ticket-tab" data-bind="css: { 'selected': transactionType === $parent.Data.selectedTransactionTab().transactionType  },
+            click: function () { $parent.Data.selectedTransactionTab($data); }">
+        <span class="tab-title" data-bind="text: transactionLabel"></span>
+    </div>
+    <!-- /ko -->
+</div>
+<div class="ticket-content">
+    <!-- ko if: Data.isNewDealVisible -->
+    <!-- ko component: { name: 'fx-component-new-deal-slip', params: { chartStationPage: true } } --><!-- /ko -->
+    <!-- /ko -->
+    <!-- ko if: Data.isNewLimitVisible -->
+    <!-- ko component: { name: 'fx-component-new-limit', params: { chartStationPage: true } } --><!-- /ko -->
+    <!-- /ko -->
+</div>

@@ -1,0 +1,11 @@
+﻿<!--ko if: visible-->
+<p class="q_title" data-bind="text: text"></p>
+<form action="javascript:void(0)">
+    <div data-bind="attr: { id : id }, foreach: questions">
+        <div data-bind="component: { name: 'fx-questions-wrapper', params: { questionOrder: $parent.questionnaireItemsDictionary[name].questionOrder,
+          inlineOrder: $parent.questionnaireItemsDictionary[name].inlineOrder,
+          questionnaireItemsDictionary: $parent.questionnaireItemsDictionary, pageQuestions: $parent.questions } }">
+        </div>
+    </div>
+</form>
+<!--/ko-->

@@ -1,0 +1,11 @@
+﻿<!-- ko if: VManager.ActiveFormType() == eForms.Deposit -->
+<span data-bind="dictionaryBinding: 'lblPageTitleDeposit', resourceName: 'general_pagetitle'"></span>
+<!-- /ko -->
+
+<!-- ko if: VManager.ActiveFormType() == eForms.ConcretePaymentForm -->
+<span data-bind="dictionaryBinding: 'lblPageTitleDepositForm', resourceName: 'general_pagetitle'"></span>
+<!-- /ko -->
+
+<!-- ko if: VManager.ActiveFormType() == eForms.WireTransferSuccess -->
+<span data-bind="dictionaryBinding: 'lblPageTitleDepositForm', resourceName: 'general_pagetitle'"></span>
+<!-- /ko -->

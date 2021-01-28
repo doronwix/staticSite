@@ -1,0 +1,23 @@
+﻿<div data-bind="attr: {'class': 'wizard-nav-container wrap-step-' + Data.step()}">
+	<!-- ko if: Data.renderedComponent -->
+	<!-- ko component: { name: Data.renderedComponent(), params: { setStepActions: UpdateStepActions } } --><!-- /ko -->
+
+	<div class="steps-wrapper">
+		<div class="center-area">
+			<div class="step-action" data-bind="visible: previousStep.visible()">
+				<button id="wizard-back" class="action-button btn-back btn action colored" data-bind="click: prev,
+			visible: previousStep.visible, enable: previousStep.valid">
+					<span data-bind="dictionaryBinding: previousStep.label, resourceName: 'navigationWizard'"></span>
+				</button>
+			</div>
+
+			<div class="step-action" data-bind="visible: nextStep.visible()">
+				<button id="wizard-next" class="action-button btn-continue btn" data-bind="click: next, css: { disabled: !nextStep.valid() },
+			visible: nextStep.visible, enable: nextStep.valid,
+			dictionaryBinding: nextStep.label, resourceName: 'navigationWizard'"></button>
+			</div>
+		</div>
+	</div>
+	<!-- /ko -->
+</div>
+

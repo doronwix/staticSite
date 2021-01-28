@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/summaryview_quotesgrid.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"colAsk\":\"Buy\",\"colBid\":\"Sell\",\"colCCY\":\"Instrument\",\"colChange\":\"Change\",\"colHigh\":\"High (Sell)\",\"colLow\":\"Low (Buy)\"}",
+  "isBase64": false
+}

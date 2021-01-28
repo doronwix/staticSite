@@ -1,0 +1,6 @@
+{
+    "extends": "./framework-eslint-rules.json",
+    "rules": {
+        "noko/no-ko": 2
+    }
+}

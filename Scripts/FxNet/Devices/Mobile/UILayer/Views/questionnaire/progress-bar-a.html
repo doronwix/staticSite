@@ -1,0 +1,28 @@
+﻿<div class="questionaire-a" data-bind="css: currentCSS">
+
+	<div class="progress-bar"></div>
+
+	<ul>
+		<li class="one" data-bind="click: navigation.clickStepCdd1">
+			<div>
+				<span>1</span>
+				<p data-bind="text: categories[0]">% Personal Details</p>
+			</div>
+		</li>
+		<li class="two" data-bind="click: navigation.clickStepCdd2">
+			<div>
+				<span>2</span>
+				<p data-bind="text: categories[1]">% Financial status</p>
+			</div>
+		</li>
+		<li class="three" data-bind="click: navigation.clickStepKyc">
+			<div>
+				<span>3</span>
+				<p data-bind="text: categories[2]">% Trading experience</p>
+			</div>
+		</li>
+	</ul>
+	<div class="clear"></div>
+</div><!--steps-->
+
+<h2 data-bind="text: category">% category</h2>

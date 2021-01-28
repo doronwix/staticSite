@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/20201230110628/0/HelpCenterWalkthroughs.js",
+  "contentType": "text/plain; charset=utf-8",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "{\"fya_demo\":\"71607\",\"fya_live\":\"71622\",\"fya_live_demo\":\"71607\",\"fya_pending\":\"71622\",\"fya_pending_demo\":\"71607\",\"HowToFoundYourAccount\":\"How to fund your account \",\"HowToOpenADeal\":\"How to open a deal\",\"HowToUploadADocument\":\"How to Upload Documents\",\"IntroductionSentece\":\"Here are some links to help you get started:\",\"oad_demo\":\"71456\",\"oad_live\":\"71456\",\"oad_live_demo\":\"71456\",\"oad_pending\":\"71456\",\"oad_pending_demo\":\"71456\",\"qpt_demo\":\"71593\",\"qpt_live\":\"71586\",\"qpt_live_demo\":\"71593\",\"qpt_pending\":\"71612\",\"qpt_pending_demo\":\"71593\",\"QuickPlatformTour\":\"Quick platform tour\",\"secureTradingLink\":\"https://content.webapi-services.net/webapi/v1/fxnet/links?lang=English&brand=iforex&broker=1&page=secure-trading\",\"Title\":\"Help Center\",\"tradingGuideLink\":\"https://content.webapi-services.net/webapi/v1/fxnet/links?lang=English&brand=iforex&broker=1&page=trader-guide\",\"uad_demo\":\"77099\",\"uad_live\":\"77099\",\"uad_pending\":\"77099\"}",
+  "isBase64": false
+}

@@ -1,0 +1,12 @@
+﻿<div class="pointed-tooltip">
+    <i class="ask" data-bind="ttFadeIn: { tt_data_id: id}"></i>
+    <div class="tooltips top" data-bind="attr: {id: id}">
+        <div class="arrow"></div>
+        <p>
+            <span data-bind="html:tooltip, 
+                  clickBubble: false,
+                  click: function(){ return false; }"></span>
+            <i class="close" data-bind="ttFadeOut: { tt_icon_id: 'some', tt_data_id: id }"></i>
+        </p>
+    </div>
+</div>

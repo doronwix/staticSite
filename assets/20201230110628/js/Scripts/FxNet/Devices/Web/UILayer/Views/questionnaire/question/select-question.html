@@ -1,0 +1,52 @@
+﻿<!--ko if: visible-->
+<div class="row" data-bind="css: {valid : isValid() && validationOn(), error : !isValid() && validationOn(),  focused: focused()}">
+	<div data-bind="if: visible" class="select-question">
+		<label data-bind="attr: { id: name + 'Label', for: htmlname }">
+			<span data-bind="html: text"></span>
+			<!--ko if: tooltip !== '' -->
+			<fx-tooltip params="tooltip: tooltip, id: name"></fx-tooltip>
+			<!--/ko-->
+		</label>
+
+		<div class="custom-select-wrapper select-optional-answers">
+			<select data-bind="options: optionalAnswers,
+						optionsText: 'text',
+						optionsValue: 'answerValue',
+						value: answer,
+						optionsCaption: placeholder,
+						nonRtlOptions,
+						attr: {
+							name: htmlname,
+							id: htmlname
+						},
+						optionsAfterRender: function(option, item){
+							if(typeof item == 'undefined' ){
+								option.setAttribute('class', 'placeholder');
+							}
+						},
+						attrIf: {
+							autocomplete: autofillTagValue
+						},
+						event:{ change: function(){ showPopup();}},
+						customSelect: true,
+						customSelectOptions: {
+							wrapNative: false,
+							wrapNativeOnMobile: true,
+							fakeDropInBody: false,
+							onBlur: function() {
+								focused(false);
+								popup.visible(false);
+							},
+							onFocus: function() {
+								focused(true);
+							}
+						}">
+			</select>
+		</div>
+		<fx-question-tooltip-balloon params="headerText: popup.headerText, bodyText: popup.bodyText, visible: popup.visible"></fx-question-tooltip-balloon>
+		<!--ko ifnot: isValid -->
+		<fx-question-validation-balloon></fx-question-validation-balloon>
+		<!--/ko-->
+	</div>
+</div>
+<!--/ko-->

@@ -1,0 +1,114 @@
+﻿<div class="payment-holder">
+	<div class="payment-select">
+		<ul class="choose-country">
+			<li>
+				<label class="title" data-bind="dictionaryBinding: 'lblSelectedCountry', resourceName: 'payments_concreteView'">%Select country</label>
+			</li>
+
+			<li>
+                <!--ko if: Info.countries().length -->
+			    <fx-component-search-country params="{ countries: Info.countries, country: Form.selectedCountry, onClick: skipRedirectToLastPayment }"
+                                             class="payments-search-countries-b">
+			    </fx-component-search-country>
+                <!-- /ko -->
+			</li>
+		</ul>
+	</div>
+
+	<div class="payment-select no-margin">
+		<h3 class="title" data-bind="dictionaryBinding: 'lblSelectText', resourceName: 'payments_concreteView'">%Select payment method</h3>
+
+		<div class="swipe-holder">
+			<ul data-bind="'data-automation': 'payment-category-select', setArrows: { elementsObservable: $data.Info.categories }" class="swipe-methods">
+				<li class="left-arrow arrow-hidden"></li>
+
+				<!-- ko foreach: Info.categories -->
+				<li class="list-item"
+					data-bind="ScrollToElement: $parent.isSelectedCategory($data),
+						css: {
+							active: $parent.isSelectedCategory($data)
+						},
+						'data-automation': 'payment-category-' + $data">
+					<a data-bind="text: $parent.getCategoryName($data),
+						click: function() {
+							$parent.skipRedirectToLastPayment();
+							$parent.changeSelectedCategory($data);
+						}"></a>
+				</li>
+				<!-- /ko -->
+
+				<li class="right-arrow arrow-hidden"></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="concretePaymentsWrapper" class="bubble-up reset lined-tiles">
+		<!-- ko if: Info.isLoading() || Info.arePaymentsLoading() -->
+		<div class="loader-background">
+			<div class="loader"></div>
+		</div>
+		<!-- /ko -->
+
+		<!-- ko if: General.isDefinedType(Info.payments().find($data.getPaymentVisibility)) -->
+		<fieldset class="depositFormConcrete">
+			<div class="deposit-tiles">
+				<div id="concretePayments" data-bind="foreach: Info.payments">
+					<!-- ko if: $parent.getPaymentVisibility($data) -->
+					<div class="card-wrap scaled"
+						 data-bind="attr: {
+								id: $parent.getPaymentId($data)
+							},
+							css: {
+								open: $parent.isSelectedPayment($data)
+							},
+							click: function(){
+								$parent.goToPaymentView($data);
+							}">
+
+						<div class="ico-wrapper">
+							<div data-bind="attr: { 'class': 'tile deposit-ico' }, css: $parent.getPaymentClass($data)">
+								<i></i>
+							</div>
+						</div>
+
+						<div class="cc-data">
+							<!-- ko if: !$data.isExistingCC -->
+
+							<div class="card-data">
+								<p>
+									<span class="card-name" data-bind="nonRtlText: $parent.getConcretePaymentName($data)"></span>
+								</p>
+							</div>
+
+							<!-- ko if: $data.isGeneric -->
+							<div class="allowed-payments" data-bind="foreach: $parent.Info.allowedCreditCards">
+								<img data-bind="attr: { src: $data }" />
+							</div>
+							<!-- /ko -->
+							<!-- /ko -->
+							<!-- ko if: $data.isExistingCC -->
+							<div class="card-data">
+								<p data-bind="text: $data.cardHolder">%Name</p>
+								<p class="card-details">
+									<span data-bind="text: $parent.getLastFourCharsOfConcretePaymentName($data)">%XXXX</span>
+									<span data-bind="text: $data.expirationDate">%01/99</span>
+								</p>
+								<p>
+									<span class="payment-subtitle" data-bind="formattedText: [Format.toDateTimeUTC($data.lastUsed)], contentKey: 'lastUsedDateFormat', resourceName: 'payments_concreteView'">%Last used:</span>
+								</p>
+
+								<a class="action" data-bind="click: $parent.removeConcretePayment, clickBubble: false">
+									<span data-bind="dictionaryBinding: 'hlRemoveCreditCard', resourceName: 'payments_concreteView'">%Remove Credit Card</span>
+								</a>
+							</div>
+							<!-- /ko -->
+						</div>
+						<div class="clear"></div>
+					</div>
+					<!-- /ko -->
+				</div>
+			</div>
+		</fieldset>
+		<!-- /ko -->
+	</div>
+</div>

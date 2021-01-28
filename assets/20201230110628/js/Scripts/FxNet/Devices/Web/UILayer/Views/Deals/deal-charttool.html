@@ -1,0 +1,15 @@
+﻿<div class="chart-tools-tab">
+    <div class="instrumentNameLabel" data-bind="instrumentName: NewDealData.selectedInstrument,
+         'data-automation': 'instrument-name'"></div>
+    <div id="dealChartContainer" data-bind="
+         visibility: Data.isChartReady(),
+         triggerEventOnWindowResize: { eventName: 'chart-container-resized' },
+         dealSlipToggle: { isFullScreen: Data.isFullScreen, trakingEventName: 'deal-slip-chart-interaction' },
+         css: { 'tc-signals-disabled': $data.Data.tcChartSignals().disabled,
+            'tc-signals-enabled': !$data.Data.tcChartSignals().disabled,
+            'tc-signals-active': $data.Data.tcChartSignals().active 
+         }"></div>
+    <div data-bind="visible: !Data.isChartReady() || Data.isLoadingData()">
+        <div class="simple-loader"></div>
+    </div>
+</div>

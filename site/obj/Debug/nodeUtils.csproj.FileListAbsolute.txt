@@ -1,0 +1,6 @@
+D:\Projects\Branches\Dev-FX3_fx_clean\iFOREX Framework\IFOREX.Clients\iFOREX.Clients.Web\nodeUtils\bin\Debug\nodeUtils.dll
+D:\Projects\Branches\Dev-FX3_fx_clean\iFOREX Framework\IFOREX.Clients\iFOREX.Clients.Web\nodeUtils\bin\Debug\nodeUtils.pdb
+D:\Projects\Branches\Dev-FX3_fx_clean\iFOREX Framework\IFOREX.Clients\iFOREX.Clients.Web\nodeUtils\obj\Debug\nodeUtils.csproj.CoreCompileInputs.cache
+D:\Projects\Branches\Dev-FX3_fx_clean\iFOREX Framework\IFOREX.Clients\iFOREX.Clients.Web\nodeUtils\obj\Debug\nodeUtils.dll
+D:\Projects\Branches\Dev-FX3_fx_clean\iFOREX Framework\IFOREX.Clients\iFOREX.Clients.Web\nodeUtils\obj\Debug\nodeUtils.pdb
+D:\Projects\Branches\Dev-FX3_fx_clean\iFOREX Framework\IFOREX.Clients\iFOREX.Clients.Web\nodeUtils\obj\Debug\nodeUtils.csprojAssemblyReference.cache

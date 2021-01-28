@@ -1,0 +1,203 @@
+﻿  
+    <menu-container>
+        <div  class="chart-menu %css%" id="%id%" >
+            <ul>
+                %html%
+            </ul>
+        </div>
+     </menu-container> 
+      
+    
+     <menu-item>
+         <li class="mn-item %css%"   >
+             <a href="javascript:void(0)" data-localize="%localization%" class="%cssaction%" tid="%id%"  >%caption%</a>
+          </li>
+    </menu-item>
+    
+    
+    <menu-item-group>
+       <li class="mn-item %css%"  >
+              <a href="javascript:void(0)" data-localize="%localization%" class="%cssaction%" tid="%id%" >%caption%</a>  
+           <div class="mn-item-group %cssgroup%" style="display:none">
+               <div class="mn-array">
+                   <div ></div>
+               </div> 
+               <ul>%html%</ul>
+               <div class="clear"></div>
+           </div>
+       </li>
+     </menu-item-group>
+
+    
+        <menu-more>
+            <li class="mn-more %css%"  >
+                <a href="javascript:void(0)" data-localize="menu.general.more" class="%css% %cssaction%" tid="more" >More</a> 
+                <div class="mn-item-group %cssgroup%" style="display:none">
+                    <div class="mn-array">
+                      <div ></div>
+                    </div> 
+                    <ul>%html%</ul>
+                    <div class="clear"></div>
+                </div>
+            </li>
+        </menu-more>
+        
+        
+     <menu-more-item-group>
+       <li class="mn-item mn-more-item %css%" style ="position:relative;" >
+              <a href="javascript:void(0)" data-localize="%localization%" class="%cssaction%" tid="%id%"  style="display: block; width: 100%" >%caption%</a>  
+           <div class="mn-item-sub-group %cssgroup%" style="display:none">
+               <div class="mn-array">
+                   <div ></div>
+               </div> 
+               <ul>%html%</ul>
+               <div class="clear"></div>
+           </div>
+       </li>
+     </menu-more-item-group>
+
+    
+        <menu-more-item>
+          <li class="mn-item %css% mn-item-group-in mn-more-item  "  >
+             <a href="javascript:void(0)" data-localize="%localization%" class="%cssaction%" tid="%id%" style="display: block; width: 100%"  >%caption%</a>
+          </li>
+   </menu-more-item> 
+    
+    
+ 
+    
+
+        <menu-charttype>
+        <li class="mm-item mm-item-group %mm-item-favorites%  %mm-item-icons% charttype-group-item">
+            <a  href="javascript:void(0);" class="mn-item-favorite a-star  %css%  icon-item  %icon-source%   a-favorite-charttype  "   tid="%id%"  state="%state%"  title="" >
+                <span class="%star%"></span>
+            </a>
+            <a href="javascript:void(0);" class="mn-item-link icon-item  %icon-source%  caption-item a-change-charttype"  tid="%id%"    data-localize="menu.charttype.%id%" >
+                 <span class="%icon%"></span> %caption%
+            </a>
+        </li>
+    </menu-charttype>
+    
+    
+    
+    
+
+    <menu-timeframe>
+        <li class="mm-item mm-item-group %mm-item-favorites%  %mm-item-icons% timeframe-group-item">
+            <a  href="javascript:void(0);" class="mn-item-favorite a-star  %css%  icon-item  %icon-source%   a-favorite-timeframe"   tid="%id%" state="%state%"   title="" >
+                <span class="%star%"></span>
+            </a>
+            <a href="javascript:void(0);" class="mn-item-link icon-item  %icon-source%  caption-item a-change-timeframe "   tid="%id%" data-localize="menu.timescale.%id%" >
+                 <span class="%icon%"></span> %caption%
+            </a>
+        </li>
+    </menu-timeframe>
+    
+    
+    
+ 
+
+    
+        <menu-timeframe-text>
+        <li class="mm-item mm-item-group %mm-item-favorites%  %mm-item-icons% timeframe-group-item">
+            <a  href="javascript:void(0);" class="mn-item-favorite a-star  %css%  icon-item  %icon-source%   a-favorite-timeframe"   tid="%id%" state="%state%"   title="" >
+                <span class="%star%"></span>
+            </a>
+            <a href="javascript:void(0);" class="mn-item-link no-icon-item caption-item a-change-timeframe "   tid="%id%" data-localize="menu.timescale.%id%" >
+                 <span><b>%title1%<sup>%title2%</sup> </b></span> %caption%
+            </a>
+        </li>
+    </menu-timeframe-text>
+
+  
+
+        <menu-majors>
+        <li class="mm-item mm-item-group major-group-item  %css% ">
+            <a href="javascript:void(0);" class="mn-item-link  caption-item  a-change-symbol "  tid="%id%"  n=%caption% data-localize="menu.symbol.%id%" >
+                 %caption%
+            </a>
+        </li>
+    </menu-majors>
+        
+        <menu-majors2>
+        <li class="mm-item mm-item-group major-group-item2  %css% ">
+            <a href="javascript:void(0);" class="mn-item-link  caption-item  a-change-symbol "  tid="%id%"  n=%caption% data-localize="menu.symbol.%id%" >
+                 %caption%
+            </a>
+        </li>
+    </menu-majors2>
+ 
+    <menu-compares>
+        <li class="mm-item mm-item-group compare-group-item  %css% ">
+            <a href="javascript:void(0);" class="mn-item-link  caption-item  a-change-compare "  tid="%id%"  n=%caption% data-localize="menu.symbol.%id%" >
+                 %caption%
+            </a>
+        </li>
+    </menu-compares>
+ 
+
+    <menu-indicators>
+        <li class="mm-item mm-item-group indicator-group-item %css%">
+            <a href="javascript:void(0);" class="mn-item-link  caption-item  a-change-indicator "  tid="%id%"  custom="%custom%"  data-localize="menu.indicator.%id%" >
+                 %caption%
+            </a>
+        </li>
+    </menu-indicators>
+ 
+ 
+ 
+     <menu-localizations>
+        <li class="mm-item mm-item-group localization-group-item">
+            <a href="javascript:void(0);" class="mn-item-link  caption-item  a-change-localization "  tid="%id%" >
+                 %caption%
+            </a>
+        </li>
+    </menu-localizations>
+    
+    
+    <menu-item-image>
+        <li class="mn-item-image ">
+            <a href="javascript:void(0);" class="  %cssaction% "  tid="%id%" >
+                <img src="%image%" alt="%caption%"/>
+            </a>
+        </li>
+    </menu-item-image>
+
+
+
+        <menu-caption>
+         <li class="tlb-caption"><span class="menu-adv-label %css%" tid="%id%" data-localize="%localization%">%caption%</span></li>
+    </menu-caption>
+    
+    <menu-space>
+         <li class="tlb-space"><span class="menu-adv-space %css%"  tid="%id%" >%caption%</span></li>
+    </menu-space>
+
+        <menu-button>
+        <li class="tlb-item"><button class="%css% action"  tid="%id%"  type="button" data-localize="%localization%"  title="%caption%">
+                             </button></li>
+    </menu-button>
+    
+ 
+
+    
+   <menu-group>
+       <li class="tlb-item tlb-item-group" ><button class="%css% group"  tid="%id%"  type="button" data-localize="%localization%"  title="%caption%">
+                             </button>
+                <div class="sub-point"></div>
+           <div class="tlb-groups %cssgroup% " style="display: none;" >
+               <div class="tlb-array">
+                   <div ></div>
+               </div> 
+               <ul>%html%</ul>
+               <div class="clear"></div>
+           </div>
+           
+       </li>                             
+    </menu-group>
+
+    
+    <menu-item>
+       <li class="tlb-item"><button class="%css% action caption-button"  tid="%id%"  type="button" data-localize="%localization%"  title="%caption%">%caption%
+                                 </button></li>      
+     </menu-item> 

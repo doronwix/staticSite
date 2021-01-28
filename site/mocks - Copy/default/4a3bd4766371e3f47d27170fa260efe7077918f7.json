@@ -1,0 +1,11 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/Scripts/AdvinionChart/ChartUI/version/prochart.version.json.js?time456",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": {
+    "guiversionbuild": "6",
+    "customerversion": ".7.0.9"
+  },
+  "isBase64": false
+}

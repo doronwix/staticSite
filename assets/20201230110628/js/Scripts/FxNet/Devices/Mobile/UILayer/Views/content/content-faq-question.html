@@ -1,0 +1,10 @@
+﻿<div class="accordion-section" data-bind="accordion, attr:{'for': id }, openEventName: $parent.openEventName">
+	<div class="accordion-section-faq">
+		<i class="accordion-status"></i>
+		<h5 class="accordion-section-title" data-bind="text: question">%Question</h5>
+	</div>
+
+	<div data-bind="attr:{id : id }" class="accordion-section-content">
+		<p data-bind="html: answer">%Answer</p>
+	</div>
+</div>

@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/uilayer/viewmodels/CustomDropDown.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define(\r\n    'viewmodels/CustomDropDown',    \r\n    ['handlers/general',],\r\n    function(general) {\r\n        function CustomDropDownModelFactory(params) {\r\n            var value = params.value;\r\n\r\n            if (general.isEmptyValue(value())) {\r\n                value(params.options()[0]);\r\n            }\r\n\r\n            return {\r\n                options: params.options,\r\n                value: value,\r\n                optionText: params.optionText,\r\n                cssClass: params.cssClass || 'light'\r\n            };\r\n        }\r\n\r\n        return {\r\n            viewModel: {\r\n                createViewModel: CustomDropDownModelFactory\r\n            }\r\n        };\r\n    }\r\n);",
+  "isBase64": false
+}

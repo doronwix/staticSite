@@ -1,0 +1,8 @@
+﻿<script id="customMessageTemplate" type="text/html">
+	<div class="balloon-holder">
+		<div class="balloonError" data-bind="css: { visible: field.isDirty() && !field.isValid() }">
+			<i class="ico-sh-error"></i>
+			<p data-bind="validationMessage: field"></p>
+		</div>
+	</div>
+</script>

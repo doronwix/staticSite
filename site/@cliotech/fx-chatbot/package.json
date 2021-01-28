@@ -1,0 +1,97 @@
+{
+  "_args": [
+    [
+      "@cliotech/fx-chatbot@2.2.2-beta.3",
+      "D:\\Projects\\Branches\\StaticFxnetSite\\site"
+    ]
+  ],
+  "_from": "@cliotech/fx-chatbot@2.2.2-beta.3",
+  "_id": "@cliotech/fx-chatbot@2.2.2-beta.3",
+  "_inBundle": false,
+  "_integrity": "sha1-VQlbER998sQbOVx3TlamYtIwMf4=",
+  "_location": "/@cliotech/fx-chatbot",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@cliotech/fx-chatbot@2.2.2-beta.3",
+    "name": "@cliotech/fx-chatbot",
+    "escapedName": "@cliotech%2ffx-chatbot",
+    "scope": "@cliotech",
+    "rawSpec": "2.2.2-beta.3",
+    "saveSpec": null,
+    "fetchSpec": "2.2.2-beta.3"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nuget.efix.local/npm/DevNpm/@cliotech/fx-chatbot/-/fx-chatbot-2.2.2-beta.3.tgz",
+  "_spec": "2.2.2-beta.3",
+  "_where": "D:\\Projects\\Branches\\StaticFxnetSite\\site",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "axios": "^0.19.0",
+    "babel-loader": "^8.0.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "description": "A JavaScript chat bot (previous named emily)",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/plugin-proposal-do-expressions": "^7.2.0",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/plugin-proposal-function-sent": "^7.2.0",
+    "@babel/plugin-proposal-json-strings": "^7.2.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.2.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+    "@babel/plugin-proposal-numeric-separator": "^7.2.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.10.5",
+    "@babel/plugin-proposal-throw-expressions": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-import-meta": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "css-loader": "^2.1.1",
+    "eslint-config-react-app": "^5.2.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "file-loader": "^5.1.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.3.1",
+    "semver": "^7.3.2",
+    "style-loader": "^0.23.1",
+    "surge": "^0.20.5",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.43.0",
+    "webpack-auto-inject-version": "^1.2.2",
+    "webpack-cli": "3.3.2",
+    "webpack-require-from": "^1.8.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "licence": "MIT",
+  "main": "dist/main.js",
+  "name": "@cliotech/fx-chatbot",
+  "private": false,
+  "scripts": {
+    "build": "webpack -p --config ./webpack/webpack.config.prod.js",
+    "build:dev": "webpack -d --config ./webpack/webpack.config.dev.js",
+    "build:react-build": "react-scripts build",
+    "eject:react-reject": "react-scripts eject",
+    "lint": "eslint --no-eslintrc -c .eslintrc.js ChatBot.js src/**/*.js",
+    "start:react-start": "react-scripts start",
+    "test:react-test": "react-scripts test"
+  },
+  "source": "ChatBot.js",
+  "version": "2.2.2-beta.3"
+}

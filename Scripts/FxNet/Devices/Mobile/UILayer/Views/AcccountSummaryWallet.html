@@ -1,0 +1,249 @@
+﻿<div data-bind="with: Data.WalletInfo">
+  <div id="walletPage">
+    <div class="header-wrapper single-head-wrapper">
+      <div>
+        <span>
+          <span
+            id="username"
+            class="prev-desc"
+            data-bind="dictionaryBinding: 'username', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <span
+            id="usernameValue"
+            class="strong"
+            data-bind="text: userName"
+          ></span>
+        </span>
+        <span>
+          <span
+            id="account"
+            class="prev-desc"
+            data-bind="dictionaryBinding: 'account', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <span
+            id="accountValue"
+            class="strong"
+            data-bind="text: accountNumber"
+          ></span>
+        </span>
+      </div>
+    </div>
+    <div class="thelist info-list inner-top-shadow">
+      <ul class="list-container">
+        <li>
+          <p>
+            <span
+              id="subHeaderText"
+              data-bind="dictionaryBinding: 'subHeaderText', resourceName: 'views_vMobileWallet'"
+            ></span>
+          </p>
+        </li>
+        <li data-bind="visible: availableMargin.visibility">
+          <span
+            id="marginAvailable"
+            class="stronger"
+            data-bind="dictionaryBinding: 'marginAvailable', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <strong
+            id="marginAvailableValue"
+            class="currency-value"
+            data-bind="text: availableMargin.value, css: { green: parseFloat(availableMargin.value()) > 0, red: parseFloat(availableMargin.value()) < 0 }"
+          ></strong>
+        </li>
+
+        <li data-bind="visible: usedMargin.visibility">
+          <span
+            id="usedforMargin"
+            data-bind="dictionaryBinding: 'usedforMargin', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <strong
+            id="usedforMarginValue"
+            class="currency-value"
+            data-bind="text: usedMargin.value"
+          ></strong>
+        </li>
+
+        <li>
+          <span
+            id="marginUtilization"
+            data-bind="dictionaryBinding: 'marginUtilization', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <strong
+            id="marginUtilizationValue"
+            class="currency-value"
+            data-bind="percentage: marginUtilizationPercentage.value, css: { red: marginUtilizationStatus() == 3, orange: marginUtilizationStatus() == 2, green: marginUtilizationStatus() == 1 }"
+          ></strong>
+        </li>
+
+        <li class="relative">
+          <span
+            id="equity"
+            class="stronger"
+            data-bind="dictionaryBinding: 'equity', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <fx-component-demo-deposit-icon
+            params="equity: equity.value"
+          ></fx-component-demo-deposit-icon>
+          <strong
+            id="equityValue"
+            class="currency-value"
+            data-bind="text: equity.value, css: { green: parseFloat(equity.value()) > 0, red: parseFloat(equity.value()) < 0 }"
+          ></strong>
+        </li>
+
+        <li
+          class="bullet"
+          data-bind="click: function () { $viewModelsManager.VManager.SwitchViewVisible(eForms.Balance, {}); }"
+        >
+          <span
+            id="balance"
+            data-bind="dictionaryBinding: 'balance', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <strong
+            id="balanceValue"
+            class="currency-value"
+            data-bind="text: accountBalance.value, css: { green: parseFloat(accountBalance.value()) > 0, red: parseFloat(accountBalance.value()) < 0 }"
+          ></strong>
+        </li>
+
+        <li data-bind="visible: tradingBonus.visibility">
+          <span
+            id="tradingBonus"
+            data-bind="dictionaryBinding: 'tradingBonus', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <strong
+            id="tradingBonusValue"
+            class="currency-value green"
+            data-bind="roundM: tradingBonus.value"
+          ></strong>
+        </li>
+
+        <li>
+          <span
+            id="exposureCoverage"
+            class="stronger"
+            data-bind="dictionaryBinding: 'exposureCoverage', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <strong
+            id="exposureCoverageValue"
+            class="currency-value"
+            data-bind="toppedPercentage: exposureCoverage.value, css: { red: !isValidExposureCoverage()}"
+          ></strong>
+        </li>
+
+        <li data-bind="visible: maintenanceMargin.visibility">
+          <span
+            id="maintenanceMargin"
+            data-bind="dictionaryBinding: 'maintenanceMargin', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <strong
+            id="maintenanceMarginValue"
+            class="currency-value"
+            data-bind="text: maintenanceMargin.value"
+          ></strong>
+        </li>
+
+        <li
+          class="bullet"
+          data-bind="click: function () { $viewModelsManager.VManager.SwitchViewVisible(eForms.NetExposure, {}); }"
+        >
+          <span
+            id="netExposure"
+            data-bind="dictionaryBinding: 'netExposure', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <strong
+            id="netExposureValue"
+            class="currency-value"
+            data-bind="roundM: netExposure.value()"
+          ></strong>
+        </li>
+
+        <li>
+          <span
+            id="maxExposure"
+            data-bind="dictionaryBinding: 'maxExposure', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <strong
+            id="maxExposureValue"
+            class="currency-value"
+            data-bind="roundM: maxExposure.value"
+          ></strong>
+        </li>
+
+        <li data-bind="visible: securities.visibility">
+          <span
+            id="securities"
+            data-bind="dictionaryBinding: 'securities', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <strong
+            id="securitiesValue"
+            class="currency-value"
+            data-bind="roundM: securities.value"
+          ></strong>
+        </li>
+
+        <li
+          class="bullet"
+          data-bind="click: function () { $viewModelsManager.VManager.SwitchViewVisible(eForms.OpenDeals); }"
+        >
+          <span
+            id="openPL"
+            class="stronger"
+            data-bind="dictionaryBinding: 'openPL', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <strong
+            id="openPLValue"
+            class="currency-value"
+            data-bind="text: openPL.value, css: { green: parseFloat(openPL.value()) > 0, red: parseFloat(openPL.value()) < 0 }"
+          ></strong>
+        </li>
+
+        <!-- ko if: bonusAmount() > 0 -->
+        <!-- ko if: pendingBonusType() === ePendingBonusType.cashBack -->
+        <li
+          data-bind="click: function () { $viewModelsManager.VManager.SwitchViewVisible(eForms.CashBack, {}); ko.postbox.publish('trading-event', 'cashback-from-wallet'); }"
+          class="bullet cashback-row"
+        >
+          <span
+            id="fx-component-live-cash-back"
+            data-bind="component: { name: 'fx-component-live-cash-back' }"
+          ></span>
+        </li>
+        <!-- /ko -->
+        <!-- ko if: pendingBonusType() === ePendingBonusType.spreadDiscount -->
+        <li class="cashback-row">
+          <span
+            id="fx-component-spread-discount"
+            data-bind="component: { name: 'fx-component-spread-discount' }"
+          ></span>
+        </li>
+        <!-- /ko -->
+        <!-- /ko -->
+        <!-- ko ifnot: $customer.prop.isDemo -->
+        <li
+          data-bind="visible: pendingWithdrawals.visibility, click: function () { $viewModelsManager.VManager.SwitchViewVisible(eForms.PendingWithdrawal, {}); ko.postbox.publish('trading-event', 'summary-pending-withdrawals'); }"
+          class="bullet"
+        >
+          <span
+            id="pendingWithdrawals"
+            data-bind="dictionaryBinding: 'pendingWithdrawals', resourceName: 'views_vMobileWallet'"
+          ></span>
+          <strong
+            id="pendingWithdrawalsValue"
+            data-bind="roundM: pendingWithdrawals.value"
+          ></strong>
+        </li>
+        <li
+          class="bullet"
+          data-bind="click: function () { $viewModelsManager.VManager.RedirectToForm(eForms.Withdrawal, { step: eWithdrawalSteps.setAmount }); }"
+        >
+          <span
+            id="Withdrawal"
+            data-bind="dictionaryBinding: 'Withdrawal', resourceName: 'views_vMobileWallet'"
+          ></span>
+        </li>
+        <!-- /ko -->
+      </ul>
+    </div>
+  </div>
+</div>

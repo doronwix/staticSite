@@ -1,0 +1,61 @@
+﻿<!-- ko if: Data.isAllowedAccess() -->
+<h3 class="title" data-bind=" text: Dictionary.GetItem('lblWireTransfers', 'DepositBackOffice')"></h3>
+
+<div class="holder withdrawal-requests" id="wireTransfers">
+    <table class="data-holder striped">
+        <tr class="blue">
+            <th data-bind="text: Dictionary.GetItem('thId', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thStatus', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thRequestDate', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thAmount', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thCurrency', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thBank', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thRate', 'DepositBackOffice')"></th>
+        </tr>
+        <!-- ko foreach: Data.wireTransfersSelectedOrPending-->
+        <tr data-bind="css : { 'selectedWithdrawal': $parent.Data.selectedWireTransferId() === transferId }, click: function(){ $parent.Data.selectedWireTransferId(transferId); }">
+            <td data-bind="text: transferId"></td>
+            <td data-bind="text: statusName"></td>
+            <td data-bind="text: lastUpdate"></td>
+            <td data-bind="text: Format.toNumberWithThousandsSeparator(amount, -1, '')"></td>
+            <td data-bind="text: currencyName"></td>
+            <td data-bind="text: bankName"></td>
+            <td data-bind="text: exchangeRate"></td>
+        </tr>
+        <!-- /ko -->
+    </table>
+</div>
+
+<div>
+    <fx-wire-transfer-edit params="selectedWireTransfer: Data.selectedWireTransfer, wireTransferBanks: Data.wireTransferBanks, refreshWireTransfer: refreshWireTransfer"></fx-wire-transfer-edit>
+</div>
+
+<h3 class="title" data-bind="text: String.format(Dictionary.GetItem('lblWireTransferHistory', 'DepositBackOffice'), Data.selectedWireTransferId())"></h3>
+
+<div class="holder withdrawal-requests" id="wireTransfersHistory">
+    <table class="data-holder striped">
+        <tr class="blue">
+            <th data-bind="text: Dictionary.GetItem('thUpdateDate', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thBank', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thCcy', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thAmount', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thValueDate', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thDealer', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thStatus', 'DepositBackOffice')"></th>
+            <th data-bind="text: Dictionary.GetItem('thComment', 'DepositBackOffice')"></th>
+        </tr>
+        <!-- ko foreach: Data.wireTransferHistoryList-->
+        <tr>
+            <td data-bind="text: lastUpdate"></td>
+            <td data-bind="text: bankName"></td>
+            <td data-bind="text: currencyName"></td>
+            <td data-bind="text: Format.toNumberWithThousandsSeparator(amount, -1, '')"></td>
+            <td data-bind="text: valueDate"></td>
+            <td data-bind="text: dealerName"></td>
+            <td data-bind="text: statusName"></td>
+            <td data-bind="text: comment"></td>
+        </tr>
+        <!-- /ko -->
+    </table>
+</div>
+<!-- /ko -->

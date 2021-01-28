@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="SonarQube - FXNET-Dev3-Build-SonarQube+Coverage Sonar way" ToolsVersion="16.0">
+  <Include Path="..\..\..\..\.sonarlint\dev3buildcsharp.ruleset" Action="Default" />
+</RuleSet>

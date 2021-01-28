@@ -1,0 +1,126 @@
+﻿<div id="CloseDealPosNum" class="slip-custom-header">
+    <!-- ko component: { name: 'fx-component-dynamic-title-slip' } --><!-- /ko -->
+    <!-- ko component: { name: 'fx-component-slip-toggle', params: { recenterWithDelay: true } } --><!-- /ko -->
+</div>
+<!-- ko component: {  name: 'fx-component-deal-tools', params: Data } --><!-- /ko -->
+
+<div class="dscol tradeticket" data-bind="visible: Data.showTransaction()">
+    <div class="ticket-content full-height">
+        <div class="trade-area">
+            <div class="trade-content styled-scroll">
+                <div class="trade-row instrument-select">
+                    <label id="lblDealSelect" class="trade-label" data-bind="dictionaryBinding: 'lblDealNo', resourceName: 'deals_CloseDeal'"></label>
+                    <!-- ko component: { name: 'fx-custom-dropdown', params: {
+                        value: Data.SelectedPosition, options: OpenDeals, optionText: 'positionNumber', cssClass: 'dark' } } -->
+                    <!-- /ko -->
+                </div>
+                <div class="trade-row">
+                    <label id="lblInstrumentLabel" class="trade-label graytint" data-bind="dictionaryBinding: 'lblInstrumentLabel', resourceName: 'deals_CloseDeal'"></label>
+                    <div class="info-rect">
+                        <span data-bind="html: Data.SelectedPosition().Instrument.ccyPairLong"></span>
+                    </div>
+                </div>
+                <div class="trade-row">
+                    <!-- ko component: { name: 'fx-component-market-info-summary' } --><!-- /ko -->
+                </div>
+                <div class="trade-row">
+                    <label id="lblDealAmount" class="trade-label graytint" data-bind="text: Data.SelectedPosition().Instrument.dealAmountLbl"></label>
+                    <div class="info-rect">
+                        <span data-bind="text: Format.formatDealAmount(Data.SelectedPosition().dealAmount)"></span>
+                    </div>
+                    <div class="conversion-info">
+                        <span class="converted-amount lighttint" data-bind="component: { name: 'fx-component-converted-amount-text', params: Data }"></span>
+                    </div>
+                </div>
+                <div class="trade-row">
+                    <div class="tworates">
+                        <div class="ratedisplay">
+                            <div class="ratelabel">
+                                <span data-bind="dictionaryBinding: 'txtDealRate', resourceName: 'deals_CloseDeal'"></span>
+                            </div>
+                            <div class="ratevalue">
+                                <span id="lblRateFirst" data-bind="text: Data.SelectedPosition().dealRateLabel.First">0.00</span>
+                                <span id="lblRateMiddle" data-bind="text: Data.SelectedPosition().dealRateLabel.Middle">00</span>
+                                <span id="lblRateLast" class="last" data-bind="text: Data.SelectedPosition().dealRateLabel.Last">0</span>
+                            </div>
+                        </div>
+                        <div class="ratedisplay">
+                            <div class="ratelabel">
+                                <span id="txtClosingRate" data-bind="dictionaryBinding: 'txtClosingRate', resourceName: 'deals_CloseDeal'"></span>
+                                <span id="txtClosingRateDirection" data-bind="text:Dictionary.GetItem('txtClosingRateDirection' + Data.SelectedPosition().orderDir, 'deals_CloseDeal')"></span>
+                            </div>
+                            <div class="ratevalue" data-bind="css: { redText: Data.SelectedPosition().isDown, greenText: Data.SelectedPosition().isUp }">
+                                <span id="lblSpotRateFirst" data-bind="text: Data.SelectedPosition().spotRateLabel().First">0.00</span>
+                                <span id="lblSpotRateMiddle" data-bind="text: Data.SelectedPosition().spotRateLabel().Middle">00</span>
+                                <span id="lblSpotRateLast" class="last" data-bind="text: Data.SelectedPosition().spotRateLabel().Last">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conversion-info" data-bind="if: Data.showForwardPips()">
+                        <span class="converted-amount">
+                            <span id="txtForwardPips" data-bind="dictionaryBinding: 'txtForwardPips', resourceName: 'deals_CloseDeal'"></span>
+                            <span data-bind="text: Data.SelectedPosition().fwPips">0.00</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="trade-row nosides">
+                    <div class="addsltp-section info nockbox">
+                        <div class="sltprow slrow">
+                            <div class="sltprow-header">
+                                <div class="custom-input-wrapper">
+                                    <label class="sltp-label">
+                                        <span id="lblSLTitle" data-bind="dictionaryBinding: 'lblSLTitle', resourceName: 'deals_CloseDeal'"></span>
+                                        <span class="bold" data-bind="css: {'sltpexists': Data.SelectedPosition().slRate != 0 }">
+                                            <!--ko if: Data.SelectedPosition().slRate == 0 -->
+                                            <span data-bind="dictionaryBinding: 'txtNotSet', resourceName: 'deals_CloseDeal'"></span>
+                                            <!-- /ko -->
+                                            <!--ko if: Data.SelectedPosition().slRate != 0 -->
+                                            <span data-bind="text: Data.SelectedPosition().slRateLabel.First">0.5602</span><span data-bind="text: Data.SelectedPosition().slRateLabel.Middle">0.5602</span><span data-bind="text: Data.SelectedPosition().slRateLabel.Last" class="smaller">3</span>
+                                            <!-- /ko -->
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sltprow tprow">
+                            <div class="sltprow-header">
+                                <div class="custom-input-wrapper">
+                                    <label class="sltp-label">
+                                        <span id="lblTPTitle" data-bind="dictionaryBinding: 'lblTPTitle', resourceName: 'deals_CloseDeal'"></span>
+                                        <span class="bold" data-bind="css: {'sltpexists': Data.SelectedPosition().tpRate != 0 }">
+                                            <!--ko if: Data.SelectedPosition().tpRate == 0 -->
+                                            <span data-bind="dictionaryBinding: 'txtNotSet', resourceName: 'deals_CloseDeal'"></span>
+                                            <!-- /ko -->
+                                            <!--ko if: Data.SelectedPosition().tpRate != 0 -->
+                                            <span data-bind="text: Data.SelectedPosition().tpRateLabel.First">1.5702</span><span data-bind="text: Data.SelectedPosition().tpRateLabel.Middle">1.5702</span><span data-bind="text: Data.SelectedPosition().tpRateLabel.Last" class="smaller">3</span>
+                                            <!-- /ko -->
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="trade-summary shadowtop" data-bind="css: { 'padbot': !Data.isInstrumentAvailable() }">
+                <div class="summary-label" data-bind="dictionaryBinding: Data.SelectedPosition().isProfit() ?
+                    'txtCurrentProfit' : 'txtCurrentLoss', resourceName: 'deals_CloseDeal'"></div>
+                <div class="summary-value" data-bind="css: { redText: !Data.SelectedPosition().isProfit(), greenText: Data.SelectedPosition().isProfit() }">
+                    <span data-bind="text: Data.SelectedPosition().pl()" class="plvalue"></span>
+                    <span data-bind="text: Data.selectedCcyName()"></span>
+                </div>
+            </div>
+            <div class="trade-action" data-bind="css: { 'trade-action-instrument-unavailable': !Data.isInstrumentAvailable() }">
+                <!-- ko component: { name: 'fx-instrument-notavailable'} --><!--/ko-->
+                <a id="btnUpdate" class="btn big deal right" href="javascript:void(0)" data-bind="css: { disabled: !Data.CloseDealReady(),
+                    isprocessing: Data.isProcessing() }, click: function () { CloseDeal(); }">
+                    <span id="btnContent" data-bind="dictionaryBinding: 'btnClostDeal', resourceName: 'deals_CloseDeal',
+                              isProcessing: { switchText: true }"></span>
+                    <!-- ko if: Data.isProcessing()-->
+                    <span class="js_processing"></span>
+                    <!-- /ko -->
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

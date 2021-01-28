@@ -1,0 +1,13 @@
+﻿<div class="accountSummaryNotActive" data-bind="visible: isVisible">
+    <div class="wallet">
+        <a href="javascript:void(0)"><span class="ico-wb ico-wb-wallet-summary"></span></a>
+    </div>
+    <div class="notActiveText">
+        <span class="notActiveTextInner" data-bind="dictionaryBinding: 'txtAccountNotactivated', resourceName: 'summaryview_accountsummary'"></span>     
+    </div>
+    <div class="CTAButton">
+        <a id="btnAccountSummaryCTA" class="btn action" data-bind="click: Data.ctaClick">
+            <p data-bind="dictionaryBinding: ctaText, resourceName: 'account_hub'"></p>
+        </a>
+    </div>
+</div>

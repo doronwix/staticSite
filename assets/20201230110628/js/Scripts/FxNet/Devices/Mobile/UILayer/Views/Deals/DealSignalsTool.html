@@ -1,0 +1,51 @@
+﻿<div class="tab-wrap">
+    <!-- ko if: permissionsModule.CheckActionAllowed('signals') -->
+    <!-- ko if: Data.isShowAgreement() -->
+    <div class="signals disclaimer-agreement">
+        <div class="container">
+            <h3 data-bind="dictionaryBinding: 'lblDisclaimerHeader', resourceName: 'deals_DealSignalsTool'"></h3>
+
+            <span data-bind="dictionaryBinding: 'lblDisclaimerText', resourceName: 'deals_DealSignalsTool'"></span>
+
+            <div class="fixed-wrapper">
+                <button class="big-blue-button" data-bind="click: Handlers.clickDisclaimerAgree, dictionaryBinding: 'hlDisclaimerAgree', resourceName: 'deals_DealSignalsTool'"></button>
+            </div>
+        </div><!--end container-->
+    </div><!--end dislaimer-content-->
+    <!-- /ko -->
+    <!-- ko if: Data.isShowSignal() -->
+    <fx-signal-details params="Data: Data"></fx-signal-details>
+
+    <!-- ko if: !Data.isShowAgreement() -->
+    <div class="container">
+        <a class="agreement"
+           data-bind="click: function () {
+					$viewModelsManager.VManager.SwitchViewVisible(eForms.SignalsDisclaimer, {})
+				},
+				dictionaryBinding: 'lblDisclaimerHeader', resourceName: 'deals_DealSignalsTool'"
+           href="javascript:void(0);"></a>
+    </div>
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- ko if: Data.isShowSignalUnavailable -->
+    <div class="signals not-available">
+        <i class="text-center tools-warning"></i>
+        <h3 class="text-center" data-bind="dictionaryBinding: 'lblTradingSignalsUnavailable', resourceName: 'deals_DealSignalsTool'"></h3>
+    </div>
+    <!--end not-available-->
+    <!-- /ko -->
+    <!-- ko if: Data.signalsAreDissallowed() -->
+    <fx-component-access-request-signals-details params="{ requestAccessType: eRequestAccessType.Signals }"></fx-component-access-request-signals-details>
+    <!--end disclaimer-content-->
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- ko if: !permissionsModule.CheckActionAllowed('signals') -->
+    <div class="signals">
+        <div class="container">
+            <p class="warning">
+                <span data-bind="text: Dictionary.GetItem('SeamlessRegister')"></span>&nbsp;<a href="javascript:void(0)" data-bind="click: permissionsModule.RegisterLeadType, text: Dictionary.GetItem('RegisterForFree')" class="SignalRetention"></a>
+            </p>
+        </div><!--end container-->
+    </div><!--end disclaimer-content-->
+    <!-- /ko -->
+</div>

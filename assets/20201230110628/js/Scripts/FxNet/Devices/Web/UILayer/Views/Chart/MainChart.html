@@ -1,0 +1,41 @@
+﻿<div id="AdvinionChartDiv" class="advinion-chart">
+    <div data-bind="css: { 'tools-collapsed': !Data.isTransactionContainerExpanded() }">
+        <div id="transatcion-switch-page" class="deal-slip expanded">
+            <div class="transaction-container">
+                <!-- ko component: { name: 'fx-component-tile-transaction-switcher' } --><!-- /ko -->
+            </div>
+        </div>
+
+        <div>
+            <div class="collapse-tools-switcher"
+                data-bind="click: function() {
+                    ToggleTransactionContainer();
+                    ko.postbox.publish('tools-chart', { event: 'main-chart-transaction-toggle', isExpanded: Data.isTransactionContainerExpanded() });
+                },
+                css: { 
+                    'ico-sh-arrow-left': Data.isTransactionContainerExpanded(),
+                    'ico-sh-arrow-right': !Data.isTransactionContainerExpanded()
+                }">
+            </div>
+
+            <div class="charts-tile-layout"
+                data-bind="component: {
+                    name: 'fx-component-tiled-layout',
+                    params: {
+                        templates: ['fx-template-chart-tile', 'fx-template-chart-tile' , 'fx-template-chart-tile' , 'fx-template-chart-tile'],
+                        layouts: window.screen.availWidth > cTileLayout.FourTilesContainerMinWidth ? [eTileLayout.Single, eTileLayout.FourSplit] : [eTileLayout.Single, eTileLayout.Split],
+                        selectedLayout:  window.screen.availWidth > cTileLayout.FourTilesContainerMinWidth ? eTileLayout.FourSplit : eTileLayout.Split,
+                        fullscreenPageId: eFullScreenControl.ChartPage
+                    }
+                }">
+            </div>
+            <!-- ko if: !AdvinionChartsManager.IsChartManagerLoaded() -->
+            <div class="simple-loader charts-tile-layout tile-loader visible">
+                <div></div>
+            </div>
+            <!-- /ko -->
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

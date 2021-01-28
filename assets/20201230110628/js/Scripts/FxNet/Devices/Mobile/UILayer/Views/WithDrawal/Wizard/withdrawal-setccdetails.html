@@ -1,0 +1,39 @@
+﻿<!-- ko if: isDataReady -->
+<div class="withdrawal-wrapper">
+    <h1 class="page-title" data-bind="text: Dictionary.GetItem('title_withdrawFunds', 'views_vMobileWithdrawal')"></h1>
+    <!-- ko component: { name: 'fx-component-amount-requested'} --><!-- /ko -->
+    <p class="padbot" data-bind="dictionaryBinding: 'txt_refundInfo', resourceName: 'views_vMobileWithdrawal'"></p>
+
+    <div class="withdrawal-info top-separator" data-bind="visible: Data.ccTiles().length">
+        <p class="highlight padbot" data-bind="dictionaryBinding: 'lbl_ccSelect', resourceName: 'views_vMobileWithdrawal'"></p>
+
+        <!-- ko foreach: Data.ccTiles -->
+        <div class="info-row cc-row" data-bind="click: $parent.OnSelectCC, css: { 'cc-row-selected': $parent.Data.selectedCC() && $parent.Data.selectedCC().CCId === CCId }">
+            <div data-bind="attr: { 'class': 'cc-icon ' + ImageClass }"></div>
+            <div class="cc-details">
+                <div>
+                    <span data-bind="text: CardHolder" class="highlight"></span>
+                </div>
+                <div>
+                    <span data-bind="text: $parent.GetCCName($data)"></span>
+                    <span data-bind="text: $parent.GetLast4($data)"></span>
+                    <span data-bind="text: CCExpiry"></span>
+                </div>
+                <div class="remove-cc-wrapper">
+                    <div class="remove-cc">
+                        <a data-bind="click: $parent.OnClickRemoveCard, dictionaryBinding: 'lbl_ccRemoveCard', resourceName: 'views_vMobileWithdrawal', clickBubble: false"></a>
+                    </div>
+                    <!-- ko if: !IsApproved  -->
+                    <div>
+                        <i class="ico-sh-warn"></i>
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+
+        </div>
+        <!--/ko-->
+    </div>
+    <p data-bind="dictionaryBinding: 'txt_ccFailureInfo', resourceName: 'views_vMobileWithdrawal'"></p>
+</div>
+<!--/ko-->

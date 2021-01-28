@@ -1,0 +1,33 @@
+﻿<div class="autocomplete-wrapper">
+	<div class="search-wrapper">
+		<div class="clear-input">
+			<input class="search"
+				id="quotes-autocomplete"
+				type="text"
+					data-bind="autocomplete: {
+						elementType: 'input.mobile',
+						source: Data.list,
+						selected: Data.selected,
+						appendTo: '.results-wrapper',
+						autocompleteWrapperClass: 'autocomplete-wrapper',
+						showIcons: true,
+						hasCategories: true,
+						renderInstruments: true,
+						hideDropDownAfterSelect: true,
+						keepTextAfterSelect: true,
+						hideDropDownWhenNotEnoughLetters: true,
+						noResultText: Dictionary.GetItem('no_results'),
+						hasInitialValue: true,
+						minLength: Data.searchMinLength()
+					},
+					virtualKeyboardBehavior,
+					attr: {
+						placeholder: Dictionary.GetItem('lblClosedDealsFilterSearch','views_vMobileQuotes')
+					}">
+			<a href="javascript:void(0)" class="clear-button closeButton" data-bind="click: Data.ClearSelectedInstrument, cssIfValue: { valueElementId: 'quotes-autocomplete', className: 'clear-button' }"></a>
+		</div>
+	</div>
+
+	<div class="results-wrapper">
+	</div>
+</div>

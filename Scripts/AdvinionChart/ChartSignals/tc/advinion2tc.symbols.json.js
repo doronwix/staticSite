@@ -1,0 +1,20 @@
+{
+	"CAD/JPY": "CADJPY",
+	"CHF/JPY": "CHFJPY",
+	"ETH/USD": "ETHUSD",
+	"EUR/AUD": "EURAUD",
+	"EUR/CAD": "EURCAD",
+	"EUR/CHF": "EURCHF",
+	"EUR/GBP": "EURGBP",
+	"EUR/HUF": "EURHUF",
+	"EUR/JPY": "EURJPY",
+	"EUR/PLN": "EURPLN",
+	"GBP/AUD": "GBPAUD",
+	"GBP/CAD": "GBPCAD",
+	"GBP/CHF": "GBPCHF",
+	"GBP/JPY": "GBPJPY",
+	"NZD/JPY": "NZDJPY"
+}
+
+
+

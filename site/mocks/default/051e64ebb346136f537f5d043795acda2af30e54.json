@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/assets/20201230110628/js/scripts/fxnet/uilayer/viewmodels/questionnaire/FaqViewModel.js?v=20201230110628",
+  "contentType": "application/javascript",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿define(\r\n    'viewmodels/questionnaire/FaqViewModel',\r\n    [\r\n        'require',\r\n        'knockout',\r\n        'Dictionary',\r\n        'LoadDictionaryContent!Support'\r\n    ],\r\n    function () {\r\n        var ko = require('knockout'),\r\n            dictionary = require('Dictionary');\r\n\r\n        function createViewModel(params) {\r\n            var faqKey = ko.utils.unwrapObservable(params.faqKey);\r\n\r\n            var allKeysFaq = dictionary.GetAllKeys(faqKey);\r\n            var allKeysFaqSorted = allKeysFaq.sort(function (x, y) {\r\n                var xp = Number(x.substr(0, x.indexOf('_')));\r\n                var yp = Number(y.substr(0, y.indexOf('_')));\r\n                return xp === yp ? 0 : xp < yp ? -1 : 1;\r\n            });\r\n\r\n            return {\r\n                faqKey: faqKey,\r\n                keys: allKeysFaqSorted,\r\n                openEventName: params.openEventName\r\n            };\r\n        }\r\n\r\n        return {\r\n            viewModel: {\r\n                createViewModel: createViewModel\r\n            }\r\n        };\r\n    }\r\n);\r\n",
+  "isBase64": false
+}

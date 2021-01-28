@@ -1,0 +1,190 @@
+[
+	{
+		"instrumentId": 63281,
+		"bgColor": "#e25485"
+	},
+	{
+		"instrumentId": 63511,
+		"bgColor": "#124096"
+	},
+	{
+		"instrumentId": 63792,
+		"bgColor": "#548fca"
+	},
+	{
+		"instrumentId": 64561,
+		"bgColor": "#5d7e53"
+	},
+	{
+		"instrumentId": 65048,
+		"bgColor": "#253d4c"
+	},
+	{
+		"instrumentId": 65304,
+		"bgColor": "#a070a9"
+	},
+	{
+		"instrumentId": 48,
+		"bgColor": "#f28a2d"
+	},
+	{
+		"instrumentId": 305,
+		"bgColor": "#7dc273"
+	},
+	{
+		"instrumentId": 536,
+		"bgColor": "#636cef"
+	},
+	{
+		"instrumentId": 1842,
+		"bgColor": "#188f4d"
+	},
+	{
+		"instrumentId": 3090,
+		"bgColor": "#385ab2"
+	},
+	{
+		"instrumentId": 3378,
+		"bgColor": "#385ab3"
+	},
+	{
+		"instrumentId": 5424,
+		"bgColor": "#3c4a99"
+	},
+	{
+		"instrumentId": 5937,
+		"bgColor": "#fcd259"
+	},
+	{
+		"instrumentId": 8213,
+		"bgColor": "#22ac4f"
+	},
+	{
+		"instrumentId": 8726,
+		"bgColor": "#124a8d"
+	},
+	{
+		"instrumentId": 9493,
+		"bgColor": "#883fb9"
+	},
+	{
+		"instrumentId": 9749,
+		"bgColor": "#207ec2"
+	},
+	{
+		"instrumentId": 11282,
+		"bgColor": "#244794"
+	},
+	{
+		"instrumentId": 12102,
+		"bgColor": "#e5110f"
+	},
+	{
+		"instrumentId": 14640,
+		"bgColor": "#091858"
+	},
+	{
+		"instrumentId": 14896,
+		"bgColor": "#005581"
+	},
+	{
+		"instrumentId": 15408,
+		"bgColor": "#01619a"
+	},
+	{
+		"instrumentId": 18991,
+		"bgColor": "#e21836"
+	},
+	{
+		"instrumentId": 20271,
+		"bgColor": "#62bb46"
+	},
+	{
+		"instrumentId": 21039,
+		"bgColor": "#e65844"
+	},
+	{
+		"instrumentId": 22063,
+		"bgColor": "#ee742b"
+	},
+	{
+		"instrumentId": 22831,
+		"bgColor": "#3c9673"
+	},
+	{
+		"instrumentId": 25647,
+		"bgColor": "#2968b3"
+	},
+	{
+		"instrumentId": 26415,
+		"bgColor": "#ff6c00"
+	},
+	{
+		"instrumentId": 27952,
+		"bgColor": "#001f6c"
+	},
+	{
+		"instrumentId": 30256,
+		"bgColor": "#000000"
+	},
+	{
+		"instrumentId": 31536,
+		"bgColor": "#1e3566"
+	},
+	{
+		"instrumentId": 31792,
+		"bgColor": "#00669e"
+	},
+	{
+		"instrumentId": 38933,
+		"bgColor": "#0b509d"
+	},
+	{
+		"instrumentId": 39215,
+		"bgColor": "#000000"
+	},
+	{
+		"instrumentId": 41265,
+		"bgColor": "#fd5000"
+	},
+	{
+		"instrumentId": 42288,
+		"bgColor": "#3d6cf9"
+	},
+	{
+		"instrumentId": 44336,
+		"bgColor": "#ff0058"
+	},
+	{
+		"instrumentId": 44594,
+		"bgColor": "#1f4f46"
+	},
+	{
+		"instrumentId": 45361,
+		"bgColor": "#f94900"
+	},
+	{
+		"instrumentId": 47409,
+		"bgColor": "#000000"
+	},
+	{
+		"instrumentId": 49968,
+		"bgColor": "#129263"
+	},
+	{
+		"instrumentId": 50736,
+		"bgColor": "#2a276e"
+	},
+	{
+		"instrumentId": 50962,
+		"bgColor": "#1677ff"
+	},
+	{
+		"instrumentId": 53809,
+		"bgColor": "#000000"
+	},
+	{
+		"instrumentId": 54065,
+		"bgColor": "#0d148c"
+	}
+]

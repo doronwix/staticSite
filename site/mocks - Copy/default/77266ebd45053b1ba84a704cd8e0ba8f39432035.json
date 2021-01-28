@@ -1,0 +1,8 @@
+{
+  "requestUrl": "/webpl3/traderlocal.iforex.com/web/1/1/scripts/fxnet/devices/web/uilayer/views/statichtml/Tutorials/VideoLessonsExtensionRequest.html?v=20201230110628",
+  "contentType": "text/html",
+  "method": "GET",
+  "statusCode": 200,
+  "data": "﻿<div class=\"tutorials-extension\">\r\n    <div data-bind=\"visible: Data.isExtensionNotSubmitted\">\r\n        <div class=\"row-wrapper\">\r\n            <span data-bind=\"dictionaryBinding: 'lblVideoLessonsRequestExtension', resourceName: 'accessRequest'\"></span>\r\n            <a class=\"btn small center\" data-bind=\"click: OnClickSubmitRequest\">\r\n                <span id=\"btnContent\" data-bind=\"dictionaryBinding: 'btnRequestExtension', resourceName: 'accessRequest'\"></span>\r\n            </a>\r\n        </div>\r\n    </div>\r\n    <div data-bind=\"visible: Data.isExtensionSubmitted\">\r\n        <div class=\"row-wrapper\">\r\n            <h3 data-bind=\"dictionaryBinding: 'lblRequestSubmittedTitle', resourceName: 'accessRequest'\" class=\"bold\"></h3>\r\n        </div>\r\n        <div class=\"row-wrapper\">\r\n            <span id=\"btnContent\" data-bind=\"dictionaryBinding: 'lblVideoLessonsExtensionSubmitted', resourceName: 'accessRequest'\"></span>\r\n        </div>\r\n    </div>\r\n</div>",
+  "isBase64": false
+}

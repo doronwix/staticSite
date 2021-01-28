@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": false,
+  "eslint.format.enable": true,
+  "files.exclude": {
+    "**/examples": true
+  }
+}

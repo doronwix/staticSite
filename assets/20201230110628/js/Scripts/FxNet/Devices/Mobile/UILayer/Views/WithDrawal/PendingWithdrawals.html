@@ -1,0 +1,52 @@
+﻿<div id="walletPending">
+    <div class="header-wrapper single-head-wrapper">
+        <div class="no-shadow">
+            <text id="CurrentWithdrawals" data-bind="dictionaryBinding: 'CurrentWithdrawals', resourceName: 'views_vMobilePendingWithdrawal'"></text>
+            <strong data-bind="roundM: Data.totalAmountPendingWithdrawal"></strong>
+            <strong data-bind="text: Data.defaultCcy"></strong>
+        </div>
+    </div>
+
+    <!-- ko if: PendingWithdrawals().length > 0 -->
+    <div class="center-content title-line clearfix">
+        <strong class="title" id="Pending" data-bind="dictionaryBinding: 'Pending', resourceName: 'views_vMobilePendingWithdrawal'"></strong>
+        <span class="float" id="immediateCancellation" data-bind="dictionaryBinding: 'immediateCancellation', resourceName: 'views_vMobilePendingWithdrawal'"></span>
+    </div>
+    <div class="thelist pending">
+        <!--thelist pending-->
+        <ul class="pending-icon list-container" data-bind="foreach: PendingWithdrawals">
+            <li>
+                <span data-bind="text: date"></span>
+                <span data-bind="text: time"></span>
+                <strong data-bind="roundM: amount"></strong> <strong data-bind="text: ccy"></strong>
+                <button type="button" id="bttnCancel" 
+                        data-bind="dictionaryBinding: 'bttnCancel', resourceName: 'views_vMobilePendingWithdrawal', click: onCancelPendingWithdrawal, disable: $parent.Data.isCancelingWithdrawal()" 
+                        class="cancel-button">
+                </button>
+            </li>
+        </ul>
+    </div>
+    <!--/thelist pending-->
+    <!-- /ko -->
+    <!-- ko if: ProcessWithdrawals().length > 0 -->
+    <div class="center-content title-line clearfix padding" data-bind="">
+        <strong class="title" id="inprocess" data-bind="dictionaryBinding: 'inprocess', resourceName: 'views_vMobilePendingWithdrawal'"></strong>
+        <span class="float" id="cancelbyemail" data-bind="dictionaryBinding: 'cancelbyemail', resourceName: 'views_vMobilePendingWithdrawal'"></span>
+    </div>
+    <div class="thelist pending">
+        <!--thelist pending-->
+        <ul class="process-icon list-container" data-bind="foreach: ProcessWithdrawals">
+            <li>
+                <span data-bind="text: date"></span>
+                <span data-bind="text: time"></span>
+                <strong data-bind="roundM: amount" class="amount"></strong>
+                <strong data-bind="text: ccy"></strong>
+                <button type="button" id="bttnCancel2" class="cancel-button" 
+                        data-bind="dictionaryBinding: 'bttnCancel2', resourceName: 'views_vMobilePendingWithdrawal', click: onCancelProcessingWithdrawal, disable: $parent.Data.isCancelingWithdrawal()">
+                </button>
+            </li>
+        </ul>
+    </div>
+    <!--/thelist pending-->
+    <!-- /ko -->
+</div>

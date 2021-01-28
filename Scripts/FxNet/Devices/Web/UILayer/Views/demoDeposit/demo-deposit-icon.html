@@ -1,0 +1,18 @@
+﻿<!-- ko if: isCustomerDemo -->
+<div class="equity-demo-deposit" data-bind="visible: isEligableToDemoDeposit() || obs.isProcessing()">
+    <!-- ko if: isEligableToDemoDeposit() -->
+    <i class="icon-equity" data-bind="click: onClick, clickBubble: false,
+       balloon: {
+        tooltipClass: 'tooltip tooltipBottom summary-tooltip customTooltip',
+        position: { my: 'center bottom', at: 'center top-9' },
+        timeout: 2000
+       },
+       attr: { title: tooltipMessage },
+       'data-automation': 'demodeposit-button'">
+    </i>
+    <!-- /ko -->
+    <!-- ko if: obs.isProcessing() -->
+    <div class="equity-spinner"></div>
+    <!-- /ko -->
+</div>
+<!-- /ko -->

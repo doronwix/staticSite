@@ -1,0 +1,47 @@
+﻿<article class="event-row">
+	<!-- ko if: Data.showDateHeader -->
+	<time class="date-header" data-bind="html: Format.toLocaleDate(EventData.EventTime, Dictionary.GetItem('LanguageCultures_locale','LanguageCultures'))"></time>
+	<!-- /ko -->
+	<section class="row-content">
+		<aside class="row-aside">
+			<figure class="flag" data-bind="css: EventData.CountryCode"></figure>
+			<figure data-bind="css: 'relevance importance-' + EventData.ImportanceActive"><mark></mark></figure>
+			<time class="hour" data-bind="html: Format.toTimehhmm(EventData.EventTime)"></time>
+		</aside>
+		<section class="row-main">
+			<h3 class="event-title" data-bind="html: EventData.Title"></h3>
+			<div class="event-details">
+				<!-- ko if: EventData.Actual -->
+				<div class="detail">
+					<span data-bind="dictionaryBinding: 'lblActual', resourceName: 'customerTools_EconomicCalendar'"></span>
+					<span class="detail-value" data-bind="html: EventData.Actual, css: EventData.ActualDirection"></span>
+				</div>
+				<!-- /ko -->
+				<!-- ko if: EventData.Forecast -->
+				<div class="detail">
+					<span data-bind="dictionaryBinding: 'lblForecast', resourceName: 'customerTools_EconomicCalendar'"></span>
+					<span class="detail-value" data-bind="html: EventData.Forecast"></span>
+				</div>
+				<!-- /ko -->
+				<!-- ko if: EventData.Previous -->
+				<div class="detail">
+					<span data-bind="dictionaryBinding: 'lblPrevious', resourceName: 'customerTools_EconomicCalendar'"></span>
+					<span class="detail-value" data-bind="html: EventData.Previous"></span>
+				</div>
+				<!-- /ko -->
+			</div>
+			<div class="event-cta" data-bind="visible: Data.options().length !== 0">
+				<div class="selection-wrap" data-bind="css: { 'disabled': Data.options().length === 1 }">
+					<select data-bind="options: Data.options,
+						optionsText: 'label',
+						optionsValue: 'id',
+						value: Data.selectedInstr, disable: Data.options().length === 1">
+					</select>
+				</div>
+				<div class="cta-wrap">
+					<button data-bind="click: CtaAction, dictionaryBinding: 'lblTrade', resourceName: 'customerTools_EconomicCalendar'"></button>
+				</div>
+			</div>
+		</section>
+	</section>
+</article>

@@ -1,0 +1,80 @@
+﻿<!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vMissingCustomerInformation).visible -->
+<fx-customer-activation></fx-customer-activation>
+<!-- /ko -->
+
+<!-- ko ifnot: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vMissingCustomerInformation).visible -->
+<div class="concrentePaymentForm fx-concrete-payments-deposit-form new-payment">
+    <!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vGenericCreditCard).visible() -->
+        <div id="DigiCertClickID_6VaWSBzf" class="security-logo" data-bind="securityLogo: {}"></div>
+        <div class="clear"></div>
+    <!-- /ko -->
+
+    <div class="tile-card" data-bind="css: { generic: Form.isGeneric }">
+        <div class="row-container">
+            <div class="logo-wrapper">
+                <div data-bind="attr: { 'class': 'deposit-row deposit-ico' }, css: Form.imageClass"><i></i></div>
+            </div>
+
+            <div class="card-details-wrapper">
+                <!--ko if: !Form.isExistingCC() -->
+                <div class="payment-details">
+                    <p data-bind="text: Form.name">%Name</p>
+                </div>
+
+                <!-- ko if: Form.isGeneric -->
+                <div class="allowed-payments" data-bind="foreach: Form.allowedCreditCards">
+                    <img data-bind="attr: { src: $data }" />
+                </div>
+                <!-- /ko -->
+                <!-- /ko-->
+                <!--ko if: Form.isExistingCC()-->
+                <div class="payment-details">
+                    <div class="card-details">
+                        <p data-bind="text: Form.cardHolder">%Name</p>
+                        <p class="card-data">
+                            <span data-bind="text: Form.lastChars">%XXXX</span>
+                            <span data-bind="text: Form.expirationDate">%01/99</span>
+                        </p>
+                        <p>
+                            <span class="payment-subtitle" data-bind="formattedText: [Format.toDateTimeUTC(Form.lastUsed())], contentKey: 'lastUsedDateFormat', resourceName: 'payments_concreteView'">%Last used:</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- /ko-->
+
+                <a class="action" data-bind="click: function() { window.history.back(); }">
+                    <span data-bind="dictionaryBinding: 'hlChangePaymentMethod', resourceName: 'payments_concreteView'">%Change payment method</span>
+                </a>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-- ko foreach: Form.paymentsConfigSettings -->
+    <!-- ko if: !$data.SkipComponentGeneration && $data.ShowInMobile -->
+    <!-- ko ifnot: $data.SubViews -->
+    <!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes[$data.ViewType]).visible-->
+    <div>
+        <div data-bind='component: { name: String.format("fx-payment-{0}", $data.Name.toLowerCase()), params: { depositingType: $data.Id } }'></div>
+    </div>
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- ko if: $data.SubViews -->
+    <!--ko foreach: $data.SubViews-->
+    <!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes[$data.ViewType]).visible() -->
+    <div>
+        <div data-bind='component: { name: String.format("fx-payment-{0}-{1}", $data.Name.toLowerCase(), $data.ViewId), params: { inatecSubtype: $data.ViewId } }'></div>
+    </div>
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- ko if: $viewModelsManager.VManager.GetActiveFormViewProperties(eViewTypes.vThirdParty).visible() -->
+    <iframe id="paymentsIframe"></iframe>
+    <!-- /ko -->
+
+    <fx-deposit-notice></fx-deposit-notice>
+</div>
+<!-- /ko -->

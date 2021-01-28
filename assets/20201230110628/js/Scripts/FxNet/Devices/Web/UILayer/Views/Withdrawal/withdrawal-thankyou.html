@@ -1,0 +1,36 @@
+﻿<div class="wizard-nav-container">
+	<div class="withdrawal-wrapper">
+		<!-- ko if: Data.isLoading -->
+		<div class="loader-background">
+			<div class="loader"></div>
+		</div>
+		<!-- /ko -->
+		<h1 class="page-title padbot" data-bind="dictionaryBinding: 'title_withdrawTy', resourceName: 'withdrawal_withdrawalrequest'"></h1>
+		<!-- ko if: !Data.documentsToUpload().length -->
+		<p class="padbot" data-bind="dictionaryBinding: 'txt_tySimpleInfo', resourceName: 'withdrawal_withdrawalrequest'"></p>
+		<!--/ko-->
+		<!-- ko if: Data.documentsToUpload().length -->
+		<!-- ko if: !Dictionary.ValueIsEmpty('txt_tyRequireUploadDocsP1', 'withdrawal_withdrawalrequest')-->
+			<p data-bind="dictionaryBinding: 'txt_tyRequireUploadDocsP1', resourceName: 'withdrawal_withdrawalrequest'" class="padbot"></p>
+		<!--/ko-->
+		<p data-bind="dictionaryBinding: 'txt_tyRequireUploadDocsP2', resourceName: 'withdrawal_withdrawalrequest'" class="highlight padbot upload-info"></p>
+		<ol class="padbot order-list upload-info">
+			<!-- ko foreach: Data.documentsToUpload() -->
+			<li data-bind="text: Dictionary.GetItem(Category, 'Category')"></li>
+			<!-- /ko -->
+		</ol>
+		<!--/ko-->
+	</div>
+	<div class="steps-wrapper thank-you">
+		<div class="center-area">
+			<div class="step-action" data-bind="visible: !Data.isLoading()">
+				<!-- ko if: Data.documentsToUpload().length !== 0 -->
+				<button id="ty-upload-documents" class="action-button btn-continue btn" data-bind="dictionaryBinding: 'lblUploadDocuments', resourceName: 'navigationWizard', click: OnClickUploadDocuments"></button>
+				<!--/ko-->
+				<!-- ko if: Data.documentsToUpload().length === 0 -->
+				<button id="ty-upload-documents" class="action-button btn-continue btn" data-bind="dictionaryBinding: 'lblContinue', resourceName: 'navigationWizard', click: OnClickDefaultAction"></button>
+				<!--/ko-->
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,138 @@
+<!-- ko with: Data-->
+<tr data-bind="css: { cursorpointer: !($parentContext.$parentContext.$parent.FlagsState.isMarketClosed() || !window.componentsLoaded() || !$data.quoteIsActive()) }, data-automation: 'openeddeal-row'">
+    <td class="checkbox cursordefault hide-on-print">
+        <div class="custom-input-wrapper">
+            <input type="checkbox" data-bind="checked: isChecked, disable: !quoteIsActive()" />
+            <span></span>
+        </div>
+    </td>
+    <td class="no-border align-left" data-bind="click: $parent.CloseDeal">
+        <div class="deal-details" data-bind="attr: { title: String.format(Dictionary.GetItem('openDeals_DealIdToolTip', 'tooltipsStaticResource'), positionNumber) }, balloon: { tooltipClass: 'tooltip tooltipBottom transparent-tooltip', position: { my: 'center bottom', at: 'center top-9' } }">
+            <div class="bold">
+                <span data-bind="dictionaryBinding: orderDir, prefix: 'orderDirection'"></span>
+                <span class="instrument" data-bind="instrumentName: instrumentID"></span>
+            </div>
+            <div class="smaller-font-size deal-datetime">
+                <span data-bind="text: exeTime"></span>
+                <span class="timezone">GMT</span>
+            </div>
+        </div>
+    </td>
+    <td data-bind="click: $parent.CloseDeal" class="no-border-print">
+        <a href="javascript:void(0)" class="btn action small colored right hide-on-print"
+           data-bind="css: { disabled: $statesManager.States.IsMarketClosed() || !window.componentsLoaded() || !quoteIsActive() }, attr: { id: 'CloseDealAction_' + positionNumber }">
+            <span data-bind="text: Dictionary.GetItem('btnCloseDeal','datagrids_opendeals')">xcontent</span>
+        </a>
+    </td>
+    <td data-bind="click: $parent.CloseDeal">
+        <span data-bind="text: Format.formatDealAmount(dealAmount)"></span>
+    </td>
+    <td data-bind="click: $parent.CloseDeal, template: { name: 'rate-template', data: Format.tenthOfPipSplitRate(orderRate, instrumentID).label }"></td>
+    <!-- ko if: $parentContext.$parentContext.$parent.HasValueDateColumn -->
+    <td class="date align-left" data-bind="click: $parent.CloseDeal">
+        <span data-bind="valueDateText: { valueDate: valueDate, showHour: false }"></span>
+    </td>
+    <!-- /ko -->
+    <td data-bind="click: $parent.CloseDeal, template: { name: 'rate-template', data: Format.tenthOfPipSplitRate(closingRate(), instrumentID).label } ,css: { disabled: !quoteIsActive() }"></td>
+    <!-- ko if: $parentContext.$parentContext.$parent.DealPermissions.CustomerDealPermit() == eDealPermit.ZeroSpread-->
+    <td class="hide-resulotion" data-bind="html: Format.addCurrencyToNumber(Format.toNumberWithThousandsSeparator(grosspl(), 2), $customer.prop.selectedCcyId())"></td>
+    <td data-bind="click: $parent.CloseDeal, html: Format.addCurrencyToNumber(commission(), $customer.prop.selectedCcyId())"></td>
+    <!-- /ko -->
+    <!-- ko if: $parentContext.$parentContext.$parent.DealPermissions.HasSpreadDiscount() -->
+    <td class="ltr hide-resulotion" data-bind="click: $parent.CloseDeal, html: Format.addCurrencyToNumber(Format.toNumberWithThousandsSeparator(grosspl(), 2), $customer.prop.selectedCcyId())"></td>
+    <td class="ltr" data-bind="click: $parent.CloseDeal, html: Format.addCurrencyToNumber(spreadDiscountConverted(), $customer.prop.selectedCcyId())"></td>
+    <!-- /ko -->
+    <td data-bind="click: $parent.CloseDeal">
+        <a href="javascript:void(0)" class="left" data-bind="visible: hasAdditionalPL, clickBubble: false,
+            click: function () {
+                $parentContext.$parentContext.$component.Data.selectedPLPositionNumber(positionNumber);
+
+                var options = {
+                    title: String.format(Dictionary.GetItem('ContractRolloverHistory','dialogsTitles',' '), positionNumber),
+                    width: 980,
+                    minHeight: 314,
+                    dialogClass: 'fx-dialog closedDeal'
+                },
+                args = {
+                    posNum: positionNumber,
+                    instrumentID: instrumentID,
+                    dealAmount: dealAmount,
+                    orderDir: orderDir
+                };
+
+                DialogViewModel.openAsync(eAppEvents.contractRolloverDataLoaded,
+                    eDialog.ContractRollover,
+                    options,
+                    eViewTypes.vContractRollover,
+                    args);
+                }">
+
+            <i data-bind="visible: positionNumber !== $parentContext.$parentContext.$component.Data.selectedPLPositionNumber(),  attr: { 'title': Dictionary.GetItem('tooltipRolloverAdjustmentInfo') }" class="ico-wb-more-info"></i>
+        </a>
+        <span class="small-loader left" data-bind="visible: positionNumber === $parentContext.$parentContext.$component.Data.selectedPLPositionNumber()"></span>
+        <span class="bold right ltr" data-bind="numberWithCurrencySymbol: {currencyId: $customer.prop.selectedCcyId(), value: General.toNumeric(pl()), decimals: 2}, css: { greenText: plSign() >= 0, redText: plSign() < 0 }"></span>
+    </td>
+    <td class="button-row cursordefault">
+        <a href="javascript:void(0)" class="btn action small colored show-on-print"
+           data-bind="click: function () { $parent.openSlTpDialog(eLimitType.StopLoss); },
+            css: { 'hide-on-print': cEmptyRate === $data.slRate() }, attr: { id: 'OpenEditSL_' + positionNumber }">
+            <!-- ko if: cEmptyRate === slRate() -->
+            <span data-bind="html: Dictionary.GetItem('openDeals_AddSL', 'datagrids_opendeals')">xcontent</span>
+            <!-- /ko -->
+            <!-- ko if: cEmptyRate !== slRate() -->
+            <span data-bind="template: { name: 'rate-template', data: Format.tenthOfPipSplitRate(slRate(), instrumentID).label }"></span>
+            <!-- /ko -->
+        </a>
+    </td>
+    <td class="button-row cursordefault">
+        <a href="javascript:void(0)" class="btn action small colored show-on-print"
+           data-bind="click: function () { $parent.openSlTpDialog(eLimitType.TakeProfit); },
+           css: { 'hide-on-print': cEmptyRate === tpRate() }, attr: { id: 'OpenEditTP_' + positionNumber }">
+            <!-- ko if: cEmptyRate === tpRate() -->
+            <span data-bind="html: Dictionary.GetItem('openDeals_AddTP', 'datagrids_opendeals')">xcontent</span>
+            <!-- /ko -->
+            <!-- ko if: cEmptyRate !== tpRate() -->
+            <span data-bind="template: { name: 'rate-template', data: Format.tenthOfPipSplitRate(tpRate(), instrumentID).label }"></span>
+            <!-- /ko -->
+        </a>
+    </td>
+    <td class="center cursordefault hide-on-print">
+        <a href="javascript:void(0)"
+           data-bind="visible: adj() && positionNumber !== $parentContext.$parentContext.$component.Data.selectedOFHPositionNumber() && !isStock,
+                click: function () {
+                    $parentContext.$parentContext.$component.Data.selectedOFHPositionNumber(positionNumber);
+
+                    var options = {
+                        title: String.format(Dictionary.GetItem('FinanceAdjustHistory', 'dialogsTitles', ' '), positionNumber),
+                        width: 980,
+                        minHeight: 314
+                    },
+                    args = {
+                        posNum: positionNumber
+                    };
+
+                    if (valueDate.isValueDateEmpty) {
+                        args.fromDate = exeTime;
+                        args.instrumentId = instrumentID;
+
+                        DialogViewModel.openAsync(eAppEvents.accountCardRecordsDataLoaded,
+                            eDialog.AccountCardRecords,
+                            options,
+                            eViewTypes.vAccountCardRecords,
+                            args);
+                    }
+                    else {
+                        DialogViewModel.openAsync(eAppEvents.rolledOverDataLoaded,
+                            eDialog.RolledOver,
+                            options,
+                            eViewTypes.vRolledOver,
+                            args);
+                    }
+                }">
+            <i class="ico-wb-more-info" data-bind="attr: { 'title': Dictionary.GetItem('tooltipMoreInfo') }"></i>
+        </a>
+
+        <span class="small-loader" data-bind="visible: positionNumber === $parentContext.$parentContext.$component.Data.selectedOFHPositionNumber()"></span>
+    </td>
+</tr>
+<!-- /ko -->
